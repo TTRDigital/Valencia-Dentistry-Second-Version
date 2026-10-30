@@ -1,0 +1,28 @@
+{
+  "slug": "all-on-x-recovery-timeline",
+  "title": "All-on-X Recovery: Timeline, Pain, Diet, and Aftercare",
+  "seoTitle": "All-on-X Recovery Timeline: Pain, Diet and Aftercare",
+  "seoDescription": "What All-on-X recovery looks like week by week, from swelling and soft foods to your final teeth. Plan your healing with our Valencia team.",
+  "excerpt": "A day-by-day look at All-on-X healing: when swelling peaks, what to eat, when to return to work, and the warning signs that mean you should call.",
+  "category": "implants",
+  "keyTakeaways": [
+    "Soreness and swelling usually peak on days 2 to 4 and ease to mild discomfort within one to two weeks.",
+    "Expect a soft diet for at least two weeks; hard or crunchy foods wait until your clinician clears you.",
+    "Many patients return to desk work within 5 to 10 days; heavy exercise waits two to four weeks.",
+    "Implants integrate over three to six months before the final prosthesis is made and fitted.",
+    "Fever above 101.5 F, spreading redness, heavy bleeding or a loose implant mean you should call right away."
+  ],
+  "related": [
+    "what-is-all-on-x-complete-guide",
+    "best-foods-after-dental-implant-surgery",
+    "do-dental-implants-hurt-recovery-pain-healing-guide"
+  ],
+  "imageAlt": "Smiling patient in the treatment chair with a dentist and a panoramic X-ray behind him",
+  "flags": [
+    "Pain evidence is borrowed from forum posts about gum grafting and a frenectomy, then presented as what All-on-X patients experience; weak relevance.",
+    "Reddit anecdotes (weight loss, cardio at day 5) are blended with clinical guidance throughout; consider trimming.",
+    "Implant survival 'above 90 percent at five to ten years' is cited to PMC4647895; the same link is reused across several posts for different claims and is unverified.",
+    "FAQ 5 answer in the faq data ends with stray CTA text 'Request Your Post-Op Guide'.",
+    "First 24 hours tip says to 'take prescribed antibiotics' as routine; antibiotics are not always prescribed."
+  ]
+}

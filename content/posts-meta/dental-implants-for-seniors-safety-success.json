@@ -1,0 +1,29 @@
+{
+  "slug": "dental-implants-for-seniors-safety-success",
+  "title": "Dental Implants for Seniors: Safety, Costs, Success",
+  "seoTitle": "Dental Implants for Seniors: Safety and Success",
+  "seoDescription": "Age alone rarely rules out implants. Learn what does, how risks are managed, and what older adults can expect. Plan a senior-friendly consult in Valencia.",
+  "excerpt": "Health, bone and hygiene predict implant success better than age. See the evidence, the risks that matter for older adults, and how implants compare with dentures.",
+  "category": "implants",
+  "keyTakeaways": [
+    "Systemic health, bone volume and oral hygiene predict success more than chronological age.",
+    "Studies cited in the article report 90 to 98 percent five-year and 85 to 95 percent ten-year implant survival.",
+    "Oral osteoporosis medications usually do not prevent implants; high-dose IV bisphosphonates need specialist review.",
+    "Implants transfer chewing force to the jaw and help preserve bone, which removable dentures do not.",
+    "Reliable daily hygiene matters; if it is not possible, dentures or caregiver-supported care may be safer."
+  ],
+  "related": [
+    "candidate-for-dental-implants",
+    "dental-implants-vs-dentures",
+    "dental-implants-with-bone-loss"
+  ],
+  "imageAlt": "Smiling older woman with grey hair",
+  "flags": [
+    "Case example 'Mrs. L, age 72 ... gained 8 pounds' reads as an invented patient story presented as a real outcome; the copy guide forbids invented facts.",
+    "Broken reference: PubMed link 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC/' has no article ID.",
+    "Broken internal link: '/dental-implants/' in the conclusion should be '/services/dental-implants/'.",
+    "FAQ 'Do implants prevent jawbone loss?' answers 'Yes'; the body uses the more measured 'help preserve'.",
+    "Questions list names 'conscious sedation' and 'general anesthesia'; the copy guide keeps sedation generic.",
+    "CDC statistic (17% of adults 65+ have lost all teeth) is cited without a specific source link."
+  ]
+}

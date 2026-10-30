@@ -1,0 +1,29 @@
+{
+  "slug": "dental-implant-timeline",
+  "title": "Dental Implant Timeline: Start to Finish Guide for Patients",
+  "seoTitle": "Dental Implant Timeline: From Consult to Final Crown",
+  "seoDescription": "See every stage of implant treatment, how long each takes, and what adds months. Get a staged, CBCT-based timeline from our Valencia team.",
+  "excerpt": "From imaging to final crown, implant treatment runs in stages. Learn the typical timing of each, why infection and bone change it, and what to ask before you start.",
+  "category": "implants",
+  "keyTakeaways": [
+    "Treatment moves through consult and imaging, any prep work, implant placement, healing, and restoration.",
+    "Most single-tooth cases without major grafting take three to nine months from extraction to crown.",
+    "Infection at the site and low bone volume are the two most common reasons a timeline stretches.",
+    "Immediate placement at extraction is possible only when the socket is infection-free and the implant is stable.",
+    "Socket grafts usually need three to four months to mature; sinus lifts and larger grafts four to six or more."
+  ],
+  "related": [
+    "how-long-do-dental-implants-take",
+    "bone-grafting-healing-timeline",
+    "do-dental-implants-hurt-recovery-pain-healing-guide"
+  ],
+  "imageAlt": "Dentist showing a smiling patient a dental implant model",
+  "flags": [
+    "FAQ 6 answer in the faq data ends with stray CTA text 'Schedule Your Implant Consultation'; the same CTA also appears as unlinked plain text in the body.",
+    "Unsourced strong claim: active infection is 'the single most frequent reason clinicians delay implant placement'.",
+    "Osseointegration windows (6 to 16 weeks mandible, 12 to 24 weeks maxilla) are specific and uncited.",
+    "Cost table ($3,000 to $6,000 per tooth; All-on-X $15,000 to $30,000 per arch) is unsourced.",
+    "Citations to 'the American Dental Association and systematic reviews on PubMed' have no links.",
+    "Reddit anecdotes (two-month crown timeline, 'gritty beads' after a graft) are used as evidence."
+  ]
+}

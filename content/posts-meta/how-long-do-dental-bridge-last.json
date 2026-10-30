@@ -1,0 +1,28 @@
+{
+  "slug": "how-long-do-dental-bridge-last",
+  "title": "How Long Do Dental Bridges Last: Expected Lifespan Guide",
+  "seoTitle": "How Long Do Dental Bridges Last? 7 to 15 Years",
+  "seoDescription": "Most fixed bridges last 7 to 15 years. Learn what shortens or extends that span and how a bridge compares with an implant. Ask our Valencia team.",
+  "excerpt": "Fixed bridges commonly last 7 to 15 years. Learn what shortens or extends that lifespan, how bridges compare with implants, and the care that helps them last.",
+  "category": "restorative",
+  "keyTakeaways": [
+    "A fixed dental bridge commonly lasts 7 to 15 years with good hygiene and routine care; well cared for bridges can last longer.",
+    "Gum disease, decay under the crowns, and heavy bite forces from grinding are the main reasons bridges fail early.",
+    "Preparing abutment teeth removes enamel; if the neighboring teeth are healthy, an implant avoids altering them.",
+    "Daily cleaning under the pontic, hygiene visits every 3 to 6 months, and a night guard for grinders extend bridge life.",
+    "Watch for sensitivity around an abutment, looseness, gum swelling, or decay at crown margins on an X-ray."
+  ],
+  "related": [
+    "dental-bridge-vs-implant-guide",
+    "dental-bridge-cost-guide",
+    "how-long-do-dental-crowns-last"
+  ],
+  "imageAlt": "Smiling woman next to a dental bridge model",
+  "flags": [
+    "Written in first person ('I hear', 'When I plan a bridge'); conflicts with the site voice (the practice is 'we').",
+    "'The American Dental Association and studies indexed on PubMed show peri-abutment breakdown is the most frequent cause of bridge failure' links only to the PubMed homepage; no specific study.",
+    "Last FAQ answer ('Will insurance cover a bridge?') has the button text 'Book a Dental Bridge Consultation' appended; FAQ extraction is malformed.",
+    "Two 'Book a Dental Bridge Consultation' buttons link to an external Weave booking URL (book2.getweave.com); confirm it is still the practice's booking link.",
+    "Forum anecdote of a '$30,000' full-mouth implant quote is unverifiable."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "top-5-cosmetic-dentistry-procedures",
+  "title": "Cosmetic Dentistry Procedures: Complete Valencia Guide 2026",
+  "seoTitle": "Top 5 Cosmetic Dentistry Procedures Explained",
+  "seoDescription": "Whitening, veneers, Invisalign, crowns and bonding compared: how each works, how long results last and what to weigh. Explore your options in Valencia.",
+  "excerpt": "Teeth whitening, veneers, Invisalign, crowns and bonding: how each procedure works, how long results typically last, and what to weigh before choosing.",
+  "category": "cosmetic",
+  "keyTakeaways": [
+    "Professional whitening can lighten teeth several shades in one visit; results last six months to two years depending on habits.",
+    "Veneers are thin porcelain or composite shells; a small amount of enamel is removed, so they are not reversible.",
+    "Invisalign aligners are worn 20 to 22 hours a day and changed every one to two weeks; most cases finish in 12 to 18 months.",
+    "Crowns restore damaged teeth and can last 10 to 15 years or longer with care; bonding is a single-visit fix lasting 3 to 10 years."
+  ],
+  "related": [
+    "how-long-do-dental-crowns-last",
+    "crown-vs-filling-dental-crown-guide",
+    "why-choose-valencia-smile-what-to-expect-on-your-first-visit"
+  ],
+  "imageAlt": "Smiling patient in the dental chair",
+  "flags": [
+    "Statistic 'A survey by the American Association of Orthodontists found that 96% of Invisalign patients would recommend the treatment' is doubtful; this figure comes from Align Technology marketing, not the AAO.",
+    "'Studies show that dental veneers have a success rate of over 95% after 10 years' and 'Professional whitening can lighten teeth by up to 8 shades' are unsourced.",
+    "The AACD '74% of adults' statistic is cited without a link.",
+    "Marketing language 'perfect smile' and 'smile of your dreams' edges toward outcome promises; the copy guide prefers measured wording.",
+    "Heading structure is malformed: no H2s, five H3 sections, and 'Conclusion' is a plain paragraph. The Process/Benefits/Statistics sub-lists are collapsed into single paragraphs separated by en-dashes.",
+    "Only post with no FAQ and no links. Existing imageAlt 'Patient smiling during a dental cleaning' does not match a cosmetic topic; replaced with a generic alt, verify against the image."
+  ]
+}

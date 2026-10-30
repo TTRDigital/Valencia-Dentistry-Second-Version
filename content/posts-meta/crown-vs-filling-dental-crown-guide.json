@@ -1,0 +1,29 @@
+{
+  "slug": "crown-vs-filling-dental-crown-guide",
+  "title": "Crown vs Filling: When You Need a Dental Crown",
+  "seoTitle": "Crown vs Filling: When a Crown Is the Safer Choice",
+  "seoDescription": "Learn when a filling is enough and when a crown protects a cracked or root-canaled tooth. Get a clear restorative plan at our Valencia office.",
+  "excerpt": "Fillings fix small defects; crowns protect teeth that have lost structure or had a root canal. See how dentists decide, what each costs and how long they last.",
+  "category": "restorative",
+  "keyTakeaways": [
+    "Fillings suit small to moderate cavities; crowns cover teeth with large structural loss, cracks or root canals.",
+    "A common rule of thumb: if a restoration would span more than a third of a cusp, a crown is often safer.",
+    "Delaying a crown after a root canal raises fracture risk and can make a tooth unrestorable.",
+    "Composite fillings typically last 5 to 10 years; well-made crowns often last 10 to 15 years or longer.",
+    "Onlays and overlays are a middle ground that preserves more natural tooth than a full crown."
+  ],
+  "related": [
+    "how-long-do-dental-crowns-last",
+    "dental-crowns-cost-santa-clarita-prices-guide",
+    "when-is-tooth-extraction-necessary"
+  ],
+  "imageAlt": "Dentist holding a dental crown",
+  "flags": [
+    "Malformed table cell in the comparison table: 'up to 10 615 years with excellent maintenance' (should read '10 to 15 years').",
+    "FAQ 6 answer in the faq data ends with stray CTA text 'Book a Same-Day Crown Consultation'.",
+    "Quotes from online forums are attributed to 'Real patients in our clinic' and 'one patient in our clinic'; also a grammar error ('patients ... raises').",
+    "'A specialist at ValenciaSmile also warns' is an unverifiable attribution; the practice lists no specialist.",
+    "H2 'crown vs filling: a clear clinical comparison' is lowercase.",
+    "Internal link /services/dental-crowns/ does not match the current site routes (nav uses /services/restorative-dentistry/)."
+  ]
+}

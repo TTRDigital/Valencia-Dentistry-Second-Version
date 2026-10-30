@@ -1,0 +1,28 @@
+{
+  "slug": "dental-implants-for-one-missing-tooth",
+  "title": "Are Dental Implants Worth It for One Missing Tooth?",
+  "seoTitle": "Are Dental Implants Worth It for One Missing Tooth?",
+  "seoDescription": "A single implant protects bone and spares neighboring teeth. See when it is worth it, what it costs over time, and how to plan with our Valencia office.",
+  "excerpt": "One gap, three options. Learn why a single implant often offers the best long-term value, when a bridge or partial makes sense, and what delay can cost you.",
+  "category": "implants",
+  "keyTakeaways": [
+    "A single implant preserves bone and avoids reshaping healthy neighboring teeth, unlike a bridge.",
+    "The article cites $3,000 to $6,000 for a single implant with crown in the U.S.; delay can double that.",
+    "Implants may not be the first choice with uncontrolled diabetes, heavy smoking or limited access to maintenance.",
+    "Most implants integrate for three to four months before the final crown; immediate loading suits select cases.",
+    "Ask what the quote includes: CBCT imaging, implant parts, lab work and follow-up visits."
+  ],
+  "related": [
+    "delay-replacing-missing-tooth-risks-costs",
+    "dental-bridge-vs-implant-guide",
+    "dental-implants-cost"
+  ],
+  "imageAlt": "Dentist showing a patient her X-ray",
+  "flags": [
+    "Written in first person as Dr. Moezzi ('a practical guide from Dr Neda Moezzi', 'Patients I see', 'How I approach this decision as a clinician'); confirm she authored it and fix the name format to 'Dr. Neda Moezzi, DDS'.",
+    "FAQ 5 answer in the faq data ends with stray CTA text 'Schedule Your Implant Consultation'; the same CTA appears unlinked in the body.",
+    "Reddit anecdotes ($2,900 root canal and crown, $3,500 to $4,500 implant quotes) are used as evidence.",
+    "Suggests comparing 'warranties' between quotes.",
+    "Citations link only to homepages (cdc.gov, ada.org, ncbi.nlm.nih.gov)."
+  ]
+}
