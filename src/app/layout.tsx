@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
 import { Fraunces, Manrope, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { site } from "../../content/site";
@@ -38,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main id="main" className="flex-1">{children}</main>
         <Footer />
         <MobileBar />
-        <OfferPopup />
+        <Suspense fallback={null}><OfferPopup /></Suspense>
         <RevealObserver />
         <Analytics />
       </body>

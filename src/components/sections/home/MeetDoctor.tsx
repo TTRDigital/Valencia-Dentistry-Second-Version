@@ -1,10 +1,11 @@
-import { doctor } from "../../../../content/site";
+import { getDoctor } from "@/lib/cms";
 import { Section } from "@/components/ui/Section";
 import { Img } from "@/components/ui/Img";
 import { Button, Arrow } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icons";
 
-export function MeetDoctor() {
+export async function MeetDoctor() {
+  const doctor = await getDoctor();
   return (
     <Section tone="ivory-200" labelledBy="doctor-heading">
       <div className="grid items-center gap-12 lg:grid-cols-12">

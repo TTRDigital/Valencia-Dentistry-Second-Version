@@ -41,7 +41,7 @@ export default function ServicesHub() {
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Services</p>
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>Everything your smile needs, under one roof</h1>
-          <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>From a child's first checkup to guided implant surgery, every treatment is planned and delivered by Dr. Neda Moezzi, DDS, in our Valencia office.</p>
+          <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>From a child&apos;s first checkup to guided implant surgery, every treatment is planned and delivered by Dr. Neda Moezzi, DDS, in our Valencia office.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
             <Button href={site.bookingUrl} variant="gold" size="lg">Book Online</Button>
             <Button href={`tel:${site.phoneE164}`} variant="outline" size="lg" icon={<Icon.phone className="h-4 w-4" />}>{site.phone}</Button>

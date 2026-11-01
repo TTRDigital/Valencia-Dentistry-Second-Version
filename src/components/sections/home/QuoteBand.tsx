@@ -1,9 +1,10 @@
-import { testimonials } from "../../../../content/site";
+import { getTestimonials } from "@/lib/cms";
 import { Img } from "@/components/ui/Img";
 import { Stars } from "@/components/ui/Stars";
 
-export function QuoteBand({ id = "kyle-figatner", image = "/images/practice/team-office-wide.png" }: { id?: string; image?: string }) {
-  const t = testimonials.find((x) => x.id === id) ?? testimonials[0];
+export async function QuoteBand({ id = "kyle-figatner", image = "/images/practice/team-office-wide.png" }: { id?: string; image?: string }) {
+  const testimonials = await getTestimonials();
+  const t = testimonials.find((x) => x.id === id || x.id === `testimonial-${id}`) ?? testimonials[0];
   return (
     <section className="relative isolate overflow-hidden bg-ink text-on-dark on-dark" aria-label="Featured patient review">
       <div className="absolute inset-0 -z-10">

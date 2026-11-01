@@ -1,4 +1,5 @@
-import { site, testimonials } from "../../../content/site";
+import { site } from "../../../content/site";
+import { getTestimonials } from "@/lib/cms";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Carousel } from "@/components/ui/Carousel";
 import { Stars } from "@/components/ui/Stars";
@@ -39,8 +40,9 @@ export function GoogleRating({ dark, className = "" }: { dark?: boolean; classNa
   );
 }
 
-export function Reviews({ tone = "ivory-200", heading = "Kind words from our patients", eyebrow = "Reviews", items = testimonials }: { tone?: "ivory" | "ivory-200" | "ink"; heading?: string; eyebrow?: string; items?: Testimonial[] }) {
+export async function Reviews({ tone = "ivory-200", heading = "Kind words from our patients", eyebrow = "Reviews", items }: { tone?: "ivory" | "ivory-200" | "ink"; heading?: string; eyebrow?: string; items?: Testimonial[] }) {
   const dark = tone === "ink";
+  const list = items ?? (await getTestimonials());
   return (
     <Section tone={tone} labelledBy="reviews-heading">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -52,7 +54,7 @@ export function Reviews({ tone = "ivory-200", heading = "Kind words from our pat
       </div>
       <div className="mt-12">
         <Carousel label="Patient reviews" dark={dark}>
-          {items.map((t) => (
+          {list.map((t) => (
             <ReviewCard key={t.id} t={t} dark={dark} />
           ))}
         </Carousel>

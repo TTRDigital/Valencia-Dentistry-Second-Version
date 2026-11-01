@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { about } from "../../../../content/pages";
-import { site, doctor } from "../../../../content/site";
+import { site } from "../../../../content/site";
+import { getDoctor } from "@/lib/cms";
 import { Hero } from "@/components/sections/Hero";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
@@ -18,7 +19,8 @@ import { pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({ title: about.seo.title, description: about.seo.description, path: "/about/" });
 const crumbs = [{ label: "Home", href: "/" }, { label: "Our Practice", href: "/about/" }];
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const doctor = await getDoctor();
   return (
     <>
       <JsonLd data={[personSchema(), breadcrumbSchema(crumbs)]} />

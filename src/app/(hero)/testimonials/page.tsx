@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { testimonials, site } from "../../../../content/site";
+import { site } from "../../../../content/site";
+import { getTestimonials } from "@/lib/cms";
 import { Hero } from "@/components/sections/Hero";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { ReviewCard, GoogleRating } from "@/components/sections/Reviews";
@@ -18,7 +19,8 @@ export const metadata: Metadata = pageMeta({
 });
 const crumbs = [{ label: "Home", href: "/" }, { label: "Reviews", href: "/testimonials/" }];
 
-export default function TestimonialsPage() {
+export default async function TestimonialsPage() {
+  const testimonials = await getTestimonials();
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />

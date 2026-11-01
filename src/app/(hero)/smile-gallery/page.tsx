@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { cases, site } from "../../../../content/site";
+import { site } from "../../../../content/site";
+import { getCases } from "@/lib/cms";
 import { Hero } from "@/components/sections/Hero";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { BeforeAfter } from "@/components/ui/BeforeAfter";
@@ -17,7 +18,8 @@ export const metadata: Metadata = pageMeta({
 });
 const crumbs = [{ label: "Home", href: "/" }, { label: "Smile Gallery", href: "/smile-gallery/" }];
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const cases = await getCases();
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
@@ -30,7 +32,7 @@ export default function GalleryPage() {
         </div>
       </Hero>
       <Section tone="ivory" labelledBy="cases-heading">
-        <SectionHeading eyebrow="Before & after" title="Seven transformations" id="cases-heading" lead="Results vary from person to person. Each plan was designed around the patient's bite, health and goals." />
+        <SectionHeading eyebrow="Before & after" title={`${["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"][cases.length - 1] ?? cases.length} transformations`} id="cases-heading" lead="Results vary from person to person. Each plan was designed around the patient's bite, health and goals." />
         <ul className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {cases.map((c, i) => (
             <li key={c.id} data-reveal="" style={{ "--reveal-delay": `${(i % 3) * 90}ms` } as React.CSSProperties}><BeforeAfter c={c} priority={i < 3} /></li>

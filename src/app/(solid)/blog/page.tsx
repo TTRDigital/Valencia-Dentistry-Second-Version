@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { posts, categoryLabel, formatDate, readingTime } from "@/lib/blog";
+import { categoryLabel, formatDate, readingTime } from "@/lib/blog";
+import { getPosts } from "@/lib/cms";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Img } from "@/components/ui/Img";
 import { Icon } from "@/components/ui/Icons";
@@ -18,7 +19,8 @@ export const metadata: Metadata = pageMeta({
 
 const crumbs = [{ label: "Home", href: "/" }, { label: "Blog", href: "/blog/" }];
 
-export default function BlogIndex() {
+export default async function BlogIndex() {
+  const posts = await getPosts();
   const [featured, ...rest] = posts;
   return (
     <>

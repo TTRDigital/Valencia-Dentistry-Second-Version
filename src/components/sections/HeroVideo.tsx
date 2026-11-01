@@ -22,8 +22,12 @@ export function HeroVideo({ src }: { src: string }) {
       setReady(true);
     };
     const idle = (window as unknown as { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number }).requestIdleCallback;
-    if (document.readyState === "complete") idle ? idle(go, { timeout: 2500 }) : setTimeout(go, 1200);
-    else window.addEventListener("load", () => (idle ? idle(go, { timeout: 2500 }) : setTimeout(go, 1200)), { once: true });
+    const schedule = () => {
+      if (idle) idle(go, { timeout: 2500 });
+      else setTimeout(go, 1200);
+    };
+    if (document.readyState === "complete") schedule();
+    else window.addEventListener("load", schedule, { once: true });
   }, []);
 
   useEffect(() => {

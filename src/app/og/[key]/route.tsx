@@ -69,6 +69,6 @@ export async function GET(_req: Request, { params }: { params: Promise<{ key: st
         </div>
       </div>
     ),
-    { width: 1200, height: 630, fonts: [{ name: "Fraunces", data: fraunces, weight: 300 }, { name: "Manrope", data: manrope, weight: 600 }] },
+    { width: 1200, height: 630, headers: { "Cache-Control": "public, max-age=31536000, immutable" }, fonts: [{ name: "Fraunces", data: fraunces, weight: 300 }, { name: "Manrope", data: manrope, weight: 600 }] },
   );
 }

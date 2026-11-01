@@ -30,11 +30,13 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menus on navigation
-  useEffect(() => {
+  // Close menus on navigation (derived state: no setState inside an effect)
+  const [seenPath, setSeenPath] = useState(pathname);
+  if (seenPath !== pathname) {
+    setSeenPath(pathname);
     setMenuOpen(false);
     setMegaOpen(false);
-  }, [pathname]);
+  }
 
   // Lock body scroll under the mobile menu
   useEffect(() => {

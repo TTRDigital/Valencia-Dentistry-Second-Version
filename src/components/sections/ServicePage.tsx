@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Service, ExtraSection } from "../../../content/types";
-import { services } from "../../../content/services";
-import { site, cases } from "../../../content/site";
+import { services as builtInServices } from "../../../content/services";
+import { site } from "../../../content/site";
 import { Hero } from "./Hero";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Button, Arrow } from "@/components/ui/Button";
@@ -23,7 +23,7 @@ const galleryFor: Record<string, string[]> = {
   "restorative-dentistry": ["case-1", "case-6", "implant-1"],
 };
 
-export function crumbsFor(s: Service): Crumb[] {
+export function crumbsFor(s: Service, services: Service[] = builtInServices): Crumb[] {
   const list: Crumb[] = [{ label: "Home", href: "/" }, { label: "Services", href: "/services/" }];
   if (s.parent) {
     const p = services.find((x) => x.path === s.parent);
@@ -33,8 +33,9 @@ export function crumbsFor(s: Service): Crumb[] {
   return list;
 }
 
-export function ServicePage({ s }: { s: Service }) {
-  const crumbs = crumbsFor(s);
+export function ServicePage({ s, all }: { s: Service; all?: Service[] }) {
+  const services = all ?? builtInServices;
+  const crumbs = crumbsFor(s, services);
   const related = s.related.map((slug) => services.find((x) => x.slug === slug)).filter(Boolean) as Service[];
   const children = services.filter((x) => x.parent === s.path);
   return (

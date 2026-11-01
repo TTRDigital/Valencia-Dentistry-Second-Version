@@ -1,10 +1,12 @@
-import { cases } from "../../../content/site";
+import { getCases } from "@/lib/cms";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { BeforeAfter } from "@/components/ui/BeforeAfter";
 import { Button, Arrow } from "@/components/ui/Button";
 
-export function GalleryPreview({ ids, heading = "Smile gallery", eyebrow = "Real patients, real results", lead = "Drag the handle to compare. Every case is a patient of Dr. Moezzi, shared with permission.", limit = 3 }: { ids?: string[]; heading?: string; eyebrow?: string; lead?: string; limit?: number }) {
-  const list = (ids ? cases.filter((c) => ids.includes(c.id)) : cases).slice(0, limit);
+export async function GalleryPreview({ ids, heading = "Smile gallery", eyebrow = "Real patients, real results", lead = "Drag the handle to compare. Every case is a patient of Dr. Moezzi, shared with permission.", limit = 3 }: { ids?: string[]; heading?: string; eyebrow?: string; lead?: string; limit?: number }) {
+  const cases = await getCases();
+  const picked = ids ? cases.filter((c) => ids.includes(c.id)) : cases;
+  const list = (picked.length ? picked : cases).slice(0, limit);
   return (
     <Section tone="ivory" labelledBy="gallery-heading">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">

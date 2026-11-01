@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import { posts, postBySlug, categoryLabel, withHeadingIds, readingTime, formatDate } from "@/lib/blog";
+import { posts, categoryLabel, withHeadingIds, readingTime, formatDate } from "@/lib/blog";
+import { getPosts } from "@/lib/cms";
 import { doctor, site } from "../../../../content/site";
 import { Section } from "@/components/ui/Section";
 import { Img } from "@/components/ui/Img";
@@ -20,17 +21,18 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps<"/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  const p = postBySlug(slug);
+  const p = (await getPosts()).find((x) => x.slug === slug);
   if (!p) return {};
   return pageMeta({ title: p.seo.title, description: p.seo.description, path: `/${p.slug}/`, type: "article", publishedTime: p.datePublished, modifiedTime: p.dateModified, ogKey: `post--${p.slug}` });
 }
 
 async function Article({ params }: Pick<PageProps<"/[slug]">, "params">) {
   const { slug } = await params;
-  const p = postBySlug(slug);
+  const all = await getPosts();
+  const p = all.find((x) => x.slug === slug);
   if (!p) notFound();
   const { html, toc } = withHeadingIds(p.html);
-  const related = p.related.map(postBySlug).filter(Boolean).slice(0, 3) as typeof posts;
+  const related = p.related.map((r) => all.find((x) => x.slug === r)).filter(Boolean).slice(0, 3) as typeof posts;
   const crumbs = [{ label: "Home", href: "/" }, { label: "Blog", href: "/blog/" }, { label: p.title, href: `/${p.slug}/` }];
   return (
     <>
