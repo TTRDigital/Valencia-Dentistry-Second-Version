@@ -14,9 +14,6 @@ import { CtaBand } from "@/components/sections/Cta";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 
-/** Every article is fully prerendered: no streaming fallback, no layout shift. */
-export const ensureStatic = "navigation";
-
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
 }
@@ -63,9 +60,9 @@ export default async function Page({ params }: PageProps<"/[slug]">) {
                 {toc.length > 2 && (
                   <nav aria-labelledby="toc-heading" className="card p-6">
                     <p id="toc-heading" className="eyebrow">In this article</p>
-                    <ol className="mt-3 space-y-2 text-sm">
+                    <ol className="mt-2 text-sm">
                       {toc.map((t, i) => (
-                        <li key={t.id} className="flex gap-3"><span className="tabular text-gold-700">{String(i + 1).padStart(2, "0")}</span><a href={`#${t.id}`} className="hover:text-slate-600 hover:underline underline-offset-4">{t.text}</a></li>
+                        <li key={t.id} className="flex gap-3"><span className="tabular pt-2.5 text-gold-700">{String(i + 1).padStart(2, "0")}</span><a href={`#${t.id}`} className="flex min-h-11 items-center hover:text-slate-600 hover:underline underline-offset-4">{t.text}</a></li>
                       ))}
                     </ol>
                   </nav>
@@ -101,7 +98,7 @@ export default async function Page({ params }: PageProps<"/[slug]">) {
                   <p className="eyebrow">About the author</p>
                   <h2 id="author" className="mt-1 text-2xl">{doctor.name}</h2>
                   <p className="mt-2 text-sm text-muted">{doctor.bio[0]} {doctor.bio[2]}</p>
-                  <Link href="/about/" className="text-link mt-3 text-sm">Read her story <Arrow /></Link>
+                  <Link href="/about/" className="text-link mt-3 min-h-11 text-sm">Read her story <Arrow /></Link>
                 </div>
               </section>
               <p className="mt-8 text-xs text-muted">This article is general information, not medical advice. For guidance about your own teeth, please book a consultation.</p>

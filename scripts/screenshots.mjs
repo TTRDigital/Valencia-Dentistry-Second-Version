@@ -4,7 +4,8 @@
  *
  *   npm run shots -- http://localhost:3000 [out-dir]
  */
-import { chromium } from "playwright";
+import { createRequire } from "node:module";
+const { chromium } = createRequire(import.meta.url)("playwright");
 import { mkdirSync } from "node:fs";
 import { join } from "node:path";
 
@@ -34,9 +35,12 @@ for (const w of WIDTHS) {
         const r = el.getBoundingClientRect();
         if (r.width === 0 || r.height === 0) return;
         const cs = getComputedStyle(el);
-        if (cs.visibility === "hidden" || cs.display === "none") return;
+        if (cs.visibility === "hidden" || cs.display === "none" || el.closest("[inert], [aria-hidden='true']")) return;
+        if (el.tagName === "INPUT" && el.closest("label")) return; // the label is the target
         const inline = cs.display === "inline" && el.closest("p, li, td, span, figcaption");
-        if (!inline && (r.height < 44 || r.width < 44) && !el.closest("[data-reveal]:not(.is-visible)")) small.push(`${el.tagName.toLowerCase()} ${Math.round(r.width)}×${Math.round(r.height)} "${(el.textContent || el.getAttribute("aria-label") || "").trim().slice(0, 30)}"`);
+        // 44px minimum height for every control; text links may be narrower than 44px but never under 24px (WCAG 2.5.8).
+        const textLink = el.tagName === "A" && !el.querySelector("img, svg") && (el.textContent || "").trim().length > 0;
+        if (!inline && (r.height < 43.5 || r.width < (textLink ? 24 : 44))) small.push(`${el.tagName.toLowerCase()} ${Math.round(r.width)}×${Math.round(r.height)} "${(el.textContent || el.getAttribute("aria-label") || "").trim().slice(0, 30)}"`);
       });
       return { scrollW, small: small.slice(0, 8) };
     });

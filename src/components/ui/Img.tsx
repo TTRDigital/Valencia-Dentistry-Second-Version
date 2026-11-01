@@ -10,9 +10,14 @@ type Props = Omit<ImageProps, "src" | "width" | "height" | "placeholder" | "blur
 };
 
 /** next/image with width, height and a blur placeholder from content/images.json. */
+/**
+ * The blur-up placeholder is only used for priority (above-the-fold) images:
+ * every placeholder is a separate SVG document the browser has to parse and
+ * rasterise before first paint, and lazy images below the fold never show it.
+ */
 export function Img({ src, alt, fill, ...rest }: Props) {
   const m = meta[src];
-  const blur = m ? { placeholder: "blur" as const, blurDataURL: m.blur } : {};
+  const blur = m && rest.priority ? { placeholder: "blur" as const, blurDataURL: m.blur } : {};
   if (fill) return <Image src={src} alt={alt} fill {...blur} {...rest} />;
   return <Image src={src} alt={alt} width={m?.w ?? 1200} height={m?.h ?? 800} {...blur} {...rest} />;
 }

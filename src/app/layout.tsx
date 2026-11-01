@@ -9,10 +9,10 @@ import { RevealObserver } from "@/components/ui/Reveal";
 import { Analytics } from "@/components/layout/Analytics";
 import { OfferPopup } from "@/components/layout/OfferPopup";
 
+// Static instances (not the variable font): four small files instead of two 120–150 KB ones on the LCP path.
 const fraunces = Fraunces({
   subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
-  weight: "variable",
+  weight: ["300", "400"],
   style: ["normal", "italic"],
   variable: "--font-fraunces",
   display: "swap",

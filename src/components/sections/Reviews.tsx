@@ -29,7 +29,7 @@ export function ReviewCard({ t, dark }: { t: Testimonial; dark?: boolean }) {
 
 export function GoogleRating({ dark, className = "" }: { dark?: boolean; className?: string }) {
   return (
-    <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-3 ${className}`} aria-label={`${site.google.rating.toFixed(1)} stars, ${site.google.reviewCount}+ Google reviews (opens Google Maps)`}>
+    <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className={`inline-flex min-h-11 items-center gap-3 ${className}`} aria-label={`${site.google.rating.toFixed(1)} stars, ${site.google.reviewCount}+ Google reviews (opens Google Maps)`}>
       <Icon.google className="h-6 w-6" />
       <span className="font-display text-2xl leading-none">{site.google.rating.toFixed(1)}</span>
       <span className="flex flex-col leading-tight">

@@ -42,13 +42,13 @@ Overall: fewer elements per screen, more air (section padding 120–160px deskto
 | `--on-dark-muted` | #B9C2CF | secondary text on ink (8.4:1) |
 
 ## Type
-- Display: **Fraunces** (variable, optical size, weight 300–400, "soft" axis) for H1/H2/pull quotes — proposed over Bodoni Moda because its lighter weights stay legible on phones and it self-hosts through next/font. Alternate: **Cormorant Garamond** 300/400 (also wired in the style guide for comparison).
+- Display: **Fraunces** static instances (Light 300 + Light Italic for headings and quotes, Regular 400 for H3) for H1/H2/pull quotes — proposed over Bodoni Moda because its lighter weights stay legible on phones and it self-hosts through next/font. The variable font with its optical-size and "soft" axes was tried first and dropped: its two preloaded files weighed 270 KB and sat on the LCP path. Alternate: **Cormorant Garamond** 300/400 (also wired in the style guide for comparison).
 - Body/UI: **Manrope** 400/500/600.
 - Eyebrows: Manrope 600, 0.72rem, letter-spacing 0.18em, uppercase, gold-700.
 - Fluid sizes with clamp(): H1 2.6rem→4.6rem, H2 2rem→3.2rem, H3 1.25rem→1.5rem, body 1rem→1.0625rem.
 - Gold 48px × 1px divider under every section heading.
 
 ## Motion
-- Reveal: opacity 0→1, translateY 24px→0, 900ms, cubic-bezier(.2,.7,.2,1), staggered 80ms, via IntersectionObserver (data-reveal). Off under prefers-reduced-motion.
+- Reveal: opacity 0→1, translateY 24px→0, 900ms, cubic-bezier(.2,.7,.2,1), staggered 80ms, via IntersectionObserver + Web Animations API (data-reveal). Hero content uses a pure CSS keyframe instead (visible without JavaScript, counted by Chrome as the LCP). Off under prefers-reduced-motion.
 - Images: hover scale 1→1.04 over 1.2s. Hero drift 24s.
 - Carousels: CSS scroll-snap, buttons + keyboard, no library.

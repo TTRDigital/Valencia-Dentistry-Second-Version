@@ -35,7 +35,7 @@ export function Affordable() {
               <div>
                 <h3 className="text-xl">Flexible financing</h3>
                 <p className="mt-2 text-sm text-muted">Monthly payment plans through third-party financing partners help spread the cost of larger treatment such as implants, veneers or All-on-4. Ask our team which option fits your budget.</p>
-                <Link href="/contact/" className="text-link mt-4 text-sm">Ask about payment options <Icon.arrowRight className="h-4 w-4" /></Link>
+                <Link href="/contact/" className="text-link mt-3 min-h-11 text-sm">Ask about payment options <Icon.arrowRight className="h-4 w-4" /></Link>
               </div>
             </div>
           </div>

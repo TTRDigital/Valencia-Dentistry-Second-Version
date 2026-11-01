@@ -17,7 +17,7 @@ export function Visit({ heading = "Visit us in Valencia", eyebrow = "Find us" }:
               <dd>
                 <span className="font-semibold text-ink-700">{site.address.street}</span><br />
                 {site.address.city} ({site.address.neighborhood}), {site.address.region} {site.address.postalCode}<br />
-                <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-link mt-1 text-sm">Get directions <Icon.arrowRight className="h-4 w-4" /></a>
+                <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-link mt-1 min-h-11 text-sm">Get directions <Icon.arrowRight className="h-4 w-4" /></a>
               </dd>
             </div>
             <div className="flex gap-4">
@@ -38,8 +38,8 @@ export function Visit({ heading = "Visit us in Valencia", eyebrow = "Find us" }:
               <dt className="sr-only">Phone and email</dt>
               <Icon.phone className="mt-1 h-5 w-5 shrink-0 text-gold-700" />
               <dd>
-                <a href={`tel:${site.phoneE164}`} className="font-semibold text-ink-700 hover:underline underline-offset-4">{site.phone}</a><br />
-                <a href={`mailto:${site.email}`} className="hover:underline underline-offset-4">{site.email}</a>
+                <a href={`tel:${site.phoneE164}`} className="inline-flex min-h-11 items-center font-semibold text-ink-700 hover:underline underline-offset-4">{site.phone}</a><br />
+                <a href={`mailto:${site.email}`} className="inline-flex min-h-11 items-center hover:underline underline-offset-4">{site.email}</a>
               </dd>
             </div>
           </dl>

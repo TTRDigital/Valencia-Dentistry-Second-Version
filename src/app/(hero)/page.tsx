@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { site } from "../../../content/site";
 import { Hero } from "@/components/sections/Hero";
 import { Pillars } from "@/components/sections/home/Pillars";
@@ -52,16 +53,17 @@ export default function HomePage() {
           <li className="flex items-center gap-3"><Icon.sparkle className="h-6 w-6 text-gold" /><span className="text-sm"><span className="block font-semibold">{site.offer.title}</span><span className="text-on-dark-muted">Exam &amp; X-rays for new patients</span></span></li>
         </ul>
       </Hero>
+      {/* Each below-the-fold section is its own Suspense boundary so React hydrates them in small, interruptible tasks. */}
       <Pillars />
-      <Reviews />
+      <Suspense fallback={null}><Reviews /></Suspense>
       <CosmeticEditorial />
       <ServiceGrid />
       <CareFirst />
-      <MeetDoctor />
+      <Suspense fallback={null}><MeetDoctor /></Suspense>
       <TechnologyRow />
-      <GalleryPreview />
+      <Suspense fallback={null}><GalleryPreview /></Suspense>
       <Affordable />
-      <QuoteBand />
+      <Suspense fallback={null}><QuoteBand /></Suspense>
       <Section tone="ivory" labelledBy="faq-heading">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4"><SectionHeading eyebrow="Good to know" title="Questions, answered" id="faq-heading" lead="A few things new patients ask before their first visit." /></div>

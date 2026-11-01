@@ -2,21 +2,21 @@ import { NextResponse, type NextRequest } from "next/server";
 import { routes } from "./lib/routes";
 
 /**
- * Unknown URLs under the dynamic segments (/<slug>/ for blog posts,
- * /services/<…>/) are rewritten to the built-in not-found route so they
- * answer with a real 404 status instead of a streamed 200.
+ * Unknown URLs under the dynamic segments (/<slug>/ for blog posts and
+ * /services/<…>/) are rewritten to a path no route matches, so they get the
+ * branded global 404 with a real 404 status instead of Next's bare error shell.
  */
 const known = new Set(routes);
 
 export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const path = pathname.endsWith("/") ? pathname : `${pathname}/`;
-  if (path === "/not-found-page/") return NextResponse.rewrite(new URL("/not-found-page/", req.url), { status: 404 });
-  if (!known.has(path)) return NextResponse.rewrite(new URL("/not-found-page/", req.url), { status: 404 });
+  const segments = path.split("/").filter(Boolean);
+  const dynamic = segments.length === 1 || segments[0] === "services";
+  if (dynamic && !known.has(path)) return NextResponse.rewrite(new URL("/_/not-found/", req.url));
   return NextResponse.next();
 }
 
 export const config = {
-  // Single-segment paths (posts + static pages) and everything under /services/
-  matcher: ["/((?!_next|api|og|images|fonts|video|cms|icon|apple-icon|favicon|manifest|robots|sitemap).*)"],
+  matcher: ["/((?!_next|api|og|images|fonts|video|cms|icon|apple-icon|favicon|manifest|robots|sitemap|_).*)"],
 };

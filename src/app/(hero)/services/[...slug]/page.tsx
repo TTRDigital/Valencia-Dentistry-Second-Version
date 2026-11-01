@@ -5,9 +5,6 @@ import { getServices } from "@/lib/cms";
 import { ServicePage } from "@/components/sections/ServicePage";
 import { pageMeta } from "@/lib/seo";
 
-/** Every service page is fully prerendered: no streaming fallback, no layout shift. */
-export const ensureStatic = "navigation";
-
 export function generateStaticParams() {
   return services.filter((s) => s.path.startsWith("/services/")).map((s) => ({ slug: s.path.replace(/^\/services\/|\/$/g, "").split("/") }));
 }

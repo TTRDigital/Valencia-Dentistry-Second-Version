@@ -73,7 +73,7 @@ npm run audit -- http://localhost:3000      # launch checks (see scripts/audit.t
 npm run shots -- http://localhost:3000 out   # screenshots at 390/768/1024/1440/1920 + overflow/tap-target check
 ```
 
-Lighthouse (mobile) was run on Home, a service page and a blog post against a production build; see the final report in the pull request / `docs/qa-report.md`.
+Lighthouse (mobile), the launch audit and the screenshot QA were run against a production build; results and caveats are in `docs/qa-report.md`.
 
 ## Editing content without the CMS
 
