@@ -23,7 +23,7 @@ import { homeFaqs } from "../../../content/pages";
 
 export const metadata: Metadata = pageMeta({
   title: "Dentist in Valencia, Santa Clarita | Valencia Smile Expert",
-  description: "Holistic, one-on-one dentistry in Valencia with Dr. Neda Moezzi, DDS. Implants, veneers, Invisalign, same-day crowns. $59 new patient exam & X-rays. Book online.",
+  description: "Holistic, one-on-one dentistry in Valencia with Dr. Neda Moezzi, DDS. Implants, veneers, Invisalign, same-day crowns. $59 new patient exam & X-rays.",
   path: "/",
   ogKey: "home",
 });

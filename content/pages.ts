@@ -1,4 +1,4 @@
-import type { Faq } from "./types";
+import type { Faq } from "./types.ts";
 
 /** Home page FAQs (rewritten from the current site; the location answer corrected to Valencia). */
 export const homeFaqs: Faq[] = [
@@ -62,7 +62,7 @@ export const emergency = {
 };
 
 export const offer = {
-  seo: { title: "$59 New Patient Special: Exam & X-Rays | Valencia Smile Expert", description: "New to Valencia Smile Expert? Start with a complete exam and digital X-rays for $59, plus unhurried time with Dr. Neda Moezzi, DDS. Book online today." },
+  seo: { title: "$59 New Patient Special: Exam & X-Rays in Valencia, CA", description: "New to Valencia Smile Expert? Start with a complete exam and digital X-rays for $59, plus unhurried time with Dr. Neda Moezzi, DDS. Book online today." },
   hero: { eyebrow: "New patient special", title: "Your first visit, $59", intro: "A complete exam, digital X-rays and a real conversation with Dr. Moezzi about your goals. No pressure and no surprises." },
   includes: ["Comprehensive exam with Dr. Moezzi", "Digital X-rays (low radiation)", "Oral cancer screening", "A written treatment plan with clear priorities", "Insurance benefits check before any treatment"],
   steps: [

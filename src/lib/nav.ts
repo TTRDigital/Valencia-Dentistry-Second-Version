@@ -1,4 +1,4 @@
-import { serviceCategories } from "../../content/site";
+import { serviceCategories } from "../../content/site.ts";
 
 export type NavLink = { label: string; href: string; description?: string; image?: string; imageAlt?: string };
 export type NavGroup = { label: string; href: string; children?: NavLink[]; featured?: NavLink[] };

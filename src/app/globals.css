@@ -183,7 +183,7 @@ h3, .h3 { font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); line-height: 1.25; 
 }
 
 /* ---------- Prose (blog & legal) ---------- */
-.prose-v { font-size: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem); line-height: 1.75; }
+.prose-v { font-size: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem); line-height: 1.75; overflow-wrap: anywhere; min-width: 0; }
 .prose-v > * + * { margin-top: 1.25em; }
 .prose-v h2 { font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.25rem); margin-top: 2.2em; scroll-margin-top: 110px; }
 .prose-v h3 { font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem); margin-top: 1.8em; scroll-margin-top: 110px; }
@@ -198,7 +198,7 @@ h3, .h3 { font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); line-height: 1.25; 
 .prose-v li::marker { color: var(--gold-700); }
 .prose-v strong { font-weight: 600; color: var(--ink-700); }
 .prose-v blockquote { border-left: 2px solid var(--gold); padding-left: 1.25rem; font-family: var(--font-serif); font-style: italic; font-size: 1.2em; color: var(--ink-700); }
-.prose-v table { width: 100%; border-collapse: collapse; font-size: 0.95em; display: block; overflow-x: auto; }
+.prose-v table { width: 100%; max-width: 100%; border-collapse: collapse; font-size: 0.95em; display: block; overflow-x: auto; }
 .prose-v thead th { text-align: left; font-weight: 600; color: var(--ink-700); background: var(--ivory-200); }
 .prose-v th, .prose-v td { padding: 0.7rem 0.9rem; border: 1px solid var(--sand); vertical-align: top; min-width: 9rem; }
 .prose-v tbody tr:nth-child(even) { background: #fff; }

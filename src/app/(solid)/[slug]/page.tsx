@@ -53,8 +53,8 @@ async function Article({ params }: Pick<PageProps<"/[slug]">, "params">) {
         </Section>
 
         <Section tone="ivory" as="div" size="sm" className="pt-0">
-          <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12">
-            <aside className="lg:col-span-4 lg:order-2">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-12">
+            <aside className="min-w-0 lg:col-span-4 lg:order-2">
               <div className="lg:sticky lg:top-32 space-y-6">
                 {toc.length > 2 && (
                   <nav aria-labelledby="toc-heading" className="card p-6">
@@ -74,7 +74,7 @@ async function Article({ params }: Pick<PageProps<"/[slug]">, "params">) {
                 </div>
               </div>
             </aside>
-            <div className="lg:col-span-8 lg:order-1">
+            <div className="min-w-0 lg:col-span-8 lg:order-1">
               {p.keyTakeaways.length > 0 && (
                 <aside className="rounded-2xl border border-gold/60 bg-white p-7" aria-labelledby="takeaways">
                   <p id="takeaways" className="eyebrow">Key takeaways</p>

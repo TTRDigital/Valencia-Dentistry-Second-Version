@@ -1,4 +1,4 @@
-import type { BeforeAfterCase, TechKey, Testimonial } from "./types";
+import type { BeforeAfterCase, TechKey, Testimonial } from "./types.ts";
 
 /** Practice facts, verified against valenciasmileexpert.com on 2026-10-30. */
 export const site = {

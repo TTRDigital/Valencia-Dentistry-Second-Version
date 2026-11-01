@@ -16,8 +16,8 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Dental Services in Valencia, Santa Clarita | Valencia Smile Expert",
-  description: "Preventive, family, cosmetic, restorative, implant and holistic dentistry in one Valencia office, every visit led by Dr. Neda Moezzi, DDS. Same-day care available.",
+  title: "Dental Services in Valencia, CA | Valencia Smile Expert",
+  description: "Preventive, family, cosmetic, restorative, implant and holistic dentistry in one Valencia office, every visit led by Dr. Neda Moezzi, DDS.",
   path: "/services/",
 });
 

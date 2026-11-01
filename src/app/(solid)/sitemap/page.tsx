@@ -5,6 +5,7 @@ import { posts } from "@/lib/blog";
 import { footerNav } from "@/lib/nav";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { pageMeta } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMeta({ title: "Sitemap | Valencia Smile Expert", description: "Every page on the Valencia Smile Expert website: services, about, reviews, blog articles and contact.", path: "/sitemap/" });
 
@@ -16,6 +17,7 @@ export default function HtmlSitemap() {
   ];
   return (
     <Section tone="ivory" size="sm" className="pt-10 lg:pt-14">
+      <JsonLd data={breadcrumbSchema([{ label: "Home", href: "/" }, { label: "Sitemap", href: "/sitemap/" }])} />
       <SectionHeading eyebrow="Sitemap" title="Every page on the site" as="h1" />
       <div className="mt-12 grid gap-12 lg:grid-cols-3">
         {groups.map((g) => (

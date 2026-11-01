@@ -11,7 +11,8 @@ const known = new Set(routes);
 export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const path = pathname.endsWith("/") ? pathname : `${pathname}/`;
-  if (!known.has(path)) return NextResponse.rewrite(new URL("/_not-found", req.url), { status: 404 });
+  if (path === "/not-found-page/") return NextResponse.rewrite(new URL("/not-found-page/", req.url), { status: 404 });
+  if (!known.has(path)) return NextResponse.rewrite(new URL("/not-found-page/", req.url), { status: 404 });
   return NextResponse.next();
 }
 

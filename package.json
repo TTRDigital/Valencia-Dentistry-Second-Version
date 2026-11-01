@@ -6,7 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "images": "node --experimental-strip-types --no-warnings scripts/images.ts",
+    "favicons": "node --experimental-strip-types --no-warnings scripts/favicons.ts",
+    "build-content": "node --experimental-strip-types --no-warnings scripts/build-content.ts",
+    "build-seed": "node --experimental-strip-types --no-warnings scripts/build-seed.ts",
+    "seed": "node --experimental-strip-types --no-warnings scripts/seed.ts",
+    "audit": "node --experimental-strip-types --no-warnings scripts/audit.ts",
+    "shots": "node scripts/screenshots.mjs"
   },
   "dependencies": {
     "@sanity/vision": "^6.21.0",

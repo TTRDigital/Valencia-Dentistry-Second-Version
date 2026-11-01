@@ -26,7 +26,6 @@ export const metadata: Metadata = {
   applicationName: site.name,
   openGraph: { type: "website", siteName: site.name, locale: "en_US" },
   twitter: { card: "summary_large_image" },
-  robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
 };
 
 export const viewport: Viewport = { themeColor: "#112740", width: "device-width", initialScale: 1 };

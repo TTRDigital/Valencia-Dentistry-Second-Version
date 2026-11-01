@@ -12,8 +12,8 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Request an Appointment | Valencia Smile Expert, Santa Clarita",
-  description: "Request a dental appointment with Dr. Neda Moezzi in Valencia. Book online instantly or send your preferred time and we will confirm. New patients: $59 exam & X-rays.",
+  title: "Request an Appointment | Valencia Smile Expert",
+  description: "Request a dental appointment with Dr. Neda Moezzi in Valencia. Book online instantly or send your preferred time and we will confirm it by phone.",
   path: "/appointment/",
 });
 const crumbs = [{ label: "Home", href: "/" }, { label: "Appointment", href: "/appointment/" }];
