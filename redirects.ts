@@ -6,7 +6,6 @@
 type Rule = { source: string; destination: string };
 
 const rules: Rule[] = [
-  { source: "/blog", destination: "/blog/" },
   { source: "/blogs/:path*", destination: "/blog/" },
   { source: "/category/:path*", destination: "/blog/" },
   { source: "/author/:path*", destination: "/about/" },

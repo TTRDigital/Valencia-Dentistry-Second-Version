@@ -45,7 +45,22 @@ function cleanHtml(html: string, slug: string) {
   });
   root.find("h2, h3, h4").each((_, el) => { if (!$(el).text().replace(/ /g, "").trim()) $(el).remove(); });
   // Booking buttons / CTAs → our booking link, plain text CTAs kept as links
-  root.find("a[href*='getweave']").attr("href", BOOK);
+  root.find("a[href*='getweave']").each((_, el) => {
+    $(el).attr("href", BOOK).attr("target", "_blank").attr("rel", "noopener noreferrer").attr("class", "btn btn-outline btn-sm");
+    const parent = $(el).parent();
+    if (parent.is("p") && parent.text().trim() === $(el).text().trim()) parent.attr("class", "cta-row");
+  });
+  // Anchors without href (leftover button markup): drop CTA duplicates, unwrap the rest
+  root.find("a:not([href])").each((_, el) => {
+    const t = $(el).text().trim();
+    if (CTA_TAIL.test(" " + t) || /consultation|schedule|book|request/i.test(t)) $(el).remove();
+    else $(el).replaceWith($(el).html() ?? "");
+  });
+  // External links open in a new tab
+  root.find("a[href^='http']").each((_, el) => {
+    const h = $(el).attr("href") ?? "";
+    if (!/valenciasmileexpert\.com/.test(h)) $(el).attr("target", "_blank").attr("rel", "noopener noreferrer");
+  });
   // Table fixes
   root.find("td, th").each((_, el) => {
     let h = $(el).html() ?? "";
