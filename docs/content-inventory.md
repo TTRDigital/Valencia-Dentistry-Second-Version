@@ -1,8 +1,8 @@
 # Content inventory — valenciasmileexpert.com (crawled 2026-10-30)
 
-56 URLs from `sitemap_index.xml`, all answered 200. Raw HTML and extracted JSON live in the build scratchpad; the facts below are what the new site is built from.
+56 URLs from `sitemap_index.xml` (26 pages, 30 blog posts), all answered 200. Raw HTML and extracted JSON live in the build scratchpad; the facts below are what the new site is built from.
 
-## Pages (25 incl. home)
+## Pages (26 incl. home)
 
 | Path | Current title | Words | FAQs | Notes / gaps |
 |---|---|---|---|---|
@@ -33,9 +33,9 @@
 | /privacy-policy/ | Privacy Policy | 1012 | 0 | Migrated as-is (legal). |
 | /terms-and-services/ | terms and services | 920 | 0 | Migrated as-is (legal). |
 
-## Blog (31 posts, all at the site root, author "Dr Neda Moezzi")
+## Blog (30 posts, all at the site root, author "Dr Neda Moezzi")
 
-All 31 have 950–1,760 words, 2–8 FAQs with FAQPage schema, most with 1–3 HTML tables, a featured image, published Apr–Jul 2026. 20 of 31 have **no meta description**; several titles exceed 60 characters (up to 124). There is no blog index page on the current site (breadcrumbs say "Blogs" but link nowhere). Comments form on every post (dropped).
+All 30 have 950–1,760 words, 2–8 FAQs with FAQPage schema, most with 1–3 HTML tables, a featured image, published Apr–Jul 2026. 20 of 30 have **no meta description**; several titles exceed 60 characters (up to 124). There is no blog index page on the current site (breadcrumbs say "Blogs" but link nowhere). Comments form on every post (dropped).
 
 ## Assets found (practice's own)
 

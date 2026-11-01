@@ -12,7 +12,7 @@
   --ivory-200: #f2ece1;
   --sand: #e9e1d2;
   --gold: #d9be8c;
-  --gold-700: #a8894f;
+  --gold-700: #856a33;
   --text: #1c2a3a;
   --muted: #56657a;
   --on-dark: #f3eee4;
@@ -168,7 +168,12 @@ h3, .h3 { font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); line-height: 1.25; 
 /* ---------- Reveal on scroll ---------- */
 /* Hidden start state only when a script can reveal it and motion is allowed. */
 @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
-  [data-reveal]:not(.is-visible) { opacity: 0; transform: translateY(24px); }
+  [data-reveal]:not(.is-visible):not(.hero-rise *) { opacity: 0; transform: translateY(24px); }
+}
+/* Above-the-fold (hero) content rises with a pure CSS animation: visible without JavaScript, no LCP delay. */
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-rise [data-reveal] { animation: rise 0.8s var(--ease-out) both; animation-delay: var(--reveal-delay, 0ms); }
 }
 
 /* Hero drift (poster fallback when no video) */

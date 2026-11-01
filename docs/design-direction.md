@@ -35,7 +35,7 @@ Overall: fewer elements per screen, more air (section padding 120–160px deskto
 | `--ivory-200` | #F2ECE1 | alternate band |
 | `--sand` | #E9E1D2 | hairlines on light |
 | `--gold` | #D9BE8C | dividers, numerals, accents (decorative only) |
-| `--gold-700` | #A8894F | gold used for text/eyebrows on ivory (4.6:1) |
+| `--gold-700` | #856A33 | gold used for text/eyebrows on ivory (4.8:1) and white (5.1:1) |
 | `--text` | #1C2A3A | body text on ivory (12.9:1) |
 | `--muted` | #56657A | secondary text (5.9:1 on ivory) |
 | `--on-dark` | #F3EEE4 | text on ink |

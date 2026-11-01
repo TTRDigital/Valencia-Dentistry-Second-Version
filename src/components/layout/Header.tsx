@@ -113,7 +113,7 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
 
         {/* Main bar */}
         <div className="container-x flex h-16 items-center justify-between lg:h-[76px]">
-          <Link href="/" className="shrink-0" aria-label={`${site.name} home`}>
+          <Link href="/" className="shrink-0" aria-label={site.name}>
             <Logo tone={light ? "light" : "dark"} className="h-8 w-auto sm:h-9" />
           </Link>
 

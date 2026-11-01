@@ -26,7 +26,7 @@ const colors = [
   ["--ivory-200", "#F2ECE1", "Alternate band"],
   ["--sand", "#E9E1D2", "Hairlines"],
   ["--gold", "#D9BE8C", "Dividers, accents (decorative)"],
-  ["--gold-700", "#A8894F", "Eyebrows, gold text (AA on ivory)"],
+  ["--gold-700", "#856A33", "Eyebrows, gold text (AA on ivory and white)"],
   ["--text", "#1C2A3A", "Body text"],
   ["--muted", "#56657A", "Secondary text"],
   ["--on-dark", "#F3EEE4", "Text on ink"],

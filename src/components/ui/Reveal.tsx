@@ -38,10 +38,10 @@ export function RevealObserver() {
       },
       { rootMargin: "0px 0px -8% 0px", threshold: 0.06 },
     );
-    const observe = (root: ParentNode) => root.querySelectorAll<HTMLElement>("[data-reveal]").forEach((el) => !seen.has(el) && io.observe(el));
+    const observe = (root: ParentNode) => root.querySelectorAll<HTMLElement>("[data-reveal]").forEach((el) => !seen.has(el) && !el.closest(".hero-rise") && io.observe(el));
     observe(document);
     const mo = new MutationObserver((muts) => {
-      for (const m of muts) m.addedNodes.forEach((n) => n instanceof HTMLElement && (n.matches("[data-reveal]") ? io.observe(n) : observe(n)));
+      for (const m of muts) m.addedNodes.forEach((n) => n instanceof HTMLElement && (n.matches("[data-reveal]") ? !n.closest(".hero-rise") && io.observe(n) : observe(n)));
     });
     mo.observe(document.body, { childList: true, subtree: true });
     return () => {

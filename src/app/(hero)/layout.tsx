@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/Header";
 export default function HeroLayout({ children }: LayoutProps<"/">) {
   return (
     <>
-      <Suspense fallback={<div className="h-16 lg:h-[116px]" aria-hidden="true" />}><Header variant="transparent" /></Suspense>
+      <Suspense fallback={null}><Header variant="transparent" /></Suspense>
       {children}
     </>
   );

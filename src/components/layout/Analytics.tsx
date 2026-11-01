@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { site } from "../../../content/site";
 
 /**
- * Google Tag Manager, loaded after the page is idle or on the first
- * interaction (never in the critical path). Consent Mode v2 defaults are set
+ * Google Tag Manager, loaded on the first interaction (scroll, tap, key) or
+ * after 12 seconds of idle time, never in the critical path. Consent Mode v2 defaults are set
  * before the container loads: analytics allowed, ads/personalisation denied,
  * so GTM tags can be gated on consent later without changing the site.
  * Set NEXT_PUBLIC_GTM_ID to override the container; empty disables it.
@@ -20,7 +20,12 @@ export function Analytics() {
       loaded = true;
       const w = window as unknown as { dataLayer: unknown[] };
       w.dataLayer = w.dataLayer || [];
-      w.dataLayer.push(["consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "granted", wait_for_update: 500 }]);
+      // Consent Mode v2 defaults (gtag expects an `arguments` object, not an array)
+      function gtag(..._args: unknown[]) {
+        // eslint-disable-next-line prefer-rest-params
+        w.dataLayer.push(arguments);
+      }
+      gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "granted", wait_for_update: 500 });
       w.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
       const s = document.createElement("script");
       s.async = true;
@@ -30,11 +35,14 @@ export function Analytics() {
     };
     const events = ["scroll", "pointerdown", "keydown", "touchstart"];
     events.forEach((e) => window.addEventListener(e, load, { passive: true, once: true }));
-    const idle = (window as unknown as { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number }).requestIdleCallback;
-    const t = idle ? idle(load, { timeout: 6000 }) : window.setTimeout(load, 6000);
+    // Fallback for visitors who never interact: load once the page has been idle for a while.
+    const t = window.setTimeout(() => {
+      if (document.visibilityState === "visible") load();
+      else document.addEventListener("visibilitychange", load, { once: true });
+    }, 12_000);
     return () => {
       events.forEach((e) => window.removeEventListener(e, load));
-      if (!idle) window.clearTimeout(t as number);
+      window.clearTimeout(t);
     };
   }, []);
   return null;

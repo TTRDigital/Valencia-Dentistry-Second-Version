@@ -34,7 +34,7 @@ export function Hero({
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/25" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/20 to-transparent" aria-hidden="true" />
       </div>
-      <div className={`container-x w-full ${compact ? "pb-14 pt-40 lg:pb-20 lg:pt-48" : "pb-16 pt-44 lg:pb-24 lg:pt-56"} ${align === "center" ? "text-center" : ""}`}>
+      <div className={`container-x hero-rise w-full ${compact ? "pb-14 pt-40 lg:pb-20 lg:pt-48" : "pb-16 pt-44 lg:pb-24 lg:pt-56"} ${align === "center" ? "text-center" : ""}`}>
         {children}
       </div>
     </section>
