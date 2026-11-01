@@ -171,7 +171,8 @@ h3, .h3 { font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); line-height: 1.25; 
   [data-reveal]:not(.is-visible):not(.hero-rise *) { opacity: 0; transform: translateY(24px); }
 }
 /* Above-the-fold (hero) content rises with a pure CSS animation: visible without JavaScript, no LCP delay. */
-@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+/* Starts at 0.01, not 0: Chrome drops opacity-0 text from LCP candidates. */
+@keyframes rise { from { opacity: 0.01; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: no-preference) {
   .hero-rise [data-reveal] { animation: rise 0.8s var(--ease-out) both; animation-delay: var(--reveal-delay, 0ms); }
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { posts, categoryLabel, withHeadingIds, readingTime, formatDate } from "@/lib/blog";
 import { getPosts } from "@/lib/cms";
@@ -15,6 +14,9 @@ import { CtaBand } from "@/components/sections/Cta";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 
+/** Every article is fully prerendered: no streaming fallback, no layout shift. */
+export const ensureStatic = "navigation";
+
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
 }
@@ -26,7 +28,7 @@ export async function generateMetadata({ params }: PageProps<"/[slug]">): Promis
   return pageMeta({ title: p.seo.title, description: p.seo.description, path: `/${p.slug}/`, type: "article", publishedTime: p.datePublished, modifiedTime: p.dateModified, ogKey: `post--${p.slug}` });
 }
 
-async function Article({ params }: Pick<PageProps<"/[slug]">, "params">) {
+export default async function Page({ params }: PageProps<"/[slug]">) {
   const { slug } = await params;
   const all = await getPosts();
   const p = all.find((x) => x.slug === slug);
@@ -125,13 +127,5 @@ async function Article({ params }: Pick<PageProps<"/[slug]">, "params">) {
       </article>
       <CtaBand title="Have a question this article did not answer?" text="Book a consultation in Valencia and get answers about your own teeth, timeline and budget." />
     </>
-  );
-}
-
-export default function Page({ params }: PageProps<"/[slug]">) {
-  return (
-    <Suspense fallback={null}>
-      <Article params={params} />
-    </Suspense>
   );
 }

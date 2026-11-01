@@ -6,7 +6,9 @@ const nextConfig: NextConfig = {
   // Every URL of the current site ends with a slash; keep them identical.
   trailingSlash: true,
   cacheComponents: true,
-  partialPrefetching: true,
+  // Off: with it on, every dynamic route (services, articles) is split into an app shell + streamed
+  // content, which paints the footer first and causes a full-viewport layout shift on slow devices.
+  partialPrefetching: false,
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [390, 640, 768, 1024, 1280, 1440, 1920],

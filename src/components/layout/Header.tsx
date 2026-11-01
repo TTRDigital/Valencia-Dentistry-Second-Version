@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useId, useRef, useState } from "react";
 import { site } from "../../../content/site";
 import { mainNav, servicesMenu } from "@/lib/nav";
 import { Logo } from "@/components/ui/Logo";
@@ -18,7 +18,7 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
-  const pathname = usePathname();
+  const [pathname, setPathname] = useState("");
   const megaId = useId();
   const closeTimer = useRef<number | null>(null);
   const headerRef = useRef<HTMLElement>(null);
@@ -30,13 +30,12 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menus on navigation (derived state: no setState inside an effect)
-  const [seenPath, setSeenPath] = useState(pathname);
-  if (seenPath !== pathname) {
-    setSeenPath(pathname);
+  // Close menus on navigation; the pathname arrives from <PathWatcher> after hydration
+  const onPath = useCallback((p: string) => {
+    setPathname(p);
     setMenuOpen(false);
     setMegaOpen(false);
-  }
+  }, []);
 
   // Lock body scroll under the mobile menu
   useEffect(() => {
@@ -74,10 +73,13 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
   }, []);
 
   const light = variant === "transparent" && !scrolled && !menuOpen;
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+  const isActive = (href: string) => Boolean(pathname) && (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
     <>
+      <Suspense fallback={null}>
+        <PathWatcher onPath={onPath} />
+      </Suspense>
       <header
         ref={headerRef}
         className={`fixed inset-x-0 top-0 z-50 transition-[background-color,color,box-shadow] duration-500 ${
@@ -212,6 +214,15 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
       {variant === "solid" && <div className="h-16 lg:h-[116px]" aria-hidden="true" />}
     </>
   );
+}
+
+/** Reads the pathname (runtime data) outside the static header shell. */
+function PathWatcher({ onPath }: { onPath: (p: string) => void }) {
+  const pathname = usePathname();
+  useEffect(() => {
+    onPath(pathname);
+  }, [pathname, onPath]);
+  return null;
 }
 
 function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {

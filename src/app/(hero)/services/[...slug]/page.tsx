@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { services } from "../../../../../content/services";
 import { getServices } from "@/lib/cms";
 import { ServicePage } from "@/components/sections/ServicePage";
 import { pageMeta } from "@/lib/seo";
+
+/** Every service page is fully prerendered: no streaming fallback, no layout shift. */
+export const ensureStatic = "navigation";
 
 export function generateStaticParams() {
   return services.filter((s) => s.path.startsWith("/services/")).map((s) => ({ slug: s.path.replace(/^\/services\/|\/$/g, "").split("/") }));
@@ -22,16 +24,8 @@ export async function generateMetadata({ params }: PageProps<"/services/[...slug
   return pageMeta({ title: s.seo.title, description: s.seo.description, path: s.path });
 }
 
-async function Content({ params }: Pick<PageProps<"/services/[...slug]">, "params">) {
+export default async function Page({ params }: PageProps<"/services/[...slug]">) {
   const { s, all } = await load(params);
   if (!s) notFound();
   return <ServicePage s={s} all={all} />;
-}
-
-export default function Page({ params }: PageProps<"/services/[...slug]">) {
-  return (
-    <Suspense fallback={null}>
-      <Content params={params} />
-    </Suspense>
-  );
 }
