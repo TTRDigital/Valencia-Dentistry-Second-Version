@@ -3,7 +3,7 @@
 Second version of the Valencia Dentistry website (Dr. Nuriel Lavi, DDS), a dental practice on Tourney Road in Valencia / Santa Clarita, CA. Built by TTR Digital Marketing on Next.js 16 (App Router, Cache Components), TypeScript, Tailwind CSS 4 and Sanity (Studio embedded at `/cms`), deployed on Vercel.
 
 - **Brand, facts and URLs** come from the practice's first site (valencia-dentistry.vercel.app / valenciadentistryca.com): name, Dr. Nuriel Lavi, contact details, logo and case photos. The page content and all 57 URLs carry over from the earlier site the first version was built from; every one answers 200. See `docs/content-inventory.md`.
-- **No photos of any dentist are used.** The first site's photo set is the design-reference practice's photography of its own dentist, so it was not reused; pages use neutral photos until real photos of Dr. Lavi and the office are supplied (see `docs/open-items.md`).
+- **Images come from the first site.** Every photo, the before/after cases, the insurance logos and the logo are taken from valencia-dentistry.vercel.app (`public/images/office`, `cases`, `insurance`, `brand`; descriptions in `content/office-images.ts`). The ten photos in which another dentist (coat embroidered "Dr. Jason Verdi") can be identified are not used; see `docs/open-items.md`. Nothing from the earlier practice's site remains.
 - **Design** is an original "boutique spa meets modern clinic" system: warm charcoal/ivory/taupe tokens taken from the logo, Fraunces + Manrope, hairline borders, slow reveals. See `docs/design-direction.md` and `/styleguide` (noindex).
 - **Copy** was rewritten in a warmer, premium voice under the rules in `docs/copy-guide.md`; medical claims were softened and everything uncertain is listed in `docs/open-items.md`.
 

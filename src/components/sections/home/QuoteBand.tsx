@@ -2,7 +2,7 @@ import { getTestimonials } from "@/lib/cms";
 import { Img } from "@/components/ui/Img";
 import { Stars } from "@/components/ui/Stars";
 
-export async function QuoteBand({ id = "tamarea-jaster", image = "/images/practice/cbct-scan.png" }: { id?: string; image?: string }) {
+export async function QuoteBand({ id = "tamarea-jaster", image = "/images/office/treatment-room-2.jpg" }: { id?: string; image?: string }) {
   const testimonials = await getTestimonials();
   const t = testimonials.find((x) => x.id === id || x.id === `testimonial-${id}`) ?? testimonials[0];
   return (

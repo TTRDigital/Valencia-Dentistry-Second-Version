@@ -6,8 +6,8 @@ const service: Service = {
   category: "preventive",
   name: "Preventive Dentistry",
   menuDescription: "Cleanings, exams, digital X-rays, sealants and screenings to keep small problems small.",
-  image: "/images/practice/preventive-cleaning.png",
-  imageAlt: "Hygienist and dentist cleaning a patient's teeth",
+  image: "/images/office/cleaning.jpg",
+  imageAlt: "Hygienist cleaning a patient's teeth in a bright treatment room",
   seo: {
     title: "Preventive Dentistry in Valencia, CA | Valencia Dentistry",
     description:

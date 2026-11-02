@@ -6,8 +6,8 @@ const service: Service = {
   category: "holistic",
   name: "Holistic Dentistry",
   menuDescription: "Biocompatible, mercury-free care with safe amalgam removal and fluoride-free options.",
-  image: "/images/blog/how-long-do-dental-bridge-last.png",
-  imageAlt: "Smiling woman next to a dental bridge model",
+  image: "/images/office/cleaning.jpg",
+  imageAlt: "Hygienist cleaning a patient's teeth in a bright treatment room",
   seo: {
     title: "Holistic Dentist in Valencia, CA | Valencia Dentistry",
     description:

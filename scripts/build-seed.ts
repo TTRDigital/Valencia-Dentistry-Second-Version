@@ -66,23 +66,23 @@ for (const [slug, l] of Object.entries(legal)) docs.push({ _id: `legal-${slug}`,
 const pageDoc = (id: string, title: string, path: string, seo: { title: string; description: string }, sections: Record<string, unknown>[]) =>
   docs.push({ _id: `page-${id}`, _type: "page", title, path, seo: { _type: "seo", ...seo }, sections: withKeys(sections) });
 pageDoc("home", "Home", "/", { title: "Dentist in Valencia, Santa Clarita | Valencia Dentistry", description: "Holistic, one-on-one dentistry in Valencia with Dr. Nuriel Lavi, DDS. Implants, veneers, Invisalign, same-day crowns. $59 new patient exam & X-rays." }, [
-  { _type: "heroSection", eyebrow: "Valencia · Santa Clarita", title: "Dentistry with heart, one patient at a time", intro: "Holistic, one-on-one care from Dr. Nuriel Lavi, DDS. No handoffs, no rush, and a plan built around your long-term health.", image: img("/images/practice/checkup-smile.png", "Dr. Nuriel Lavi and her team in the Valencia office"), compact: false },
+  { _type: "heroSection", eyebrow: "Valencia · Santa Clarita", title: "Dentistry with heart, one patient at a time", intro: "Dr. Nuriel Lavi, DDS sees every patient himself, at every visit. Holistic, integrative care with modern technology, in a quiet office on Tourney Road.", image: img("/images/office/treatment-room.jpg", "Treatment room with a dental chair, monitors and large arched windows"), compact: false },
   { _type: "componentSection", component: "reviews" }, { _type: "componentSection", component: "serviceGrid" }, { _type: "componentSection", component: "meetDoctor" }, { _type: "componentSection", component: "technology" }, { _type: "componentSection", component: "gallery" }, { _type: "componentSection", component: "affordable" },
   { _type: "faqSection", heading: "Questions, answered", faqs: withKeys(homeFaqs.map((_, i) => ({ _type: "reference", _ref: `faq-home-${i}` }))) }, { _type: "componentSection", component: "visit" }, { _type: "componentSection", component: "cta", heading: "Ready when you are" },
 ]);
 pageDoc("about", "Our Practice", "/about/", about.seo, [
-  { _type: "heroSection", ...about.hero, image: img("/images/practice/family-consult.png", "Dentist talking with a family in the treatment room") },
+  { _type: "heroSection", ...about.hero, image: img("/images/office/treatment-room-2.jpg", "Calm treatment room with natural light and a modern dental chair") },
   { _type: "contentSection", eyebrow: "Our mission", heading: about.mission.heading, intro: about.mission.paragraphs.join("\n\n") },
   { _type: "contentSection", eyebrow: "What guides us", heading: "The values behind every visit", items: withKeys(about.values.map((v) => ({ _type: "titledItem", ...v }))) },
   { _type: "componentSection", component: "technology", heading: about.technology.heading, text: about.technology.text }, { _type: "componentSection", component: "serviceGrid" }, { _type: "componentSection", component: "reviews" }, { _type: "componentSection", component: "visit" },
 ]);
 pageDoc("emergency-dental", "Emergency Dental", "/emergency-dental/", emergency.seo, [
-  { _type: "heroSection", ...emergency.hero, image: img("/images/practice/exam-mirror.png", "Dr. Lavi treating a patient") },
+  { _type: "heroSection", ...emergency.hero, image: img("/images/office/cleaning.jpg", "Hygienist cleaning a patient's teeth in a bright treatment room") },
   { _type: "contentSection", eyebrow: "What to do right now", heading: "Common emergencies and first steps", items: withKeys(emergency.situations.map((v) => ({ _type: "titledItem", ...v }))) },
   { _type: "faqSection", heading: "Emergency questions", faqs: withKeys(emergency.faqs.map((_, i) => ({ _type: "reference", _ref: `faq-emergency-${i}` }))) }, { _type: "componentSection", component: "form" }, { _type: "componentSection", component: "visit" },
 ]);
 pageDoc("new-patient-offer", "New Patient Special", "/new-patient-offer/", offer.seo, [
-  { _type: "heroSection", ...offer.hero, image: img("/images/practice/checkup-smile.png", "A smiling patient in the dental chair") },
+  { _type: "heroSection", ...offer.hero, image: img("/images/office/veneer-tryin.jpg", "Patient smiling in the dental chair during a cosmetic visit") },
   { _type: "contentSection", eyebrow: "What is included", heading: "Everything a first visit should be", bullets: offer.includes },
   { _type: "contentSection", eyebrow: "How it works", heading: "Four simple steps", items: withKeys(offer.steps.map((v) => ({ _type: "titledItem", ...v }))) },
   { _type: "faqSection", heading: "About the special", faqs: withKeys(offer.faqs.map((_, i) => ({ _type: "reference", _ref: `faq-offer-${i}` }))) }, { _type: "componentSection", component: "form" }, { _type: "componentSection", component: "affordable" },

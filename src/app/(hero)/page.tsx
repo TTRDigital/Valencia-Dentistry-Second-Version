@@ -33,7 +33,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={[dentistSchema(), personSchema(), webSiteSchema(), faqSchema(homeFaqs)]} />
-      <Hero image="/images/practice/checkup-smile.png" imageAlt="Smiling patient in the dental chair during a checkup" objectPosition="70% 40%">
+      <Hero image="/images/office/treatment-room.jpg" imageAlt="Treatment room with a dental chair, monitors and large arched windows" objectPosition="center 55%">
         <div className="max-w-3xl">
           <p className="eyebrow" data-reveal="">Valencia · Santa Clarita</p>
           <h1 className="display-xl mt-5" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>

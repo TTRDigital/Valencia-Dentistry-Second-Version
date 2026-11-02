@@ -23,7 +23,7 @@ export default async function GalleryPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <Hero image="/images/practice/exam-mirror.png" imageAlt="Close-up of a smile during a dental mirror exam" compact objectPosition="center 45%">
+      <Hero image="/images/office/veneer-smile.jpg" imageAlt="Patient checking her smile in a hand mirror" compact objectPosition="center 45%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Smile gallery</p>

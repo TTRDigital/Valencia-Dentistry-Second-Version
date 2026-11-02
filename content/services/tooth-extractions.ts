@@ -7,8 +7,8 @@ const service: Service = {
   category: "surgery",
   name: "Tooth Extractions",
   menuDescription: "Gentle simple and surgical extractions with sedation options and clear aftercare.",
-  image: "/images/blog/bone-grafting-is-it-painful.png",
-  imageAlt: "Dentist preparing a patient for treatment",
+  image: "/images/office/treatment-room.jpg",
+  imageAlt: "Treatment room with a dental chair, monitors and large arched windows",
   seo: {
     title: "Tooth Extractions in Valencia, CA | Valencia Dentistry",
     description:

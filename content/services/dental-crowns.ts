@@ -6,8 +6,8 @@ const service: Service = {
   category: "restorative",
   name: "Dental Crowns",
   menuDescription: "Porcelain and ceramic crowns that protect weak or damaged teeth, with same-day options.",
-  image: "/images/blog/crown-vs-filling-dental-crown-guide.png",
-  imageAlt: "Dentist holding a dental crown",
+  image: "/images/office/scan-closeup.jpg",
+  imageAlt: "Digital intraoral scan of a patient's teeth shown on a monitor",
   seo: {
     title: "Dental Crowns in Valencia, CA | Valencia Dentistry",
     description:

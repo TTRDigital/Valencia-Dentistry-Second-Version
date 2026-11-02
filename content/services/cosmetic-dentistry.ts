@@ -6,8 +6,8 @@ const service: Service = {
   category: "cosmetic",
   name: "Cosmetic Dentistry",
   menuDescription: "Whitening, Invisalign, veneers and bonding, planned by Dr. Lavi for a natural result.",
-  image: "/images/practice/checkup-smile.png",
-  imageAlt: "Smiling patient in the dental chair during a checkup",
+  image: "/images/office/veneer-tryin.jpg",
+  imageAlt: "Patient smiling in the dental chair during a cosmetic visit",
   seo: {
     title: "Cosmetic Dentistry in Santa Clarita | Valencia Dentistry",
     description:
@@ -133,8 +133,8 @@ const service: Service = {
         "A calm, welcoming office with sedation options when appropriate",
         "Clear written estimates, flexible financing and a $59 new-patient special",
       ],
-      image: "/images/blog/top-5-cosmetic-dentistry-procedures.png",
-      imageAlt: "Smiling patient in the dental chair",
+      image: "/images/office/veneer-smile.jpg",
+      imageAlt: "Patient checking her smile in a hand mirror",
     },
   ],
   showGallery: true,

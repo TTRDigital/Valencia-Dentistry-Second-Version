@@ -22,7 +22,7 @@ export default function AppointmentPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <Hero image="/images/practice/tooth-model.jpg" imageAlt="Gloved hands holding a tooth model with a filling" compact objectPosition="center 30%">
+      <Hero image="/images/office/treatment-room.jpg" imageAlt="Treatment room with a dental chair, monitors and large arched windows" compact objectPosition="center 30%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Appointments</p>

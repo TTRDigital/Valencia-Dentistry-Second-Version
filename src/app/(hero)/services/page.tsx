@@ -36,7 +36,7 @@ export default function ServicesHub() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <Hero image="/images/practice/cbct-scan.png" imageAlt="Patient standing at the CBCT 3D imaging unit" compact objectPosition="center 40%">
+      <Hero image="/images/office/treatment-room.jpg" imageAlt="Treatment room with a dental chair, monitors and large arched windows" compact objectPosition="center 40%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Services</p>

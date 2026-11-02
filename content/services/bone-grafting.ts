@@ -7,8 +7,8 @@ const service: Service = {
   category: "surgery",
   name: "Bone Grafting",
   menuDescription: "Rebuild lost jawbone so implants have a stable foundation, with PRF to support healing.",
-  image: "/images/blog/bone-grafting-for-dental-implants-guide.png",
-  imageAlt: "Dentist examining a patient, with an X-ray on the screen",
+  image: "/images/office/treatment-room-2.jpg",
+  imageAlt: "Calm treatment room with natural light and a modern dental chair",
   seo: {
     title: "Bone Grafting in Santa Clarita | Valencia Dentistry",
     description:

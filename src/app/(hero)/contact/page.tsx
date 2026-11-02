@@ -23,7 +23,7 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <Hero image="/images/blog/candidate-for-dental-implants.png" imageAlt="Dentist and patient smiling together in the treatment room" compact objectPosition="center 20%">
+      <Hero image="/images/office/treatment-room-2.jpg" imageAlt="Calm treatment room with natural light and a modern dental chair" compact objectPosition="center 20%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Contact</p>

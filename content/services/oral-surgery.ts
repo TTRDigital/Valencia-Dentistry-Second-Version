@@ -6,8 +6,8 @@ const service: Service = {
   category: "surgery",
   name: "Oral Surgery",
   menuDescription: "Extractions, wisdom teeth, bone grafting and implant surgery in one calm office.",
-  image: "/images/blog/bone-grafting-healing-timeline.png",
-  imageAlt: "Dentist showing a patient her X-ray and a tooth model",
+  image: "/images/office/treatment-room.jpg",
+  imageAlt: "Treatment room with a dental chair, monitors and large arched windows",
   seo: {
     title: "Oral Surgery in Santa Clarita | Valencia Dentistry",
     description:

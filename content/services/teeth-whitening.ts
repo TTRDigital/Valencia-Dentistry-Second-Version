@@ -7,8 +7,8 @@ const service: Service = {
   category: "cosmetic",
   name: "Teeth Whitening",
   menuDescription: "In-office and custom take-home whitening that lifts stains while protecting your enamel.",
-  image: "/images/blog/dental-implants-for-seniors-safety-success.png",
-  imageAlt: "Smiling older woman with grey hair",
+  image: "/images/office/aligner-patient-2.jpg",
+  imageAlt: "Patient smiling while placing a clear aligner",
   seo: {
     title: "Teeth Whitening in Santa Clarita | Valencia Dentistry",
     description:
@@ -117,8 +117,8 @@ const service: Service = {
         "Keep up regular cleanings to remove surface stain",
         "Schedule a touch-up when your shade starts to fade",
       ],
-      image: "/images/practice/checkup-smile.png",
-      imageAlt: "Smiling patient in the dental chair during a checkup",
+      image: "/images/office/veneer-smile.jpg",
+      imageAlt: "Patient checking her smile in a hand mirror",
     },
   ],
   showGallery: true,

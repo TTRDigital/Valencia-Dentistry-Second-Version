@@ -7,8 +7,8 @@ const service: Service = {
   category: "surgery",
   name: "All-on-4 Implants",
   menuDescription: "A full arch of fixed teeth supported by four implants, often with same-day temporaries.",
-  image: "/images/blog/what-is-all-on-x-complete-guide.png",
-  imageAlt: "Dentist showing a smiling patient a denture model",
+  image: "/images/office/denture-closeup.jpg",
+  imageAlt: "Close-up of a full-arch implant denture model",
   seo: {
     title: "All-on-4 Implants in Santa Clarita | Valencia Dentistry",
     description:

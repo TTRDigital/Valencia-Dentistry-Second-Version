@@ -1,6 +1,16 @@
 # QA report
 
-## Second version (2026-11-02): Valencia Dentistry rebrand
+## Second version, images from the first site (2026-11-02)
+
+| Check | Result |
+|---|---|
+| Previous-dentist, old-brand or other-dentist names in rendered pages (63) | 0 matches |
+| Broken images on 12 key pages (Playwright, full scroll) | 0 |
+| Launch audit | No problems; 61 pages, 61 links, 57/57 old URLs |
+| Screenshot QA, 10 pages × 5 widths | No horizontal scroll, no small tap targets |
+| Lighthouse mobile, Home / service / article | Performance 87 / 93 / 93; Accessibility, Best practices, SEO 100; CLS 0 |
+
+## Second version: Valencia Dentistry rebrand
 
 | Check | Result |
 |---|---|

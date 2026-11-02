@@ -25,7 +25,7 @@ export default async function AboutPage() {
   return (
     <>
       <JsonLd data={[personSchema(), breadcrumbSchema(crumbs)]} />
-      <Hero image="/images/practice/family-consult.png" imageAlt="Dentist talking with a family in the treatment room" compact objectPosition="center 30%">
+      <Hero image="/images/office/treatment-room-2.jpg" imageAlt="Calm treatment room with natural light and a modern dental chair" compact objectPosition="center 30%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">{about.hero.eyebrow}</p>
@@ -72,13 +72,13 @@ export default async function AboutPage() {
       <Section tone="ivory-200" labelledBy="team-heading">
         <div className="grid items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-6" data-reveal="">
-            <div className="img-zoom overflow-hidden rounded-2xl"><Img src="/images/practice/checkup-smile.png" alt="Smiling patient in the dental chair during a checkup" sizes="(min-width: 1024px) 50vw, 100vw" className="h-auto w-full object-cover" /></div>
+            <div className="img-zoom overflow-hidden rounded-2xl"><Img src="/images/office/cleaning.jpg" alt="Hygienist cleaning a patient's teeth in a bright treatment room" sizes="(min-width: 1024px) 50vw, 100vw" className="h-auto w-full object-cover" /></div>
           </div>
           <div className="lg:col-span-6 lg:pl-8">
             <SectionHeading eyebrow="The team" title={about.team.heading} id="team-heading" lead={about.team.text} />
             <div className="mt-8 grid gap-4 sm:grid-cols-2" data-reveal="">
-              <div className="img-zoom overflow-hidden rounded-2xl"><div className="relative aspect-[5/4]"><Img src="/images/blog/dental-implants-for-seniors-safety-success.png" alt="Smiling patient in a bright dental office" fill sizes="(min-width: 640px) 25vw, 50vw" className="object-cover" /></div></div>
-              <div className="img-zoom overflow-hidden rounded-2xl"><div className="relative aspect-[5/4]"><Img src="/images/practice/cbct-scan.png" alt="Patient standing at the CBCT 3D imaging unit" fill sizes="(min-width: 640px) 25vw, 50vw" className="object-cover" /></div></div>
+              <div className="img-zoom overflow-hidden rounded-2xl"><div className="relative aspect-[5/4]"><Img src="/images/office/scan-closeup.jpg" alt="Digital intraoral scan of a patient's teeth shown on a monitor" fill sizes="(min-width: 640px) 25vw, 50vw" className="object-cover" /></div></div>
+              <div className="img-zoom overflow-hidden rounded-2xl"><div className="relative aspect-[5/4]"><Img src="/images/office/treatment-room.jpg" alt="Treatment room with a dental chair, monitors and large arched windows" fill sizes="(min-width: 640px) 25vw, 50vw" className="object-cover" /></div></div>
             </div>
           </div>
         </div>

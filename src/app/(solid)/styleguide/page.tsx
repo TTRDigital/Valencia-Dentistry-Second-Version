@@ -100,7 +100,7 @@ export default function StyleGuide() {
             <GoogleRating />
             <OpenBadge className="block" />
             <ul className="grid grid-cols-4 gap-3">{technology.map((t) => <li key={t.key} className="card flex flex-col items-center gap-2 p-3 text-center text-[0.65rem]"><TechIcon k={t.key} className="h-8 w-8 text-gold-700" />{t.name}</li>)}</ul>
-            <div className="card img-zoom overflow-hidden"><div className="relative aspect-[4/3]"><Img src="/images/practice/preventive-cleaning.png" alt="Hygienist cleaning a patient's teeth" fill sizes="400px" className="object-cover" /></div><p className="p-4 text-sm">Image card with slow zoom on hover</p></div>
+            <div className="card img-zoom overflow-hidden"><div className="relative aspect-[4/3]"><Img src="/images/office/cleaning.jpg" alt="Hygienist cleaning a patient's teeth in a bright treatment room" fill sizes="400px" className="object-cover" /></div><p className="p-4 text-sm">Image card with slow zoom on hover</p></div>
           </div>
         </div>
         <div className="mt-10 max-w-2xl"><FaqList items={homeFaqs.slice(0, 3)} /></div>

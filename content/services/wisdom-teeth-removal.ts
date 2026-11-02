@@ -7,8 +7,8 @@ const service: Service = {
   category: "surgery",
   name: "Wisdom Teeth Removal",
   menuDescription: "Evaluation and removal of impacted or crowding wisdom teeth, with sedation options.",
-  image: "/images/practice/cbct-scan.png",
-  imageAlt: "Patient standing at the CBCT 3D imaging unit",
+  image: "/images/office/treatment-room-2.jpg",
+  imageAlt: "Calm treatment room with natural light and a modern dental chair",
   seo: {
     title: "Wisdom Teeth Removal Santa Clarita | Valencia Dentistry",
     description:
@@ -113,8 +113,8 @@ const service: Service = {
           text: "For a tooth that is impacted under gum or bone, or only partly erupted. A small opening is made in the gum, and the tooth may be divided into pieces so it can be removed gently. Sedation options are available.",
         },
       ],
-      image: "/images/blog/bone-grafting-is-it-painful.png",
-      imageAlt: "Dentist preparing a patient for treatment",
+      image: "/images/office/treatment-room.jpg",
+      imageAlt: "Treatment room with a dental chair, monitors and large arched windows",
     },
     {
       eyebrow: "Aftercare",

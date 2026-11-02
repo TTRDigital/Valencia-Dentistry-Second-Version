@@ -30,7 +30,7 @@ export function CareFirst() {
             ))}
           </ul>
           <div className="relative mt-10 aspect-[5/4] overflow-hidden rounded-2xl img-zoom lg:aspect-[4/3]" data-reveal="">
-            <Img src="/images/blog/candidate-for-dental-implants.png" alt="Dentist and patient smiling together in the treatment room" fill sizes="(min-width: 1024px) 38vw, 100vw" className="object-cover" />
+            <Img src="/images/office/cleaning.jpg" alt="Hygienist cleaning a patient's teeth in a bright treatment room" fill sizes="(min-width: 1024px) 38vw, 100vw" className="object-cover" />
           </div>
         </div>
         <div className="lg:col-span-7 lg:pt-16">

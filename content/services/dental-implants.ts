@@ -6,8 +6,8 @@ const service: Service = {
   category: "restorative",
   name: "Dental Implants",
   menuDescription: "Replace one tooth, several teeth or a full arch with implants planned in 3D.",
-  image: "/images/blog/dental-implant-timeline.png",
-  imageAlt: "Dentist showing a smiling patient a dental implant model",
+  image: "/images/office/implant-model-hands.jpg",
+  imageAlt: "Dentist showing a patient how an implant and crown fit on a model",
   seo: {
     title: "Dental Implants in Santa Clarita | Valencia Dentistry",
     description:
@@ -133,8 +133,8 @@ const service: Service = {
           text: "A specialized option anchored in the cheekbone, considered when the upper jaw has severe bone loss.",
         },
       ],
-      image: "/images/blog/dental-implants-vs-dentures.png",
-      imageAlt: "Patient smiling while a dentist holds an implant model",
+      image: "/images/office/denture-closeup.jpg",
+      imageAlt: "Close-up of a full-arch implant denture model",
     },
     {
       eyebrow: "Aftercare",

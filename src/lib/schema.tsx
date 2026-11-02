@@ -27,7 +27,7 @@ export function dentistSchema() {
     url: site.url,
     telephone: site.phoneE164,
     email: site.email,
-    image: `${site.url}/images/practice/checkup-smile.png`,
+    image: `${site.url}/images/office/treatment-room.jpg`,
     logo: `${site.url}/images/brand/logo.svg`,
     priceRange: site.priceRange,
     address: {

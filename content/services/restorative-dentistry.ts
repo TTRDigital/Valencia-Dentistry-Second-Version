@@ -6,8 +6,8 @@ const service: Service = {
   category: "restorative",
   name: "Restorative Dentistry",
   menuDescription: "Fillings, crowns, bridges, inlays and onlays to repair damaged teeth and replace missing ones.",
-  image: "/images/practice/tooth-model.jpg",
-  imageAlt: "Gloved hands holding a tooth model with a filling",
+  image: "/images/office/implant-model-hands.jpg",
+  imageAlt: "Dentist showing a patient how an implant and crown fit on a model",
   seo: {
     title: "Restorative Dentistry Santa Clarita | Valencia Dentistry",
     description:
@@ -127,8 +127,8 @@ const service: Service = {
           text: "Lab-made restorations for teeth too damaged for a filling but not in need of a full crown. They preserve more of the natural tooth.",
         },
       ],
-      image: "/images/blog/how-long-do-dental-crowns-last.png",
-      imageAlt: "Dentist showing a patient a dental crown",
+      image: "/images/office/scan-closeup.jpg",
+      imageAlt: "Digital intraoral scan of a patient's teeth shown on a monitor",
     },
   ],
   showGallery: true,

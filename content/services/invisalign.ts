@@ -7,8 +7,8 @@ const service: Service = {
   category: "cosmetic",
   name: "Invisalign",
   menuDescription: "Clear, removable aligners planned from an iTero scan to straighten teeth without braces.",
-  image: "/images/blog/dental-implants-valencia-cost-guide.png",
-  imageAlt: "Smiling man with his dentist in the background",
+  image: "/images/office/aligner-patient.jpg",
+  imageAlt: "Smiling patient holding a clear aligner and its case",
   seo: {
     title: "Invisalign in Santa Clarita | Valencia Dentistry",
     description:
@@ -138,8 +138,8 @@ const service: Service = {
         "Keep them in their case when not in your mouth",
         "Brush and floss before putting a set back in",
       ],
-      image: "/images/practice/exam-mirror.png",
-      imageAlt: "Close-up of a dental mirror exam of a patient's smile",
+      image: "/images/office/aligner-patient-2.jpg",
+      imageAlt: "Patient smiling while placing a clear aligner",
     },
   ],
   showGallery: true,

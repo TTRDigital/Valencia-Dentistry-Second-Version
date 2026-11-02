@@ -7,8 +7,8 @@ const service: Service = {
   category: "restorative",
   name: "Dental Bridges",
   menuDescription: "Fixed, natural-looking bridges that replace one or more missing teeth without surgery.",
-  image: "/images/blog/dental-bridge-cost-guide.png",
-  imageAlt: "Dentist showing a patient a dental bridge model",
+  image: "/images/office/implant-model-hands.jpg",
+  imageAlt: "Dentist showing a patient how an implant and crown fit on a model",
   seo: {
     title: "Dental Bridges in Valencia, CA | Valencia Dentistry",
     description:
@@ -143,8 +143,8 @@ const service: Service = {
           text: "Limiting ice, hard candy and sticky sweets reduces stress on the bridge and helps prevent damage.",
         },
       ],
-      image: "/images/blog/how-long-do-dental-bridge-last.png",
-      imageAlt: "Smiling woman next to a dental bridge model",
+      image: "/images/office/denture-closeup.jpg",
+      imageAlt: "Close-up of a full-arch implant denture model",
     },
   ],
   showGallery: true,

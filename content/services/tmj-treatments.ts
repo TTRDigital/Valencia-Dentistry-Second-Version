@@ -6,8 +6,8 @@ const service: Service = {
   category: "preventive",
   name: "TMJ Treatment",
   menuDescription: "Relief for jaw pain, clicking and headaches with custom night guards and bite care.",
-  image: "/images/blog/do-dental-implants-hurt-recovery-pain-healing-guide.png",
-  imageAlt: "Dentist showing a smiling patient a dental implant model",
+  image: "/images/office/aligner-patient.jpg",
+  imageAlt: "Smiling patient holding a clear aligner and its case",
   seo: {
     title: "TMJ Treatment in Valencia, CA | Valencia Dentistry",
     description:

@@ -7,8 +7,8 @@ const service: Service = {
   category: "cosmetic",
   name: "Veneers",
   menuDescription: "Thin porcelain or composite shells that cover chips, gaps and stains for an even smile.",
-  image: "/images/blog/top-5-cosmetic-dentistry-procedures.png",
-  imageAlt: "Smiling patient in the dental chair",
+  image: "/images/office/veneer-smile.jpg",
+  imageAlt: "Patient checking her smile in a hand mirror",
   seo: {
     title: "Porcelain Veneers in Santa Clarita | Valencia Dentistry",
     description:
@@ -146,8 +146,8 @@ const service: Service = {
           ],
         },
       ],
-      image: "/images/practice/checkup-smile.png",
-      imageAlt: "Smiling patient in the dental chair during a checkup",
+      image: "/images/office/veneer-tryin.jpg",
+      imageAlt: "Patient smiling in the dental chair during a cosmetic visit",
     },
   ],
   showGallery: true,

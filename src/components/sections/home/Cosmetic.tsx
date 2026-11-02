@@ -24,7 +24,7 @@ export function CosmeticEditorial() {
         <div className="lg:col-span-7" data-reveal="" style={{ "--reveal-delay": "120ms" } as React.CSSProperties}>
           <div className="gold-frame img-zoom ml-auto max-w-3xl">
             <div className="relative aspect-[16/11] overflow-hidden rounded-2xl">
-              <Img src="/images/blog/top-5-cosmetic-dentistry-procedures.png" alt="Dentist checking a patient's smile with a mirror" fill sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover" />
+              <Img src="/images/office/veneer-smile.jpg" alt="Patient checking her smile in a hand mirror" fill sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover" />
             </div>
           </div>
         </div>

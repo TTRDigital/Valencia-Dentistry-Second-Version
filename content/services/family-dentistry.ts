@@ -6,8 +6,8 @@ const service: Service = {
   category: "family",
   name: "Family Dentistry",
   menuDescription: "Gentle, age-appropriate care for infants, children, teens, adults and seniors.",
-  image: "/images/practice/family-consult.png",
-  imageAlt: "Dentist talking with a family in the treatment room",
+  image: "/images/office/treatment-room-2.jpg",
+  imageAlt: "Calm treatment room with natural light and a modern dental chair",
   seo: {
     title: "Family Dentist in Valencia, CA | Valencia Dentistry",
     description:

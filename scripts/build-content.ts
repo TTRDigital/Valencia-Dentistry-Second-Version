@@ -42,6 +42,49 @@ const BRAND: [RegExp, string][] = [
 ];
 const brand = (s: string) => BRAND.reduce((acc, [re, rep]) => acc.replace(re, rep), s);
 
+const OFFICE: Record<string, [string, string]> = {
+  cleaning: ["/images/office/cleaning.jpg", "Hygienist cleaning a patient's teeth in a bright treatment room"],
+  room: ["/images/office/treatment-room.jpg", "Treatment room with a dental chair, monitors and large arched windows"],
+  room2: ["/images/office/treatment-room-2.jpg", "Calm treatment room with natural light and a modern dental chair"],
+  implant: ["/images/office/implant-model-hands.jpg", "Dentist showing a patient how an implant and crown fit on a model"],
+  denture: ["/images/office/denture-closeup.jpg", "Close-up of a full-arch implant denture model"],
+  scan: ["/images/office/scan-closeup.jpg", "Digital intraoral scan of a patient's teeth shown on a monitor"],
+  smile: ["/images/office/veneer-smile.jpg", "Patient checking her smile in a hand mirror"],
+};
+const POST_IMAGES: Record<string, [string, string]> = {
+  _default: OFFICE.room,
+  "all-on-x-recovery-timeline": OFFICE.denture,
+  "all-on-x-vs-dentures-complete-guide": OFFICE.denture,
+  "best-foods-after-dental-implant-surgery": OFFICE.implant,
+  "bone-grafting-for-dental-implants-guide": OFFICE.room,
+  "bone-grafting-healing-timeline": OFFICE.room2,
+  "bone-grafting-is-it-painful": OFFICE.room,
+  "candidate-for-dental-implants": OFFICE.implant,
+  "crown-vs-filling-dental-crown-guide": OFFICE.scan,
+  "delay-replacing-missing-tooth-risks-costs": OFFICE.implant,
+  "dental-bridge-cost-guide": OFFICE.implant,
+  "dental-bridge-vs-implant-guide": OFFICE.scan,
+  "dental-crowns-cost-santa-clarita-prices-guide": OFFICE.scan,
+  "dental-implant-timeline": OFFICE.implant,
+  "dental-implants-cost": OFFICE.implant,
+  "dental-implants-for-one-missing-tooth": OFFICE.implant,
+  "dental-implants-for-seniors-safety-success": OFFICE.room2,
+  "dental-implants-valencia-cost-guide": OFFICE.implant,
+  "dental-implants-vs-dentures": OFFICE.denture,
+  "dental-implants-with-bone-loss": OFFICE.room,
+  "do-dental-implants-hurt-recovery-pain-healing-guide": OFFICE.room2,
+  "how-long-do-dental-bridge-last": OFFICE.scan,
+  "how-long-do-dental-crowns-last": OFFICE.scan,
+  "how-long-do-dental-implants-take": OFFICE.implant,
+  "is-tooth-extraction-painful": OFFICE.room,
+  "tooth-extraction-healing-diet-guide": OFFICE.room2,
+  "top-5-cosmetic-dentistry-procedures": OFFICE.smile,
+  "what-is-all-on-x-complete-guide": OFFICE.denture,
+  "when-is-tooth-extraction-necessary": OFFICE.room,
+  "why-choose-valencia-smile-what-to-expect-on-your-first-visit": OFFICE.cleaning,
+  "why-regular-dental-cleanings-matter-health-cost-how-often-to-come-dental-cleaning-valencia": OFFICE.cleaning,
+};
+
 const CTA_TAIL = /\s*(Request Your Post-Op Guide|Book a Same-Day Crown Consultation|Get a Written Cost Comparison|Request a Written Cost Estimate|Schedule Your Implant Consultation|Book a Dental Bridge Consultation|Schedule a Post-Op Check|Schedule a Free [A-Za-z ]+|Book [A-Z][A-Za-z -]+Consultation|Schedule [A-Z][A-Za-z -]+Consultation)\s*$/;
 
 function cleanHtml(html: string, slug: string) {
@@ -104,8 +147,9 @@ const posts = raws.map((r) => {
   if (!existsSync(metaPath)) throw new Error(`missing meta for ${r.slug}`);
   const m = JSON.parse(readFileSync(metaPath, "utf8"));
   const faqs = r.faq.map((f) => ({ q: brand(f.q.trim()), a: brand((f.a || "").replace(CTA_TAIL, "").trim()) })).filter((f) => f.q && f.a);
-  // Posts without their own banner (or whose old banner showed the previous dentist) use a neutral office photo.
-  const image = existsSync(join(ROOT, "public/images/blog", `${r.slug}.png`)) ? `/images/blog/${r.slug}.png` : r.slug.startsWith("why-regular-dental-cleanings") ? "/images/practice/preventive-cleaning.png" : "/images/practice/exam-mirror.png";
+  // Featured photo per post: the first site's choice where that photo shows no identifiable dentist,
+  // otherwise the closest topical photo from the same shoot (content/office-images.ts).
+  const [image, imageAlt] = POST_IMAGES[r.slug] ?? POST_IMAGES._default;
   return {
     slug: r.slug,
     title: brand(m.title || r.title),
@@ -115,7 +159,7 @@ const posts = raws.map((r) => {
     dateModified: r.dateModified && r.dateModified > r.datePublished ? r.dateModified : r.datePublished,
     author: "Dr. Nuriel Lavi, DDS",
     image,
-    imageAlt: brand(m.imageAlt || r.imageAlt || r.title),
+    imageAlt,
     category: m.category,
     keyTakeaways: m.keyTakeaways,
     html: cleanHtml(r.html, r.slug),

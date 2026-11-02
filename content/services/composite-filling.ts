@@ -7,8 +7,8 @@ const service: Service = {
   category: "cosmetic",
   name: "Composite Fillings",
   menuDescription: "Tooth-colored, metal-free fillings that repair cavities and chips and blend right in.",
-  image: "/images/practice/exam-mirror.png",
-  imageAlt: "Close-up of a dental mirror exam of a patient's smile",
+  image: "/images/office/scan-closeup.jpg",
+  imageAlt: "Digital intraoral scan of a patient's teeth shown on a monitor",
   seo: {
     title: "Composite Fillings in Santa Clarita | Valencia Dentistry",
     description:
@@ -125,8 +125,8 @@ const service: Service = {
         "Keep up with regular checkups and cleanings so we can monitor the filling",
         "Tell us about any sensitivity or rough edges",
       ],
-      image: "/images/practice/tooth-model.jpg",
-      imageAlt: "Gloved hands holding a tooth model with a filling",
+      image: "/images/office/cleaning.jpg",
+      imageAlt: "Hygienist cleaning a patient's teeth in a bright treatment room",
     },
   ],
   showGallery: true,

@@ -24,7 +24,7 @@ export default async function TestimonialsPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <Hero image="/images/blog/dental-implants-for-seniors-safety-success.png" imageAlt="Smiling patient in a bright dental office" compact objectPosition="center 25%">
+      <Hero image="/images/office/aligner-patient-2.jpg" imageAlt="Patient smiling while placing a clear aligner" compact objectPosition="center 25%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Reviews</p>

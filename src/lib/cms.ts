@@ -58,7 +58,7 @@ export async function getPosts(): Promise<Post[]> {
   if (!docs?.length) return builtIn;
   const merged = docs.map((d) => {
     const b = builtIn.find((x) => x.slug === d.slug);
-    return { ...(b ?? {}), ...d, author: "Dr. Nuriel Lavi, DDS", image: imgPath(d.image) || b?.image || "/images/practice/exam-mirror.png", imageAlt: d.image?.alt || b?.imageAlt || "" } as Post;
+    return { ...(b ?? {}), ...d, author: "Dr. Nuriel Lavi, DDS", image: imgPath(d.image) || b?.image || "/images/office/treatment-room.jpg", imageAlt: d.image?.alt || b?.imageAlt || "" } as Post;
   });
   return merged.sort((a, b) => (a.datePublished < b.datePublished ? 1 : -1));
 }
