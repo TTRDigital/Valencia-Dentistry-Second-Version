@@ -13,22 +13,22 @@ import { homeFaqs } from "../../../../content/pages";
 
 export const metadata: Metadata = {
   title: "Style guide",
-  description: "Design tokens, type and components of the Valencia Smile Expert website.",
+  description: "Design tokens, type and components of the Valencia Dentistry website.",
   robots: { index: false, follow: false },
 };
 
 const colors = [
-  ["--ink", "#0F1F33", "Dark surfaces, headings"],
-  ["--ink-700", "#112740", "Brand navy (logo)"],
-  ["--slate", "#366797", "Brand steel blue, links"],
-  ["--slate-600", "#2E5A85", "Solid buttons"],
+  ["--ink", "#1C1B19", "Dark surfaces"],
+  ["--ink-700", "#2E2E2E", "Logo charcoal, headings"],
+  ["--slate", "#7A6B52", "Taupe accent, links, icons"],
+  ["--slate-600", "#5E5240", "Solid buttons"],
   ["--ivory", "#FAF7F1", "Page background"],
   ["--ivory-200", "#F2ECE1", "Alternate band"],
   ["--sand", "#E9E1D2", "Hairlines"],
   ["--gold", "#D9BE8C", "Dividers, accents (decorative)"],
   ["--gold-700", "#856A33", "Eyebrows, gold text (AA on ivory and white)"],
-  ["--text", "#1C2A3A", "Body text"],
-  ["--muted", "#56657A", "Secondary text"],
+  ["--text", "#22211F", "Body text"],
+  ["--muted", "#5F5A52", "Secondary text"],
   ["--on-dark", "#F3EEE4", "Text on ink"],
 ];
 
@@ -36,11 +36,11 @@ export default function StyleGuide() {
   return (
     <>
       <Section tone="ivory" size="sm">
-        <SectionHeading eyebrow="Internal · noindex" title="Style guide" as="h1" lead="Tokens, type, components and motion rules for the Valencia Smile Expert site. Everything on the site is built from these pieces." />
+        <SectionHeading eyebrow="Internal · noindex" title="Style guide" as="h1" lead="Tokens, type, components and motion rules for the Valencia Dentistry site. Everything on the site is built from these pieces." />
       </Section>
 
       <Section tone="white" size="sm" labelledBy="sg-color">
-        <SectionHeading title="Color" id="sg-color" lead="Brand navy and steel blue shifted toward luxury: ivory instead of white, champagne gold for hairlines. Every text/background pair passes WCAG AA." />
+        <SectionHeading title="Color" id="sg-color" lead="Warm charcoal and taupe from the Valencia Dentistry mark, on ivory, with champagne gold hairlines. Every text/background pair passes WCAG AA." />
         <ul className="mt-10 grid gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {colors.map(([v, hex, use]) => (
             <li key={v} className="card overflow-hidden">

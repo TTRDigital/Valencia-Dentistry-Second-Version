@@ -6,10 +6,10 @@ const service: Service = {
   category: "restorative",
   name: "Dental Crowns",
   menuDescription: "Porcelain and ceramic crowns that protect weak or damaged teeth, with same-day options.",
-  image: "/images/practice/dr-moezzi-treating.png",
-  imageAlt: "Dr. Moezzi treating a patient in the dental chair at Valencia Smile Expert",
+  image: "/images/blog/crown-vs-filling-dental-crown-guide.png",
+  imageAlt: "Dentist holding a dental crown",
   seo: {
-    title: "Dental Crowns in Valencia, CA | Valencia Smile Expert",
+    title: "Dental Crowns in Valencia, CA | Valencia Dentistry",
     description:
       "Protect a cracked, worn or root-canal-treated tooth with a natural-looking crown in Valencia, Santa Clarita. Same-day crowns available. Book your visit.",
   },
@@ -17,14 +17,14 @@ const service: Service = {
     eyebrow: "Restorative Dentistry",
     title: "Dental Crowns in Valencia",
     intro:
-      "A crown covers a cracked, worn or root-canal-treated tooth so it can work the way it should again. Dr. Neda Moezzi, DDS designs each one to fit comfortably and blend in with your smile.",
+      "A crown covers a cracked, worn or root-canal-treated tooth so it can work the way it should again. Dr. Nuriel Lavi, DDS designs each one to fit comfortably and blend in with your smile.",
   },
   overview: {
     heading: "Crowns that protect and restore",
     paragraphs: [
       "A dental crown is a custom cap that fits over a tooth weakened by decay, a crack, a large filling or a root canal. Where a filling only patches one area, a crown wraps the whole tooth. That brings back its strength, its shape and its ability to chew normally.",
       "We make most of our crowns from porcelain and ceramic. These materials are strong, and we match their shade to your neighboring teeth so the crown is hard to spot. Many crowns can be designed and milled in our office, so you may leave with your final crown in a single visit.",
-      "Dr. Moezzi plans every crown herself, from the exam and digital scan to the final polish. The goal is a restoration that feels natural, protects what remains of your tooth and supports your oral health for years to come.",
+      "Dr. Lavi plans every crown himself, from the exam and digital scan to the final polish. The goal is a restoration that feels natural, protects what remains of your tooth and supports your oral health for years to come.",
     ],
     highlights: [
       { title: "Porcelain and ceramic", text: "Metal-free materials matched to the color of your natural teeth." },
@@ -61,7 +61,7 @@ const service: Service = {
     steps: [
       {
         title: "Exam and planning",
-        text: "Dr. Moezzi examines the tooth, reviews your X-rays and confirms a crown is the right choice. We talk through materials, timing and cost before any work starts.",
+        text: "Dr. Lavi examines the tooth, reviews your X-rays and confirms a crown is the right choice. We talk through materials, timing and cost before any work starts.",
       },
       {
         title: "Preparation and digital scan",
@@ -157,7 +157,7 @@ const service: Service = {
   related: ["dental-bridges", "restorative-dentistry", "composite-filling", "dental-implants"],
   cta: {
     heading: "Protect your tooth before it gets worse",
-    text: "If a tooth is cracked, worn or weakened, a crown can restore it before bigger problems develop. Schedule your visit with Dr. Moezzi in Valencia.",
+    text: "If a tooth is cracked, worn or weakened, a crown can restore it before bigger problems develop. Schedule your visit with Dr. Lavi in Valencia.",
   },
   flags: [
     "Source claims crowns last 10-15 years; softened to 'many crowns last ten years or more with care'.",

@@ -7,6 +7,7 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icons";
 import { Img } from "@/components/ui/Img";
+import { DoctorCard } from "@/components/ui/DoctorCard";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { TechnologyRow } from "@/components/sections/Technology";
 import { Reviews } from "@/components/sections/Reviews";
@@ -24,7 +25,7 @@ export default async function AboutPage() {
   return (
     <>
       <JsonLd data={[personSchema(), breadcrumbSchema(crumbs)]} />
-      <Hero image="/images/practice/team-office-wide.png" imageAlt="Dr. Neda Moezzi seated with her team in the Valencia office" compact objectPosition="center 30%">
+      <Hero image="/images/practice/family-consult.png" imageAlt="Dentist talking with a family in the treatment room" compact objectPosition="center 30%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">{about.hero.eyebrow}</p>
@@ -33,16 +34,16 @@ export default async function AboutPage() {
         </div>
       </Hero>
 
-      <Section tone="ivory" labelledBy="dr-heading" id="dr-neda-moezzi">
+      <Section tone="ivory" labelledBy="dr-heading" id="dr-nuriel-lavi">
         <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5" data-reveal="">
             <div className="gold-frame lg:sticky lg:top-32">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-100"><Img src={doctor.portrait} alt={doctor.portraitAlt} fill priority sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover object-top" /></div>
+              <DoctorCard name={doctor.name} title={doctor.title} portrait={doctor.portrait} portraitAlt={doctor.portraitAlt} priority sizes="(min-width: 1024px) 40vw, 90vw" />
             </div>
           </div>
           <div className="lg:col-span-7">
             <SectionHeading eyebrow="Meet your dentist" title={doctor.name} id="dr-heading" />
-            <p className="serif-italic mt-8 text-2xl leading-snug text-ink-700">“{doctor.quote}”</p>
+            <p className="serif-italic mt-8 text-2xl leading-snug text-ink-700">{doctor.statement}</p>
             <div className="prose-v mt-8" data-reveal="">{doctor.bio.map((p) => <p key={p}>{p}</p>)}</div>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2" data-reveal="">
               {doctor.credentials.map((c) => <li key={c} className="flex items-start gap-3 rounded-xl border border-sand bg-white p-4 text-sm"><Icon.check className="mt-0.5 h-4 w-4 shrink-0 text-gold-700" />{c}</li>)}
@@ -71,20 +72,20 @@ export default async function AboutPage() {
       <Section tone="ivory-200" labelledBy="team-heading">
         <div className="grid items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-6" data-reveal="">
-            <div className="img-zoom overflow-hidden rounded-2xl"><Img src="/images/practice/team-sign.png" alt="Dr. Neda Moezzi and her team under the Neda Moezzi DDS sign" sizes="(min-width: 1024px) 50vw, 100vw" className="h-auto w-full object-cover" /></div>
+            <div className="img-zoom overflow-hidden rounded-2xl"><Img src="/images/practice/checkup-smile.png" alt="Smiling patient in the dental chair during a checkup" sizes="(min-width: 1024px) 50vw, 100vw" className="h-auto w-full object-cover" /></div>
           </div>
           <div className="lg:col-span-6 lg:pl-8">
             <SectionHeading eyebrow="The team" title={about.team.heading} id="team-heading" lead={about.team.text} />
             <div className="mt-8 grid gap-4 sm:grid-cols-2" data-reveal="">
-              <div className="img-zoom overflow-hidden rounded-2xl"><div className="relative aspect-[5/4]"><Img src="/images/practice/dr-moezzi-smile-sign.png" alt="Dr. Moezzi holding a Smile sign at the front desk" fill sizes="(min-width: 640px) 25vw, 50vw" className="object-cover" /></div></div>
-              <div className="img-zoom overflow-hidden rounded-2xl"><div className="relative aspect-[5/4]"><Img src="/images/practice/treatment-room.png" alt="A bright treatment room with a patient reclining in the chair" fill sizes="(min-width: 640px) 25vw, 50vw" className="object-cover" /></div></div>
+              <div className="img-zoom overflow-hidden rounded-2xl"><div className="relative aspect-[5/4]"><Img src="/images/blog/dental-implants-for-seniors-safety-success.png" alt="Smiling patient in a bright dental office" fill sizes="(min-width: 640px) 25vw, 50vw" className="object-cover" /></div></div>
+              <div className="img-zoom overflow-hidden rounded-2xl"><div className="relative aspect-[5/4]"><Img src="/images/practice/cbct-scan.png" alt="Patient standing at the CBCT 3D imaging unit" fill sizes="(min-width: 640px) 25vw, 50vw" className="object-cover" /></div></div>
             </div>
           </div>
         </div>
       </Section>
 
       <TechnologyRow tone="white" heading={about.technology.heading} eyebrow="Technology" lead={about.technology.text} />
-      <ServiceGrid heading="Comprehensive care under one roof" lead="From a child's first checkup to full-arch implants, Dr. Moezzi's training spans the whole of dentistry." />
+      <ServiceGrid heading="Comprehensive care under one roof" lead="From a child's first checkup to full-arch implants, Dr. Lavi's training spans the whole of dentistry." />
       <Reviews tone="ivory-200" heading="Why families stay" />
       <Visit />
       <CtaBand title="Come meet us" text={`New to the area or returning after time away? New patients start with the ${site.offer.title}.`} />

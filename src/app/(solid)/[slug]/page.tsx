@@ -6,6 +6,7 @@ import { getPosts } from "@/lib/cms";
 import { doctor, site } from "../../../../content/site";
 import { Section } from "@/components/ui/Section";
 import { Img } from "@/components/ui/Img";
+import { Mark } from "@/components/ui/Logo";
 import { Icon } from "@/components/ui/Icons";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { FaqList } from "@/components/ui/Faq";
@@ -69,7 +70,7 @@ export default async function Page({ params }: PageProps<"/[slug]">) {
                 )}
                 <div className="card bg-ink p-6 text-on-dark on-dark grain">
                   <p className="eyebrow">Ready to talk?</p>
-                  <p className="mt-2 font-display text-xl">Ask Dr. Moezzi about your own case</p>
+                  <p className="mt-2 font-display text-xl">Ask Dr. Lavi about your own case</p>
                   <p className="mt-2 text-sm text-on-dark-muted">{site.offer.title} for new patients.</p>
                   <div className="mt-4 flex flex-col gap-2"><Button href={site.bookingUrl} variant="gold" size="sm">Book Online</Button><Button href={`tel:${site.phoneE164}`} variant="outline" size="sm" icon={<Icon.phone className="h-4 w-4" />}>{site.phone}</Button></div>
                 </div>
@@ -93,12 +94,12 @@ export default async function Page({ params }: PageProps<"/[slug]">) {
                 </section>
               )}
               <section className="mt-14 flex flex-col gap-6 rounded-2xl border border-sand bg-white p-7 sm:flex-row" aria-labelledby="author">
-                <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full bg-slate-100"><Img src={doctor.portrait} alt={doctor.portraitAlt} fill sizes="96px" className="object-cover object-top" /></div>
+                {doctor.portrait ? <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full bg-slate-100"><Img src={doctor.portrait} alt={doctor.portraitAlt} fill sizes="96px" className="object-cover object-top" /></div> : <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-ink"><Mark tone="light" className="h-10 w-auto" /></div>}
                 <div>
                   <p className="eyebrow">About the author</p>
                   <h2 id="author" className="mt-1 text-2xl">{doctor.name}</h2>
                   <p className="mt-2 text-sm text-muted">{doctor.bio[0]} {doctor.bio[2]}</p>
-                  <Link href="/about/" className="text-link mt-3 min-h-11 text-sm">Read her story <Arrow /></Link>
+                  <Link href="/about/" className="text-link mt-3 min-h-11 text-sm">Read his story <Arrow /></Link>
                 </div>
               </section>
               <p className="mt-8 text-xs text-muted">This article is general information, not medical advice. For guidance about your own teeth, please book a consultation.</p>

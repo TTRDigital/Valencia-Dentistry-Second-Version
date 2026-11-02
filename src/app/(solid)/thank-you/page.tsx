@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icons";
 import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = pageMeta({ title: "Thank You | Valencia Smile Expert", description: "We received your request and will be in touch shortly.", path: "/thank-you/", noindex: true });
+export const metadata: Metadata = pageMeta({ title: "Thank You | Valencia Dentistry", description: "We received your request and will be in touch shortly.", path: "/thank-you/", noindex: true });
 
 export default function ThankYou() {
   return (

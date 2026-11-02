@@ -6,30 +6,30 @@ const service: Service = {
   category: "restorative",
   name: "Dental Implants",
   menuDescription: "Replace one tooth, several teeth or a full arch with implants planned in 3D.",
-  image: "/images/practice/dr-moezzi-treating.png",
-  imageAlt: "Dr. Moezzi treating a patient who is reclined in the dental chair",
+  image: "/images/blog/dental-implant-timeline.png",
+  imageAlt: "Dentist showing a smiling patient a dental implant model",
   seo: {
-    title: "Dental Implants in Santa Clarita | Valencia Smile Expert",
+    title: "Dental Implants in Santa Clarita | Valencia Dentistry",
     description:
-      "Dental implants in Valencia, Santa Clarita, planned with CBCT 3D imaging and guided surgery by Dr. Neda Moezzi. Book a consultation today.",
+      "Dental implants in Valencia, Santa Clarita, planned with CBCT 3D imaging and guided surgery by Dr. Nuriel Lavi. Book a consultation today.",
   },
   hero: {
     eyebrow: "Dental Implants",
     title: "Dental Implants in Santa Clarita",
     intro:
-      "Missing teeth change how you eat, speak and smile. Dr. Neda Moezzi, DDS plans every implant in 3D, so your new tooth is built to fit your bite and your life.",
+      "Missing teeth change how you eat, speak and smile. Dr. Nuriel Lavi, DDS plans every implant in 3D, so your new tooth is built to fit your bite and your life.",
   },
   overview: {
-    heading: "Implant care led by Dr. Moezzi",
+    heading: "Implant care led by Dr. Lavi",
     paragraphs: [
       "A dental implant replaces a tooth from the root up. A small titanium post is placed in the jawbone, and once it has healed, it supports a custom crown, bridge or denture. Because the implant is anchored in bone, it can feel steadier than removable options and helps keep the surrounding bone healthy.",
-      "At Valencia Smile Expert, we treat patients who are missing one tooth, several teeth or a full arch. Dr. Moezzi reviews your bone support, gum health, bite and goals before recommending a plan. CBCT 3D imaging and guided surgery help us place each implant exactly where it belongs.",
+      "At Valencia Dentistry, we treat patients who are missing one tooth, several teeth or a full arch. Dr. Lavi reviews your bone support, gum health, bite and goals before recommending a plan. CBCT 3D imaging and guided surgery help us place each implant exactly where it belongs.",
       "You will always know what comes next. We explain each phase, offer sedation options when appropriate, and give you a written estimate before treatment begins.",
     ],
     highlights: [
       {
         title: "Doctor-led planning",
-        text: "Dr. Moezzi personally evaluates your smile, bite and bone before recommending an implant plan.",
+        text: "Dr. Lavi personally evaluates your smile, bite and bone before recommending an implant plan.",
       },
       {
         title: "3D-guided placement",
@@ -89,7 +89,7 @@ const service: Service = {
     steps: [
       {
         title: "Consultation and planning",
-        text: "We start with an exam, a CBCT 3D scan and a conversation about your health, bite and goals. If needed, Dr. Moezzi may recommend extractions, gum treatment or bone grafting before placement.",
+        text: "We start with an exam, a CBCT 3D scan and a conversation about your health, bite and goals. If needed, Dr. Lavi may recommend extractions, gum treatment or bone grafting before placement.",
       },
       {
         title: "Implant placement",
@@ -110,7 +110,7 @@ const service: Service = {
     {
       eyebrow: "Options",
       heading: "Implant options we offer",
-      intro: "The right option depends on how many teeth you are missing and how much bone supports them. Dr. Moezzi will walk you through the choices at your consultation.",
+      intro: "The right option depends on how many teeth you are missing and how much bone supports them. Dr. Lavi will walk you through the choices at your consultation.",
       items: [
         {
           title: "Single tooth implant",
@@ -133,8 +133,8 @@ const service: Service = {
           text: "A specialized option anchored in the cheekbone, considered when the upper jaw has severe bone loss.",
         },
       ],
-      image: "/images/practice/tooth-model.jpg",
-      imageAlt: "Dentist showing a patient a model of a tooth during a consultation",
+      image: "/images/blog/dental-implants-vs-dentures.png",
+      imageAlt: "Patient smiling while a dentist holds an implant model",
     },
     {
       eyebrow: "Aftercare",
@@ -144,7 +144,7 @@ const service: Service = {
         {
           title: "Before your procedure",
           bullets: [
-            "Follow Dr. Moezzi's pre-op instructions, which may include pausing certain medications",
+            "Follow Dr. Lavi's pre-op instructions, which may include pausing certain medications",
             "Arrange a ride home if sedation is planned",
             "Keep your teeth and gums clean to reduce bacteria and inflammation",
             "Eat well in the days leading up to surgery",
@@ -189,7 +189,7 @@ const service: Service = {
     },
     {
       q: "Are dental implants safe for seniors?",
-      a: "Age alone is rarely the deciding factor. Older adults in good general health, with enough bone or a willingness to graft, are often good candidates. Dr. Moezzi reviews your medical history before recommending treatment.",
+      a: "Age alone is rarely the deciding factor. Older adults in good general health, with enough bone or a willingness to graft, are often good candidates. Dr. Lavi reviews your medical history before recommending treatment.",
     },
     {
       q: "How are implants different from dentures?",
@@ -197,7 +197,7 @@ const service: Service = {
     },
     {
       q: "Will I need bone grafting first?",
-      a: "Not everyone does. If your scan shows the bone is too thin or short to hold an implant securely, Dr. Moezzi may recommend a graft first. In some cases grafting can be done at the same visit as placement.",
+      a: "Not everyone does. If your scan shows the bone is too thin or short to hold an implant securely, Dr. Lavi may recommend a graft first. In some cases grafting can be done at the same visit as placement.",
     },
   ],
   related: ["bone-grafting", "all-on-4-implants", "dental-crowns", "dental-bridges"],
@@ -206,7 +206,7 @@ const service: Service = {
     text: "Book an implant consultation in Valencia and find out which option fits your smile.",
   },
   flags: [
-    "Zygomatic implants: listed on the current site as an option and kept in the options list; confirm Dr. Moezzi actually places them before publishing.",
+    "Zygomatic implants: listed on the current site as an option and kept in the options list; confirm Dr. Lavi actually places them before publishing.",
     "Source claimed implants last '20 years or more, often a lifetime' and that 'same-day implants may be possible'; softened to 'many years, and often decades' and 'in select cases a temporary tooth can be placed sooner'.",
     "Source said recovery discomfort is 'often less than a tooth extraction'; softened to 'often less than they expected'.",
     "Source mentioned 'digital imaging' and 'guided implant planning' without naming CBCT; mapped to the cbct and guided-implants TechKeys the practice lists.",

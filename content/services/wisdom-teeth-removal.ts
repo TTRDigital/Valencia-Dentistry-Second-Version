@@ -8,24 +8,24 @@ const service: Service = {
   name: "Wisdom Teeth Removal",
   menuDescription: "Evaluation and removal of impacted or crowding wisdom teeth, with sedation options.",
   image: "/images/practice/cbct-scan.png",
-  imageAlt: "A patient standing at the CBCT 3D imaging unit in the office",
+  imageAlt: "Patient standing at the CBCT 3D imaging unit",
   seo: {
-    title: "Wisdom Teeth Removal Santa Clarita | Valencia Smile Expert",
+    title: "Wisdom Teeth Removal Santa Clarita | Valencia Dentistry",
     description:
-      "Wisdom teeth removal in Santa Clarita with 3D imaging, sedation options and a clear recovery plan. Book an evaluation with Dr. Moezzi in Valencia.",
+      "Wisdom teeth removal in Santa Clarita with 3D imaging, sedation options and a clear recovery plan. Book an evaluation with Dr. Lavi in Valencia.",
   },
   hero: {
     eyebrow: "Oral Surgery",
     title: "Wisdom Teeth Removal in Santa Clarita",
     intro:
-      "Wisdom teeth that come in crooked, crowded or trapped can cause pain and damage nearby teeth. Dr. Neda Moezzi, DDS, evaluates and removes them in our Valencia office, with sedation options when appropriate.",
+      "Wisdom teeth that come in crooked, crowded or trapped can cause pain and damage nearby teeth. Dr. Nuriel Lavi, DDS, evaluates and removes them in our Valencia office, with sedation options when appropriate.",
   },
   overview: {
     heading: "Thoughtful care for third molars",
     paragraphs: [
       "Wisdom teeth are the last molars to arrive, usually in the late teens or early twenties. Many jaws simply do not have room for them. When they come in at an angle or stay trapped under the gum, they can cause swelling, infection, crowding and damage to the teeth beside them.",
-      "Not every wisdom tooth needs to come out. Dr. Moezzi uses a CBCT 3D scan to see each tooth's position, its roots and the nerves nearby before making a recommendation. When removal makes sense, she explains why and what the procedure will involve.",
-      "The whole process happens in one familiar place: your evaluation, the procedure and your follow-up visits, all with Dr. Moezzi and the same team.",
+      "Not every wisdom tooth needs to come out. Dr. Lavi uses a CBCT 3D scan to see each tooth's position, its roots and the nerves nearby before making a recommendation. When removal makes sense, he explains why and what the procedure will involve.",
+      "The whole process happens in one familiar place: your evaluation, the procedure and your follow-up visits, all with Dr. Lavi and the same team.",
     ],
     highlights: [
       {
@@ -38,7 +38,7 @@ const service: Service = {
       },
       {
         title: "One office, one doctor",
-        text: "Evaluation, removal and follow-up with Dr. Moezzi in Valencia.",
+        text: "Evaluation, removal and follow-up with Dr. Lavi in Valencia.",
       },
     ],
   },
@@ -85,11 +85,11 @@ const service: Service = {
     steps: [
       {
         title: "Exam and 3D scan",
-        text: "We start with an exam and a CBCT scan to see how each wisdom tooth sits in the jaw. Dr. Moezzi reviews the images with you, listens to your symptoms and recommends an approach.",
+        text: "We start with an exam and a CBCT scan to see how each wisdom tooth sits in the jaw. Dr. Lavi reviews the images with you, listens to your symptoms and recommends an approach.",
       },
       {
         title: "Removal in our office",
-        text: "The procedure is done with local anesthesia, with sedation options when appropriate. Dr. Moezzi uses gentle techniques whether the tooth is fully erupted or impacted. Many procedures take less than an hour.",
+        text: "The procedure is done with local anesthesia, with sedation options when appropriate. Dr. Lavi uses gentle techniques whether the tooth is fully erupted or impacted. Many procedures take less than an hour.",
       },
       {
         title: "Recovery and follow-up",
@@ -113,8 +113,8 @@ const service: Service = {
           text: "For a tooth that is impacted under gum or bone, or only partly erupted. A small opening is made in the gum, and the tooth may be divided into pieces so it can be removed gently. Sedation options are available.",
         },
       ],
-      image: "/images/practice/consult-chair.png",
-      imageAlt: "Dr. Moezzi in consultation with a seated patient",
+      image: "/images/blog/bone-grafting-is-it-painful.png",
+      imageAlt: "Dentist preparing a patient for treatment",
     },
     {
       eyebrow: "Aftercare",
@@ -126,7 +126,7 @@ const service: Service = {
           bullets: [
             "If sedation is planned, follow the fasting instructions we give you",
             "Arrange a ride home if you will have sedation",
-            "Adjust medications only if Dr. Moezzi advises it",
+            "Adjust medications only if Dr. Lavi advises it",
             "Avoid smoking and alcohol for at least 24 hours",
             "Brush gently and keep your mouth clean",
           ],
@@ -158,7 +158,7 @@ const service: Service = {
     },
     {
       q: "Will I be awake during the procedure?",
-      a: "That depends on what you prefer and what Dr. Moezzi recommends. Every procedure uses local anesthesia, and options such as nitrous oxide or oral sedation are available when appropriate. We will go over your choices at your consultation.",
+      a: "That depends on what you prefer and what Dr. Lavi recommends. Every procedure uses local anesthesia, and options such as nitrous oxide or oral sedation are available when appropriate. We will go over your choices at your consultation.",
     },
     {
       q: "How long does recovery take?",
@@ -170,7 +170,7 @@ const service: Service = {
     },
     {
       q: "Does everyone need their wisdom teeth removed?",
-      a: "No. If your wisdom teeth have come in straight, have room and are easy to keep clean, they may be fine to keep. Dr. Moezzi uses a 3D scan to evaluate each tooth before recommending anything.",
+      a: "No. If your wisdom teeth have come in straight, have room and are easy to keep clean, they may be fine to keep. Dr. Lavi uses a 3D scan to evaluate each tooth before recommending anything.",
     },
     {
       q: "What is dry socket?",
@@ -184,10 +184,10 @@ const service: Service = {
   related: ["tooth-extractions", "oral-surgery", "bone-grafting", "preventive-dentistry"],
   cta: {
     heading: "Book a wisdom teeth evaluation",
-    text: "Call (661) 254-5200 or book online, and Dr. Moezzi will take a look and walk you through your options.",
+    text: "Call (661) 254-5200 or book online, and Dr. Lavi will take a look and walk you through your options.",
   },
   flags: [
-    "Source states Dr. Moezzi personally performs all wisdom teeth extractions; kept as evaluation, removal and follow-up with Dr. Moezzi in our office. Confirm complex impactions are not referred out.",
+    "Source states Dr. Lavi personally performs all wisdom teeth extractions; kept as evaluation, removal and follow-up with Dr. Lavi in our office. Confirm complex impactions are not referred out.",
     "Source says 'most extractions are completed in under an hour'; softened to 'many procedures take less than an hour'.",
     "Source FAQ names nitrous oxide and oral sedation; mentioned once in the 'Will I be awake' FAQ. Confirm these are the sedation options actually offered.",
     "Source gives '6-8 hours' fasting before sedation; replaced with 'follow the fasting instructions we give you' since the rule depends on the sedation type.",

@@ -2,7 +2,7 @@ import type { StructureResolver } from "sanity/structure";
 
 export const structure: StructureResolver = (S) =>
   S.list()
-    .title("Valencia Smile Expert")
+    .title("Valencia Dentistry")
     .items([
       S.listItem().title("Site settings").id("siteSettings").child(S.document().schemaType("siteSettings").documentId("siteSettings")),
       S.listItem().title("Navigation").id("navigation").child(S.document().schemaType("navigation").documentId("navigation")),

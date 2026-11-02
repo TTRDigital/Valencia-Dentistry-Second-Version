@@ -7,10 +7,10 @@ const service: Service = {
   category: "cosmetic",
   name: "Invisalign",
   menuDescription: "Clear, removable aligners planned from an iTero scan to straighten teeth without braces.",
-  image: "/images/practice/consult-chair.png",
-  imageAlt: "Dr. Moezzi in consultation with a seated patient",
+  image: "/images/blog/dental-implants-valencia-cost-guide.png",
+  imageAlt: "Smiling man with his dentist in the background",
   seo: {
-    title: "Invisalign in Santa Clarita | Valencia Smile Expert",
+    title: "Invisalign in Santa Clarita | Valencia Dentistry",
     description:
       "Invisalign clear aligners in Valencia, Santa Clarita. iTero scan, no messy molds, and a preview of your new smile. Book an Invisalign consultation.",
   },
@@ -18,14 +18,14 @@ const service: Service = {
     eyebrow: "Invisalign",
     title: "Invisalign in Santa Clarita",
     intro:
-      "Straighten your teeth with clear, removable aligners planned from a digital scan by Dr. Neda Moezzi, DDS.",
+      "Straighten your teeth with clear, removable aligners planned from a digital scan by Dr. Nuriel Lavi, DDS.",
   },
   overview: {
     heading: "The clear way to straighter teeth",
     paragraphs: [
       "Invisalign uses a series of clear, custom-made aligners to move teeth gradually into better alignment. They are hard to notice when worn and come out for meals and brushing, which is why many adults and teens choose them over metal braces.",
       "Treatment at our Valencia office starts with an iTero digital scan rather than a tray of impression material. The scan builds a 3D model of your teeth and lets you preview your projected result before you commit.",
-      "Dr. Moezzi has training in clear aligner therapy and plans each case personally. Most patients finish in 6 to 18 months depending on how much movement is needed.",
+      "Dr. Lavi has training in clear aligner therapy and plans each case personally. Most patients finish in 6 to 18 months depending on how much movement is needed.",
     ],
     highlights: [
       { title: "No impressions", text: "An iTero scan replaces messy molds." },
@@ -83,7 +83,7 @@ const service: Service = {
       },
       {
         title: "Custom aligners",
-        text: "Dr. Moezzi designs your plan, and a series of BPA-free aligners is made to fit your mouth exactly.",
+        text: "Dr. Lavi designs your plan, and a series of BPA-free aligners is made to fit your mouth exactly.",
       },
       {
         title: "Daily wear",
@@ -138,8 +138,8 @@ const service: Service = {
         "Keep them in their case when not in your mouth",
         "Brush and floss before putting a set back in",
       ],
-      image: "/images/practice/tooth-model.jpg",
-      imageAlt: "Dentist showing a patient a tooth model",
+      image: "/images/practice/exam-mirror.png",
+      imageAlt: "Close-up of a dental mirror exam of a patient's smile",
     },
   ],
   showGallery: true,
@@ -173,7 +173,7 @@ const service: Service = {
     },
     {
       q: "How often will I visit the office?",
-      a: "Usually every 6 to 8 weeks. Dr. Moezzi checks your progress and gives you your next sets of aligners. These visits are short.",
+      a: "Usually every 6 to 8 weeks. Dr. Lavi checks your progress and gives you your next sets of aligners. These visits are short.",
     },
     {
       q: "Will insurance cover Invisalign?",
@@ -190,7 +190,7 @@ const service: Service = {
     text: "Book an Invisalign consultation in Valencia and preview your result with an iTero scan.",
   },
   flags: [
-    "Source says 'Invisalign-Certified Provider' and 'helped countless patients'; kept as 'training in clear aligner therapy' and dropped the patient count. Verify Dr. Moezzi's Invisalign provider status.",
+    "Source says 'Invisalign-Certified Provider' and 'helped countless patients'; kept as 'training in clear aligner therapy' and dropped the patient count. Verify Dr. Lavi's Invisalign provider status.",
     "Source's $3,500-$8,000 price range omitted per the copy guide.",
     "Dropped 'one of the top Invisalign providers in Santa Clarita'.",
   ],

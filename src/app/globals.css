@@ -2,21 +2,22 @@
 
 /* ---------- Design tokens (see docs/design-direction.md) ---------- */
 :root {
-  --ink: #0f1f33;
-  --ink-700: #112740;
-  --ink-600: #1b3350;
-  --slate: #366797;
-  --slate-600: #2e5a85;
-  --slate-100: #e4ecf4;
+  /* Warm charcoal + taupe, taken from the Valencia Dentistry mark (#2E2E2E / #9A8B72). */
+  --ink: #1c1b19;
+  --ink-700: #2e2e2e;
+  --ink-600: #3a3835;
+  --slate: #7a6b52;
+  --slate-600: #5e5240;
+  --slate-100: #eee8dd;
   --ivory: #faf7f1;
   --ivory-200: #f2ece1;
   --sand: #e9e1d2;
   --gold: #d9be8c;
   --gold-700: #856a33;
-  --text: #1c2a3a;
-  --muted: #56657a;
+  --text: #22211f;
+  --muted: #5f5a52;
   --on-dark: #f3eee4;
-  --on-dark-muted: #b9c2cf;
+  --on-dark-muted: #c4bdb1;
   --header-h: 76px;
   --topbar-h: 44px;
   --radius: 18px;
@@ -229,8 +230,8 @@ details[open] .chev { transform: rotate(45deg); }
 .chev { transition: transform 0.3s var(--ease-out); }
 
 /* ---------- Site header states (toggled by HeaderBehavior with data attributes) ---------- */
-.site-header { --logo-navy: var(--ink-700); --logo-blue: var(--slate); background: rgba(250, 247, 241, 0.95); color: var(--ink-700); backdrop-filter: blur(12px); box-shadow: 0 1px 0 0 var(--sand); transition: background-color 0.5s var(--ease-out), color 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out); }
-.site-header[data-light] { --logo-navy: var(--on-dark); --logo-blue: #8fb3d9; background: transparent; color: var(--on-dark); backdrop-filter: none; box-shadow: none; }
+.site-header { --logo-dark: #2e2e2e; --logo-accent: #9a8b72; --logo-sub: #7a6b52; background: rgba(250, 247, 241, 0.95); color: var(--ink-700); backdrop-filter: blur(12px); box-shadow: 0 1px 0 0 var(--sand); transition: background-color 0.5s var(--ease-out), color 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out); }
+.site-header[data-light] { --logo-dark: var(--on-dark); --logo-accent: #c9ba9c; --logo-sub: #c9ba9c; background: transparent; color: var(--on-dark); backdrop-filter: none; box-shadow: none; }
 .site-header .topbar { max-height: 48px; opacity: 1; border-bottom: 1px solid var(--sand); overflow: hidden; transition: max-height 0.5s var(--ease-out), opacity 0.5s var(--ease-out); }
 .site-header[data-light] .topbar { border-bottom-color: rgba(255, 255, 255, 0.15); }
 .site-header[data-scrolled] .topbar { max-height: 0; opacity: 0; border-bottom-color: transparent; }

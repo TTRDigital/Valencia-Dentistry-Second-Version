@@ -51,7 +51,7 @@ export function Visit({ heading = "Visit us in Valencia", eyebrow = "Find us" }:
         <div className="lg:col-span-7" data-reveal="">
           <div className="gold-frame">
             <iframe
-              title="Map to Valencia Smile Expert, 27420 Tourney Rd Suite 240, Santa Clarita"
+              title="Map to Valencia Dentistry, 27420 Tourney Rd Suite 240, Santa Clarita"
               src={site.mapsEmbed}
               className="h-[380px] w-full rounded-2xl border border-sand bg-ivory grayscale-[35%] lg:h-[520px]"
               loading="lazy"

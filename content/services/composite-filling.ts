@@ -7,10 +7,10 @@ const service: Service = {
   category: "cosmetic",
   name: "Composite Fillings",
   menuDescription: "Tooth-colored, metal-free fillings that repair cavities and chips and blend right in.",
-  image: "/images/practice/dr-moezzi-treating.png",
-  imageAlt: "Dr. Moezzi treating a patient in the Valencia office",
+  image: "/images/practice/exam-mirror.png",
+  imageAlt: "Close-up of a dental mirror exam of a patient's smile",
   seo: {
-    title: "Composite Fillings in Santa Clarita | Valencia Smile Expert",
+    title: "Composite Fillings in Santa Clarita | Valencia Dentistry",
     description:
       "Tooth-colored, mercury-free composite fillings in Valencia, Santa Clarita. Repair cavities and chips with a filling that blends in. Book your visit.",
   },
@@ -23,7 +23,7 @@ const service: Service = {
   overview: {
     heading: "What is a composite filling?",
     paragraphs: [
-      "A composite filling is a tooth-colored resin used to treat cavities and repair minor chips and wear. Dr. Neda Moezzi, DDS shades the material to your enamel, bonds it directly to the tooth and sculpts it to the natural contours, so the repair is hard to spot.",
+      "A composite filling is a tooth-colored resin used to treat cavities and repair minor chips and wear. Dr. Nuriel Lavi, DDS shades the material to your enamel, bonds it directly to the tooth and sculpts it to the natural contours, so the repair is hard to spot.",
       "Because the resin bonds to the tooth, less healthy structure needs to be removed than with a traditional silver filling. It also contains no mercury or metal, which fits the mercury-free approach of our Valencia practice.",
       "Fillings are placed with intraoral camera images and digital X-rays guiding the work, so you can see the problem before and after it is fixed.",
     ],
@@ -125,8 +125,8 @@ const service: Service = {
         "Keep up with regular checkups and cleanings so we can monitor the filling",
         "Tell us about any sensitivity or rough edges",
       ],
-      image: "/images/practice/exam-mirror.png",
-      imageAlt: "Close-up of a dental mirror exam of a patient's smile",
+      image: "/images/practice/tooth-model.jpg",
+      imageAlt: "Gloved hands holding a tooth model with a filling",
     },
   ],
   showGallery: true,
@@ -160,7 +160,7 @@ const service: Service = {
     },
     {
       q: "How do composite fillings compare to silver fillings?",
-      a: "Composite bonds directly to the tooth, needs less drilling and matches your enamel. Silver amalgam is strong but visible and contains a metal alloy. Dr. Moezzi can explain which suits your tooth.",
+      a: "Composite bonds directly to the tooth, needs less drilling and matches your enamel. Silver amalgam is strong but visible and contains a metal alloy. Dr. Lavi can explain which suits your tooth.",
     },
   ],
   related: ["cosmetic-dentistry", "dental-crowns", "holistic-dentistry", "restorative-dentistry"],

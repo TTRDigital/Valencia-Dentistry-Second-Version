@@ -1,5 +1,5 @@
 /**
- * Renders the favicon set from public/images/brand/mark.svg:
+ * Renders the favicon set from public/images/brand/icon-tile.svg (the practice mark on ivory):
  * src/app/favicon.ico (16/32/48), src/app/icon.png (32), src/app/apple-icon.png (180),
  * public/icon-192.png, public/icon-512.png.
  *
@@ -10,7 +10,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const ROOT = new URL("..", import.meta.url).pathname;
-const svg = readFileSync(join(ROOT, "public/images/brand/mark.svg"));
+const svg = readFileSync(join(ROOT, "public/images/brand/icon-tile.svg"));
 const png = (size: number) => sharp(svg, { density: 384 }).resize(size, size).png().toBuffer();
 
 const [i16, i32, i48, i180, i192, i512] = await Promise.all([16, 32, 48, 180, 192, 512].map(png));

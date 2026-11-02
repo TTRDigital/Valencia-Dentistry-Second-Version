@@ -5,29 +5,29 @@ const service: Service = {
   path: "/services/cosmetic-dentistry/",
   category: "cosmetic",
   name: "Cosmetic Dentistry",
-  menuDescription: "Whitening, Invisalign, veneers and bonding, planned by Dr. Moezzi for a natural result.",
-  image: "/images/practice/dr-moezzi-smile-sign.png",
-  imageAlt: "Dr. Moezzi holding a Smile sign in the Valencia office",
+  menuDescription: "Whitening, Invisalign, veneers and bonding, planned by Dr. Lavi for a natural result.",
+  image: "/images/practice/checkup-smile.png",
+  imageAlt: "Smiling patient in the dental chair during a checkup",
   seo: {
-    title: "Cosmetic Dentistry in Santa Clarita | Valencia Smile Expert",
+    title: "Cosmetic Dentistry in Santa Clarita | Valencia Dentistry",
     description:
-      "Whitening, Invisalign, veneers and bonding in Valencia, Santa Clarita. Dr. Moezzi plans natural-looking smile changes. Book a consultation today.",
+      "Whitening, Invisalign, veneers and bonding in Valencia, Santa Clarita. Dr. Lavi plans natural-looking smile changes. Book a consultation today.",
   },
   hero: {
     eyebrow: "Cosmetic Dentistry",
     title: "Cosmetic Dentistry in Santa Clarita",
     intro:
-      "Subtle refinements or a full smile makeover, planned by Dr. Neda Moezzi, DDS to look natural and feel like you.",
+      "Subtle refinements or a full smile makeover, planned by Dr. Nuriel Lavi, DDS to look natural and feel like you.",
   },
   overview: {
     heading: "What cosmetic dentistry can do",
     paragraphs: [
       "Cosmetic dentistry improves the way your smile looks. It addresses stains, chips, gaps, uneven edges and crooked teeth. At our Valencia practice it also goes a step further: every plan is built around your face, your goals and your comfort.",
-      "Dr. Moezzi is hands-on with each case. She uses an iTero digital scan and intraoral camera images to show you what she sees, then recommends the least invasive path to the result you want. Many treatments take only one or two visits.",
+      "Dr. Lavi is hands-on with each case. He uses an iTero digital scan and intraoral camera images to show you what he sees, then recommends the least invasive path to the result you want. Many treatments take only one or two visits.",
       "Whether you want a brighter shade, straighter teeth or a complete makeover, the aim is a smile that looks real, not overdone.",
     ],
     highlights: [
-      { title: "Doctor-led planning", text: "Dr. Moezzi designs and oversees every cosmetic case herself." },
+      { title: "Doctor-led planning", text: "Dr. Lavi designs and oversees every cosmetic case himself." },
       { title: "Natural results", text: "Shade, shape and proportion chosen to suit your face." },
       { title: "Minimally invasive", text: "We preserve healthy enamel wherever we can." },
     ],
@@ -53,7 +53,7 @@ const service: Service = {
       },
       {
         title: "Natural-looking results",
-        text: "Dr. Moezzi matches shade and shape to your features so your smile looks like yours, only refined.",
+        text: "Dr. Lavi matches shade and shape to your features so your smile looks like yours, only refined.",
       },
       {
         title: "Better function",
@@ -74,7 +74,7 @@ const service: Service = {
     steps: [
       {
         title: "Consultation",
-        text: "Meet Dr. Moezzi, share what you would like to change, and get an honest view of the options that suit your smile.",
+        text: "Meet Dr. Lavi, share what you would like to change, and get an honest view of the options that suit your smile.",
       },
       {
         title: "Personalized plan",
@@ -119,22 +119,22 @@ const service: Service = {
         },
         {
           title: "Full smile makeover",
-          text: "Two or more treatments combined into one plan designed and sequenced by Dr. Moezzi.",
+          text: "Two or more treatments combined into one plan designed and sequenced by Dr. Lavi.",
         },
       ],
     },
     {
       eyebrow: "Why us",
-      heading: "Why patients choose Valencia Smile Expert",
+      heading: "Why patients choose Valencia Dentistry",
       bullets: [
-        "Doctor-led care: Dr. Moezzi plans and performs your cosmetic treatment herself",
+        "Doctor-led care: Dr. Lavi plans and performs your cosmetic treatment himself",
         "Digital planning with iTero scans and intraoral camera images",
         "Flexible scheduling for busy professionals and families",
         "A calm, welcoming office with sedation options when appropriate",
         "Clear written estimates, flexible financing and a $59 new-patient special",
       ],
-      image: "/images/practice/consult-chair.png",
-      imageAlt: "Dr. Moezzi in consultation with a seated patient",
+      image: "/images/blog/top-5-cosmetic-dentistry-procedures.png",
+      imageAlt: "Smiling patient in the dental chair",
     },
   ],
   showGallery: true,
@@ -148,7 +148,7 @@ const service: Service = {
   faqs: [
     {
       q: "How do I know which cosmetic treatment is right for me?",
-      a: "Start with a consultation. Dr. Moezzi examines your teeth, listens to what you would like to change and explains which option fits, whether that is whitening, Invisalign, veneers or a combination.",
+      a: "Start with a consultation. Dr. Lavi examines your teeth, listens to what you would like to change and explains which option fits, whether that is whitening, Invisalign, veneers or a combination.",
     },
     {
       q: "Is cosmetic dentistry painful?",
@@ -168,7 +168,7 @@ const service: Service = {
     },
     {
       q: "Can cosmetic treatments be combined?",
-      a: "Yes. Many patients pair whitening with bonding, or complete Invisalign before veneers. Dr. Moezzi sequences the steps so each one supports the next.",
+      a: "Yes. Many patients pair whitening with bonding, or complete Invisalign before veneers. Dr. Lavi sequences the steps so each one supports the next.",
     },
   ],
   related: ["teeth-whitening", "veneers", "invisalign", "composite-filling"],

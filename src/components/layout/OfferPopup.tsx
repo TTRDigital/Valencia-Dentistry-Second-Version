@@ -86,7 +86,7 @@ export function OfferPopup() {
           </button>
         </div>
         <div className="px-7 py-6">
-          <h2 id="offer-title" className="h3">Start with unhurried time with Dr. Moezzi</h2>
+          <h2 id="offer-title" className="h3">Start with unhurried time with Dr. Lavi</h2>
           <p id="offer-desc" className="mt-2 text-sm text-muted">{site.offer.description}</p>
           <ul className="mt-4 space-y-1.5 text-sm">
             {["Complete exam and digital X-rays", "A clear, written plan with no surprises", site.insurance, site.financing].map((t) => (

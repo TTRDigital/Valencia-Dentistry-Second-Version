@@ -175,7 +175,7 @@ export function AppointmentForm({ form, services, compact, defaultService = "" }
       <div>
         <label className="flex items-start gap-3 text-sm">
           <input type="checkbox" name="consent" className="mt-1 h-5 w-5 rounded border-sand accent-slate-600" aria-invalid={Boolean(errors.consent)} aria-describedby={errors.consent ? `${id}-consent-err` : undefined} onChange={(e) => validateField("consent", e.target.checked)} />
-          <span>I agree that Valencia Smile Expert may contact me by phone, text or email about my request. Message and data rates may apply. See our <Link href="/privacy-policy/" className="underline underline-offset-2">privacy policy</Link>.</span>
+          <span>I agree that Valencia Dentistry may contact me by phone, text or email about my request. Message and data rates may apply. See our <Link href="/privacy-policy/" className="underline underline-offset-2">privacy policy</Link>.</span>
         </label>
         {errors.consent && <p id={`${id}-consent-err`} className="mt-1 text-sm text-rose-600">{errors.consent}</p>}
       </div>

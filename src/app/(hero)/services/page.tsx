@@ -16,8 +16,8 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Dental Services in Valencia, CA | Valencia Smile Expert",
-  description: "Preventive, family, cosmetic, restorative, implant and holistic dentistry in one Valencia office, every visit led by Dr. Neda Moezzi, DDS.",
+  title: "Dental Services in Valencia, CA | Valencia Dentistry",
+  description: "Preventive, family, cosmetic, restorative, implant and holistic dentistry in one Valencia office, every visit led by Dr. Nuriel Lavi, DDS.",
   path: "/services/",
 });
 
@@ -36,12 +36,12 @@ export default function ServicesHub() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <Hero image="/images/practice/treatment-room.png" imageAlt="Dr. Moezzi treating a patient in a bright treatment room" compact objectPosition="center 40%">
+      <Hero image="/images/practice/cbct-scan.png" imageAlt="Patient standing at the CBCT 3D imaging unit" compact objectPosition="center 40%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Services</p>
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>Everything your smile needs, under one roof</h1>
-          <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>From a child&apos;s first checkup to guided implant surgery, every treatment is planned and delivered by Dr. Neda Moezzi, DDS, in our Valencia office.</p>
+          <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>From a child&apos;s first checkup to guided implant surgery, every treatment is planned and delivered by Dr. Nuriel Lavi, DDS, in our Valencia office.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
             <Button href={site.bookingUrl} variant="gold" size="lg">Book Online</Button>
             <Button href={`tel:${site.phoneE164}`} variant="outline" size="lg" icon={<Icon.phone className="h-4 w-4" />}>{site.phone}</Button>
@@ -79,7 +79,7 @@ export default function ServicesHub() {
       <TechnologyRow tone="white" />
       <Affordable />
       <Reviews tone="ivory-200" heading="Trusted by Santa Clarita families" />
-      <CtaBand title="Not sure where to start?" text="Book a consultation and Dr. Moezzi will map out the right care, in the right order, at a pace that suits you." />
+      <CtaBand title="Not sure where to start?" text="Book a consultation and Dr. Lavi will map out the right care, in the right order, at a pace that suits you." />
     </>
   );
 }

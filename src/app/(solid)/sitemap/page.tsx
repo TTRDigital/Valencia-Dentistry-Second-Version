@@ -7,7 +7,7 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { pageMeta } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
-export const metadata: Metadata = pageMeta({ title: "Sitemap | Valencia Smile Expert", description: "Every page on the Valencia Smile Expert website: services, about, reviews, blog articles and contact.", path: "/sitemap/" });
+export const metadata: Metadata = pageMeta({ title: "Sitemap | Valencia Dentistry", description: "Every page on the Valencia Dentistry website: services, about, reviews, blog articles and contact.", path: "/sitemap/" });
 
 export default function HtmlSitemap() {
   const groups = [

@@ -7,10 +7,10 @@ const service: Service = {
   category: "surgery",
   name: "Tooth Extractions",
   menuDescription: "Gentle simple and surgical extractions with sedation options and clear aftercare.",
-  image: "/images/practice/dr-moezzi-treating.png",
-  imageAlt: "Dr. Moezzi treating a patient who is reclined in the dental chair",
+  image: "/images/blog/bone-grafting-is-it-painful.png",
+  imageAlt: "Dentist preparing a patient for treatment",
   seo: {
-    title: "Tooth Extractions in Valencia, CA | Valencia Smile Expert",
+    title: "Tooth Extractions in Valencia, CA | Valencia Dentistry",
     description:
       "Gentle tooth extractions in Valencia, Santa Clarita. Simple and surgical removal with sedation options and a clear recovery plan. Book a consultation.",
   },
@@ -18,19 +18,19 @@ const service: Service = {
     eyebrow: "Oral Surgery",
     title: "Tooth Extractions in Valencia",
     intro:
-      "When a tooth can no longer be saved, removing it can bring real relief. Dr. Neda Moezzi, DDS, performs simple and surgical extractions in a calm setting, with sedation options when appropriate.",
+      "When a tooth can no longer be saved, removing it can bring real relief. Dr. Nuriel Lavi, DDS, performs simple and surgical extractions in a calm setting, with sedation options when appropriate.",
   },
   overview: {
     heading: "Comfortable tooth removal, when it is the right call",
     paragraphs: [
       "An extraction is usually the last option we reach for. When decay, infection, a crack or crowding puts the rest of your mouth at risk, taking the tooth out can protect your health and end the discomfort. We explain why we are recommending it, and what your alternatives are, before anything is scheduled.",
-      "Every extraction starts with an exam and a CBCT 3D scan so Dr. Moezzi can see the roots, nerves and bone around the tooth. That picture tells us whether a simple or surgical approach is needed and helps us plan a smooth procedure.",
+      "Every extraction starts with an exam and a CBCT 3D scan so Dr. Lavi can see the roots, nerves and bone around the tooth. That picture tells us whether a simple or surgical approach is needed and helps us plan a smooth procedure.",
       "You will leave with written aftercare instructions and a follow-up visit on the calendar. If the tooth should be replaced, we talk through implants, bridges and other options so there is a plan for the space.",
     ],
     highlights: [
       {
         title: "Doctor-led care",
-        text: "Dr. Moezzi handles your extraction personally and answers your questions without pressure.",
+        text: "Dr. Lavi handles your extraction personally and answers your questions without pressure.",
       },
       {
         title: "Sedation options",
@@ -44,7 +44,7 @@ const service: Service = {
   },
   whoFor: {
     heading: "Who may need a tooth extraction",
-    intro: "Dr. Moezzi may recommend removing a tooth if you have:",
+    intro: "Dr. Lavi may recommend removing a tooth if you have:",
     bullets: [
       "Decay too extensive for a filling, crown or root canal",
       "An infection or abscess that has reached the pulp or nearby bone",
@@ -84,11 +84,11 @@ const service: Service = {
     steps: [
       {
         title: "Exam and 3D scan",
-        text: "We examine the tooth and take a CBCT scan to see the roots and surrounding bone. Dr. Moezzi reviews your symptoms, explains your options and confirms whether extraction is the right choice.",
+        text: "We examine the tooth and take a CBCT scan to see the roots and surrounding bone. Dr. Lavi reviews your symptoms, explains your options and confirms whether extraction is the right choice.",
       },
       {
         title: "Comfortable removal",
-        text: "The procedure happens in our Valencia office under local anesthesia, with sedation options when appropriate. Dr. Moezzi uses careful, modern techniques whether the extraction is simple or surgical.",
+        text: "The procedure happens in our Valencia office under local anesthesia, with sedation options when appropriate. Dr. Lavi uses careful, modern techniques whether the extraction is simple or surgical.",
       },
       {
         title: "Recovery and follow-up",
@@ -171,7 +171,7 @@ const service: Service = {
     },
     {
       q: "Can I be sedated for my extraction?",
-      a: "Yes. Every extraction is done with local anesthesia, and sedation options are available when appropriate for patients who feel anxious. Dr. Moezzi will go over what makes sense for you at your consultation.",
+      a: "Yes. Every extraction is done with local anesthesia, and sedation options are available when appropriate for patients who feel anxious. Dr. Lavi will go over what makes sense for you at your consultation.",
     },
     {
       q: "What is dry socket, and how do I avoid it?",
@@ -181,7 +181,7 @@ const service: Service = {
   related: ["wisdom-teeth-removal", "dental-implants", "bone-grafting", "dental-bridges"],
   cta: {
     heading: "Relief starts with a consultation",
-    text: "Call (661) 254-5200 or book online to see Dr. Moezzi in Valencia and find out whether an extraction is the right step.",
+    text: "Call (661) 254-5200 or book online to see Dr. Lavi in Valencia and find out whether an extraction is the right step.",
   },
   flags: [
     "Source promises 'same-day appointments & emergency availability'; softened to 'same-day visits when the schedule allows'. Confirm the practice offers same-day emergency extractions.",

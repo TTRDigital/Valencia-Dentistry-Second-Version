@@ -12,8 +12,8 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Request an Appointment | Valencia Smile Expert",
-  description: "Request a dental appointment with Dr. Neda Moezzi in Valencia. Book online instantly or send your preferred time and we will confirm it by phone.",
+  title: "Request an Appointment | Valencia Dentistry",
+  description: "Request a dental appointment with Dr. Nuriel Lavi in Valencia. Book online instantly or send your preferred time and we will confirm it by phone.",
   path: "/appointment/",
 });
 const crumbs = [{ label: "Home", href: "/" }, { label: "Appointment", href: "/appointment/" }];
@@ -22,7 +22,7 @@ export default function AppointmentPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <Hero image="/images/practice/consult-chair.png" imageAlt="Dr. Moezzi in consultation with a seated patient" compact objectPosition="center 30%">
+      <Hero image="/images/practice/tooth-model.jpg" imageAlt="Gloved hands holding a tooth model with a filling" compact objectPosition="center 30%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Appointments</p>

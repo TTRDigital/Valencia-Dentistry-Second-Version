@@ -6,10 +6,10 @@ const service: Service = {
   category: "holistic",
   name: "Holistic Dentistry",
   menuDescription: "Biocompatible, mercury-free care with safe amalgam removal and fluoride-free options.",
-  image: "/images/practice/consult-chair.png",
-  imageAlt: "Dr. Moezzi in consultation with a seated patient, discussing treatment options",
+  image: "/images/blog/how-long-do-dental-bridge-last.png",
+  imageAlt: "Smiling woman next to a dental bridge model",
   seo: {
-    title: "Holistic Dentist in Valencia, CA | Valencia Smile Expert",
+    title: "Holistic Dentist in Valencia, CA | Valencia Dentistry",
     description:
       "Mercury-free, biocompatible dental care in Valencia, Santa Clarita. SMART amalgam removal and fluoride-free options. Book a consultation.",
   },
@@ -22,9 +22,9 @@ const service: Service = {
   overview: {
     heading: "A whole-body view of oral health",
     paragraphs: [
-      "Holistic dentistry starts from a simple idea: your mouth is part of your body, not separate from it. At Valencia Smile Expert we choose materials with care, keep treatment as conservative as possible and avoid procedures you do not need.",
+      "Holistic dentistry starts from a simple idea: your mouth is part of your body, not separate from it. At Valencia Dentistry we choose materials with care, keep treatment as conservative as possible and avoid procedures you do not need.",
       "That means tooth-colored fillings made without mercury or BPA, metal-free crowns and bridges, and the SMART protocol when old silver fillings are removed. For preventive visits we offer fluoride-free cleanings with alternative remineralizing agents.",
-      "Dr. Neda Moezzi, DDS leads every appointment herself. She takes time to review your health history, understand what matters to you and build a plan that respects both your teeth and your overall wellness.",
+      "Dr. Nuriel Lavi, DDS leads every appointment himself. He takes time to review your health history, understand what matters to you and build a plan that respects both your teeth and your overall wellness.",
     ],
     highlights: [
       { title: "Mercury-free", text: "Fillings and restorations made without amalgam, metals or BPA." },
@@ -60,7 +60,7 @@ const service: Service = {
     steps: [
       {
         title: "Evaluation",
-        text: "Dr. Moezzi completes a full oral exam, reviews your medical history and discusses any material sensitivities. Digital X-rays are taken only when needed.",
+        text: "Dr. Lavi completes a full oral exam, reviews your medical history and discusses any material sensitivities. Digital X-rays are taken only when needed.",
       },
       {
         title: "Personalized plan",
@@ -135,7 +135,7 @@ const service: Service = {
   related: ["composite-filling", "preventive-dentistry", "family-dentistry", "dental-crowns"],
   cta: {
     heading: "Care that respects your whole body",
-    text: "Book a consultation with Dr. Moezzi in Valencia to talk through mercury-free, biocompatible options for you and your family.",
+    text: "Book a consultation with Dr. Lavi in Valencia to talk through mercury-free, biocompatible options for you and your family.",
   },
   flags: [
     "Ozone therapy: source lists it as a treatment that 'supports healing and reduces infection'. Kept as an item with a softened description. Verify the practice offers it.",

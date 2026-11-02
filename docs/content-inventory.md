@@ -1,4 +1,6 @@
-# Content inventory — valenciasmileexpert.com (crawled 2026-10-30)
+# Content inventory — earlier site (crawled 2026-10-30)
+
+> **Second version (2026-11-02):** the practice is now **Valencia Dentistry**, led by **Dr. Nuriel Lavi, DDS** (brand, logo, email and domain from the first site at valencia-dentistry.vercel.app). The previous practice owner's name, photos and reviews that name them have been removed from the site. The inventory below describes the source content the pages were written from.
 
 56 URLs from `sitemap_index.xml` (26 pages, 30 blog posts), all answered 200. Raw HTML and extracted JSON live in the build scratchpad; the facts below are what the new site is built from.
 
@@ -6,8 +8,8 @@
 
 | Path | Current title | Words | FAQs | Notes / gaps |
 |---|---|---|---|---|
-| / | Valencia Smile Expert: Trusted Dentist in Santa Clarita | 879 | 7 | One FAQ answer says "We're in West Hollywood" (copy error, fixed to Valencia). Only 5 Google reviews shown, no rating count on page. |
-| /about/ | About Us | 633 | 0 | No H1. "Serving Santa Clarita since 2007", Dr. Moezzi: University of Detroit Mercy, 2010. |
+| / | the earlier practice brand: Trusted Dentist in Santa Clarita | 879 | 7 | One FAQ answer says "We're in West Hollywood" (copy error, fixed to Valencia). Only 5 Google reviews shown, no rating count on page. |
+| /about/ | About Us | 633 | 0 | No H1. "Serving Santa Clarita since 2007", the previous dentist: University of Detroit Mercy, 2010. |
 | /services/ | Dental Services in Santa Clarita | 641 | 0 | Full category lists (preventive, cosmetic, restorative, family, surgical) + insurance logos (Delta Dental, MetLife, Cigna, Aetna, United Concordia, BCBS, Principal, Humana) + "patient portal" mention (no link). |
 | /services/cosmetic-dentistry/ | Cosmetic dentistry | 1219 | 5 | |
 | /services/cosmetic-dentistry/composite-filling/ | Composite fillings | 1154 | 6 | |
@@ -33,19 +35,19 @@
 | /privacy-policy/ | Privacy Policy | 1012 | 0 | Migrated as-is (legal). |
 | /terms-and-services/ | terms and services | 920 | 0 | Migrated as-is (legal). |
 
-## Blog (30 posts, all at the site root, author "Dr Neda Moezzi")
+## Blog (30 posts, all at the site root, author "the previous dentist")
 
 All 30 have 950–1,760 words, 2–8 FAQs with FAQPage schema, most with 1–3 HTML tables, a featured image, published Apr–Jul 2026. 20 of 30 have **no meta description**; several titles exceed 60 characters (up to 124). There is no blog index page on the current site (breadcrumbs say "Blogs" but link nowhere). Comments form on every post (dropped).
 
 ## Assets found (practice's own)
 
 - Logo: 461×96 PNG only (no vector). Favicon 44×49 PNG. A vector logo is still needed from the client.
-- 22 practice photos (Dr. Moezzi, team, treatment rooms, CBCT unit, exam shots) at 470–1,296px wide; 6 before/after pairs (≈437×404) + 1 implant pair (599×351); 8 insurance logos; 31 blog featured images (≈1,200px). No videos anywhere on the site. No video testimonials.
+- 22 practice photos (the previous dentist, team, treatment rooms, CBCT unit, exam shots) at 470–1,296px wide; 6 before/after pairs (≈437×404) + 1 implant pair (599×351); 8 insurance logos; 31 blog featured images (≈1,200px). No videos anywhere on the site. No video testimonials.
 - Reviews: 5 Google reviews with names and relative dates (Jose C, Doug Chong, Tamarea Jaster, Kyle Figatner, Victoria Kersanty). The "4.9★ (180 reviews)" figure comes from the brief; it is shown on the site as given and should be kept in sync with Google.
 
 ## Facts verified against the live site
 
-Dr. Neda Moezzi, DDS (University of Detroit Mercy, 2010) · 27420 Tourney Rd, Suite 240, Santa Clarita, CA 91355 · (661) 254-5200 · info@valenciasmileexpert.com · Mon–Fri 8am–5pm, Sat & Sun closed · $59 new patient exam & X-rays · most major PPO plans · flexible financing · Weave booking link · Google Maps short link · Facebook, Instagram, LinkedIn, X handles · GTM-PPV3TDK8 (+ GA4 G-XBJPWQ7365) · geo 34.421619, -118.5780025 · technology: CBCT, iTero, PRF, guided implants, digital X-rays, intraoral cameras, laser dentistry, same-day in-house crowns · same-day/emergency availability · sedation options.
+the previous dentist (University of Detroit Mercy, 2010) · 27420 Tourney Rd, Suite 240, Santa Clarita, CA 91355 · (661) 254-5200 · info@the earlier site · Mon–Fri 8am–5pm, Sat & Sun closed · $59 new patient exam & X-rays · most major PPO plans · flexible financing · Weave booking link · Google Maps short link · Facebook, Instagram, LinkedIn, X handles · GTM-PPV3TDK8 (+ GA4 G-XBJPWQ7365) · geo 34.421619, -118.5780025 · technology: CBCT, iTero, PRF, guided implants, digital X-rays, intraoral cameras, laser dentistry, same-day in-house crowns · same-day/emergency availability · sedation options.
 
 ## Gaps to fill (what the client should provide)
 1. Vector logo (SVG) — the site ships with a rebuilt SVG wordmark based on the PNG mark.

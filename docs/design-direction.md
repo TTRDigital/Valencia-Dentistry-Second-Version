@@ -1,4 +1,4 @@
-# Design direction — Valencia Smile Expert
+# Design direction — Valencia Dentistry
 
 The reference (Newbury Park Dental Arts) was studied for *section ideas and mood only*. Nothing from it (text, photos, video, logo, doctor, awards, prices, membership, code) is used.
 
@@ -23,23 +23,25 @@ The reference (Newbury Park Dental Arts) was studied for *section ideas and mood
 
 Overall: fewer elements per screen, more air (section padding 120–160px desktop), hairline borders instead of shadows, ivory backgrounds instead of white, deep ink instead of black.
 
-## Tokens (proposed, all text pairs pass WCAG AA)
+## Tokens (second version: warm charcoal + taupe from the Valencia Dentistry mark; all text pairs pass WCAG AA)
 
 | Token | Value | Use |
 |---|---|---|
-| `--ink` | #0F1F33 | dark surfaces, headings |
-| `--ink-700` | #112740 | brand navy (from logo) |
-| `--slate` | #366797 | brand steel blue; links, secondary accents |
-| `--slate-600` | #2E5A85 | solid buttons (6.1:1 on ivory with white text) |
+| `--ink` | #1C1B19 | dark surfaces |
+| `--ink-700` | #2E2E2E | logo charcoal, headings |
+| `--slate` | #7A6B52 | taupe accent, links, icons (4.8:1 on ivory) |
+| `--slate-600` | #5E5240 | solid buttons (7.6:1 with white text) |
 | `--ivory` | #FAF7F1 | page background |
 | `--ivory-200` | #F2ECE1 | alternate band |
 | `--sand` | #E9E1D2 | hairlines on light |
-| `--gold` | #D9BE8C | dividers, numerals, accents (decorative only) |
-| `--gold-700` | #856A33 | gold used for text/eyebrows on ivory (4.8:1) and white (5.1:1) |
-| `--text` | #1C2A3A | body text on ivory (12.9:1) |
-| `--muted` | #56657A | secondary text (5.9:1 on ivory) |
+| `--gold` | #D9BE8C | dividers, numerals, accents (decorative) |
+| `--gold-700` | #856A33 | eyebrows and gold text on ivory/white |
+| `--text` | #22211F | body text on ivory |
+| `--muted` | #5F5A52 | secondary text (6.4:1 on ivory) |
 | `--on-dark` | #F3EEE4 | text on ink |
-| `--on-dark-muted` | #B9C2CF | secondary text on ink (8.4:1) |
+| `--on-dark-muted` | #C4BDB1 | secondary text on ink |
+
+The logo mark keeps its own colours: charcoal #2E2E2E and taupe #9A8B72 on light backgrounds, ivory and #C9BA9C on dark ones.
 
 ## Type
 - Display: **Fraunces** static instances (Light 300 + Light Italic for headings and quotes, Regular 400 for H3) for H1/H2/pull quotes — proposed over Bodoni Moda because its lighter weights stay legible on phones and it self-hosts through next/font. The variable font with its optical-size and "soft" axes was tried first and dropped: its two preloaded files weighed 270 KB and sat on the LCP path. Alternate: **Cormorant Garamond** 300/400 (also wired in the style guide for comparison).

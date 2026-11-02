@@ -21,7 +21,7 @@ export default function EmergencyPage() {
   return (
     <>
       <JsonLd data={[breadcrumbSchema(crumbs), faqSchema(emergency.faqs)]} />
-      <Hero image="/images/practice/dr-moezzi-treating.png" imageAlt="Dr. Moezzi treating a patient" compact objectPosition="center 30%">
+      <Hero image="/images/practice/exam-mirror.png" imageAlt="Close-up of a dental mirror exam of a patient's smile" compact objectPosition="center 30%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">{emergency.hero.eyebrow}</p>

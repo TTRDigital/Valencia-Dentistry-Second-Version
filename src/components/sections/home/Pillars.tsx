@@ -4,7 +4,7 @@ import { Icon } from "@/components/ui/Icons";
 const pillars = [
   { n: "01", title: "Advanced technology", text: "3D CBCT imaging, iTero scanning, guided implant surgery and PRF therapy, so diagnosis is precise and treatment is gentler.", I: Icon.sparkle },
   { n: "02", title: "Calming spaces", text: "A quiet, light-filled office with sedation options when you want them. Nothing here feels like a clinic.", I: Icon.leaf },
-  { n: "03", title: "One-on-one care", text: "Dr. Moezzi leads every visit herself. No handoffs, no rush, and a plan explained in plain language.", I: Icon.heart },
+  { n: "03", title: "One-on-one care", text: "Dr. Lavi leads every visit himself. No handoffs, no rush, and a plan explained in plain language.", I: Icon.heart },
 ];
 
 export function Pillars() {

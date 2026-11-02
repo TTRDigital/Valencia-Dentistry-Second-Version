@@ -8,7 +8,7 @@
  * canonical, 1200×630 og:image that loads, valid JSON-LD (Dentist on the home
  * page, BreadcrumbList on inner pages, FAQPage where FAQs exist), alt on every
  * image, no internal link that answers anything but 200, no noindex page in the
- * sitemap, every old URL of valenciasmileexpert.com answering 200 (or one 301 to a 200).
+ * sitemap, every URL of the earlier sites (content/old-urls.txt) answering 200 (or one 301 to a 200).
  */
 import * as cheerio from "cheerio";
 import { readFileSync } from "node:fs";
@@ -104,7 +104,7 @@ for (const u of oldUrls) {
   if (r.status === 200) migrated++;
   else if ([301, 308].includes(r.status)) {
     const loc = r.headers.get("location") || "";
-    const r2 = await get(local(loc));
+    const r2 = await get(new URL(local(loc), BASE + "/").toString());
     if (r2.status === 200) migrated++;
     else bad(u, `redirects to ${loc} which answers ${r2.status}`);
   } else bad(u, `old URL answers ${r.status}`);

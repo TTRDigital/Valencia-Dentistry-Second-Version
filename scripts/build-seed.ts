@@ -29,11 +29,11 @@ docs.push({
   mapsUrl: site.mapsUrl, bookingUrl: site.bookingUrl, hoursText: "Mon–Fri 8 AM – 5 PM · Sat & Sun closed",
   googleRating: site.google.rating, googleReviewCount: site.google.reviewCount, insurance: site.insurance, financing: site.financing,
   areaServed: site.areaServed, social: site.social, gtmId: site.gtmId,
-  seo: { _type: "seo", title: "Dentist in Valencia, Santa Clarita | Valencia Smile Expert", description: "Holistic, one-on-one dentistry in Valencia with Dr. Neda Moezzi, DDS." },
+  seo: { _type: "seo", title: "Dentist in Valencia, Santa Clarita | Valencia Dentistry", description: "Holistic, one-on-one dentistry in Valencia with Dr. Nuriel Lavi, DDS." },
 });
 docs.push({ _id: "navigation", _type: "navigation", title: "Navigation", main: withKeys(mainNav.map((n) => ({ _type: "object", label: n.label, href: n.href }))), footerPractice: withKeys(footerNav.practice.map((n) => ({ _type: "object", ...n }))), footerServices: withKeys(footerNav.services.map((n) => ({ _type: "object", ...n }))) });
 docs.push({ _id: "offer", _type: "offer", title: site.offer.title, price: site.offer.price, short: site.offer.short, description: site.offer.description, bullets: offer.includes, fineprint: site.offer.fineprint, popupEnabled: true, popupDelayDesktop: 12, popupDelayMobile: 20 });
-docs.push({ _id: "doctor-neda-moezzi", _type: "doctor", name: doctor.name, shortName: doctor.shortName, title: doctor.title, school: doctor.school, gradYear: doctor.gradYear, portrait: img(doctor.portrait, doctor.portraitAlt), quote: doctor.quote, bio: doctor.bio, credentials: doctor.credentials });
+docs.push({ _id: "doctor-nuriel-lavi", _type: "doctor", name: doctor.name, shortName: doctor.shortName, title: doctor.title, portrait: doctor.portrait ? img(doctor.portrait, doctor.portraitAlt) : undefined, quote: doctor.statement, bio: doctor.bio, credentials: doctor.credentials });
 testimonials.forEach((t, i) => docs.push({ _id: `testimonial-${t.id}`, _type: "testimonial", name: t.name, text: t.text, rating: t.rating, source: t.source, service: t.service, order: i }));
 cases.forEach((c, i) => docs.push({ _id: `case-${c.id}`, _type: "beforeAfterCase", title: c.title, treatment: c.treatment, before: img(c.before, c.beforeAlt), after: img(c.after, c.afterAlt), consent: true, order: i }));
 homeFaqs.forEach((f, i) => docs.push({ _id: `faq-home-${i}`, _type: "faq", q: f.q, a: f.a, group: "home" }));
@@ -56,28 +56,28 @@ for (const s of services) {
 for (const p of posts) {
   docs.push({
     _id: `post-${p.slug}`, _type: "post", title: p.title, slug: { _type: "slug", current: p.slug }, excerpt: p.excerpt, datePublished: p.datePublished, dateModified: p.dateModified,
-    author: { _type: "reference", _ref: "doctor-neda-moezzi" }, image: img(p.image as string, p.imageAlt as string), category: p.category, keyTakeaways: p.keyTakeaways, html: p.html,
+    author: { _type: "reference", _ref: "doctor-nuriel-lavi" }, image: img(p.image as string, p.imageAlt as string), category: p.category, keyTakeaways: p.keyTakeaways, html: p.html,
     faqs: withKeys(((p.faqs as { q: string; a: string }[]) ?? []).map((f) => ({ _type: "faqItem", ...f }))), related: p.related, seo: { _type: "seo", ...(p.seo as object) },
   });
 }
-for (const [slug, l] of Object.entries(legal)) docs.push({ _id: `legal-${slug}`, _type: "legalPage", title: l.title, slug: { _type: "slug", current: slug }, updated: l.updated, html: l.html, seo: { _type: "seo", title: `${l.title} | Valencia Smile Expert`, description: `${l.title} of Valencia Smile Expert.` } });
+for (const [slug, l] of Object.entries(legal)) docs.push({ _id: `legal-${slug}`, _type: "legalPage", title: l.title, slug: { _type: "slug", current: slug }, updated: l.updated, html: l.html, seo: { _type: "seo", title: `${l.title} | Valencia Dentistry`, description: `${l.title} of Valencia Dentistry.` } });
 
 // Marketing pages as section-builder documents
 const pageDoc = (id: string, title: string, path: string, seo: { title: string; description: string }, sections: Record<string, unknown>[]) =>
   docs.push({ _id: `page-${id}`, _type: "page", title, path, seo: { _type: "seo", ...seo }, sections: withKeys(sections) });
-pageDoc("home", "Home", "/", { title: "Dentist in Valencia, Santa Clarita | Valencia Smile Expert", description: "Holistic, one-on-one dentistry in Valencia with Dr. Neda Moezzi, DDS. Implants, veneers, Invisalign, same-day crowns. $59 new patient exam & X-rays." }, [
-  { _type: "heroSection", eyebrow: "Valencia · Santa Clarita", title: "Dentistry with heart, one patient at a time", intro: "Holistic, one-on-one care from Dr. Neda Moezzi, DDS. No handoffs, no rush, and a plan built around your long-term health.", image: img("/images/practice/team-sign.png", "Dr. Neda Moezzi and her team in the Valencia office"), compact: false },
+pageDoc("home", "Home", "/", { title: "Dentist in Valencia, Santa Clarita | Valencia Dentistry", description: "Holistic, one-on-one dentistry in Valencia with Dr. Nuriel Lavi, DDS. Implants, veneers, Invisalign, same-day crowns. $59 new patient exam & X-rays." }, [
+  { _type: "heroSection", eyebrow: "Valencia · Santa Clarita", title: "Dentistry with heart, one patient at a time", intro: "Holistic, one-on-one care from Dr. Nuriel Lavi, DDS. No handoffs, no rush, and a plan built around your long-term health.", image: img("/images/practice/checkup-smile.png", "Dr. Nuriel Lavi and her team in the Valencia office"), compact: false },
   { _type: "componentSection", component: "reviews" }, { _type: "componentSection", component: "serviceGrid" }, { _type: "componentSection", component: "meetDoctor" }, { _type: "componentSection", component: "technology" }, { _type: "componentSection", component: "gallery" }, { _type: "componentSection", component: "affordable" },
   { _type: "faqSection", heading: "Questions, answered", faqs: withKeys(homeFaqs.map((_, i) => ({ _type: "reference", _ref: `faq-home-${i}` }))) }, { _type: "componentSection", component: "visit" }, { _type: "componentSection", component: "cta", heading: "Ready when you are" },
 ]);
 pageDoc("about", "Our Practice", "/about/", about.seo, [
-  { _type: "heroSection", ...about.hero, image: img("/images/practice/team-office-wide.png", "Dr. Neda Moezzi seated with her team") },
+  { _type: "heroSection", ...about.hero, image: img("/images/practice/family-consult.png", "Dentist talking with a family in the treatment room") },
   { _type: "contentSection", eyebrow: "Our mission", heading: about.mission.heading, intro: about.mission.paragraphs.join("\n\n") },
   { _type: "contentSection", eyebrow: "What guides us", heading: "The values behind every visit", items: withKeys(about.values.map((v) => ({ _type: "titledItem", ...v }))) },
   { _type: "componentSection", component: "technology", heading: about.technology.heading, text: about.technology.text }, { _type: "componentSection", component: "serviceGrid" }, { _type: "componentSection", component: "reviews" }, { _type: "componentSection", component: "visit" },
 ]);
 pageDoc("emergency-dental", "Emergency Dental", "/emergency-dental/", emergency.seo, [
-  { _type: "heroSection", ...emergency.hero, image: img("/images/practice/dr-moezzi-treating.png", "Dr. Moezzi treating a patient") },
+  { _type: "heroSection", ...emergency.hero, image: img("/images/practice/exam-mirror.png", "Dr. Lavi treating a patient") },
   { _type: "contentSection", eyebrow: "What to do right now", heading: "Common emergencies and first steps", items: withKeys(emergency.situations.map((v) => ({ _type: "titledItem", ...v }))) },
   { _type: "faqSection", heading: "Emergency questions", faqs: withKeys(emergency.faqs.map((_, i) => ({ _type: "reference", _ref: `faq-emergency-${i}` }))) }, { _type: "componentSection", component: "form" }, { _type: "componentSection", component: "visit" },
 ]);
@@ -88,12 +88,12 @@ pageDoc("new-patient-offer", "New Patient Special", "/new-patient-offer/", offer
   { _type: "faqSection", heading: "About the special", faqs: withKeys(offer.faqs.map((_, i) => ({ _type: "reference", _ref: `faq-offer-${i}` }))) }, { _type: "componentSection", component: "form" }, { _type: "componentSection", component: "affordable" },
 ]);
 for (const [id, title, path, seo] of [
-  ["services", "Services", "/services/", { title: "Dental Services in Valencia, CA | Valencia Smile Expert", description: "Preventive, family, cosmetic, restorative, implant and holistic dentistry in one Valencia office." }],
-  ["smile-gallery", "Smile Gallery", "/smile-gallery/", { title: "Smile Gallery: Before & After Photos | Valencia Smile Expert", description: "Real before-and-after results from Dr. Neda Moezzi's patients in Valencia." }],
-  ["testimonials", "Reviews", "/testimonials/", { title: "Patient Reviews & Testimonials | Valencia Smile Expert", description: "What patients say about Dr. Neda Moezzi and Valencia Smile Expert." }],
-  ["contact", "Contact", "/contact/", { title: "Contact Valencia Smile Expert | Dentist in Valencia, CA", description: "Call (661) 254-5200, book online or send a message." }],
-  ["appointment", "Appointment", "/appointment/", { title: "Request an Appointment | Valencia Smile Expert", description: "Request a dental appointment with Dr. Neda Moezzi in Valencia." }],
-  ["blog", "Blog", "/blog/", { title: "Dental Health Blog | Valencia Smile Expert, Santa Clarita", description: "Plain-language guides from Dr. Neda Moezzi, DDS." }],
+  ["services", "Services", "/services/", { title: "Dental Services in Valencia, CA | Valencia Dentistry", description: "Preventive, family, cosmetic, restorative, implant and holistic dentistry in one Valencia office." }],
+  ["smile-gallery", "Smile Gallery", "/smile-gallery/", { title: "Smile Gallery: Before & After Photos | Valencia Dentistry", description: "Real before-and-after results from Dr. Nuriel Lavi's patients in Valencia." }],
+  ["testimonials", "Reviews", "/testimonials/", { title: "Patient Reviews & Testimonials | Valencia Dentistry", description: "What patients say about Dr. Nuriel Lavi and Valencia Dentistry." }],
+  ["contact", "Contact", "/contact/", { title: "Contact Valencia Dentistry | Dentist in Valencia, CA", description: "Call (661) 254-5200, book online or send a message." }],
+  ["appointment", "Appointment", "/appointment/", { title: "Request an Appointment | Valencia Dentistry", description: "Request a dental appointment with Dr. Nuriel Lavi in Valencia." }],
+  ["blog", "Blog", "/blog/", { title: "Dental Health Blog | Valencia Dentistry, Santa Clarita", description: "Plain-language guides from Dr. Nuriel Lavi, DDS." }],
 ] as const) pageDoc(id, title, path, seo, [{ _type: "componentSection", component: id === "contact" || id === "appointment" ? "form" : id === "smile-gallery" ? "gallery" : id === "testimonials" ? "reviews" : "serviceGrid" }]);
 
 writeFileSync(join(ROOT, "content/seed.json"), JSON.stringify(docs, null, 0));

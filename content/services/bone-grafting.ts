@@ -7,25 +7,25 @@ const service: Service = {
   category: "surgery",
   name: "Bone Grafting",
   menuDescription: "Rebuild lost jawbone so implants have a stable foundation, with PRF to support healing.",
-  image: "/images/practice/cbct-scan.png",
-  imageAlt: "Patient standing at the CBCT 3D imaging unit used to measure jawbone",
+  image: "/images/blog/bone-grafting-for-dental-implants-guide.png",
+  imageAlt: "Dentist examining a patient, with an X-ray on the screen",
   seo: {
-    title: "Bone Grafting in Santa Clarita | Valencia Smile Expert",
+    title: "Bone Grafting in Santa Clarita | Valencia Dentistry",
     description:
-      "Bone grafting in Valencia, Santa Clarita to rebuild jawbone before dental implants. Socket preservation, sinus lifts and PRF with Dr. Moezzi. Book today.",
+      "Bone grafting in Valencia, Santa Clarita to rebuild jawbone before dental implants. Socket preservation, sinus lifts and PRF with Dr. Lavi. Book today.",
   },
   hero: {
     eyebrow: "Bone Grafting",
     title: "Bone Grafting in Santa Clarita",
     intro:
-      "When the jaw has lost bone after an extraction, infection or years of wearing dentures, a graft rebuilds the foundation your implant needs. Dr. Neda Moezzi, DDS plans each graft on a 3D scan.",
+      "When the jaw has lost bone after an extraction, infection or years of wearing dentures, a graft rebuilds the foundation your implant needs. Dr. Nuriel Lavi, DDS plans each graft on a 3D scan.",
   },
   overview: {
     heading: "Rebuilding the foundation of your smile",
     paragraphs: [
       "After a tooth is lost, the bone that held it begins to shrink. Trauma and infection can take more. Without enough healthy bone, an implant has nothing secure to hold onto, and the shape of your face can change over time.",
       "Bone grafting adds material where bone is missing and gives your body a scaffold to grow new bone. At our Valencia office it is most often used to prepare for implants or to preserve the socket right after an extraction.",
-      "Dr. Moezzi measures your bone on a CBCT 3D scan, chooses the type of graft and material that suits you, and may use PRF from your own blood to support healing. Sedation options are available when appropriate.",
+      "Dr. Lavi measures your bone on a CBCT 3D scan, chooses the type of graft and material that suits you, and may use PRF from your own blood to support healing. Sedation options are available when appropriate.",
     ],
     highlights: [
       {
@@ -44,7 +44,7 @@ const service: Service = {
   },
   whoFor: {
     heading: "Who needs a bone graft?",
-    intro: "Dr. Moezzi may recommend grafting if you:",
+    intro: "Dr. Lavi may recommend grafting if you:",
     bullets: [
       "Lost a tooth and want to preserve the bone for a future implant",
       "Want implants but your scan shows too little bone to hold them",
@@ -84,7 +84,7 @@ const service: Service = {
     steps: [
       {
         title: "Consultation and 3D scan",
-        text: "An exam and CBCT scan show your bone volume and the best grafting approach. Dr. Moezzi explains your material options and answers your questions so you feel informed.",
+        text: "An exam and CBCT scan show your bone volume and the best grafting approach. Dr. Lavi explains your material options and answers your questions so you feel informed.",
       },
       {
         title: "In-office graft",
@@ -154,7 +154,7 @@ const service: Service = {
           bullets: [
             "Follow fasting instructions if sedation is planned",
             "Avoid smoking and alcohol for at least 24 hours beforehand",
-            "Pause medications only if Dr. Moezzi advises it",
+            "Pause medications only if Dr. Lavi advises it",
             "Arrange a ride home if sedation will be used",
             "Keep your mouth clean to lower the risk of infection",
           ],
@@ -176,7 +176,7 @@ const service: Service = {
   cost: {
     heading: "Cost and financing",
     paragraphs: [
-      "The fee depends on the type of graft, the material used and how much bone needs rebuilding. Once Dr. Moezzi has reviewed your scan, you will receive a written estimate before treatment begins.",
+      "The fee depends on the type of graft, the material used and how much bone needs rebuilding. Once Dr. Lavi has reviewed your scan, you will receive a written estimate before treatment begins.",
       "We accept most major PPO plans and offer flexible financing options. New patients can start with our $59 exam and X-rays special.",
     ],
   },
@@ -191,11 +191,11 @@ const service: Service = {
     },
     {
       q: "Can I get an implant right after bone grafting?",
-      a: "Sometimes a small graft and an implant can be placed at the same visit. More often the graft needs to heal first. Dr. Moezzi will map out a timeline for your case after your scan.",
+      a: "Sometimes a small graft and an implant can be placed at the same visit. More often the graft needs to heal first. Dr. Lavi will map out a timeline for your case after your scan.",
     },
     {
       q: "What kind of bone is used for grafting?",
-      a: "Options include processed donor bone, bovine-derived bone, synthetic material or bone from elsewhere in your own mouth. Each is biocompatible, and Dr. Moezzi explains the choices so you can pick what you are comfortable with.",
+      a: "Options include processed donor bone, bovine-derived bone, synthetic material or bone from elsewhere in your own mouth. Each is biocompatible, and Dr. Lavi explains the choices so you can pick what you are comfortable with.",
     },
     {
       q: "Is bone grafting always needed before implants?",
@@ -209,7 +209,7 @@ const service: Service = {
   related: ["dental-implants", "tooth-extractions", "all-on-4-implants", "oral-surgery"],
   cta: {
     heading: "Find out if you need a graft",
-    text: "Book a consultation in Valencia and Dr. Moezzi will measure your bone and explain your options.",
+    text: "Book a consultation in Valencia and Dr. Lavi will measure your bone and explain your options.",
   },
   flags: [
     "Source 'holistic' section claimed PRF and autologous options give 'safer, more natural outcomes' and that PRF 'promotes faster healing' and 'reduces inflammation'; softened to 'supports healing'.",

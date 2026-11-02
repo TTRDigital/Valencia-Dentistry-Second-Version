@@ -21,7 +21,7 @@ export default function OfferPage() {
   return (
     <>
       <JsonLd data={[breadcrumbSchema(crumbs), faqSchema(offer.faqs)]} />
-      <Hero image="/images/practice/checkup-smile.png" imageAlt="A smiling patient in the dental chair during a checkup" compact objectPosition="center 30%">
+      <Hero image="/images/blog/dental-implants-valencia-cost-guide.png" imageAlt="Smiling patient in a dental office" compact objectPosition="center 30%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">{offer.hero.eyebrow}</p>

@@ -7,10 +7,10 @@ const service: Service = {
   category: "cosmetic",
   name: "Teeth Whitening",
   menuDescription: "In-office and custom take-home whitening that lifts stains while protecting your enamel.",
-  image: "/images/practice/checkup-smile.png",
-  imageAlt: "Smiling woman in a dental chair during a checkup",
+  image: "/images/blog/dental-implants-for-seniors-safety-success.png",
+  imageAlt: "Smiling older woman with grey hair",
   seo: {
-    title: "Teeth Whitening in Santa Clarita | Valencia Smile Expert",
+    title: "Teeth Whitening in Santa Clarita | Valencia Dentistry",
     description:
       "Professional teeth whitening in Valencia, Santa Clarita. In-office or custom take-home trays, shade-matched and enamel-safe. Book your whitening visit.",
   },
@@ -23,7 +23,7 @@ const service: Service = {
   overview: {
     heading: "Professional whitening, done carefully",
     paragraphs: [
-      "If your smile has dulled from coffee, tea, wine or simply time, professional whitening can bring back a brighter shade. At our Valencia office, Dr. Neda Moezzi, DDS matches the treatment to your goals and your sensitivity level rather than using one formula for everyone.",
+      "If your smile has dulled from coffee, tea, wine or simply time, professional whitening can bring back a brighter shade. At our Valencia office, Dr. Nuriel Lavi, DDS matches the treatment to your goals and your sensitivity level rather than using one formula for everyone.",
       "We use dental-grade whitening gel that reaches deeper stains than store strips can, while protecting enamel and gum tissue. Many patients see a noticeable change after a single in-office session.",
       "Prefer to whiten at home? Custom trays made to fit your teeth hold the gel evenly for gradual, controlled results on your own schedule.",
     ],
@@ -90,7 +90,7 @@ const service: Service = {
   extraSections: [
     {
       eyebrow: "Options",
-      heading: "Whitening options at Valencia Smile Expert",
+      heading: "Whitening options at Valencia Dentistry",
       items: [
         {
           title: "In-office whitening",
@@ -117,8 +117,8 @@ const service: Service = {
         "Keep up regular cleanings to remove surface stain",
         "Schedule a touch-up when your shade starts to fade",
       ],
-      image: "/images/practice/dr-moezzi-patient-chair.png",
-      imageAlt: "Dr. Moezzi talking with a patient in the treatment chair",
+      image: "/images/practice/checkup-smile.png",
+      imageAlt: "Smiling patient in the dental chair during a checkup",
     },
   ],
   showGallery: true,
@@ -152,7 +152,7 @@ const service: Service = {
     },
     {
       q: "Can I whiten if I have crowns or veneers?",
-      a: "Whitening gel lightens natural enamel but not porcelain or composite. If you have restorations on front teeth, Dr. Moezzi will discuss how to keep the shades matching.",
+      a: "Whitening gel lightens natural enamel but not porcelain or composite. If you have restorations on front teeth, Dr. Lavi will discuss how to keep the shades matching.",
     },
   ],
   related: ["cosmetic-dentistry", "veneers", "invisalign", "preventive-dentistry"],

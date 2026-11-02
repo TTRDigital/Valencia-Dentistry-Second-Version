@@ -129,7 +129,7 @@ export const doctor = defineType({
     defineField({ name: "school", type: "string" }),
     defineField({ name: "gradYear", type: "number" }),
     defineField({ name: "portrait", type: "siteImage" }),
-    defineField({ name: "quote", type: "text", rows: 3 }),
+    defineField({ name: "quote", title: "Statement (shown in italics)", type: "text", rows: 3 }),
     defineField({ name: "bio", type: "array", of: [defineArrayMember({ type: "text" })] }),
     defineField({ name: "credentials", type: "array", of: [defineArrayMember({ type: "string" })] }),
   ],

@@ -7,9 +7,9 @@ const service: Service = {
   name: "Family Dentistry",
   menuDescription: "Gentle, age-appropriate care for infants, children, teens, adults and seniors.",
   image: "/images/practice/family-consult.png",
-  imageAlt: "A dentist talking with a family in the treatment room",
+  imageAlt: "Dentist talking with a family in the treatment room",
   seo: {
-    title: "Family Dentist in Valencia, CA | Valencia Smile Expert",
+    title: "Family Dentist in Valencia, CA | Valencia Dentistry",
     description:
       "One dental home for the whole family in Valencia, Santa Clarita. Infant exams, children's and teen dentistry, sealants and care for adults. Book a visit.",
   },
@@ -17,14 +17,14 @@ const service: Service = {
     eyebrow: "Family Dentistry",
     title: "Family Dentistry in Valencia",
     intro:
-      "From a baby's first tooth to a grandparent's crown, Dr. Neda Moezzi, DDS cares for every age in one calm, friendly office in Valencia.",
+      "From a baby's first tooth to a grandparent's crown, Dr. Nuriel Lavi, DDS cares for every age in one calm, friendly office in Valencia.",
   },
   overview: {
     heading: "One dental home for every age",
     paragraphs: [
-      "Families are busy. Having one practice that can see your toddler, your teenager and you makes dental care simpler to keep up with. At Valencia Smile Expert we provide age-appropriate care for infants, children, teens, adults and seniors.",
+      "Families are busy. Having one practice that can see your toddler, your teenager and you makes dental care simpler to keep up with. At Valencia Dentistry we provide age-appropriate care for infants, children, teens, adults and seniors.",
       "For younger patients that means gentle first exams, cleanings, sealants, fluoride or fluoride-free options, space maintainers and tooth-colored fillings when they are needed. For teens we add sports mouthguards and a conversation about straightening options. Adults and seniors have access to the full range of preventive, restorative and cosmetic care under the same roof.",
-      "Dr. Moezzi sees each family member herself. She takes time to help children feel at ease, explains things in plain language and builds trust that makes the next visit easier.",
+      "Dr. Lavi sees each family member himself. He takes time to help children feel at ease, explains things in plain language and builds trust that makes the next visit easier.",
     ],
     highlights: [
       { title: "All ages welcome", text: "Infant exams through senior care, in one office." },
@@ -48,7 +48,7 @@ const service: Service = {
     heading: "Benefits of a family dental practice",
     intro: "Consistency is good for your teeth and good for your calendar.",
     items: [
-      { title: "Continuity of care", text: "Dr. Moezzi follows your family's dental history over time, so changes are easier to spot." },
+      { title: "Continuity of care", text: "Dr. Lavi follows your family's dental history over time, so changes are easier to spot." },
       { title: "Comfortable for children", text: "A gentle introduction to the dentist helps kids build healthy habits without fear." },
       { title: "Prevention at every age", text: "Sealants and fluoride for kids, gum care and screenings for adults, all designed to prevent bigger problems." },
       { title: "Simpler scheduling", text: "One office and one phone number for everyone in the household." },
@@ -65,7 +65,7 @@ const service: Service = {
       },
       {
         title: "Exam and cleaning",
-        text: "Dr. Moezzi examines teeth, gums and bite, takes digital X-rays when appropriate for the patient's age and risk, and our hygienist cleans and polishes.",
+        text: "Dr. Lavi examines teeth, gums and bite, takes digital X-rays when appropriate for the patient's age and risk, and our hygienist cleans and polishes.",
       },
       {
         title: "Prevention and education",
@@ -120,7 +120,7 @@ const service: Service = {
     },
     {
       q: "What are sealants and does my child need them?",
-      a: "A sealant is a thin coating applied to the grooves of back teeth where food and bacteria collect. It helps block decay. Dr. Moezzi will recommend sealants based on your child's cavity risk.",
+      a: "A sealant is a thin coating applied to the grooves of back teeth where food and bacteria collect. It helps block decay. Dr. Lavi will recommend sealants based on your child's cavity risk.",
     },
     {
       q: "What is a space maintainer?",
@@ -146,7 +146,7 @@ const service: Service = {
   related: ["preventive-dentistry", "composite-filling", "invisalign", "holistic-dentistry"],
   cta: {
     heading: "Bring the whole family",
-    text: "Schedule visits for everyone in your household with Dr. Moezzi in Valencia. New patients can start with the $59 exam and X-ray special.",
+    text: "Schedule visits for everyone in your household with Dr. Lavi in Valencia. New patients can start with the $59 exam and X-ray special.",
   },
   flags: [
     "No dedicated family dentistry page exists on the current site. Content assembled from the home and services page lists; service descriptions are generic.",

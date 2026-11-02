@@ -11,7 +11,7 @@ export function ServiceGrid({ heading = "Everything your smile needs", eyebrow =
       <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {serviceCategories.map((c, i) => (
           <li key={c.key} data-reveal="" style={{ "--reveal-delay": `${(i % 3) * 90}ms` } as React.CSSProperties}>
-            <Link href={c.href} className="group card img-zoom block h-full overflow-hidden rounded-2xl transition-shadow hover:shadow-[0_30px_60px_-30px_rgba(15,31,51,0.35)]">
+            <Link href={c.href} className="group card img-zoom block h-full overflow-hidden rounded-2xl transition-shadow hover:shadow-[0_30px_60px_-30px_rgba(28,27,25,0.35)]">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Img src={c.image} alt={c.imageAlt} fill sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
               </div>

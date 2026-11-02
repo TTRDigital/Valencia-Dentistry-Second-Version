@@ -5,6 +5,7 @@ import { mainNav, servicesMenu } from "@/lib/nav";
 import { Logo } from "@/components/ui/Logo";
 import { Icon } from "@/components/ui/Icons";
 import { Img } from "@/components/ui/Img";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { HeaderBehavior, ActiveNav } from "./HeaderBehavior";
 
 /**
@@ -37,13 +38,7 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
               <Link href="/new-patient-offer/" className="hdr-offer inline-flex min-h-11 items-center gap-2 font-semibold hover:underline underline-offset-4">
                 <Icon.sparkle className="h-4 w-4" /> {site.offer.title}
               </Link>
-              <span className="hdr-divider h-4 w-px" aria-hidden="true" />
-              <ul className="flex items-center gap-1" aria-label="Social media">
-                <li><a href={site.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-11 w-11 items-center justify-center opacity-80 hover:opacity-100"><Icon.facebook /></a></li>
-                <li><a href={site.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center opacity-80 hover:opacity-100"><Icon.instagram /></a></li>
-                <li><a href={site.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="flex h-11 w-11 items-center justify-center opacity-80 hover:opacity-100"><Icon.linkedin /></a></li>
-                <li><a href={site.social.x} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="flex h-11 w-11 items-center justify-center opacity-80 hover:opacity-100"><Icon.x /></a></li>
-              </ul>
+              <SocialLinks className="flex items-center gap-1 border-l border-current/20 pl-4" linkClass="flex h-11 w-11 items-center justify-center opacity-80 hover:opacity-100" />
             </div>
           </div>
         </div>
@@ -100,7 +95,7 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
 
         {/* Services mega menu */}
         <div id="mega-menu" data-mega="" className="mega absolute inset-x-0 top-full hidden lg:block" inert>
-          <div className="bg-ivory text-ink-700 border-y border-sand shadow-[0_24px_60px_-20px_rgba(15,31,51,0.25)]">
+          <div className="bg-ivory text-ink-700 border-y border-sand shadow-[0_24px_60px_-20px_rgba(28,27,25,0.25)]">
             <div className="container-x py-8">
               <div className="grid grid-cols-3 gap-x-8 gap-y-8 xl:grid-cols-6">
                 {servicesMenu.map(({ category, links }) => (
@@ -182,12 +177,7 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
           <div className="mt-8 text-sm text-muted">
             <p>{site.address.street}<br />{site.address.city}, {site.address.region} {site.address.postalCode}</p>
             <p className="mt-2">Mon–Fri 8 AM – 5 PM</p>
-            <ul className="mt-4 flex gap-2" aria-label="Social media">
-              <li><a href={site.social.facebook} aria-label="Facebook" className="flex h-11 w-11 items-center justify-center"><Icon.facebook className="h-5 w-5" /></a></li>
-              <li><a href={site.social.instagram} aria-label="Instagram" className="flex h-11 w-11 items-center justify-center"><Icon.instagram className="h-5 w-5" /></a></li>
-              <li><a href={site.social.linkedin} aria-label="LinkedIn" className="flex h-11 w-11 items-center justify-center"><Icon.linkedin className="h-5 w-5" /></a></li>
-              <li><a href={site.social.x} aria-label="X (Twitter)" className="flex h-11 w-11 items-center justify-center"><Icon.x className="h-5 w-5" /></a></li>
-            </ul>
+            <SocialLinks className="mt-4 flex gap-2" linkClass="flex h-11 w-11 items-center justify-center" iconClass="h-5 w-5" />
           </div>
           <button type="button" data-close-menu="" className="sr-only focus:not-sr-only">Close menu</button>
         </div>

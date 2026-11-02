@@ -13,8 +13,8 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Contact Valencia Smile Expert | Dentist in Valencia, CA",
-  description: "Call (661) 254-5200, book online or send a message. Valencia Smile Expert, 27420 Tourney Rd Suite 240, Santa Clarita, CA 91355. Open Mon–Fri 8am–5pm.",
+  title: "Contact Valencia Dentistry | Dentist in Valencia, CA",
+  description: "Call (661) 254-5200, book online or send a message. Valencia Dentistry, 27420 Tourney Rd Suite 240, Santa Clarita, CA 91355. Open Mon–Fri 8am–5pm.",
   path: "/contact/",
 });
 const crumbs = [{ label: "Home", href: "/" }, { label: "Contact", href: "/contact/" }];
@@ -23,7 +23,7 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <Hero image="/images/practice/team-four.png" imageAlt="Dr. Moezzi with three members of her team" compact objectPosition="center 20%">
+      <Hero image="/images/blog/candidate-for-dental-implants.png" imageAlt="Dentist and patient smiling together in the treatment room" compact objectPosition="center 20%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Contact</p>

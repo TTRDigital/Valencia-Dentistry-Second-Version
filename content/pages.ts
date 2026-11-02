@@ -2,7 +2,7 @@ import type { Faq } from "./types.ts";
 
 /** Home page FAQs (rewritten from the current site; the location answer corrected to Valencia). */
 export const homeFaqs: Faq[] = [
-  { q: "What makes Valencia Smile Expert different?", a: "You see Dr. Moezzi herself at every visit, with time to talk. Care is holistic and integrative: biocompatible materials, a focus on prevention and attention to how your mouth affects the rest of your body." },
+  { q: "What makes Valencia Dentistry different?", a: "You see Dr. Lavi himself at every visit, with time to talk. Care is holistic and integrative: biocompatible materials, a focus on prevention and attention to how your mouth affects the rest of your body." },
   { q: "Do you accept insurance?", a: "Yes. We accept most major PPO plans and will verify your benefits before treatment so you know what to expect. Flexible financing is available for anything your plan does not cover." },
   { q: "What happens at my first visit?", a: "We review your health history, take digital X-rays, complete a thorough exam and spend time understanding your goals. You leave with a clear, written plan. New patients pay $59 for the exam and X-rays." },
   { q: "Do you offer cosmetic treatments like veneers or Invisalign?", a: "Yes. Veneers, teeth whitening, Invisalign clear aligners and cosmetic bonding are all planned in-house around a digital scan of your smile." },
@@ -11,30 +11,30 @@ export const homeFaqs: Faq[] = [
   { q: "Where are you located, and is there parking?", a: "We are at 27420 Tourney Rd, Suite 240, in Valencia (Santa Clarita), CA 91355, with free parking at the building and elevator access to the second floor." },
 ];
 
-/** About page copy (rewritten from /about/ on the current site). */
+/** About page copy (from the practice's first site, tightened). */
 export const about = {
-  seo: { title: "About Dr. Neda Moezzi & Our Practice | Valencia Smile Expert", description: "Meet Dr. Neda Moezzi, DDS, and the team behind Valencia Smile Expert: holistic, one-on-one dentistry in Valencia, Santa Clarita since 2007." },
-  hero: { eyebrow: "Our practice", title: "A dental home in Valencia since 2007", intro: "Now led by Dr. Neda Moezzi, DDS, Valencia Smile Expert pairs clinical precision and modern technology with the kind of warm, unhurried care that makes patients feel like family." },
+  seo: { title: "About Dr. Nuriel Lavi & Our Practice | Valencia Dentistry", description: "Meet Dr. Nuriel Lavi, DDS, and Valencia Dentistry: holistic, one-on-one dentistry on Tourney Road in Valencia, Santa Clarita." },
+  hero: { eyebrow: "Our practice", title: "Dentistry with heart, in Valencia", intro: "Valencia Dentistry blends clinical precision and modern technology with a warm, one-on-one approach. Dr. Nuriel Lavi leads every visit himself, so you are never handed off and never rushed." },
   mission: {
-    heading: "Our mission",
+    heading: "Santa Clarita's dental home",
     paragraphs: [
-      "From the beginning, Dr. Moezzi set out to make excellent dental care feel accessible, compassionate and genuinely personal. Whether you are here for a routine cleaning or a full smile restoration, you should feel comfortable, confident in the work and fully cared for.",
-      "That is why there are no handoffs. Dr. Moezzi performs your exam, explains your options and plans your care herself, and the same small team greets you at every visit.",
+      "Valencia Dentistry serves Santa Clarita families from Tourney Road in Valencia. It is a place where advanced care and genuine kindness sit side by side: a calm office, a small team that knows your name, and a dentist who treats every patient the way he would want his own family treated.",
+      "The mission is simple. High-quality dentistry should be accessible, compassionate and truly patient-centered, whether you are here for a routine cleaning or a full smile reconstruction.",
     ],
   },
   values: [
-    { title: "Individual attention", text: "Every patient, every visit, gets our full focus." },
-    { title: "Holistic approach", text: "We look past symptoms to the cause and consider your whole-body health." },
-    { title: "Long-term outlook", text: "Prevention, education and lasting solutions over quick fixes." },
-    { title: "Comfort and clarity", text: "Sedation options, plain-language explanations and a calm, friendly space." },
+    { title: "Individual attention", text: "Every patient, every visit, gets our full focus. You see Dr. Lavi himself, every time." },
+    { title: "Holistic approach", text: "We consider your whole-body wellness and use biocompatible, mercury-free materials." },
+    { title: "Long-term outlook", text: "Prevention, education and lasting solutions over short-term patches." },
+    { title: "Comfort and clarity", text: "Sedation options, plain-language explanations and a calm, unhurried atmosphere." },
     { title: "Excellence", text: "Advanced technology and proven techniques, with no shortcuts." },
-    { title: "Honesty", text: "Options and costs explained up front, so there are no surprises." },
-    { title: "Community", text: "Proud to care for Santa Clarita families, many of them for years." },
-    { title: "Flexibility", text: "Appointment times that fit real lives, including same-day care." },
+    { title: "Honesty", text: "Options and costs explained up front. No surprises." },
+    { title: "Community", text: "Serving Valencia, Santa Clarita, Stevenson Ranch, Newhall, Saugus and Canyon Country with pride." },
+    { title: "Flexibility", text: "Convenient appointment times and same-day care when you need it." },
   ],
   technology: {
     heading: "Comfort meets innovation",
-    text: "The office is equipped with 3D CBCT imaging, iTero digital scanning, intraoral cameras, PRF therapy and laser dentistry, so care is safe, efficient and as minimally invasive as possible. Combined with a calming environment and sedation options, it changes what going to the dentist feels like.",
+    text: "The office is equipped for safe, efficient and minimally invasive care: 3D CBCT imaging, iTero digital scanning, intraoral cameras, PRF therapy, laser dentistry and in-house crowns, combined with a calm environment and sedation options.",
   },
   team: {
     heading: "A small team you will get to know",
@@ -43,7 +43,7 @@ export const about = {
 };
 
 export const emergency = {
-  seo: { title: "Emergency Dentist in Valencia, Santa Clarita | Same-Day Care", description: "Tooth pain, a broken tooth or a lost crown? Valencia Smile Expert offers same-day emergency dental care in Valencia. Call (661) 254-5200 now." },
+  seo: { title: "Emergency Dentist in Valencia, Santa Clarita | Same-Day Care", description: "Tooth pain, a broken tooth or a lost crown? Valencia Dentistry offers same-day emergency dental care in Valencia. Call (661) 254-5200 now." },
   hero: { eyebrow: "Emergency dental care", title: "In pain? We will see you today", intro: "Same-day appointments for toothaches, broken teeth, lost crowns, swelling and injuries. Call us and we will tell you exactly what to do next." },
   situations: [
     { title: "Severe toothache", text: "Rinse with warm water, floss gently to remove anything trapped, and take an over-the-counter pain reliever as directed. Do not place aspirin on the gum." },
@@ -62,17 +62,17 @@ export const emergency = {
 };
 
 export const offer = {
-  seo: { title: "$59 New Patient Special: Exam & X-Rays in Valencia, CA", description: "New to Valencia Smile Expert? Start with a complete exam and digital X-rays for $59, plus unhurried time with Dr. Neda Moezzi, DDS. Book online today." },
-  hero: { eyebrow: "New patient special", title: "Your first visit, $59", intro: "A complete exam, digital X-rays and a real conversation with Dr. Moezzi about your goals. No pressure and no surprises." },
-  includes: ["Comprehensive exam with Dr. Moezzi", "Digital X-rays (low radiation)", "Oral cancer screening", "A written treatment plan with clear priorities", "Insurance benefits check before any treatment"],
+  seo: { title: "$59 New Patient Special: Exam & X-Rays in Valencia, CA", description: "New to Valencia Dentistry? Start with a complete exam and digital X-rays for $59, plus unhurried time with Dr. Nuriel Lavi, DDS. Book online today." },
+  hero: { eyebrow: "New patient special", title: "Your first visit, $59", intro: "A complete exam, digital X-rays and a real conversation with Dr. Lavi about your goals. No pressure and no surprises." },
+  includes: ["Comprehensive exam with Dr. Lavi", "Digital X-rays (low radiation)", "Oral cancer screening", "A written treatment plan with clear priorities", "Insurance benefits check before any treatment"],
   steps: [
     { title: "Book online or call", text: "Pick a time that suits you. Same-day visits are often available." },
     { title: "Short forms, done your way", text: "Complete new-patient forms at home or when you arrive." },
-    { title: "Meet Dr. Moezzi", text: "Exam, X-rays and time to talk through what you want for your smile." },
+    { title: "Meet Dr. Lavi", text: "Exam, X-rays and time to talk through what you want for your smile." },
     { title: "Leave with a plan", text: "Clear next steps and costs in writing, whether that is a cleaning or something more." },
   ],
   faqs: [
-    { q: "Who qualifies for the $59 special?", a: "New patients of Valencia Smile Expert. The offer covers the exam and X-rays and cannot be combined with insurance or other offers." },
+    { q: "Who qualifies for the $59 special?", a: "New patients of Valencia Dentistry. The offer covers the exam and X-rays and cannot be combined with insurance or other offers." },
     { q: "Does it include a cleaning?", a: "The special covers the exam and X-rays. A cleaning can usually be scheduled the same day if your gums are healthy; we will give you the cost before we begin." },
     { q: "What if I have insurance?", a: "We will verify your benefits before your visit. If your plan covers the exam and X-rays, we will bill your plan instead." },
   ],

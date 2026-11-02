@@ -7,10 +7,10 @@ const service: Service = {
   category: "cosmetic",
   name: "Veneers",
   menuDescription: "Thin porcelain or composite shells that cover chips, gaps and stains for an even smile.",
-  image: "/images/practice/tooth-model.jpg",
-  imageAlt: "Dentist showing a patient a tooth model during a consultation",
+  image: "/images/blog/top-5-cosmetic-dentistry-procedures.png",
+  imageAlt: "Smiling patient in the dental chair",
   seo: {
-    title: "Porcelain Veneers in Santa Clarita | Valencia Smile Expert",
+    title: "Porcelain Veneers in Santa Clarita | Valencia Dentistry",
     description:
       "Custom porcelain and composite veneers in Valencia, Santa Clarita. Cover chips, gaps and stains with a natural-looking smile. Book a veneer consultation.",
   },
@@ -18,13 +18,13 @@ const service: Service = {
     eyebrow: "Veneers",
     title: "Custom Veneers in Santa Clarita",
     intro:
-      "Thin, hand-finished shells designed by Dr. Neda Moezzi, DDS to cover chips, gaps and stains while still looking like you.",
+      "Thin, hand-finished shells designed by Dr. Nuriel Lavi, DDS to cover chips, gaps and stains while still looking like you.",
   },
   overview: {
     heading: "What veneers are and what they fix",
     paragraphs: [
       "Veneers are thin, custom shells of porcelain or composite resin bonded to the front of your teeth. They change the shape, color and alignment of what shows when you smile, without the more extensive work a crown requires.",
-      "At our Valencia practice, Dr. Moezzi designs each veneer around your facial features, tooth proportions and the shade you want. An iTero scan and intraoral camera images help us preview the result before any tooth is touched.",
+      "At our Valencia practice, Dr. Lavi designs each veneer around your facial features, tooth proportions and the shade you want. An iTero scan and intraoral camera images help us preview the result before any tooth is touched.",
       "Veneers can correct chipped or cracked teeth, worn or uneven edges, small gaps, minor misalignment and deep discoloration that whitening cannot lift.",
     ],
     highlights: [
@@ -79,7 +79,7 @@ const service: Service = {
     steps: [
       {
         title: "Consultation and smile design",
-        text: "Dr. Moezzi checks your oral health, listens to your goals and designs the plan. A digital preview helps you choose the veneer type and shade.",
+        text: "Dr. Lavi checks your oral health, listens to your goals and designs the plan. A digital preview helps you choose the veneer type and shade.",
       },
       {
         title: "Preparation and impressions",
@@ -146,8 +146,8 @@ const service: Service = {
           ],
         },
       ],
-      image: "/images/practice/treatment-room.png",
-      imageAlt: "Dr. Moezzi treating a patient in a bright treatment room",
+      image: "/images/practice/checkup-smile.png",
+      imageAlt: "Smiling patient in the dental chair during a checkup",
     },
   ],
   showGallery: true,
@@ -181,7 +181,7 @@ const service: Service = {
     },
     {
       q: "How many veneers will I need?",
-      a: "Some patients treat one chipped tooth. Others choose six to ten for a full smile makeover. Dr. Moezzi recommends the number that gives a balanced result when you smile.",
+      a: "Some patients treat one chipped tooth. Others choose six to ten for a full smile makeover. Dr. Lavi recommends the number that gives a balanced result when you smile.",
     },
   ],
   related: ["cosmetic-dentistry", "teeth-whitening", "invisalign", "dental-crowns"],

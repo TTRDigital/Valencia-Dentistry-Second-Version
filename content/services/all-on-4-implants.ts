@@ -7,10 +7,10 @@ const service: Service = {
   category: "surgery",
   name: "All-on-4 Implants",
   menuDescription: "A full arch of fixed teeth supported by four implants, often with same-day temporaries.",
-  image: "/images/practice/consult-chair.png",
-  imageAlt: "Dr. Moezzi in consultation with a seated patient",
+  image: "/images/blog/what-is-all-on-x-complete-guide.png",
+  imageAlt: "Dentist showing a smiling patient a denture model",
   seo: {
-    title: "All-on-4 Implants in Santa Clarita | Valencia Smile Expert",
+    title: "All-on-4 Implants in Santa Clarita | Valencia Dentistry",
     description:
       "Replace a full arch of failing teeth with All-on-4 implants in Valencia, Santa Clarita. 3D planning, PRF and same-day temporary teeth. Book a consultation.",
   },
@@ -18,14 +18,14 @@ const service: Service = {
     eyebrow: "All-on-4 Implants",
     title: "All-on-4 Implants in Santa Clarita",
     intro:
-      "Missing most or all of your teeth does not have to mean loose dentures. All-on-4 uses four implants per jaw to support a full arch of fixed teeth, planned in 3D by Dr. Neda Moezzi, DDS.",
+      "Missing most or all of your teeth does not have to mean loose dentures. All-on-4 uses four implants per jaw to support a full arch of fixed teeth, planned in 3D by Dr. Nuriel Lavi, DDS.",
   },
   overview: {
     heading: "A full arch on four implants",
     paragraphs: [
       "All-on-4, sometimes called All-on-X, replaces an entire row of missing or failing teeth with a fixed bridge supported by four implants. Two implants are placed upright at the front of the jaw and two are angled at the back, which makes the most of the bone you already have.",
       "Because the angled implants reach denser bone, many patients who were told they needed grafting for traditional implants can be treated without it. The bridge is secured to the implants, so it does not move, slip or come out at night.",
-      "Dr. Moezzi plans every case on a CBCT 3D scan and uses guided placement and PRF therapy. In many cases a temporary bridge is attached on the day of surgery, so you leave the office with teeth.",
+      "Dr. Lavi plans every case on a CBCT 3D scan and uses guided placement and PRF therapy. In many cases a temporary bridge is attached on the day of surgery, so you leave the office with teeth.",
     ],
     highlights: [
       {
@@ -89,7 +89,7 @@ const service: Service = {
     steps: [
       {
         title: "Consultation and CBCT scan",
-        text: "An exam, a 3D scan and a conversation about your goals. Dr. Moezzi evaluates your bone and designs a guided surgical plan that fixes the exact position of each implant.",
+        text: "An exam, a 3D scan and a conversation about your goals. Dr. Lavi evaluates your bone and designs a guided surgical plan that fixes the exact position of each implant.",
       },
       {
         title: "Surgery and temporary bridge",
@@ -163,7 +163,7 @@ const service: Service = {
     },
     {
       q: "Am I too old for All-on-4?",
-      a: "Age alone rarely rules anyone out. What matters is being healthy enough for oral surgery and having any medical conditions well controlled. Dr. Moezzi reviews your health history at your consultation.",
+      a: "Age alone rarely rules anyone out. What matters is being healthy enough for oral surgery and having any medical conditions well controlled. Dr. Lavi reviews your health history at your consultation.",
     },
     {
       q: "How much do All-on-4 implants cost?",

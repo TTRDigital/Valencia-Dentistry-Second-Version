@@ -41,7 +41,7 @@ export function pageMeta({
       siteName: site.name,
       locale: "en_US",
       images: [{ url: image, width: 1200, height: 630, alt: title }],
-      ...(type === "article" ? { publishedTime, modifiedTime, authors: ["Dr. Neda Moezzi, DDS"] } : {}),
+      ...(type === "article" ? { publishedTime, modifiedTime, authors: ["Dr. Nuriel Lavi, DDS"] } : {}),
     },
     twitter: { card: "summary_large_image", title, description, images: [image] },
   };

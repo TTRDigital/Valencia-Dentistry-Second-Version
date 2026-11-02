@@ -48,7 +48,7 @@ export const siteImage = defineType({
   name: "siteImage",
   title: "Image",
   type: "object",
-  description: "Either upload an image or reference one of the built-in photos by path (e.g. /images/practice/team-sign.png).",
+  description: "Either upload an image or reference one of the built-in photos by path (e.g. /images/practice/checkup-smile.png).",
   fields: [
     defineField({ name: "upload", title: "Upload", type: "image", options: { hotspot: true } }),
     defineField({ name: "path", title: "Built-in image path", type: "string" }),

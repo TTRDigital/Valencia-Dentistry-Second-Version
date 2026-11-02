@@ -6,10 +6,10 @@ const service: Service = {
   category: "surgery",
   name: "Oral Surgery",
   menuDescription: "Extractions, wisdom teeth, bone grafting and implant surgery in one calm office.",
-  image: "/images/practice/treatment-room.png",
-  imageAlt: "Dr. Moezzi treating a patient in a bright treatment room",
+  image: "/images/blog/bone-grafting-healing-timeline.png",
+  imageAlt: "Dentist showing a patient her X-ray and a tooth model",
   seo: {
-    title: "Oral Surgery in Santa Clarita | Valencia Smile Expert",
+    title: "Oral Surgery in Santa Clarita | Valencia Dentistry",
     description:
       "Gentle oral surgery in Valencia, Santa Clarita: extractions, wisdom teeth, bone grafting and implants with 3D planning and sedation options. Book today.",
   },
@@ -17,19 +17,19 @@ const service: Service = {
     eyebrow: "Oral Surgery",
     title: "Oral Surgery in Santa Clarita",
     intro:
-      "Whether you need a wisdom tooth removed, bone rebuilt for an implant or an infection treated, Dr. Neda Moezzi, DDS plans each procedure in 3D and keeps you comfortable from start to finish.",
+      "Whether you need a wisdom tooth removed, bone rebuilt for an implant or an infection treated, Dr. Nuriel Lavi, DDS plans each procedure in 3D and keeps you comfortable from start to finish.",
   },
   overview: {
     heading: "Surgical care, without the stress",
     paragraphs: [
-      "Oral surgery covers the procedures that go beneath the gumline: removing damaged or impacted teeth, rebuilding jawbone and placing implants. At Valencia Smile Expert, these treatments happen in the same calm office where you have your checkups, with a doctor you already know.",
-      "Dr. Moezzi performs each procedure herself. She uses CBCT 3D imaging to see bone, nerves and roots before she begins, guided surgery tools for precise placement, and PRF therapy to support healing afterward.",
+      "Oral surgery covers the procedures that go beneath the gumline: removing damaged or impacted teeth, rebuilding jawbone and placing implants. At Valencia Dentistry, these treatments happen in the same calm office where you have your checkups, with a doctor you already know.",
+      "Dr. Lavi performs each procedure himself. He uses CBCT 3D imaging to see bone, nerves and roots before he begins, guided surgery tools for precise placement, and PRF therapy to support healing afterward.",
       "You will never feel rushed. We walk you through your options, explain what to expect and offer sedation options when appropriate.",
     ],
     highlights: [
       {
         title: "Doctor-led surgery",
-        text: "Dr. Moezzi performs every surgical treatment with a focus on safety and detail.",
+        text: "Dr. Lavi performs every surgical treatment with a focus on safety and detail.",
       },
       {
         title: "3D planning",
@@ -43,7 +43,7 @@ const service: Service = {
   },
   whoFor: {
     heading: "When oral surgery may be needed",
-    intro: "Dr. Moezzi may recommend a surgical procedure if you:",
+    intro: "Dr. Lavi may recommend a surgical procedure if you:",
     bullets: [
       "Have a tooth that is too damaged or infected to save",
       "Have impacted or painful wisdom teeth",
@@ -84,7 +84,7 @@ const service: Service = {
     steps: [
       {
         title: "Consultation and 3D imaging",
-        text: "We begin with an exam, a CBCT scan and a frank discussion of your symptoms and goals. Dr. Moezzi explains your options and designs a surgical plan built around your anatomy.",
+        text: "We begin with an exam, a CBCT scan and a frank discussion of your symptoms and goals. Dr. Lavi explains your options and designs a surgical plan built around your anatomy.",
       },
       {
         title: "Procedure day",
@@ -134,7 +134,7 @@ const service: Service = {
           title: "Before your procedure",
           bullets: [
             "Follow fasting instructions if sedation is planned",
-            "Pause medications only if Dr. Moezzi advises it",
+            "Pause medications only if Dr. Lavi advises it",
             "Arrange a ride home if sedation will be used",
             "Avoid smoking and alcohol for at least 24 hours beforehand",
             "Keep your mouth clean to lower the risk of infection",
@@ -156,7 +156,7 @@ const service: Service = {
   cost: {
     heading: "Cost and financing",
     paragraphs: [
-      "Fees vary by procedure, from a simple extraction to grafting or implant placement. Once Dr. Moezzi has examined you and reviewed your scan, you will receive a written estimate before treatment so you know what to expect.",
+      "Fees vary by procedure, from a simple extraction to grafting or implant placement. Once Dr. Lavi has examined you and reviewed your scan, you will receive a written estimate before treatment so you know what to expect.",
       "We accept most major PPO plans and will help you understand your coverage. Flexible financing options are available, and new patients can begin with our $59 exam and X-rays special.",
     ],
   },
@@ -187,16 +187,16 @@ const service: Service = {
     },
     {
       q: "How do I know if I need oral surgery?",
-      a: "Persistent tooth pain, swelling, jaw discomfort or a tooth that cannot be saved are common reasons. If you are planning implants, grafting may be part of your plan. An exam with Dr. Moezzi is the best way to find out.",
+      a: "Persistent tooth pain, swelling, jaw discomfort or a tooth that cannot be saved are common reasons. If you are planning implants, grafting may be part of your plan. An exam with Dr. Lavi is the best way to find out.",
     },
     {
       q: "Can I have oral surgery if I have a medical condition?",
-      a: "Many patients with medical conditions can be treated safely. Dr. Moezzi reviews your full health history and may coordinate with your physician so the right precautions are in place.",
+      a: "Many patients with medical conditions can be treated safely. Dr. Lavi reviews your full health history and may coordinate with your physician so the right precautions are in place.",
     },
   ],
   related: ["tooth-extractions", "wisdom-teeth-removal", "bone-grafting", "dental-implants"],
   cta: {
-    heading: "Talk to Dr. Moezzi about your options",
+    heading: "Talk to Dr. Lavi about your options",
     text: "Book an oral surgery consultation in Valencia and get a clear plan for relief.",
   },
   flags: [

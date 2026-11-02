@@ -3,6 +3,7 @@ import { site } from "../../../content/site";
 import { footerNav } from "@/lib/nav";
 import { Logo } from "@/components/ui/Logo";
 import { Icon } from "@/components/ui/Icons";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { OpenBadge } from "@/components/ui/OpenBadge";
 import { Year } from "@/components/ui/Year";
 
@@ -15,7 +16,7 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo tone="light" className="h-9 w-auto" />
             <p className="mt-6 max-w-sm text-on-dark-muted">
-              Holistic, one-on-one dentistry in Valencia, Santa Clarita. Every visit led by Dr. Neda Moezzi, DDS, with no handoffs and no rush.
+              Holistic, one-on-one dentistry in Valencia, Santa Clarita. Every visit led by Dr. Nuriel Lavi, DDS, with no handoffs and no rush.
             </p>
             <div className="mt-8 space-y-1 text-sm">
               <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className="flex min-h-11 items-start gap-3 py-2 hover:underline underline-offset-4">
@@ -51,27 +52,11 @@ export function Footer() {
               <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-gold">Book Online</a>
               <Link href="/appointment/" className="btn btn-outline">Request an appointment</Link>
             </div>
-            <ul className="mt-8 flex gap-2" aria-label="Social media">
-              {[
-                ["Facebook", site.social.facebook, Icon.facebook],
-                ["Instagram", site.social.instagram, Icon.instagram],
-                ["LinkedIn", site.social.linkedin, Icon.linkedin],
-                ["X (Twitter)", site.social.x, Icon.x],
-              ].map(([label, href, I]) => {
-                const C = I as (p: { className?: string }) => React.JSX.Element;
-                return (
-                  <li key={label as string}>
-                    <a href={href as string} target="_blank" rel="noopener noreferrer" aria-label={label as string} className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 hover:border-gold hover:text-gold">
-                      <C className="h-4 w-4" />
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
+            <SocialLinks className="mt-8 flex gap-2" linkClass="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 hover:border-gold hover:text-gold" />
           </div>
         </div>
         <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-on-dark-muted md:flex-row md:items-center md:justify-between">
-          <p>© <Year /> {site.name} · Dr. Neda Moezzi, DDS · Dentist in Valencia, Santa Clarita, serving {site.areaServed.slice(2).join(", ")} and the Santa Clarita Valley.</p>
+          <p>© <Year /> {site.name} · Dr. Nuriel Lavi, DDS · Dentist in Valencia, Santa Clarita, serving {site.areaServed.slice(2).join(", ")} and the Santa Clarita Valley.</p>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             {footerNav.legal.map((l) => (
               <li key={l.href}><Link href={l.href} className="inline-flex min-h-11 items-center hover:underline underline-offset-4">{l.label}</Link></li>

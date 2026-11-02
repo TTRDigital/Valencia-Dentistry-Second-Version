@@ -3,7 +3,7 @@ import type { Faq, Post, Service } from "../../content/types";
 
 const ID = {
   dentist: `${site.url}/#dentist`,
-  person: `${site.url}/about/#dr-neda-moezzi`,
+  person: `${site.url}/about/#dr-nuriel-lavi`,
   website: `${site.url}/#website`,
 };
 
@@ -27,7 +27,7 @@ export function dentistSchema() {
     url: site.url,
     telephone: site.phoneE164,
     email: site.email,
-    image: `${site.url}/images/practice/team-sign.png`,
+    image: `${site.url}/images/practice/checkup-smile.png`,
     logo: `${site.url}/images/brand/logo.svg`,
     priceRange: site.priceRange,
     address: {
@@ -44,7 +44,7 @@ export function dentistSchema() {
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "17:00" },
     ],
     areaServed: site.areaServed.map((name) => ({ "@type": "City", name })),
-    sameAs: Object.values(site.social),
+    ...(Object.values(site.social).length ? { sameAs: Object.values(site.social) } : {}),
     founder: { "@id": ID.person },
     employee: { "@id": ID.person },
     medicalSpecialty: ["Dentistry", "CosmeticDentistry", "OralSurgery"],
@@ -66,16 +66,16 @@ export function personSchema() {
     "@context": "https://schema.org",
     "@type": "Person",
     "@id": ID.person,
-    name: "Neda Moezzi",
+    name: "Nuriel Lavi",
+    givenName: "Nuriel",
+    familyName: "Lavi",
     honorificPrefix: "Dr.",
     honorificSuffix: "DDS",
     jobTitle: doctor.title,
-    image: `${site.url}${doctor.portrait}`,
+    ...(doctor.portrait ? { image: `${site.url}${doctor.portrait}` } : {}),
     url: `${site.url}/about/`,
     worksFor: { "@id": ID.dentist },
-    alumniOf: { "@type": "CollegeOrUniversity", name: doctor.school },
     knowsAbout: ["Cosmetic dentistry", "Dental implants", "Holistic dentistry", "Oral surgery"],
-    sameAs: [site.social.linkedin],
   };
 }
 

@@ -1,5 +1,5 @@
 /**
- * Sanity project for the Valencia Smile Expert site.
+ * Sanity project for the Valencia Dentistry site.
  *
  * The project ID is pinned on purpose: this environment sets
  * NEXT_PUBLIC_SANITY_PROJECT_ID for a different site, and that value must

@@ -7,23 +7,23 @@ const service: Service = {
   name: "Restorative Dentistry",
   menuDescription: "Fillings, crowns, bridges, inlays and onlays to repair damaged teeth and replace missing ones.",
   image: "/images/practice/tooth-model.jpg",
-  imageAlt: "Dentist showing a patient a tooth model while explaining a restoration",
+  imageAlt: "Gloved hands holding a tooth model with a filling",
   seo: {
-    title: "Restorative Dentistry Santa Clarita | Valencia Smile Expert",
+    title: "Restorative Dentistry Santa Clarita | Valencia Dentistry",
     description:
-      "Repair worn, damaged or missing teeth with fillings, crowns, bridges, inlays and onlays in Valencia, Santa Clarita. Book a visit with Dr. Moezzi.",
+      "Repair worn, damaged or missing teeth with fillings, crowns, bridges, inlays and onlays in Valencia, Santa Clarita. Book a visit with Dr. Lavi.",
   },
   hero: {
     eyebrow: "Restorative Dentistry",
     title: "Restorative Dentistry in Santa Clarita",
     intro:
-      "Cavities, cracks, worn enamel and missing teeth all have a fix. Dr. Neda Moezzi, DDS, repairs and replaces teeth with restorations designed to look natural and hold up to daily life.",
+      "Cavities, cracks, worn enamel and missing teeth all have a fix. Dr. Nuriel Lavi, DDS, repairs and replaces teeth with restorations designed to look natural and hold up to daily life.",
   },
   overview: {
     heading: "Rebuild strength, comfort and a natural look",
     paragraphs: [
       "Restorative dentistry covers the treatments that repair a damaged tooth or replace one that is gone. That includes tooth-colored fillings, crowns, bridges, inlays and onlays, and implant-supported restorations. The aim is a mouth that works comfortably and looks like it never needed work.",
-      "Dr. Moezzi starts by understanding the problem fully. Digital imaging shows what is happening below the surface, and she walks you through the options so you can weigh durability, appearance and cost. Where possible we choose the most conservative repair that will last.",
+      "Dr. Lavi starts by understanding the problem fully. Digital imaging shows what is happening below the surface, and he walks you through the options so you can weigh durability, appearance and cost. Where possible we choose the most conservative repair that will last.",
       "Whether you need one filling or a plan for several teeth, we sequence the work so it fits your schedule and your budget, and we tell you what to expect at each visit.",
     ],
     highlights: [
@@ -87,7 +87,7 @@ const service: Service = {
     steps: [
       {
         title: "Exam and imaging",
-        text: "Dr. Moezzi examines your teeth and gums and takes digital images to see decay, cracks and bone levels. You get a clear explanation of what she finds.",
+        text: "Dr. Lavi examines your teeth and gums and takes digital images to see decay, cracks and bone levels. You get a clear explanation of what he finds.",
       },
       {
         title: "A plan you understand",
@@ -127,8 +127,8 @@ const service: Service = {
           text: "Lab-made restorations for teeth too damaged for a filling but not in need of a full crown. They preserve more of the natural tooth.",
         },
       ],
-      image: "/images/practice/treatment-room.png",
-      imageAlt: "Dr. Moezzi treating a patient in a bright treatment room",
+      image: "/images/blog/how-long-do-dental-crowns-last.png",
+      imageAlt: "Dentist showing a patient a dental crown",
     },
   ],
   showGallery: true,
@@ -162,13 +162,13 @@ const service: Service = {
     },
     {
       q: "Which is better, a bridge or an implant?",
-      a: "Both replace missing teeth. A bridge is supported by neighboring teeth and is usually finished in a few weeks. An implant stands on its own in the jawbone and takes longer. Dr. Moezzi will explain which fits your mouth and goals.",
+      a: "Both replace missing teeth. A bridge is supported by neighboring teeth and is usually finished in a few weeks. An implant stands on its own in the jawbone and takes longer. Dr. Lavi will explain which fits your mouth and goals.",
     },
   ],
   related: ["composite-filling", "dental-crowns", "dental-bridges", "dental-implants"],
   cta: {
     heading: "Let us restore your smile",
-    text: "Call (661) 254-5200 or book online for an exam with Dr. Moezzi in Valencia, and we will map out the repairs that make sense for you.",
+    text: "Call (661) 254-5200 or book online for an exam with Dr. Lavi in Valencia, and we will map out the repairs that make sense for you.",
   },
   flags: [
     "Source FAQ says crowns and bridges last '10-15 years or longer'; replaced with 'many years' (no specific lifespan promised).",

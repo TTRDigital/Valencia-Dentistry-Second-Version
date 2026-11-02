@@ -7,10 +7,10 @@ const service: Service = {
   category: "restorative",
   name: "Dental Bridges",
   menuDescription: "Fixed, natural-looking bridges that replace one or more missing teeth without surgery.",
-  image: "/images/practice/consult-chair.png",
-  imageAlt: "Dr. Moezzi in consultation with a seated patient",
+  image: "/images/blog/dental-bridge-cost-guide.png",
+  imageAlt: "Dentist showing a patient a dental bridge model",
   seo: {
-    title: "Dental Bridges in Valencia, CA | Valencia Smile Expert",
+    title: "Dental Bridges in Valencia, CA | Valencia Dentistry",
     description:
       "Replace missing teeth with a custom dental bridge in Valencia, Santa Clarita. Natural-looking, fixed and no surgery required. Book a consultation today.",
   },
@@ -24,8 +24,8 @@ const service: Service = {
     heading: "A fixed solution for missing teeth",
     paragraphs: [
       "A dental bridge replaces one or more missing teeth with an artificial tooth, called a pontic, anchored to the teeth or implants on either side of the gap. Because it is cemented in place, it stays put when you eat and talk, unlike a removable partial denture.",
-      "Each bridge is made for you. Dr. Neda Moezzi, DDS, matches the shade, size and shape to your surrounding teeth so the result blends in. Digital scanning gives the lab a precise model for a comfortable fit.",
-      "Bridges are a good fit when the neighboring teeth are healthy and you want to restore function in weeks rather than months. If an implant would serve you better, Dr. Moezzi will tell you and explain why.",
+      "Each bridge is made for you. Dr. Nuriel Lavi, DDS, matches the shade, size and shape to your surrounding teeth so the result blends in. Digital scanning gives the lab a precise model for a comfortable fit.",
+      "Bridges are a good fit when the neighboring teeth are healthy and you want to restore function in weeks rather than months. If an implant would serve you better, Dr. Lavi will tell you and explain why.",
     ],
     highlights: [
       {
@@ -84,7 +84,7 @@ const service: Service = {
     steps: [
       {
         title: "Consultation",
-        text: "Dr. Moezzi examines your teeth and gums, takes digital images and talks through your goals to decide whether a bridge, and which type, fits best.",
+        text: "Dr. Lavi examines your teeth and gums, takes digital images and talks through your goals to decide whether a bridge, and which type, fits best.",
       },
       {
         title: "Preparation and temporary bridge",
@@ -101,7 +101,7 @@ const service: Service = {
     {
       eyebrow: "Types",
       heading: "Types of dental bridges",
-      intro: "Different designs suit different gaps. Dr. Moezzi will recommend the one that fits your teeth and goals.",
+      intro: "Different designs suit different gaps. Dr. Lavi will recommend the one that fits your teeth and goals.",
       items: [
         {
           title: "Traditional bridge",
@@ -136,15 +136,15 @@ const service: Service = {
         },
         {
           title: "Keep your checkups",
-          text: "Regular visits let Dr. Moezzi check the fit of your bridge and the health of the supporting teeth.",
+          text: "Regular visits let Dr. Lavi check the fit of your bridge and the health of the supporting teeth.",
         },
         {
           title: "Mind hard and sticky foods",
           text: "Limiting ice, hard candy and sticky sweets reduces stress on the bridge and helps prevent damage.",
         },
       ],
-      image: "/images/practice/exam-mirror.png",
-      imageAlt: "Close-up of a dental mirror exam of a patient's smile",
+      image: "/images/blog/how-long-do-dental-bridge-last.png",
+      imageAlt: "Smiling woman next to a dental bridge model",
     },
   ],
   showGallery: true,
@@ -170,7 +170,7 @@ const service: Service = {
     },
     {
       q: "Bridge or implant: what is the difference?",
-      a: "A bridge rests on the neighboring teeth or on implants and is usually finished in a few weeks. An implant is a standalone post placed in the jawbone and needs time to heal. Dr. Moezzi will explain both so you can choose what suits your mouth, timeline and budget.",
+      a: "A bridge rests on the neighboring teeth or on implants and is usually finished in a few weeks. An implant is a standalone post placed in the jawbone and needs time to heal. Dr. Lavi will explain both so you can choose what suits your mouth, timeline and budget.",
     },
     {
       q: "How do I care for my bridge?",
@@ -188,7 +188,7 @@ const service: Service = {
   related: ["dental-implants", "dental-crowns", "restorative-dentistry", "tooth-extractions"],
   cta: {
     heading: "Close the gap in your smile",
-    text: "Call (661) 254-5200 or book online for a bridge consultation with Dr. Moezzi in Valencia.",
+    text: "Call (661) 254-5200 or book online for a bridge consultation with Dr. Lavi in Valencia.",
   },
   flags: [
     "Source FAQ says bridges last '5 to 15 years, some longer'; replaced with 'many years' (no specific lifespan).",

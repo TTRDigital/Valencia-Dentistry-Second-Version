@@ -1,5 +1,20 @@
 # QA report
 
+## Second version (2026-11-02): Valencia Dentistry rebrand
+
+| Check | Result |
+|---|---|
+| Previous-dentist / old-brand text in every rendered page (64 pages incl. 404 and thank-you) | 0 matches |
+| Photos of the previous dentist in `public/` | 0 (17 files deleted) |
+| Launch audit | No problems; 61 sitemap pages, 61 links, 57/57 old URLs (incl. `/category/blogs/` from the first site) |
+| Screenshot QA, 10 pages × 5 widths | No horizontal scroll, no small tap targets |
+| Header behaviour test | Pass (scroll state, mega menu, drawer, active link) |
+| Lighthouse mobile, Home / service / article | Performance 83 / 96 / 93; Accessibility, Best practices, SEO 100 on all three; CLS 0 |
+
+Screenshots of this version: `docs/screenshots/*.jpg`.
+
+## First version of this build (2026-11-01)
+
 Measured on a production build (`next build` + `next start`) inside the build container on 2026-11-01, commit `d61c81b`+. Reproduce with the commands in the README (`npm run audit`, `npm run shots`, Lighthouse CLI 12.8 with `--preset=perf --form-factor=mobile --throttling-method=simulate`).
 
 ## Lighthouse (mobile, simulated throttling)
@@ -25,7 +40,7 @@ Checks: status, doctype, `<html lang="en">`, charset first in head, one H1, titl
 
 ## Screenshots (`npm run shots`)
 
-`No horizontal scroll, no small tap targets.` across 10 pages × 5 widths (390, 768, 1024, 1440, 1920). Eight representative captures are in `docs/screenshots/`. Tap-target rule: every control ≥ 44 px high; text links ≥ 24 px wide (WCAG 2.5.8); inputs inside a label count through the label.
+`No horizontal scroll, no small tap targets.` across 10 pages × 5 widths (390, 768, 1024, 1440, 1920).  Tap-target rule: every control ≥ 44 px high; text links ≥ 24 px wide (WCAG 2.5.8); inputs inside a label count through the label.
 
 ## Behaviour tests (Playwright, production build)
 

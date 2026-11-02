@@ -23,8 +23,8 @@ import { FaqList } from "@/components/ui/Faq";
 import { homeFaqs } from "../../../content/pages";
 
 export const metadata: Metadata = pageMeta({
-  title: "Dentist in Valencia, Santa Clarita | Valencia Smile Expert",
-  description: "Holistic, one-on-one dentistry in Valencia with Dr. Neda Moezzi, DDS. Implants, veneers, Invisalign, same-day crowns. $59 new patient exam & X-rays.",
+  title: "Dentist in Valencia, Santa Clarita | Valencia Dentistry",
+  description: "Holistic, one-on-one dentistry in Valencia with Dr. Nuriel Lavi, DDS. Implants, veneers, Invisalign, same-day crowns. $59 new patient exam & X-rays.",
   path: "/",
   ogKey: "home",
 });
@@ -33,14 +33,14 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={[dentistSchema(), personSchema(), webSiteSchema(), faqSchema(homeFaqs)]} />
-      <Hero image="/images/practice/team-sign.png" imageAlt="Dr. Neda Moezzi and her team in the Valencia office, in front of the Neda Moezzi DDS sign" objectPosition="center 30%">
+      <Hero image="/images/practice/checkup-smile.png" imageAlt="Smiling patient in the dental chair during a checkup" objectPosition="70% 40%">
         <div className="max-w-3xl">
           <p className="eyebrow" data-reveal="">Valencia · Santa Clarita</p>
           <h1 className="display-xl mt-5" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>
             Dentistry with <span className="serif-italic">heart</span>, one patient at a time
           </h1>
           <p className="lead mt-6 max-w-xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>
-            Holistic, one-on-one care from Dr. Neda Moezzi, DDS. No handoffs, no rush, and a plan built around your long-term health.
+            Dr. Nuriel Lavi, DDS sees every patient himself, at every visit. Holistic, integrative care with modern technology, in a quiet office on Tourney Road.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
             <Button href={site.bookingUrl} variant="gold" size="lg">Book Online</Button>

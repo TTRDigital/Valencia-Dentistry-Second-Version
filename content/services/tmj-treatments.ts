@@ -6,25 +6,25 @@ const service: Service = {
   category: "preventive",
   name: "TMJ Treatment",
   menuDescription: "Relief for jaw pain, clicking and headaches with custom night guards and bite care.",
-  image: "/images/practice/dr-moezzi-patient-chair.png",
-  imageAlt: "Dr. Moezzi talking with a patient seated in the treatment chair",
+  image: "/images/blog/do-dental-implants-hurt-recovery-pain-healing-guide.png",
+  imageAlt: "Dentist showing a smiling patient a dental implant model",
   seo: {
-    title: "TMJ Treatment in Valencia, CA | Valencia Smile Expert",
+    title: "TMJ Treatment in Valencia, CA | Valencia Dentistry",
     description:
-      "Jaw pain, clicking or headaches? Dr. Moezzi offers custom night guards and bite adjustments for TMJ disorders in Valencia, Santa Clarita. Book an exam.",
+      "Jaw pain, clicking or headaches? Dr. Lavi offers custom night guards and bite adjustments for TMJ disorders in Valencia, Santa Clarita. Book an exam.",
   },
   hero: {
     eyebrow: "TMJ and Jaw Pain",
     title: "TMJ Treatment in Valencia for Jaw Pain and Headaches",
     intro:
-      "Jaw pain, clicking and tension headaches can wear you down. Dr. Neda Moezzi, DDS looks for the cause of the strain and builds a plan designed to ease it, from custom night guards to bite care.",
+      "Jaw pain, clicking and tension headaches can wear you down. Dr. Nuriel Lavi, DDS looks for the cause of the strain and builds a plan designed to ease it, from custom night guards to bite care.",
   },
   overview: {
     heading: "Understanding TMJ disorders",
     paragraphs: [
       "The temporomandibular joint, or TMJ, is the hinge that connects your lower jaw to your skull. You use it every time you chew, speak or yawn. When the joint or the muscles around it become strained, inflamed or out of balance, the result is a temporomandibular disorder, often called TMD.",
       "The discomfort rarely stays in the jaw. Many patients notice headaches, earaches, a clicking or locking sensation and even neck and shoulder tension. Grinding and clenching, a misaligned bite, stress, arthritis and injury are the most common causes.",
-      "At Valencia Smile Expert we take time to find out what is driving your symptoms. Treatment is personalized and conservative, using custom oral appliances, bite adjustments and practical guidance aimed at the root of the problem rather than only the symptoms.",
+      "At Valencia Dentistry we take time to find out what is driving your symptoms. Treatment is personalized and conservative, using custom oral appliances, bite adjustments and practical guidance aimed at the root of the problem rather than only the symptoms.",
     ],
     highlights: [
       { title: "Custom night guards", text: "Made to fit your teeth to reduce grinding and ease joint pressure." },
@@ -61,7 +61,7 @@ const service: Service = {
     steps: [
       {
         title: "Evaluation",
-        text: "Dr. Moezzi examines your jaw, teeth and bite, reviews your medical history and takes digital images when needed to pinpoint what is causing the discomfort.",
+        text: "Dr. Lavi examines your jaw, teeth and bite, reviews your medical history and takes digital images when needed to pinpoint what is causing the discomfort.",
       },
       {
         title: "Personalized plan",
@@ -151,7 +151,7 @@ const service: Service = {
   related: ["preventive-dentistry", "dental-crowns", "holistic-dentistry", "restorative-dentistry"],
   cta: {
     heading: "Find out what is causing your jaw pain",
-    text: "Schedule a TMJ evaluation with Dr. Moezzi in Valencia and get a plan designed to bring your jaw back to comfort.",
+    text: "Schedule a TMJ evaluation with Dr. Lavi in Valencia and get a plan designed to bring your jaw back to comfort.",
   },
   flags: [
     "Botox for TMJ relief is listed on the source page. Kept with softened wording ('for some patients'). Verify the practice offers Botox therapy.",

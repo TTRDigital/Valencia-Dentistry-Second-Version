@@ -58,7 +58,7 @@ export async function getPosts(): Promise<Post[]> {
   if (!docs?.length) return builtIn;
   const merged = docs.map((d) => {
     const b = builtIn.find((x) => x.slug === d.slug);
-    return { ...(b ?? {}), ...d, author: "Dr. Neda Moezzi, DDS", image: imgPath(d.image) || b?.image || "/images/practice/exam-mirror.png", imageAlt: d.image?.alt || b?.imageAlt || "" } as Post;
+    return { ...(b ?? {}), ...d, author: "Dr. Nuriel Lavi, DDS", image: imgPath(d.image) || b?.image || "/images/practice/exam-mirror.png", imageAlt: d.image?.alt || b?.imageAlt || "" } as Post;
   });
   return merged.sort((a, b) => (a.datePublished < b.datePublished ? 1 : -1));
 }
@@ -88,5 +88,6 @@ export async function getDoctor() {
   const docs = await fetchAll<Record<string, unknown> & { portrait?: SiteImage }>(`*[_type=="doctor"][0...1]{..., portrait{..., upload{asset->{url}}}}`);
   const d = docs?.[0];
   if (!d) return builtInDoctor;
-  return { ...builtInDoctor, ...d, portrait: imgPath(d.portrait) || builtInDoctor.portrait, portraitAlt: d.portrait?.alt || builtInDoctor.portraitAlt };
+  return { ...builtInDoctor, ...d, portrait: imgPath(d.portrait) || builtInDoctor.portrait,
+    statement: (d.quote as string) || builtInDoctor.statement, portraitAlt: d.portrait?.alt || builtInDoctor.portraitAlt };
 }

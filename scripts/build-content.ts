@@ -23,6 +23,25 @@ const BOOK = "https://book2.getweave.com/657e8080-2ad9-44fa-8cfb-2c06a59cd7a7/re
 type Raw = { slug: string; title: string; datePublished: string; dateModified?: string; author: string; image: string; imageAlt: string; faq: { q: string; a: string }[]; html: string };
 const raws: Raw[] = JSON.parse(readFileSync(join(CRAWL, "blog-posts.json"), "utf8"));
 
+/** Brand pass: the practice is Valencia Dentistry, led by Dr. Nuriel Lavi, DDS. */
+const BRAND: [RegExp, string][] = [
+  [/Dr\.? ?Neda Moezzi,? DDS/g, "Dr. Nuriel Lavi, DDS"],
+  [/Dr\.? ?Neda Moezzi/g, "Dr. Nuriel Lavi"],
+  [/Neda Moezzi/g, "Nuriel Lavi"],
+  [/Dr\.? ?Moezzi/g, "Dr. Lavi"],
+  [/Dr\.? ?Neda/g, "Dr. Lavi"],
+  [/Moezzi/g, "Lavi"],
+  [/\bNeda\b/g, "Dr. Lavi"],
+  [/Valencia Smile Expert LLC/g, "Valencia Dentistry"],
+  [/Valencia Smile Experts?/g, "Valencia Dentistry"],
+  [/ValenciaSmile/g, "Valencia Dentistry"],
+  [/Valencia Smile(?=[:\s,.)'’])/g, "Valencia Dentistry"],
+  [/info@valenciasmileexpert\.com/g, "ValenciaDentistryCA@gmail.com"],
+  [/https?:\/\/(www\.)?valenciasmileexpert\.com/g, ""],
+  [/www\.valenciasmileexpert\.com/g, "valenciadentistryca.com"],
+];
+const brand = (s: string) => BRAND.reduce((acc, [re, rep]) => acc.replace(re, rep), s);
+
 const CTA_TAIL = /\s*(Request Your Post-Op Guide|Book a Same-Day Crown Consultation|Get a Written Cost Comparison|Request a Written Cost Estimate|Schedule Your Implant Consultation|Book a Dental Bridge Consultation|Schedule a Post-Op Check|Schedule a Free [A-Za-z ]+|Book [A-Z][A-Za-z -]+Consultation|Schedule [A-Z][A-Za-z -]+Consultation)\s*$/;
 
 function cleanHtml(html: string, slug: string) {
@@ -77,25 +96,26 @@ function cleanHtml(html: string, slug: string) {
   if (slug === "why-regular-dental-cleanings-matter-health-cost-how-often-to-come-dental-cleaning-valencia") {
     out = out.replace(/<p>(How often do I need a cleaning\?)(Most adults[^<]*)<\/p>/, "<p><strong>$1</strong> $2</p>");
   }
-  return out.trim();
+  return brand(out.trim());
 }
 
 const posts = raws.map((r) => {
   const metaPath = join(ROOT, "content/posts-meta", `${r.slug}.json`);
   if (!existsSync(metaPath)) throw new Error(`missing meta for ${r.slug}`);
   const m = JSON.parse(readFileSync(metaPath, "utf8"));
-  const faqs = r.faq.map((f) => ({ q: f.q.trim(), a: (f.a || "").replace(CTA_TAIL, "").trim() })).filter((f) => f.q && f.a);
-  const image = existsSync(join(ROOT, "public/images/blog", `${r.slug}.png`)) ? `/images/blog/${r.slug}.png` : "/images/practice/exam-mirror.png";
+  const faqs = r.faq.map((f) => ({ q: brand(f.q.trim()), a: brand((f.a || "").replace(CTA_TAIL, "").trim()) })).filter((f) => f.q && f.a);
+  // Posts without their own banner (or whose old banner showed the previous dentist) use a neutral office photo.
+  const image = existsSync(join(ROOT, "public/images/blog", `${r.slug}.png`)) ? `/images/blog/${r.slug}.png` : r.slug.startsWith("why-regular-dental-cleanings") ? "/images/practice/preventive-cleaning.png" : "/images/practice/exam-mirror.png";
   return {
     slug: r.slug,
-    title: m.title || r.title,
+    title: brand(m.title || r.title),
     seo: { title: m.seoTitle, description: m.seoDescription },
     excerpt: m.excerpt,
     datePublished: r.datePublished,
     dateModified: r.dateModified && r.dateModified > r.datePublished ? r.dateModified : r.datePublished,
-    author: "Dr. Neda Moezzi, DDS",
+    author: "Dr. Nuriel Lavi, DDS",
     image,
-    imageAlt: m.imageAlt || r.imageAlt || r.title,
+    imageAlt: brand(m.imageAlt || r.imageAlt || r.title),
     category: m.category,
     keyTakeaways: m.keyTakeaways,
     html: cleanHtml(r.html, r.slug),
@@ -128,7 +148,7 @@ const legal: Record<string, { title: string; html: string; updated: string }> = 
 for (const [slug, title] of [["privacy-policy", "Privacy Policy"], ["terms-and-services", "Terms and Services"]] as const) {
   const d = JSON.parse(readFileSync(join(CRAWL, "extracted", `${slug}.json`), "utf8"));
   const blocks: Block[] = d.blocks.filter((b: Block) => !/^(Privacy Policy|terms and services|Terms and Services)$/i.test(b.text));
-  legal[slug] = { title, html: blocksToHtml(blocks), updated: "2026-10-30" };
+  legal[slug] = { title, html: brand(blocksToHtml(blocks)), updated: "2026-11-02" };
 }
 writeFileSync(join(ROOT, "content/legal.json"), JSON.stringify(legal, null, 1));
 console.log("content/legal.json:", Object.keys(legal).join(", "));

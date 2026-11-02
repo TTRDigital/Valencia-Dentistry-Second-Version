@@ -1,14 +1,17 @@
 import type { BeforeAfterCase, TechKey, Testimonial } from "./types.ts";
 
-/** Practice facts, verified against valenciasmileexpert.com on 2026-10-30. */
+/**
+ * Practice facts for Valencia Dentistry (Dr. Nuriel Lavi, DDS), taken from the
+ * practice's first site (valencia-dentistry.vercel.app) on 2026-11-02.
+ */
 export const site = {
-  name: "Valencia Smile Expert",
-  legalName: "Valencia Smile Expert",
+  name: "Valencia Dentistry",
+  legalName: "Valencia Dentistry",
   tagline: "Holistic, one-on-one dentistry in Valencia",
-  url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.valenciasmileexpert.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://valenciadentistryca.com",
   phone: "(661) 254-5200",
   phoneE164: "+16612545200",
-  email: "info@valenciasmileexpert.com",
+  email: "ValenciaDentistryCA@gmail.com",
   address: {
     street: "27420 Tourney Rd, Suite 240",
     city: "Santa Clarita",
@@ -29,48 +32,50 @@ export const site = {
   ],
   /** 0 = Sunday … 6 = Saturday; minutes from midnight, America/Los_Angeles. */
   openingHours: { days: [1, 2, 3, 4, 5], opens: 8 * 60, closes: 17 * 60, timeZone: "America/Los_Angeles" },
-  social: {
-    facebook: "https://www.facebook.com/iHeartDDS1/",
-    instagram: "https://www.instagram.com/Valenciasmileexpert/",
-    linkedin: "https://www.linkedin.com/in/iHeartDDS1",
-    x: "https://x.com/iHeartDDS1",
-  },
+  /**
+   * Social profiles. Left empty on purpose: the handles on the earlier sites
+   * belong to the previous practice. Icons appear in the header and footer as
+   * soon as a URL is filled in here (or in the CMS).
+   */
+  social: {} as Partial<Record<"facebook" | "instagram" | "linkedin" | "x", string>>,
   google: { rating: 4.9, reviewCount: 180 },
   offer: {
     title: "$59 New Patient Special",
     short: "$59 exam & X-rays",
     price: "$59",
-    description: "A complete exam and digital X-rays for new patients, plus unhurried time with Dr. Moezzi to talk through your goals.",
+    description: "A complete exam and digital X-rays for new patients, plus unhurried time with Dr. Lavi to talk through your goals.",
     fineprint: "New patients only. Cannot be combined with insurance or other offers.",
   },
   insurance: "Most major PPO plans accepted",
   financing: "Flexible financing options",
   gtmId: "GTM-PPV3TDK8",
-  foundedYear: 2007,
-  areaServed: ["Valencia", "Santa Clarita", "Stevenson Ranch", "Newhall", "Saugus", "Canyon Country", "Castaic"],
+  areaServed: ["Valencia", "Santa Clarita", "Stevenson Ranch", "Newhall", "Saugus", "Canyon Country"],
   priceRange: "$$",
 };
 
+/**
+ * Dr. Nuriel Lavi, DDS. No portrait yet: the photos on the first site show a
+ * different dentist, so doctor sections use the practice mark until real
+ * photos are supplied (set `portrait` to a path in public/images to show one).
+ */
 export const doctor = {
-  name: "Dr. Neda Moezzi, DDS",
-  shortName: "Dr. Moezzi",
-  firstName: "Neda",
-  title: "Founder & Lead Dentist",
-  school: "University of Detroit Mercy School of Dentistry",
-  gradYear: 2010,
-  portrait: "/images/practice/dr-moezzi-portrait.png",
-  portraitAlt: "Dr. Neda Moezzi, DDS, smiling in a pink blazer",
-  quote: "Dentistry, to me, is about trust. I take the time to listen, understand your goals and build a plan that supports your health for the long term.",
+  name: "Dr. Nuriel Lavi, DDS",
+  shortName: "Dr. Lavi",
+  firstName: "Nuriel",
+  title: "Dentist and practice owner",
+  portrait: "" as string,
+  portraitAlt: "Dr. Nuriel Lavi, DDS",
+  statement: "Plain explanations, honest priorities and a calm, unhurried visit. That is what every patient should expect.",
   bio: [
-    "Dr. Neda Moezzi, DDS, is the founder and lead dentist at Valencia Smile Expert. She graduated from the University of Detroit Mercy School of Dentistry in 2010 and has continued her training in general, cosmetic and surgical dentistry ever since.",
-    "Her practice is built around one idea: every patient deserves the dentist's full attention. There are no handoffs and no rush. Dr. Moezzi performs your exam, explains your options in plain language and designs a plan around your long-term health, not just the tooth in front of her.",
-    "Her approach is holistic and integrative. She chooses biocompatible materials, favors prevention and minimally invasive care, and considers how your oral health connects to the rest of your body.",
+    "Dr. Nuriel Lavi leads Valencia Dentistry on Tourney Road in Valencia. He sees every patient himself, at every visit, and takes the time to listen before he recommends anything.",
+    "Treatment plans are built around your long-term health, your comfort and your goals, with modern imaging, biocompatible materials and a preference for prevention over quick fixes.",
+    "Patients should expect plain explanations, honest priorities and a calm, unhurried visit.",
   ],
   credentials: [
-    "Doctor of Dental Surgery, University of Detroit Mercy (2010)",
-    "General, cosmetic and implant dentistry",
-    "Guided implant surgery and PRF therapy",
-    "Holistic and biocompatible dentistry",
+    "One dentist at every visit, no handoffs",
+    "3D CBCT imaging and guided implant planning",
+    "Holistic, integrative approach to oral health",
+    "Same-day crowns made in house",
   ],
 };
 
@@ -79,7 +84,7 @@ export const technology: { key: TechKey; name: string; text: string }[] = [
   { key: "itero", name: "iTero digital scanning", text: "A quick, mess-free digital impression that replaces putty trays for crowns, veneers and Invisalign." },
   { key: "prf", name: "PRF therapy", text: "Platelet-rich fibrin from your own blood, used to support healing after extractions, grafts and implants." },
   { key: "guided-implants", name: "Guided implant surgery", text: "Implants planned on your 3D scan and placed with a surgical guide for accuracy and a gentler visit." },
-  { key: "digital-xray", name: "Digital X-rays", text: "Fast, low-radiation images you can see on screen with Dr. Moezzi during your exam." },
+  { key: "digital-xray", name: "Digital X-rays", text: "Fast, low-radiation images you can see on screen with Dr. Lavi during your exam." },
   { key: "intraoral-camera", name: "Intraoral cameras", text: "A small camera shows you exactly what we see, so every recommendation makes sense." },
   { key: "laser", name: "Laser dentistry", text: "Precise, minimally invasive soft-tissue care with less discomfort and faster healing for many procedures." },
   { key: "same-day-crowns", name: "Same-day crowns", text: "In-house custom crowns, so many patients leave with their final restoration in a single visit." },
@@ -96,21 +101,14 @@ export const insurers = [
   { name: "Humana", logo: "/images/insurance/humana.png" },
 ];
 
-/** Real Google reviews shown on the current site, verbatim. */
+/**
+ * Real Google reviews of the office, verbatim. Only reviews that do not name
+ * a dentist are used (the others refer to the previous practice owner).
+ */
 export const testimonials: Testimonial[] = [
-  {
-    id: "jose-c",
-    name: "Jose C.",
-    when: "Recently",
-    rating: 5,
-    source: "google",
-    text: "My first visit and it was amazing. From the time Alexis made my appointment to Leah the hygienist cleaning my teeth to Dr Neda explaining to me my treatment plan everything was perfect. I highly recommend them to everyone that is looking for a great dental experience. I found my dental office thank you ladies",
-    service: "New patient visit",
-  },
   {
     id: "doug-chong",
     name: "Doug Chong",
-    when: "Recently",
     rating: 5,
     source: "google",
     text: "Best Dentist & Best Dental Hygienist in the Santa Clarita. Beautiful office and friendly staff. They truly take care of you!",
@@ -124,27 +122,9 @@ export const testimonials: Testimonial[] = [
     text: "I chipped my 2 front teeth back in October pretty bad and I came here to get crowns and they look SO natural you can barely tell it's a crown! I love it so much and the process was pretty simple, definitely recommend coming here if you need any dental work done!",
     service: "Dental crowns",
   },
-  {
-    id: "kyle-figatner",
-    name: "Kyle Figatner",
-    when: "Recently",
-    rating: 5,
-    source: "google",
-    text: "Great experience. I went in with pain in one of my teeth. Dr. Moezzi took the time to discuss all treatment options and address any concerns. Treatment was painless and I had no more pain after treatment. It's been great since.",
-    service: "Emergency visit",
-  },
-  {
-    id: "victoria-kersanty",
-    name: "Victoria Kersanty",
-    when: "Recently",
-    rating: 5,
-    source: "google",
-    text: "I'm 55 and have never had a better experience then with Dr Neda and her team. I absolutely love them and will never go anywhere else. I've also brought my family to her.",
-    service: "Family care",
-  },
 ];
 
-/** Real before/after cases from the practice's current gallery. */
+/** Before/after cases from the office's gallery (the same cases the first site shows). */
 export const cases: BeforeAfterCase[] = [
   { id: "case-1", title: "Full smile restoration", treatment: "Crowns, veneers and implant restoration", before: "/images/cases/before-1.png", after: "/images/cases/after-1.png", beforeAlt: "Before: a smile with worn, stained and missing teeth", afterAlt: "After: a full set of even, white teeth" },
   { id: "case-2", title: "Smile makeover", treatment: "Porcelain veneers", before: "/images/cases/before-2.png", after: "/images/cases/after-2.png", beforeAlt: "Before: short, uneven teeth", afterAlt: "After: a bright, even smile" },
@@ -165,10 +145,10 @@ export type ServiceCategoryCard = {
 };
 
 export const serviceCategories: ServiceCategoryCard[] = [
-  { key: "preventive", name: "Preventive", href: "/services/preventive-dentistry/", text: "Cleanings, exams, X-rays and night guards that keep small problems small.", image: "/images/practice/preventive-cleaning.png", imageAlt: "Hygienist cleaning a patient's teeth" },
+  { key: "preventive", name: "Preventive", href: "/services/preventive-dentistry/", text: "Cleanings, exams, X-rays and night guards that keep small problems small.", image: "/images/practice/preventive-cleaning.png", imageAlt: "Hygienist and dentist cleaning a patient's teeth" },
   { key: "family", name: "Family", href: "/services/family-dentistry/", text: "Gentle care for children, teens, parents and grandparents in one place.", image: "/images/practice/family-consult.png", imageAlt: "Dentist talking with a family in the treatment room" },
   { key: "cosmetic", name: "Cosmetic", href: "/services/cosmetic-dentistry/", text: "Veneers, whitening, Invisalign and bonding designed around your face.", image: "/images/practice/checkup-smile.png", imageAlt: "Smiling woman in a dental chair during a checkup" },
-  { key: "restorative", name: "Restorative", href: "/services/restorative-dentistry/", text: "Same-day crowns, bridges and fillings that look and feel natural.", image: "/images/practice/consult-chair.png", imageAlt: "Dr. Moezzi in consultation with a seated patient" },
-  { key: "surgery", name: "Implants & Oral Surgery", href: "/services/dental-implants/", text: "Guided implants, All-on-4, extractions and grafting with PRF healing.", image: "/images/practice/cbct-scan.png", imageAlt: "Patient standing at the CBCT 3D imaging unit" },
-  { key: "holistic", name: "Holistic", href: "/services/holistic-dentistry/", text: "Mercury-free, biocompatible care that respects the whole body.", image: "/images/practice/dr-moezzi-patient-chair.png", imageAlt: "Dr. Moezzi talking with a patient in the treatment chair" },
+  { key: "restorative", name: "Restorative", href: "/services/restorative-dentistry/", text: "Same-day crowns, bridges and fillings that look and feel natural.", image: "/images/practice/tooth-model.jpg", imageAlt: "Gloved hands holding a tooth model with a filling" },
+  { key: "surgery", name: "Implants & Oral Surgery", href: "/services/dental-implants/", text: "Guided implants, All-on-4, extractions and grafting with PRF healing.", image: "/images/blog/dental-implant-timeline.png", imageAlt: "Dentist showing a smiling patient a dental implant model" },
+  { key: "holistic", name: "Holistic", href: "/services/holistic-dentistry/", text: "Mercury-free, biocompatible care that respects the whole body.", image: "/images/blog/how-long-do-dental-bridge-last.png", imageAlt: "Smiling patient in a bright treatment room" },
 ];

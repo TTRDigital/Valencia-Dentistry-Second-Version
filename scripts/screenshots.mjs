@@ -22,6 +22,7 @@ for (const w of WIDTHS) {
   const page = await ctx.newPage();
   for (const p of PAGES) {
     await page.goto(BASE + p, { waitUntil: "networkidle" });
+    await page.addStyleTag({ content: ".section,.section-sm,footer{content-visibility:visible!important}" });
     await page.evaluate(async () => {
       document.querySelectorAll("[data-reveal]").forEach((e) => e.animate([{ opacity: 1, transform: "none" }], { duration: 0, fill: "forwards" }));
       for (let y = 0; y < document.body.scrollHeight; y += 600) { window.scrollTo({ top: y, behavior: "instant" }); await new Promise((r) => setTimeout(r, 80)); }

@@ -1,10 +1,10 @@
-# Copy guide — Valencia Smile Expert
+# Copy guide — Valencia Dentistry
 
 Use this for every piece of marketing copy on the site (service pages, home, about, blog metadata).
 
 ## Voice
 - Warm, premium, concise. "Boutique practice, not a clinic." Confident but never boastful.
-- Second person ("you", "your smile"); the practice is "we"; the dentist is "Dr. Moezzi" (first mention: "Dr. Neda Moezzi, DDS").
+- Second person ("you", "your smile"); the practice is "we"; the dentist is "Dr. Lavi" (first mention: "Dr. Nuriel Lavi, DDS"; he/him).
 - Short sentences. One idea per sentence. No exclamation marks. No "!" in headings.
 - Plain words: say "exam" not "comprehensive examination", "scan" not "diagnostic imaging modality".
 - Do NOT copy sentences from the current site. Keep its facts, service lists and the gist; rewrite every sentence.
@@ -12,7 +12,7 @@ Use this for every piece of marketing copy on the site (service pages, home, abo
 
 ## Hard rules (compliance)
 - No outcome guarantees. Never "permanent", "painless", "guaranteed", "best dentist", "#1", "top-rated". Prefer "designed to", "can", "many patients", "with proper care".
-- No invented facts: no awards, years of experience, numbers of patients, case counts, specific prices other than the $59 new-patient special, no credentials beyond: DDS, University of Detroit Mercy School of Dentistry (2010 graduate), practice serving Santa Clarita since 2007, now led by Dr. Moezzi.
+- No invented facts: no awards, years of experience, numbers of patients, case counts, specific prices other than the $59 new-patient special, and no credentials for Dr. Lavi beyond DDS and what the practice has published (one dentist at every visit, CBCT and guided implant planning, holistic approach, in-house crowns). Never name or picture the previous practice owner.
 - Technology the practice really lists: CBCT 3D imaging, iTero digital scanning, PRF (platelet-rich fibrin), guided implant surgery, digital X-rays, intraoral cameras, laser dentistry, same-day in-house crowns. Use only these (as TechKey values: cbct, itero, prf, guided-implants, digital-xray, intraoral-camera, laser, same-day-crowns).
 - Sedation: the site says "sedation options"; keep it generic ("sedation options when appropriate"). Do not name nitrous/IV unless the source page says so.
 - Holistic page: keep claims measured ("biocompatible materials", "mercury-free", "SMART protocol for amalgam removal", "fluoride-free options"). Do not claim it treats or cures medical conditions.
@@ -22,7 +22,7 @@ Use this for every piece of marketing copy on the site (service pages, home, abo
 - Office: 27420 Tourney Rd, Suite 240, Santa Clarita (Valencia), CA 91355 · (661) 254-5200 · Mon–Fri 8am–5pm.
 
 ## SEO
-- `seo.title` ≤ 60 characters, unique, ends with " | Valencia Smile Expert" only if it fits (otherwise omit the brand).
+- `seo.title` ≤ 60 characters, unique, ends with " | Valencia Dentistry" only if it fits (otherwise omit the brand).
 - `seo.description` ≤ 155 characters, one clear benefit + location + a soft call to action.
 - One H1 per page = `hero.title`. Section headings are H2; cards are H3.
 - Every image path must exist in /public/images (see the list in the brief).

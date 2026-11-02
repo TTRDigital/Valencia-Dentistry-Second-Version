@@ -12,8 +12,8 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Smile Gallery: Before & After Photos | Valencia Smile Expert",
-  description: "Real before-and-after results from Dr. Neda Moezzi's patients in Valencia: veneers, crowns, implants and smile makeovers. Drag to compare each case.",
+  title: "Smile Gallery: Before & After Photos | Valencia Dentistry",
+  description: "Real before-and-after results from Dr. Nuriel Lavi's patients in Valencia: veneers, crowns, implants and smile makeovers. Drag to compare each case.",
   path: "/smile-gallery/",
 });
 const crumbs = [{ label: "Home", href: "/" }, { label: "Smile Gallery", href: "/smile-gallery/" }];
@@ -28,7 +28,7 @@ export default async function GalleryPage() {
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Smile gallery</p>
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>Real patients, real results</h1>
-          <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Every case below is a patient of Dr. Moezzi, photographed in our office and shared with permission. Drag the handle to compare.</p>
+          <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Every case below is a patient of Dr. Lavi, photographed in our office and shared with permission. Drag the handle to compare.</p>
         </div>
       </Hero>
       <Section tone="ivory" labelledBy="cases-heading">
@@ -41,7 +41,7 @@ export default async function GalleryPage() {
         <div className="mt-14 flex flex-col items-center gap-4 rounded-2xl border border-sand bg-white p-8 text-center sm:flex-row sm:text-left" data-reveal="">
           <div className="flex-1">
             <h2 className="text-2xl">Curious what is possible for your smile?</h2>
-            <p className="mt-2 text-muted">Dr. Moezzi can preview your options on a digital scan at your consultation. New patients start with the {site.offer.title}.</p>
+            <p className="mt-2 text-muted">Dr. Lavi can preview your options on a digital scan at your consultation. New patients start with the {site.offer.title}.</p>
           </div>
           <Button href={site.bookingUrl}>Book a consultation</Button>
         </div>

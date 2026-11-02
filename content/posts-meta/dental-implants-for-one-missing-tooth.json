@@ -19,7 +19,7 @@
   ],
   "imageAlt": "Dentist showing a patient her X-ray",
   "flags": [
-    "Written in first person as Dr. Moezzi ('a practical guide from Dr Neda Moezzi', 'Patients I see', 'How I approach this decision as a clinician'); confirm she authored it and fix the name format to 'Dr. Neda Moezzi, DDS'.",
+    "Written in first person as Dr. Lavi ('a practical guide from Dr. Nuriel Lavi', 'Patients I see', 'How I approach this decision as a clinician'); confirm she authored it and fix the name format to 'Dr. Nuriel Lavi, DDS'.",
     "FAQ 5 answer in the faq data ends with stray CTA text 'Schedule Your Implant Consultation'; the same CTA appears unlinked in the body.",
     "Reddit anecdotes ($2,900 root canal and crown, $3,500 to $4,500 implant quotes) are used as evidence.",
     "Suggests comparing 'warranties' between quotes.",

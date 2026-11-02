@@ -91,7 +91,7 @@ export function ServicePage({ s, all }: { s: Service; all?: Service[] }) {
               </ul>
             ) : null}
             <div className="card mt-6 bg-ink p-7 text-on-dark on-dark grain" data-reveal="">
-              <p className="eyebrow">Talk to Dr. Moezzi</p>
+              <p className="eyebrow">Talk to Dr. Lavi</p>
               <p className="mt-2 font-display text-2xl">A consultation is the right first step</p>
               <p className="mt-2 text-sm text-on-dark-muted">Bring your questions. You will leave with a clear picture of your options and a written estimate.</p>
               <div className="mt-5 flex flex-col gap-2"><Button href={site.bookingUrl} variant="gold" size="sm">Book Online</Button><Button href="/appointment/" variant="outline" size="sm">Request an appointment</Button></div>
@@ -143,7 +143,7 @@ export function ServicePage({ s, all }: { s: Service; all?: Service[] }) {
         </ol>
       </Section>
 
-      {s.technology.length > 0 && <TechnologyRow keys={s.technology} tone="white" heading="Technology used" eyebrow="Precision" lead="The tools Dr. Moezzi uses for this treatment, and why they matter to you." />}
+      {s.technology.length > 0 && <TechnologyRow keys={s.technology} tone="white" heading="Technology used" eyebrow="Precision" lead="The tools Dr. Lavi uses for this treatment, and why they matter to you." />}
 
       {s.extraSections?.map((x, i) => <Extra key={x.heading} x={x} alt={i % 2 === 1} />)}
 

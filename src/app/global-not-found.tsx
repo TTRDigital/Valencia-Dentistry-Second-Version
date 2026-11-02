@@ -12,7 +12,7 @@ import { NotFoundView } from "@/components/sections/NotFoundView";
 const fraunces = Fraunces({ subsets: ["latin"], weight: ["300", "400"], style: ["normal", "italic"], variable: "--font-fraunces", display: "swap" });
 const manrope = Manrope({ subsets: ["latin"], weight: "variable", variable: "--font-manrope", display: "swap" });
 
-export const metadata: Metadata = { title: "Page not found | Valencia Smile Expert", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Page not found | Valencia Dentistry", robots: { index: false, follow: false } };
 
 export default function GlobalNotFound() {
   return (

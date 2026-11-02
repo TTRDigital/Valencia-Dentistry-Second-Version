@@ -7,24 +7,24 @@ const service: Service = {
   name: "Preventive Dentistry",
   menuDescription: "Cleanings, exams, digital X-rays, sealants and screenings to keep small problems small.",
   image: "/images/practice/preventive-cleaning.png",
-  imageAlt: "A hygienist cleaning a patient's teeth in a bright treatment room",
+  imageAlt: "Hygienist and dentist cleaning a patient's teeth",
   seo: {
-    title: "Preventive Dentistry in Valencia, CA | Valencia Smile Expert",
+    title: "Preventive Dentistry in Valencia, CA | Valencia Dentistry",
     description:
-      "Cleanings, exams, digital X-rays and screenings in Valencia, Santa Clarita. Catch problems early with Dr. Moezzi. New patients: $59 exam and X-rays.",
+      "Cleanings, exams, digital X-rays and screenings in Valencia, Santa Clarita. Catch problems early with Dr. Lavi. New patients: $59 exam and X-rays.",
   },
   hero: {
     eyebrow: "Preventive Dentistry",
     title: "Preventive Dentistry in Valencia",
     intro:
-      "Regular cleanings and exams are the simplest way to protect your smile. Dr. Neda Moezzi, DDS and our hygiene team help you catch small issues before they become costly ones.",
+      "Regular cleanings and exams are the simplest way to protect your smile. Dr. Nuriel Lavi, DDS and our hygiene team help you catch small issues before they become costly ones.",
   },
   overview: {
     heading: "Care that keeps problems small",
     paragraphs: [
       "Most dental trouble starts quietly. A bit of tartar below the gumline, a shallow cavity, early gum inflammation. None of it hurts at first, which is exactly why regular visits matter. A professional cleaning removes what brushing cannot, and an exam catches changes while they are still easy to treat.",
-      "At Valencia Smile Expert, preventive care goes beyond a polish. Each visit includes a gum check, an oral cancer screening and digital X-rays when they are due. We offer fluoride treatments, sealants, custom night guards and sports mouthguards, as well as fluoride-free options for patients who prefer them.",
-      "You see Dr. Moezzi at every visit. She reviews your exam, explains what she sees and sets a cleaning schedule based on your actual risk rather than a one-size-fits-all rule.",
+      "At Valencia Dentistry, preventive care goes beyond a polish. Each visit includes a gum check, an oral cancer screening and digital X-rays when they are due. We offer fluoride treatments, sealants, custom night guards and sports mouthguards, as well as fluoride-free options for patients who prefer them.",
+      "You see Dr. Lavi at every visit. He reviews your exam, explains what he sees and sets a cleaning schedule based on your actual risk rather than a one-size-fits-all rule.",
     ],
     highlights: [
       { title: "Digital X-rays and CBCT", text: "Low-dose digital images and 3D scans when a closer look is needed." },
@@ -61,7 +61,7 @@ const service: Service = {
     steps: [
       {
         title: "Exam and gum check",
-        text: "Dr. Moezzi examines your teeth and gums, measures gum pockets, screens for oral cancer and reviews digital X-rays if they are due.",
+        text: "Dr. Lavi examines your teeth and gums, measures gum pockets, screens for oral cancer and reviews digital X-rays if they are due.",
       },
       {
         title: "Cleaning",
@@ -84,7 +84,7 @@ const service: Service = {
       heading: "Our preventive services",
       intro: "Everything you need to stay ahead of dental problems, in one Valencia office.",
       items: [
-        { title: "Cleanings and exams", text: "Routine hygiene visits with a full exam by Dr. Moezzi." },
+        { title: "Cleanings and exams", text: "Routine hygiene visits with a full exam by Dr. Lavi." },
         { title: "Digital X-rays and CBCT", text: "Low-dose digital imaging, with 3D scans when a closer look is needed." },
         { title: "Fluoride treatments", text: "Enamel-strengthening treatments, with fluoride-free alternatives available." },
         { title: "Sealants", text: "A thin protective coating on the chewing surfaces of back teeth to help block decay." },
@@ -99,7 +99,7 @@ const service: Service = {
     {
       eyebrow: "Frequency",
       heading: "How often should you come in",
-      intro: "Six months works for most people, but your schedule should match your risk. Dr. Moezzi sets yours during your exam.",
+      intro: "Six months works for most people, but your schedule should match your risk. Dr. Lavi sets yours during your exam.",
       items: [
         { title: "Healthy gums", text: "Every six months is the usual interval when gums are healthy and tartar builds slowly." },
         { title: "History of cavities or tartar", text: "Every three to four months can help keep bacteria in check." },
@@ -118,7 +118,7 @@ const service: Service = {
   faqs: [
     {
       q: "How often do I need a dental cleaning?",
-      a: "Most adults with healthy gums do well with a cleaning every six months. If you have gum disease, implants or other risk factors, Dr. Moezzi may suggest every two to four months. We set your schedule at your exam.",
+      a: "Most adults with healthy gums do well with a cleaning every six months. If you have gum disease, implants or other risk factors, Dr. Lavi may suggest every two to four months. We set your schedule at your exam.",
     },
     {
       q: "Does insurance cover cleanings?",
@@ -126,7 +126,7 @@ const service: Service = {
     },
     {
       q: "What does the $59 new patient special include?",
-      a: "It covers an exam and digital X-rays for new patients. It is a simple way to meet Dr. Moezzi, get a clear picture of your oral health and plan any next steps.",
+      a: "It covers an exam and digital X-rays for new patients. It is a simple way to meet Dr. Lavi, get a clear picture of your oral health and plan any next steps.",
     },
     {
       q: "Are digital X-rays safe?",
@@ -148,12 +148,12 @@ const service: Service = {
   related: ["family-dentistry", "holistic-dentistry", "composite-filling", "tmj-treatments"],
   cta: {
     heading: "Due for a cleaning",
-    text: "Book your exam and cleaning with Dr. Moezzi in Valencia. New patients can start with the $59 exam and X-ray special.",
+    text: "Book your exam and cleaning with Dr. Lavi in Valencia. New patients can start with the $59 exam and X-ray special.",
   },
   flags: [
     "No dedicated preventive page exists on the current site. Content assembled from the home and services page lists, the 'Why Patients Choose' sections and the dental cleanings blog post.",
     "Cleaning frequency guidance (6 months / 3-4 months / 2-3 months) is taken from the practice's blog post; confirm the practice is comfortable publishing these intervals.",
-    "'Oral cancer screening at every exam' and 'you see Dr. Moezzi at every visit' are drawn from the source's list and the 'one-on-one attention' claim; verify both.",
+    "'Oral cancer screening at every exam' and 'you see Dr. Lavi at every visit' are drawn from the source's list and the 'one-on-one attention' claim; verify both.",
     "Sleep apnea appliances and safe mercury removal appear in the source's preventive lists and are kept as items; verify they belong on this page.",
     "'Visit takes about an hour' is an assumption; adjust to the practice's real appointment length.",
     "Technology: cbct and intraoral-camera were included per the assignment; the source preventive lists mention 'Digital X-Rays & CBCT Scans' but not intraoral cameras.",

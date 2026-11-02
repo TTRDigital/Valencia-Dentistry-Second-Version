@@ -23,13 +23,13 @@ const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["300", "400"
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name} | Dentist in Valencia, Santa Clarita`, template: `%s | ${site.name}` },
-  description: "Holistic, one-on-one dentistry in Valencia, Santa Clarita with Dr. Neda Moezzi, DDS. $59 new patient exam and X-rays. Book online today.",
+  description: "Holistic, one-on-one dentistry in Valencia, Santa Clarita with Dr. Nuriel Lavi, DDS. $59 new patient exam and X-rays. Book online today.",
   applicationName: site.name,
   openGraph: { type: "website", siteName: site.name, locale: "en_US" },
   twitter: { card: "summary_large_image" },
 };
 
-export const viewport: Viewport = { themeColor: "#112740", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#1C1B19", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

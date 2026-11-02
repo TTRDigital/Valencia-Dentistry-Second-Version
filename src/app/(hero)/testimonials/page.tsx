@@ -13,8 +13,8 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Patient Reviews & Testimonials | Valencia Smile Expert",
-  description: "Read what patients say about Dr. Neda Moezzi and Valencia Smile Expert: 4.9 stars on Google from Santa Clarita families, shown word for word.",
+  title: "Patient Reviews & Testimonials | Valencia Dentistry",
+  description: "Read what patients say about Dr. Nuriel Lavi and Valencia Dentistry: 4.9 stars on Google from Santa Clarita families, shown word for word.",
   path: "/testimonials/",
 });
 const crumbs = [{ label: "Home", href: "/" }, { label: "Reviews", href: "/testimonials/" }];
@@ -24,7 +24,7 @@ export default async function TestimonialsPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <Hero image="/images/practice/dr-moezzi-smile-sign.png" imageAlt="Dr. Moezzi smiling behind a Smile sign at the front desk" compact objectPosition="center 25%">
+      <Hero image="/images/blog/dental-implants-for-seniors-safety-success.png" imageAlt="Smiling patient in a bright dental office" compact objectPosition="center 25%">
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Reviews</p>

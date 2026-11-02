@@ -14,7 +14,7 @@ export function CosmeticEditorial() {
             Veneers, whitening, Invisalign and bonding, planned on a digital scan of your own teeth and shaped to suit your face, not a template.
           </p>
           <p className="mt-4 text-muted">
-            Dr. Moezzi previews the result with you before anything begins, keeps as much natural enamel as possible, and chooses materials that look like teeth, not like dental work.
+            Dr. Lavi previews the result with you before anything begins, keeps as much natural enamel as possible, and chooses materials that look like teeth, not like dental work.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="/services/cosmetic-dentistry/" icon={<Arrow />}>Explore cosmetic care</Button>
@@ -24,7 +24,7 @@ export function CosmeticEditorial() {
         <div className="lg:col-span-7" data-reveal="" style={{ "--reveal-delay": "120ms" } as React.CSSProperties}>
           <div className="gold-frame img-zoom ml-auto max-w-3xl">
             <div className="relative aspect-[16/11] overflow-hidden rounded-2xl">
-              <Img src="/images/practice/checkup-smile.png" alt="A smiling patient reclining in the dental chair during a checkup" fill sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover" />
+              <Img src="/images/blog/top-5-cosmetic-dentistry-procedures.png" alt="Dentist checking a patient's smile with a mirror" fill sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover" />
             </div>
           </div>
         </div>
