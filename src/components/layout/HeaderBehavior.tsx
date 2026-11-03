@@ -25,10 +25,11 @@ export function HeaderBehavior() {
     let scrolled = false;
 
     const paint = () => {
-      const light = variant === "transparent" && !scrolled && !menuOpen;
+      const light = (variant === "transparent" && !scrolled) || menuOpen;
       header.toggleAttribute("data-light", light);
       header.classList.toggle("on-dark", light);
-      header.toggleAttribute("data-scrolled", scrolled);
+      header.toggleAttribute("data-scrolled", scrolled && !menuOpen);
+      header.toggleAttribute("data-menu-open", menuOpen);
     };
     const onScroll = () => {
       const s = window.scrollY > 40;
@@ -51,7 +52,7 @@ export function HeaderBehavior() {
       menuBtn?.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       menuBtn?.querySelectorAll<HTMLElement>("[data-icon]").forEach((i) => (i.hidden = i.dataset.icon !== (open ? "close" : "menu")));
       document.documentElement.style.overflow = open ? "hidden" : "";
-      if (open) drawer?.querySelector<HTMLElement>("a, button")?.focus();
+      if (open) window.setTimeout(() => drawer?.querySelector<HTMLElement>("a, summary")?.focus({ preventScroll: true }), 50);
       else menuBtn?.focus();
       paint();
     };
@@ -64,6 +65,18 @@ export function HeaderBehavior() {
       closeTimer = window.setTimeout(() => setMega(false), 180);
     };
     const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Tab" && menuOpen && drawer && menuBtn) {
+        const items = [menuBtn, ...Array.from(drawer.querySelectorAll<HTMLElement>("a, summary, button:not([data-close-menu])"))].filter((el) => el.offsetParent !== null);
+        const firstEl = items[0];
+        const lastEl = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        } else if (!e.shiftKey && document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
       if (e.key === "Escape") {
         if (menuOpen) setMenu(false);
         setMega(false);
@@ -106,17 +119,30 @@ export function HeaderBehavior() {
   return null;
 }
 
-/** Marks the current section's link in the header (runtime data, kept out of the static shell). */
+/** Pages that are not blog posts among single-segment URLs. */
+const PAGES = new Set(["about", "appointment", "contact", "emergency-dental", "new-patient-offer", "smile-gallery", "testimonials", "tmj-treatments", "blog", "privacy-policy", "sitemap", "terms-and-services", "thank-you", "styleguide", "services"]);
+
+/** The nav section a path belongs to: blog posts → Blog, service pages (and TMJ) → Services. */
+function section(pathname: string) {
+  const parts = pathname.split("/").filter(Boolean);
+  if (!parts.length) return "/";
+  if (parts[0] === "services" || parts[0] === "tmj-treatments") return "/services/";
+  if (parts.length === 1 && !PAGES.has(parts[0])) return "/blog/";
+  return `/${parts[0]}/`;
+}
+
+/** Highlights the current section in the header and mobile menu (runtime data, kept out of the static shell). */
 export function ActiveNav() {
   const pathname = usePathname();
   useEffect(() => {
-    document.querySelectorAll<HTMLAnchorElement>("#site-header [data-nav]").forEach((a) => {
-      const href = a.getAttribute("href") || "";
-      const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
+    const current = section(pathname);
+    document.querySelectorAll<HTMLAnchorElement>("[data-nav]").forEach((a) => {
+      const active = a.getAttribute("href") === current;
       a.toggleAttribute("data-active", active);
-      if (active) a.setAttribute("aria-current", "page");
+      if (active) a.setAttribute("aria-current", pathname === current ? "page" : "true");
       else a.removeAttribute("aria-current");
     });
+    document.querySelector("[data-mega-button]")?.toggleAttribute("data-active", current === "/services/");
   }, [pathname]);
   return null;
 }

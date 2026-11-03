@@ -6,12 +6,25 @@ import { Icon } from "@/components/ui/Icons";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import { OpenBadge } from "@/components/ui/OpenBadge";
 import { Year } from "@/components/ui/Year";
+import { Aurora } from "@/components/ui/Effects";
+import { Arrow } from "@/components/ui/Button";
 
 export function Footer() {
   return (
-    <footer className="bg-ink text-on-dark on-dark grain" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">Footer</h2>
-      <div className="container-x py-16 lg:py-20">
+    <footer className="relative overflow-clip bg-ink text-on-dark on-dark grain" aria-labelledby="footer-heading">
+      <Aurora className="opacity-60" />
+      {/* Big closing CTA */}
+      <div className="container-x relative border-b border-white/10 pb-14 pt-20 lg:pb-20 lg:pt-28">
+        <p className="eyebrow"><span className="gold-rule w-8" aria-hidden="true" />Valencia · Santa Clarita</p>
+        <h2 id="footer-heading" className="mt-6 max-w-5xl display-giant" data-split="">
+          Book your visit with <em className="accent">Dr. Lavi.</em>
+        </h2>
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-gold btn-lg" data-cursor="Book"><span className="btn-label">Book your first visit <Arrow className="btn-arrow" /></span></a>
+          <a href={`tel:${site.phoneE164}`} className="btn btn-outline btn-lg"><span className="btn-label"><Icon.phone className="h-4 w-4" /> {site.phone}</span></a>
+        </div>
+      </div>
+      <div className="container-x relative py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Logo tone="light" className="h-9 w-auto" />
@@ -33,7 +46,7 @@ export function Footer() {
             <p className="eyebrow">Practice</p>
             <ul className="mt-3 text-sm">
               {footerNav.practice.map((l) => (
-                <li key={l.href}><Link href={l.href} className="inline-flex min-h-11 items-center hover:underline underline-offset-4">{l.label}</Link></li>
+                <li key={l.href}><Link href={l.href} className="inline-flex min-h-11 items-center sweep">{l.label}</Link></li>
               ))}
             </ul>
           </div>
@@ -41,16 +54,16 @@ export function Footer() {
             <p className="eyebrow">Services</p>
             <ul className="mt-3 grid grid-cols-1 gap-x-6 text-sm sm:grid-cols-2 lg:grid-cols-1">
               {footerNav.services.map((l) => (
-                <li key={l.href}><Link href={l.href} className="inline-flex min-h-11 items-center hover:underline underline-offset-4">{l.label}</Link></li>
+                <li key={l.href}><Link href={l.href} className="inline-flex min-h-11 items-center sweep">{l.label}</Link></li>
               ))}
             </ul>
           </div>
           <div className="lg:col-span-3">
             <p className="eyebrow">Get started</p>
             <p className="mt-4 text-sm text-on-dark-muted">{site.insurance}. {site.financing}.</p>
-            <div className="mt-5 flex flex-col gap-3">
-              <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-gold">Book your first visit</a>
-              <Link href="/appointment/" className="btn btn-outline">Request an appointment</Link>
+            <div className="mt-5 flex flex-col items-start gap-3">
+              <Link href="/appointment/" className="btn btn-outline"><span className="btn-label">Request an appointment <Arrow className="btn-arrow" /></span></Link>
+              <Link href="/new-patient-offer/" className="text-link min-h-11">What to expect at your first visit</Link>
             </div>
             <SocialLinks className="mt-8 flex gap-2" linkClass="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 hover:border-gold hover:text-gold" />
           </div>
@@ -59,11 +72,15 @@ export function Footer() {
           <p>© <Year /> {site.name} · Dr. Nuriel Lavi, DDS · Dentist in Valencia, Santa Clarita, serving {site.areaServed.slice(2).join(", ")} and the Santa Clarita Valley.</p>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             {footerNav.legal.map((l) => (
-              <li key={l.href}><Link href={l.href} className="inline-flex min-h-11 items-center hover:underline underline-offset-4">{l.label}</Link></li>
+              <li key={l.href}><Link href={l.href} className="inline-flex min-h-11 items-center sweep">{l.label}</Link></li>
             ))}
             <li><Link href="/cms" className="inline-flex min-h-11 items-center hover:underline underline-offset-4">Edit site</Link></li>
           </ul>
         </div>
+      </div>
+      {/* Giant faint wordmark */}
+      <div className="relative select-none overflow-hidden" aria-hidden="true">
+        <p className="translate-y-[18%] whitespace-nowrap text-center font-display text-[clamp(5rem,24vw,24rem)] font-light leading-[0.8] tracking-[-0.05em] text-white/[0.05]">Valencia</p>
       </div>
     </footer>
   );

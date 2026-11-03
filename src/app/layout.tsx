@@ -5,7 +5,7 @@ import "./globals.css";
 import { site } from "../../content/site";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBar } from "@/components/layout/MobileBar";
-import { RevealObserver } from "@/components/ui/Reveal";
+import { MotionProvider } from "@/components/motion/MotionProvider";
 import { Analytics } from "@/components/layout/Analytics";
 
 // Static instances (not the variable font): four small files instead of two 120–150 KB ones on the LCP path.
@@ -28,17 +28,17 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-export const viewport: Viewport = { themeColor: "#1C1B19", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#1B1A17", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${manrope.variable} ${cormorant.variable} h-full`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${fraunces.variable} ${manrope.variable} ${cormorant.variable} h-full`}>
       <body className="min-h-full flex flex-col">
         <a href="#main" className="skip-link">Skip to content</a>
         <main id="main" className="flex-1">{children}</main>
         <Footer />
-        <MobileBar />
-        <RevealObserver />
+        <Suspense fallback={null}><MobileBar /></Suspense>
+        <Suspense fallback={null}><MotionProvider /></Suspense>
         <Analytics />
       </body>
     </html>
