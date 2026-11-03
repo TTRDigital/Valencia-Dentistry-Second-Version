@@ -126,7 +126,7 @@ const service: Service = {
     heading: "Cost and financing",
     paragraphs: [
       "Whitening is considered cosmetic, so it is usually not covered by insurance. We keep pricing simple and explain the cost of in-office and take-home options at your consultation.",
-      "You receive a written estimate before treatment, and flexible financing options are available. If you are new to the practice, our $59 exam and X-ray special is a good first step to confirm your teeth are ready for whitening.",
+      "You receive a written estimate before treatment, and flexible financing options are available.",
     ],
   },
   faqs: [

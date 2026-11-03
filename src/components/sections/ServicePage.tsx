@@ -54,7 +54,7 @@ export function ServicePage({ s, all }: { s: Service; all?: Service[] }) {
           <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/15 pt-5 text-sm" data-reveal="" style={{ "--reveal-delay": "320ms" } as React.CSSProperties}>
             <GoogleRating dark />
             <span className="inline-flex items-center gap-2"><Icon.shield className="h-4 w-4 text-gold" />{site.insurance}</span>
-            <span className="inline-flex items-center gap-2"><Icon.sparkle className="h-4 w-4 text-gold" />{site.offer.title}</span>
+            <span className="inline-flex items-center gap-2"><Icon.sparkle className="h-4 w-4 text-gold" />{site.insurance}</span>
           </div>
         </div>
       </Hero>
@@ -94,7 +94,7 @@ export function ServicePage({ s, all }: { s: Service; all?: Service[] }) {
               <p className="eyebrow">Talk to Dr. Lavi</p>
               <p className="mt-2 font-display text-2xl">A consultation is the right first step</p>
               <p className="mt-2 text-sm text-on-dark-muted">Bring your questions. You will leave with a clear picture of your options and a written estimate.</p>
-              <div className="mt-5 flex flex-col gap-2"><Button href={site.bookingUrl} variant="gold" size="sm">Book Online</Button><Button href="/appointment/" variant="outline" size="sm">Request an appointment</Button></div>
+              <div className="mt-5 flex flex-col gap-2"><Button href={site.bookingUrl} variant="gold" size="sm">Book your first visit</Button><Button href="/appointment/" variant="outline" size="sm">Request an appointment</Button></div>
             </div>
           </aside>
         </div>
@@ -158,7 +158,7 @@ export function ServicePage({ s, all }: { s: Service; all?: Service[] }) {
           </div>
           <div className="grid gap-4 self-center lg:col-span-5" data-reveal="">
             {[
-              [site.offer.title, "Exam and X-rays for new patients", Icon.sparkle],
+              ["Your first visit", "Exam and digital X-rays with Dr. Lavi", Icon.sparkle],
               [site.insurance, "We verify benefits before treatment", Icon.shield],
               [site.financing, "Monthly plans through third-party partners", Icon.calendar],
             ].map(([t, d, I]) => {

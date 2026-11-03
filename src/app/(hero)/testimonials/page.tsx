@@ -51,7 +51,7 @@ export default async function TestimonialsPage() {
         <p className="mt-8 text-sm text-muted">Video testimonials with captions will appear here as patients share them.</p>
       </Section>
       <GalleryPreview heading="See the results they are talking about" />
-      <CtaBand title="Experience it for yourself" text={`Book online or call ${site.phone}. New patients start with the ${site.offer.title}.`} />
+      <CtaBand title="Experience it for yourself" text={`Book online or call ${site.phone}.`} />
     </>
   );
 }

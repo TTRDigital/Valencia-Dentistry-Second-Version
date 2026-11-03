@@ -148,7 +148,7 @@ const service: Service = {
     heading: "Cost of wisdom teeth removal",
     paragraphs: [
       "The fee depends on how many teeth are removed, whether they are erupted or impacted, and whether sedation is used. After your exam and scan you receive a written estimate before treatment.",
-      "We accept most major PPO plans and offer flexible financing options. New patients can begin with our $59 exam and X-rays special.",
+      "We accept most major PPO plans and offer flexible financing options.",
     ],
   },
   faqs: [

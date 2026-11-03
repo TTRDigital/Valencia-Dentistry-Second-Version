@@ -4,7 +4,7 @@ import type { Faq } from "./types.ts";
 export const homeFaqs: Faq[] = [
   { q: "What makes Valencia Dentistry different?", a: "You see Dr. Lavi himself at every visit, with time to talk. Care is holistic and integrative: biocompatible materials, a focus on prevention and attention to how your mouth affects the rest of your body." },
   { q: "Do you accept insurance?", a: "Yes. We accept most major PPO plans and will verify your benefits before treatment so you know what to expect. Flexible financing is available for anything your plan does not cover." },
-  { q: "What happens at my first visit?", a: "We review your health history, take digital X-rays, complete a thorough exam and spend time understanding your goals. You leave with a clear, written plan. New patients pay $59 for the exam and X-rays." },
+  { q: "What happens at my first visit?", a: "We review your health history, take digital X-rays, complete a thorough exam and spend time understanding your goals. You leave with a clear, written plan." },
   { q: "Do you offer cosmetic treatments like veneers or Invisalign?", a: "Yes. Veneers, teeth whitening, Invisalign clear aligners and cosmetic bonding are all planned in-house around a digital scan of your smile." },
   { q: "Can I get a crown in one visit?", a: "Often, yes. We design and make custom crowns in the office, so many patients receive their final crown the same day." },
   { q: "Is holistic dentistry effective?", a: "Holistic dentistry is evidence-based dentistry with extra care in material choice and a preference for minimally invasive, preventive treatment. It does not replace medical care for health conditions." },
@@ -62,8 +62,8 @@ export const emergency = {
 };
 
 export const offer = {
-  seo: { title: "$59 New Patient Special: Exam & X-Rays in Valencia, CA", description: "New to Valencia Dentistry? Start with a complete exam and digital X-rays for $59, plus unhurried time with Dr. Nuriel Lavi, DDS. Book online today." },
-  hero: { eyebrow: "New patient special", title: "Your first visit, $59", intro: "A complete exam, digital X-rays and a real conversation with Dr. Lavi about your goals. No pressure and no surprises." },
+  seo: { title: "Your First Visit: Exam & Digital X-Rays in Valencia, CA", description: "New to Valencia Dentistry? Your first visit is a complete exam and digital X-rays, plus unhurried time with Dr. Nuriel Lavi, DDS. Book your first visit today." },
+  hero: { eyebrow: "New patients", title: "Your first visit, made simple", intro: "A complete exam, digital X-rays and a real conversation with Dr. Lavi about your goals. No pressure and no surprises." },
   includes: ["Comprehensive exam with Dr. Lavi", "Digital X-rays (low radiation)", "Oral cancer screening", "A written treatment plan with clear priorities", "Insurance benefits check before any treatment"],
   steps: [
     { title: "Book online or call", text: "Pick a time that suits you. Same-day visits are often available." },
@@ -72,8 +72,8 @@ export const offer = {
     { title: "Leave with a plan", text: "Clear next steps and costs in writing, whether that is a cleaning or something more." },
   ],
   faqs: [
-    { q: "Who qualifies for the $59 special?", a: "New patients of Valencia Dentistry. The offer covers the exam and X-rays and cannot be combined with insurance or other offers." },
-    { q: "Does it include a cleaning?", a: "The special covers the exam and X-rays. A cleaning can usually be scheduled the same day if your gums are healthy; we will give you the cost before we begin." },
-    { q: "What if I have insurance?", a: "We will verify your benefits before your visit. If your plan covers the exam and X-rays, we will bill your plan instead." },
+    { q: "What does the first visit include?", a: "A comprehensive exam with Dr. Lavi, digital X-rays, an oral cancer screening and time to talk through your goals. You leave with a written plan and clear priorities." },
+    { q: "Does it include a cleaning?", a: "A cleaning can usually be scheduled the same day if your gums are healthy. We will tell you the cost before we begin." },
+    { q: "What if I have insurance?", a: "We accept most major PPO plans and verify your benefits before your visit, so you know what to expect before any treatment." },
   ],
 };

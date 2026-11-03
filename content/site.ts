@@ -39,13 +39,6 @@ export const site = {
    */
   social: {} as Partial<Record<"facebook" | "instagram" | "linkedin" | "x", string>>,
   google: { rating: 4.9, reviewCount: 180 },
-  offer: {
-    title: "$59 New Patient Special",
-    short: "$59 exam & X-rays",
-    price: "$59",
-    description: "A complete exam and digital X-rays for new patients, plus unhurried time with Dr. Lavi to talk through your goals.",
-    fineprint: "New patients only. Cannot be combined with insurance or other offers.",
-  },
   insurance: "Most major PPO plans accepted",
   financing: "Flexible financing options",
   gtmId: "GTM-PPV3TDK8",

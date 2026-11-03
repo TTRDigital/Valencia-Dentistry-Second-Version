@@ -141,7 +141,7 @@ const service: Service = {
     heading: "Cost and financing",
     paragraphs: [
       "The fee depends on whether you are treating one arch or both, the complexity of your case and the materials chosen for the final bridge. After your consultation and scan, you will receive a written estimate before any treatment begins.",
-      "We accept most major PPO plans and help you make the most of your benefits. Flexible financing options can spread the investment over time, and new patients can start with our $59 exam and X-rays special.",
+      "We accept most major PPO plans and help you make the most of your benefits.",
     ],
   },
   faqs: [

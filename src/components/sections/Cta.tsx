@@ -15,10 +15,10 @@ export function CtaBand({ eyebrow = "Begin here", title, text, offer = true }: {
         </div>
         <div className="lg:col-span-5 lg:justify-self-end" data-reveal="" style={{ "--reveal-delay": "120ms" } as React.CSSProperties}>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-            <Button href={site.bookingUrl} variant="gold" size="lg">Book Online</Button>
+            <Button href={site.bookingUrl} variant="gold" size="lg">Book your first visit</Button>
             <Button href={`tel:${site.phoneE164}`} variant="outline" size="lg" icon={<Icon.phone className="h-4 w-4" />}>{site.phone}</Button>
           </div>
-          {offer && <p className="mt-4 text-sm text-on-dark-muted">{site.offer.title} · {site.insurance} · {site.financing}</p>}
+          {offer && <p className="mt-4 text-sm text-on-dark-muted">{site.insurance} · {site.financing}</p>}
         </div>
       </div>
     </Section>

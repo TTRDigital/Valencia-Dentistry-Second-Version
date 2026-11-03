@@ -134,7 +134,7 @@ const service: Service = {
     heading: "Cost and insurance",
     paragraphs: [
       "The cost of a filling depends on the size of the repair and how many surfaces of the tooth are involved. Composite fillings are commonly covered by dental insurance, and we accept most major PPO plans.",
-      "You get a written estimate before treatment begins, and flexible financing options are available. New patients can start with our $59 exam and X-ray special, which is often where a cavity is first found.",
+      "You get a written estimate before treatment begins, and flexible financing options are available.",
     ],
   },
   faqs: [

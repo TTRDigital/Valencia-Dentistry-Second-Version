@@ -88,7 +88,7 @@ export default async function AboutPage() {
       <ServiceGrid heading="Comprehensive care under one roof" lead="From a child's first checkup to full-arch implants, Dr. Lavi's training spans the whole of dentistry." />
       <Reviews tone="ivory-200" heading="Why families stay" />
       <Visit />
-      <CtaBand title="Come meet us" text={`New to the area or returning after time away? New patients start with the ${site.offer.title}.`} />
+      <CtaBand title="Come meet us" text={`New to the area or returning after time away? Your first visit starts with an exam, digital X-rays and time to talk.`} />
     </>
   );
 }

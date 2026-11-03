@@ -20,7 +20,7 @@ const pages: Card[] = [
   { key: "testimonials", title: "Kind words from our patients", subtitle: `${site.google.rating} stars on Google`, image: "/images/office/aligner-patient-2.jpg" },
   { key: "contact", title: "We would love to hear from you", subtitle: `${site.phone} · ${site.address.street}`, image: "/images/office/treatment-room-2.jpg" },
   { key: "appointment", title: "Book your visit", subtitle: "Online in under a minute, or we will call you", image: "/images/office/treatment-room.jpg" },
-  { key: "new-patient-offer", title: "$59 new patient exam & X-rays", subtitle: "Unhurried time with Dr. Lavi", image: "/images/office/veneer-tryin.jpg" },
+  { key: "new-patient-offer", title: "Your first visit, made simple", subtitle: "Unhurried time with Dr. Lavi", image: "/images/office/veneer-tryin.jpg" },
   { key: "emergency-dental", title: "In pain? We will see you today", subtitle: "Same-day emergency dental care in Valencia", image: "/images/office/cleaning.jpg" },
   { key: "blog", title: "Guides for a healthier smile", subtitle: "Written by Dr. Nuriel Lavi, DDS", image: "/images/office/implant-model-hands.jpg" },
   { key: "sitemap", title: "Sitemap", subtitle: site.name },

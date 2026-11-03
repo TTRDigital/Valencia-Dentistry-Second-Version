@@ -16,7 +16,7 @@ The reference (Newbury Park Dental Arts) was studied for *section ideas and mood
 | Awards wall | Hidden until the client confirms real credentials. |
 | Technology icon row | Refined line icons on ivory for CBCT, iTero, PRF, guided implants, digital X-rays, intraoral cameras, laser, same-day crowns, each with a 10-word explanation. |
 | Smile gallery | Drag before/after sliders using the practice's six real cases + implant case. |
-| Affordable care + membership | PPO logos (the eight the practice lists), financing paragraph, $59 special card; membership omitted (not offered). |
+| Affordable care + membership | PPO logos (the eight the practice lists), financing paragraph, a "Your first visit" card (no price); membership omitted (not offered). |
 | Big quote band | One real review as a quote over a darkened practice image. |
 | Map/visit section | Map, hours with live Open/Closed badge (America/Los_Angeles), parking/suite directions, final CTA. |
 | New-patient popup | Once per session, 12s delay (15s+ on mobile), focus-trapped, Esc closes, never covers the sticky bar. |

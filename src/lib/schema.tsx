@@ -49,14 +49,6 @@ export function dentistSchema() {
     employee: { "@id": ID.person },
     medicalSpecialty: ["Dentistry", "CosmeticDentistry", "OralSurgery"],
     paymentAccepted: "Cash, Credit Card, Insurance, Financing",
-    makesOffer: {
-      "@type": "Offer",
-      name: site.offer.title,
-      price: "59",
-      priceCurrency: "USD",
-      description: "New patient exam and digital X-rays.",
-      eligibleCustomerType: "New patients",
-    },
     availableService: technology.map((t) => ({ "@type": "MedicalProcedure", name: t.name })),
   };
 }

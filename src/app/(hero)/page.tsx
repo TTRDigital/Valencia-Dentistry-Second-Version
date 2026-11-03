@@ -24,7 +24,7 @@ import { homeFaqs } from "../../../content/pages";
 
 export const metadata: Metadata = pageMeta({
   title: "Dentist in Valencia, Santa Clarita | Valencia Dentistry",
-  description: "Holistic, one-on-one dentistry in Valencia with Dr. Nuriel Lavi, DDS. Implants, veneers, Invisalign, same-day crowns. $59 new patient exam & X-rays.",
+  description: "Holistic, one-on-one dentistry in Valencia with Dr. Nuriel Lavi, DDS. Implants, veneers, Invisalign, same-day crowns. Book your first visit.",
   path: "/",
   ogKey: "home",
 });
@@ -43,14 +43,14 @@ export default function HomePage() {
             Dr. Nuriel Lavi, DDS sees every patient himself, at every visit. Holistic, integrative care with modern technology, in a quiet office on Tourney Road.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
-            <Button href={site.bookingUrl} variant="gold" size="lg">Book Online</Button>
+            <Button href={site.bookingUrl} variant="gold" size="lg">Book your first visit</Button>
             <Button href={`tel:${site.phoneE164}`} variant="outline" size="lg" icon={<Icon.phone className="h-4 w-4" />}>{site.phone}</Button>
           </div>
         </div>
         <ul className="mt-12 grid max-w-4xl gap-4 border-t border-white/15 pt-6 sm:grid-cols-3" data-reveal="" style={{ "--reveal-delay": "320ms" } as React.CSSProperties}>
           <li><GoogleRating dark /></li>
           <li className="flex items-center gap-3"><Icon.shield className="h-6 w-6 text-gold" /><span className="text-sm"><span className="block font-semibold">{site.insurance}</span><span className="text-on-dark-muted">{site.financing}</span></span></li>
-          <li className="flex items-center gap-3"><Icon.sparkle className="h-6 w-6 text-gold" /><span className="text-sm"><span className="block font-semibold">{site.offer.title}</span><span className="text-on-dark-muted">Exam &amp; X-rays for new patients</span></span></li>
+          <li className="flex items-center gap-3"><Icon.sparkle className="h-6 w-6 text-gold" /><span className="text-sm"><span className="block font-semibold">{site.insurance}</span><span className="text-on-dark-muted">Benefits checked before treatment</span></span></li>
         </ul>
       </Hero>
       {/* Each below-the-fold section is its own Suspense boundary so React hydrates them in small, interruptible tasks. */}
@@ -71,7 +71,7 @@ export default function HomePage() {
         </div>
       </Section>
       <Visit />
-      <CtaBand title="Ready when you are" text="Book online in under a minute, or call and talk to a real person. New patients start with a $59 exam and X-rays." />
+      <CtaBand title="Ready when you are" text="Book online in under a minute, or call and talk to a real person. Your first visit starts with an exam, digital X-rays and time to talk." />
     </>
   );
 }

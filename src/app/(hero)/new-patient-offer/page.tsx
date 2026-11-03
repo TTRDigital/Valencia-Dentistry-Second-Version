@@ -15,7 +15,7 @@ import { JsonLd, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({ title: offer.seo.title, description: offer.seo.description, path: "/new-patient-offer/" });
-const crumbs = [{ label: "Home", href: "/" }, { label: "New Patient Special", href: "/new-patient-offer/" }];
+const crumbs = [{ label: "Home", href: "/" }, { label: "Your First Visit", href: "/new-patient-offer/" }];
 
 export default function OfferPage() {
   return (
@@ -28,7 +28,7 @@ export default function OfferPage() {
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{offer.hero.title}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>{offer.hero.intro}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
-            <Button href={site.bookingUrl} variant="gold" size="lg">Claim the $59 special</Button>
+            <Button href={site.bookingUrl} variant="gold" size="lg">Book your first visit</Button>
             <Button href={`tel:${site.phoneE164}`} variant="outline" size="lg" icon={<Icon.phone className="h-4 w-4" />}>{site.phone}</Button>
           </div>
         </div>
@@ -40,13 +40,12 @@ export default function OfferPage() {
             <ul className="mt-8 space-y-3" data-reveal="">
               {offer.includes.map((t) => <li key={t} className="flex items-start gap-3 rounded-xl border border-sand bg-white p-4 text-[0.95rem]"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-gold-700" />{t}</li>)}
             </ul>
-            <p className="mt-4 text-xs text-muted">{site.offer.fineprint}</p>
           </div>
           <div className="lg:col-span-7" data-reveal="">
             <div className="card p-7 lg:p-10">
-              <h2 className="text-2xl">Request your $59 visit</h2>
+              <h2 className="text-2xl">Request your first visit</h2>
               <p className="mt-2 text-sm text-muted">Prefer to book instantly? Use <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">online scheduling</a>.</p>
-              <div className="mt-6"><AppointmentForm form="offer" services={serviceOptions} defaultService="New patient exam ($59 special)" /></div>
+              <div className="mt-6"><AppointmentForm form="offer" services={serviceOptions} defaultService="New patient exam" /></div>
             </div>
           </div>
         </div>
@@ -66,7 +65,7 @@ export default function OfferPage() {
       </Section>
       <Section tone="ivory" labelledBy="offer-faq">
         <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-4"><SectionHeading eyebrow="Questions" title="About the special" id="offer-faq" /></div>
+          <div className="lg:col-span-4"><SectionHeading eyebrow="Questions" title="About your first visit" id="offer-faq" /></div>
           <div className="lg:col-span-8"><FaqList items={offer.faqs} /></div>
         </div>
       </Section>

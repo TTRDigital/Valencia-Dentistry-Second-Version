@@ -11,7 +11,7 @@ Second version of the Valencia Dentistry website (Dr. Nuriel Lavi, DDS), a denta
 
 | Area | Routes |
 |---|---|
-| Home | `/` (hero, pillars, reviews, cosmetic editorial, service cards, first-visit timeline, Dr. Lavi, technology, smile gallery, insurance & financing, quote band, FAQs, visit, CTA, new-patient popup) |
+| Home | `/` (hero, pillars, reviews, cosmetic editorial, service cards, first-visit timeline, Dr. Lavi, technology, smile gallery, insurance & financing, quote band, FAQs, visit, CTA) |
 | Practice | `/about/`, `/smile-gallery/`, `/testimonials/`, `/contact/`, `/appointment/`, `/new-patient-offer/`, `/emergency-dental/`, `/thank-you/` (noindex), `/privacy-policy/`, `/terms-and-services/`, `/sitemap/` |
 | Services | `/services/` hub + 18 service pages (16 existing URLs, plus new `/services/preventive-dentistry/` and `/services/family-dentistry/`) and `/tmj-treatments/`, all on one premium template (`src/components/sections/ServicePage.tsx`) |
 | Blog | `/blog/` index with topic filter + 30 articles at their original root URLs (`/<slug>/`) with table of contents, key takeaways, FAQs, author box, related posts and CTA |
@@ -48,7 +48,7 @@ npm run dev                  # http://localhost:3000 and http://localhost:3000/c
 
 1. Set the practice's project ID in `sanity/env.ts` (pinned on purpose; `NEXT_PUBLIC_SANITY_PROJECT_ID` is ignored because this environment uses it for another site).
 2. In sanity.io/manage > API > CORS origins, allow `http://localhost:3000`, the Vercel preview URL and `https://valenciadentistryca.com` + `https://www.valenciadentistryca.com` (with credentials).
-3. Load the content: `SANITY_WRITE_TOKEN=<editor token> npm run seed` (adds missing documents) or `npm run seed -- --force` (overwrites). 87 documents: site settings, navigation, offer/popup, doctor, 2 testimonials, 7 before/after cases, 14 FAQs, 18 services, 30 posts, 2 legal pages, 10 pages. Images are referenced by their path in `public/images`; editors can upload replacements.
+3. Load the content: `SANITY_WRITE_TOKEN=<editor token> npm run seed` (adds missing documents) or `npm run seed -- --force` (overwrites). 86 documents: site settings, navigation, doctor, 2 testimonials, 7 before/after cases, 14 FAQs, 18 services, 30 posts, 2 legal pages, 10 pages. Images are referenced by their path in `public/images`; editors can upload replacements.
 4. Publish webhook: API > Webhooks, URL `https://valenciadentistryca.com/api/revalidate/?secret=<SANITY_REVALIDATE_SECRET>`, trigger on create/update/delete. Pages refresh within seconds; otherwise within an hour.
 5. Until the project is connected, the site renders the built-in content and `/cms` shows a notice.
 

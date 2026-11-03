@@ -167,7 +167,7 @@ const service: Service = {
     heading: "Cost and financing",
     paragraphs: [
       "The cost of an implant depends on how many teeth you are replacing, whether grafting or extractions are needed, and the type of restoration on top. After your consultation you will receive a written estimate before treatment begins, so there are no surprises.",
-      "We accept most major PPO plans and offer flexible financing options to spread the cost over time. New patients can start with our $59 exam and X-rays special.",
+      "We accept most major PPO plans and offer flexible financing options to spread the cost over time.",
     ],
   },
   faqs: [

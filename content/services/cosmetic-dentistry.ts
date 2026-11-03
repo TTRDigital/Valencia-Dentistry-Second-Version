@@ -131,7 +131,6 @@ const service: Service = {
         "Digital planning with iTero scans and intraoral camera images",
         "Flexible scheduling for busy professionals and families",
         "A calm, welcoming office with sedation options when appropriate",
-        "Clear written estimates, flexible financing and a $59 new-patient special",
       ],
       image: "/images/office/veneer-smile.jpg",
       imageAlt: "Patient checking her smile in a hand mirror",
@@ -142,7 +141,7 @@ const service: Service = {
     heading: "Cost and financing",
     paragraphs: [
       "Cosmetic treatment is rarely covered by insurance, though procedures with a functional benefit are sometimes partly covered. We accept most major PPO plans and will check your benefits for you.",
-      "You receive a written estimate before treatment starts, with flexible financing options to spread the cost. New patients can begin with our $59 exam and X-ray special.",
+      "You receive a written estimate before treatment starts, with flexible financing options to spread the cost.",
     ],
   },
   faqs: [

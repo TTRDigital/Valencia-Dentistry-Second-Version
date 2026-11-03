@@ -71,8 +71,8 @@ export default async function Page({ params }: PageProps<"/[slug]">) {
                 <div className="card bg-ink p-6 text-on-dark on-dark grain">
                   <p className="eyebrow">Ready to talk?</p>
                   <p className="mt-2 font-display text-xl">Ask Dr. Lavi about your own case</p>
-                  <p className="mt-2 text-sm text-on-dark-muted">{site.offer.title} for new patients.</p>
-                  <div className="mt-4 flex flex-col gap-2"><Button href={site.bookingUrl} variant="gold" size="sm">Book Online</Button><Button href={`tel:${site.phoneE164}`} variant="outline" size="sm" icon={<Icon.phone className="h-4 w-4" />}>{site.phone}</Button></div>
+                  <p className="mt-2 text-sm text-on-dark-muted">{site.insurance}. {site.financing}.</p>
+                  <div className="mt-4 flex flex-col gap-2"><Button href={site.bookingUrl} variant="gold" size="sm">Book your first visit</Button><Button href={`tel:${site.phoneE164}`} variant="outline" size="sm" icon={<Icon.phone className="h-4 w-4" />}>{site.phone}</Button></div>
                 </div>
               </div>
             </aside>

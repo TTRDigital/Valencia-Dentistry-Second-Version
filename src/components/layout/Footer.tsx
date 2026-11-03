@@ -47,9 +47,9 @@ export function Footer() {
           </div>
           <div className="lg:col-span-3">
             <p className="eyebrow">Get started</p>
-            <p className="mt-4 text-sm text-on-dark-muted">{site.offer.title}: an exam and X-rays for new patients. {site.insurance}. {site.financing}.</p>
+            <p className="mt-4 text-sm text-on-dark-muted">{site.insurance}. {site.financing}.</p>
             <div className="mt-5 flex flex-col gap-3">
-              <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-gold">Book Online</a>
+              <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-gold">Book your first visit</a>
               <Link href="/appointment/" className="btn btn-outline">Request an appointment</Link>
             </div>
             <SocialLinks className="mt-8 flex gap-2" linkClass="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 hover:border-gold hover:text-gold" />

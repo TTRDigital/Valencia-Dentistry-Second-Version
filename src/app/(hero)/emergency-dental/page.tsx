@@ -29,7 +29,7 @@ export default function EmergencyPage() {
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>{emergency.hero.intro}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
             <Button href={`tel:${site.phoneE164}`} variant="gold" size="lg" icon={<Icon.phone className="h-4 w-4" />}>Call {site.phone}</Button>
-            <Button href={site.bookingUrl} variant="outline" size="lg">Book Online</Button>
+            <Button href={site.bookingUrl} variant="outline" size="lg">Book your first visit</Button>
           </div>
           <div className="mt-6" data-reveal="" style={{ "--reveal-delay": "320ms" } as React.CSSProperties}><OpenBadge className="text-on-dark-muted" /></div>
         </div>

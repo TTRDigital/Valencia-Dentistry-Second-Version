@@ -41,7 +41,7 @@ export default async function GalleryPage() {
         <div className="mt-14 flex flex-col items-center gap-4 rounded-2xl border border-sand bg-white p-8 text-center sm:flex-row sm:text-left" data-reveal="">
           <div className="flex-1">
             <h2 className="text-2xl">Curious what is possible for your smile?</h2>
-            <p className="mt-2 text-muted">Dr. Lavi can preview your options on a digital scan at your consultation. New patients start with the {site.offer.title}.</p>
+            <p className="mt-2 text-muted">Dr. Lavi can preview your options on a digital scan at your consultation.</p>
           </div>
           <Button href={site.bookingUrl}>Book a consultation</Button>
         </div>

@@ -11,7 +11,7 @@ const service: Service = {
   seo: {
     title: "Preventive Dentistry in Valencia, CA | Valencia Dentistry",
     description:
-      "Cleanings, exams, digital X-rays and screenings in Valencia, Santa Clarita. Catch problems early with Dr. Lavi. New patients: $59 exam and X-rays.",
+      "Cleanings, exams, digital X-rays and screenings in Valencia, Santa Clarita. Catch problems early with Dr. Lavi.",
   },
   hero: {
     eyebrow: "Preventive Dentistry",
@@ -29,7 +29,7 @@ const service: Service = {
     highlights: [
       { title: "Digital X-rays and CBCT", text: "Low-dose digital images and 3D scans when a closer look is needed." },
       { title: "Personalized schedule", text: "Cleaning intervals set by your gum health and history." },
-      { title: "$59 new patient special", text: "An exam and X-rays for new patients." },
+      { title: "A clear first visit", text: "An exam and digital X-rays so Dr. Lavi can see the full picture." },
     ],
   },
   whoFor: {
@@ -112,7 +112,7 @@ const service: Service = {
     heading: "Cost and insurance",
     paragraphs: [
       "Most dental plans cover preventive cleanings and exams, often one or two per year. We accept most major PPO plans and can verify your benefits before you arrive so there are no surprises.",
-      "New patients can start with our $59 special, which includes an exam and X-rays. For any further treatment, you receive a written estimate first, and flexible financing options are available.",
+      "For any further treatment, you receive a written estimate first, and flexible financing options are available.",
     ],
   },
   faqs: [
@@ -125,8 +125,8 @@ const service: Service = {
       a: "Many plans cover one or two preventive cleanings a year. Coverage varies, so we check your benefits ahead of time and tell you what to expect before your visit.",
     },
     {
-      q: "What does the $59 new patient special include?",
-      a: "It covers an exam and digital X-rays for new patients. It is a simple way to meet Dr. Lavi, get a clear picture of your oral health and plan any next steps.",
+      q: "What happens at my first preventive visit?",
+      a: "New patients start with an exam and digital X-rays. It is a simple way to meet Dr. Lavi, get a clear picture of your oral health and plan any next steps.",
     },
     {
       q: "Are digital X-rays safe?",
@@ -148,7 +148,7 @@ const service: Service = {
   related: ["family-dentistry", "holistic-dentistry", "composite-filling", "tmj-treatments"],
   cta: {
     heading: "Due for a cleaning",
-    text: "Book your exam and cleaning with Dr. Lavi in Valencia. New patients can start with the $59 exam and X-ray special.",
+    text: "Book your exam and cleaning with Dr. Lavi in Valencia.",
   },
   flags: [
     "No dedicated preventive page exists on the current site. Content assembled from the home and services page lists, the 'Why Patients Choose' sections and the dental cleanings blog post.",

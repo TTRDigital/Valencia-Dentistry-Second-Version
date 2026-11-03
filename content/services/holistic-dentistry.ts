@@ -103,7 +103,7 @@ const service: Service = {
     heading: "Cost and insurance",
     paragraphs: [
       "Holistic treatments are billed the same way as their conventional counterparts, so most are covered in the usual way. We accept most major PPO plans and will review your benefits before treatment.",
-      "You receive a written estimate before we begin, and flexible financing options are available. New patients can start with our $59 special, which includes an exam and X-rays.",
+      "You receive a written estimate before we begin, and flexible financing options are available.",
     ],
   },
   faqs: [

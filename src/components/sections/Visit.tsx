@@ -44,7 +44,7 @@ export function Visit({ heading = "Visit us in Valencia", eyebrow = "Find us" }:
             </div>
           </dl>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row" data-reveal="">
-            <Button href={site.bookingUrl}>Book Online</Button>
+            <Button href={site.bookingUrl}>Book your first visit</Button>
             <Button href="/contact/" variant="outline">Contact us</Button>
           </div>
         </div>

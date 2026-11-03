@@ -24,10 +24,10 @@ export function Affordable() {
           <div className="card flex flex-col justify-between gap-6 rounded-2xl bg-ink p-8 text-on-dark on-dark grain sm:flex-row sm:items-center" data-reveal="">
             <div>
               <p className="eyebrow">New patients</p>
-              <p className="mt-2 font-display text-4xl">{site.offer.price} <span className="text-xl">exam &amp; X-rays</span></p>
-              <p className="mt-2 max-w-sm text-sm text-on-dark-muted">{site.offer.description}</p>
+              <p className="mt-2 font-display text-4xl">Your first visit</p>
+              <p className="mt-2 max-w-sm text-sm text-on-dark-muted">A complete exam and digital X-rays, plus unhurried time with Dr. Lavi to talk through your goals.</p>
             </div>
-            <Button href="/new-patient-offer/" variant="gold">Claim the special</Button>
+            <Button href="/new-patient-offer/" variant="gold">Book your first visit</Button>
           </div>
           <div className="card p-8" data-reveal="" style={{ "--reveal-delay": "100ms" } as React.CSSProperties}>
             <div className="flex items-start gap-4">

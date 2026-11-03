@@ -108,7 +108,7 @@ export default function StyleGuide() {
 
       <Section tone="white" size="sm" labelledBy="sg-motion">
         <SectionHeading title="Motion & spacing" id="sg-motion" lead="Reveal: fade + 24px rise, 900ms, staggered 80–120ms, IntersectionObserver. Image hover scale 1.04 over 1.2s. Hero drift 24s. Everything off under prefers-reduced-motion. Section padding 72–160px, container max 84rem, 16px gutters on phones." />
-        <p className="mt-6 text-sm text-muted">Practice facts used across the site: {site.phone} · {site.address.street} · {site.offer.title}.</p>
+        <p className="mt-6 text-sm text-muted">Practice facts used across the site: {site.phone} · {site.address.street} · {site.insurance}.</p>
       </Section>
     </>
   );

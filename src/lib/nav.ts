@@ -51,7 +51,7 @@ export const mainNav: NavGroup[] = [
 export const footerNav = {
   practice: [
     { label: "Our Practice", href: "/about/" },
-    { label: "New Patient Special", href: "/new-patient-offer/" },
+    { label: "Your First Visit", href: "/new-patient-offer/" },
     { label: "Emergency Dental", href: "/emergency-dental/" },
     { label: "Smile Gallery", href: "/smile-gallery/" },
     { label: "Reviews", href: "/testimonials/" },

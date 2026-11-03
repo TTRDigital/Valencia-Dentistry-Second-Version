@@ -121,7 +121,7 @@ const service: Service = {
     heading: "Cost and insurance",
     paragraphs: [
       "The cost of a crown depends on the material, the condition of the tooth and your insurance coverage. We accept most major PPO plans and will check your benefits before treatment so you know what to expect.",
-      "You receive a written estimate before we begin, and flexible financing options are available. New patients can start with our $59 special, which includes an exam and X-rays.",
+      "You receive a written estimate before we begin, and flexible financing options are available.",
     ],
   },
   faqs: [

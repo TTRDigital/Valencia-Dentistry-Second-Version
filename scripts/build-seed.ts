@@ -32,7 +32,6 @@ docs.push({
   seo: { _type: "seo", title: "Dentist in Valencia, Santa Clarita | Valencia Dentistry", description: "Holistic, one-on-one dentistry in Valencia with Dr. Nuriel Lavi, DDS." },
 });
 docs.push({ _id: "navigation", _type: "navigation", title: "Navigation", main: withKeys(mainNav.map((n) => ({ _type: "object", label: n.label, href: n.href }))), footerPractice: withKeys(footerNav.practice.map((n) => ({ _type: "object", ...n }))), footerServices: withKeys(footerNav.services.map((n) => ({ _type: "object", ...n }))) });
-docs.push({ _id: "offer", _type: "offer", title: site.offer.title, price: site.offer.price, short: site.offer.short, description: site.offer.description, bullets: offer.includes, fineprint: site.offer.fineprint, popupEnabled: true, popupDelayDesktop: 12, popupDelayMobile: 20 });
 docs.push({ _id: "doctor-nuriel-lavi", _type: "doctor", name: doctor.name, shortName: doctor.shortName, title: doctor.title, portrait: doctor.portrait ? img(doctor.portrait, doctor.portraitAlt) : undefined, quote: doctor.statement, bio: doctor.bio, credentials: doctor.credentials });
 testimonials.forEach((t, i) => docs.push({ _id: `testimonial-${t.id}`, _type: "testimonial", name: t.name, text: t.text, rating: t.rating, source: t.source, service: t.service, order: i }));
 cases.forEach((c, i) => docs.push({ _id: `case-${c.id}`, _type: "beforeAfterCase", title: c.title, treatment: c.treatment, before: img(c.before, c.beforeAlt), after: img(c.after, c.afterAlt), consent: true, order: i }));
@@ -65,7 +64,7 @@ for (const [slug, l] of Object.entries(legal)) docs.push({ _id: `legal-${slug}`,
 // Marketing pages as section-builder documents
 const pageDoc = (id: string, title: string, path: string, seo: { title: string; description: string }, sections: Record<string, unknown>[]) =>
   docs.push({ _id: `page-${id}`, _type: "page", title, path, seo: { _type: "seo", ...seo }, sections: withKeys(sections) });
-pageDoc("home", "Home", "/", { title: "Dentist in Valencia, Santa Clarita | Valencia Dentistry", description: "Holistic, one-on-one dentistry in Valencia with Dr. Nuriel Lavi, DDS. Implants, veneers, Invisalign, same-day crowns. $59 new patient exam & X-rays." }, [
+pageDoc("home", "Home", "/", { title: "Dentist in Valencia, Santa Clarita | Valencia Dentistry", description: "Holistic, one-on-one dentistry in Valencia with Dr. Nuriel Lavi, DDS. Implants, veneers, Invisalign, same-day crowns. Book your first visit." }, [
   { _type: "heroSection", eyebrow: "Valencia · Santa Clarita", title: "Dentistry with heart, one patient at a time", intro: "Dr. Nuriel Lavi, DDS sees every patient himself, at every visit. Holistic, integrative care with modern technology, in a quiet office on Tourney Road.", image: img("/images/office/treatment-room.jpg", "Treatment room with a dental chair, monitors and large arched windows"), compact: false },
   { _type: "componentSection", component: "reviews" }, { _type: "componentSection", component: "serviceGrid" }, { _type: "componentSection", component: "meetDoctor" }, { _type: "componentSection", component: "technology" }, { _type: "componentSection", component: "gallery" }, { _type: "componentSection", component: "affordable" },
   { _type: "faqSection", heading: "Questions, answered", faqs: withKeys(homeFaqs.map((_, i) => ({ _type: "reference", _ref: `faq-home-${i}` }))) }, { _type: "componentSection", component: "visit" }, { _type: "componentSection", component: "cta", heading: "Ready when you are" },
@@ -81,11 +80,11 @@ pageDoc("emergency-dental", "Emergency Dental", "/emergency-dental/", emergency.
   { _type: "contentSection", eyebrow: "What to do right now", heading: "Common emergencies and first steps", items: withKeys(emergency.situations.map((v) => ({ _type: "titledItem", ...v }))) },
   { _type: "faqSection", heading: "Emergency questions", faqs: withKeys(emergency.faqs.map((_, i) => ({ _type: "reference", _ref: `faq-emergency-${i}` }))) }, { _type: "componentSection", component: "form" }, { _type: "componentSection", component: "visit" },
 ]);
-pageDoc("new-patient-offer", "New Patient Special", "/new-patient-offer/", offer.seo, [
+pageDoc("new-patient-offer", "Your First Visit", "/new-patient-offer/", offer.seo, [
   { _type: "heroSection", ...offer.hero, image: img("/images/office/veneer-tryin.jpg", "Patient smiling in the dental chair during a cosmetic visit") },
   { _type: "contentSection", eyebrow: "What is included", heading: "Everything a first visit should be", bullets: offer.includes },
   { _type: "contentSection", eyebrow: "How it works", heading: "Four simple steps", items: withKeys(offer.steps.map((v) => ({ _type: "titledItem", ...v }))) },
-  { _type: "faqSection", heading: "About the special", faqs: withKeys(offer.faqs.map((_, i) => ({ _type: "reference", _ref: `faq-offer-${i}` }))) }, { _type: "componentSection", component: "form" }, { _type: "componentSection", component: "affordable" },
+  { _type: "faqSection", heading: "About your first visit", faqs: withKeys(offer.faqs.map((_, i) => ({ _type: "reference", _ref: `faq-offer-${i}` }))) }, { _type: "componentSection", component: "form" }, { _type: "componentSection", component: "affordable" },
 ]);
 for (const [id, title, path, seo] of [
   ["services", "Services", "/services/", { title: "Dental Services in Valencia, CA | Valencia Dentistry", description: "Preventive, family, cosmetic, restorative, implant and holistic dentistry in one Valencia office." }],

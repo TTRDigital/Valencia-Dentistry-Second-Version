@@ -136,7 +136,7 @@ const service: Service = {
     heading: "Cost of restorative dentistry",
     paragraphs: [
       "The fee depends on the type of restoration, the material and how many teeth are involved. After your exam, you receive a written estimate before treatment so you can plan with confidence.",
-      "We accept most major PPO plans, and many plans help cover restorative care that is needed to restore function. Flexible financing options are available, and new patients can begin with our $59 exam and X-rays special.",
+      "We accept most major PPO plans, and many plans help cover restorative care that is needed to restore function.",
     ],
   },
   faqs: [

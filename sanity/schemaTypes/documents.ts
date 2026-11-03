@@ -183,23 +183,6 @@ export const faq = defineType({
   preview: { select: { title: "q", subtitle: "group" } },
 });
 
-export const offer = defineType({
-  name: "offer",
-  title: "Offer / popup",
-  type: "document",
-  fields: [
-    defineField({ name: "title", type: "string", validation: (r) => r.required() }),
-    defineField({ name: "price", type: "string" }),
-    defineField({ name: "short", title: "Short label", type: "string" }),
-    defineField({ name: "description", type: "text", rows: 3 }),
-    defineField({ name: "bullets", type: "array", of: [defineArrayMember({ type: "string" })] }),
-    defineField({ name: "fineprint", type: "text", rows: 2 }),
-    defineField({ name: "popupEnabled", title: "Show popup", type: "boolean", initialValue: true }),
-    defineField({ name: "popupDelayDesktop", title: "Popup delay desktop (seconds)", type: "number", initialValue: 12 }),
-    defineField({ name: "popupDelayMobile", title: "Popup delay mobile (seconds)", type: "number", initialValue: 20 }),
-  ],
-});
-
 export const legalPage = defineType({
   name: "legalPage",
   title: "Legal page",

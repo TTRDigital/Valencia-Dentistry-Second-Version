@@ -119,7 +119,7 @@ const service: Service = {
     heading: "Cost and insurance",
     paragraphs: [
       "The cost of TMJ care depends on the treatment you need, from a single night guard to a combination of appliances and bite work. Coverage varies by plan, so we review your benefits and explain what is included before you commit.",
-      "We accept most major PPO plans, provide a written estimate before treatment and offer flexible financing options. New patients can start with our $59 special, which includes an exam and X-rays.",
+      "We accept most major PPO plans, provide a written estimate before treatment and offer flexible financing options.",
     ],
   },
   faqs: [

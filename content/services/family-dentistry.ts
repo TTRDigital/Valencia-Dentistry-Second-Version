@@ -110,7 +110,7 @@ const service: Service = {
     heading: "Cost and insurance",
     paragraphs: [
       "Most dental plans cover preventive visits for children and adults, and we accept most major PPO plans. Our team verifies benefits for each family member before you arrive.",
-      "New patients of any age can start with our $59 special, which includes an exam and X-rays. For any further treatment, you receive a written estimate first, and flexible financing options are available.",
+      "For any further treatment, you receive a written estimate first, and flexible financing options are available.",
     ],
   },
   faqs: [
@@ -146,7 +146,7 @@ const service: Service = {
   related: ["preventive-dentistry", "composite-filling", "invisalign", "holistic-dentistry"],
   cta: {
     heading: "Bring the whole family",
-    text: "Schedule visits for everyone in your household with Dr. Lavi in Valencia. New patients can start with the $59 exam and X-ray special.",
+    text: "Schedule visits for everyone in your household with Dr. Lavi in Valencia.",
   },
   flags: [
     "No dedicated family dentistry page exists on the current site. Content assembled from the home and services page lists; service descriptions are generic.",

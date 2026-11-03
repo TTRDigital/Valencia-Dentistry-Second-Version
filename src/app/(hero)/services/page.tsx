@@ -43,7 +43,7 @@ export default function ServicesHub() {
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>Everything your smile needs, under one roof</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>From a child&apos;s first checkup to guided implant surgery, every treatment is planned and delivered by Dr. Nuriel Lavi, DDS, in our Valencia office.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
-            <Button href={site.bookingUrl} variant="gold" size="lg">Book Online</Button>
+            <Button href={site.bookingUrl} variant="gold" size="lg">Book your first visit</Button>
             <Button href={`tel:${site.phoneE164}`} variant="outline" size="lg" icon={<Icon.phone className="h-4 w-4" />}>{site.phone}</Button>
           </div>
           <div className="mt-8 border-t border-white/15 pt-5" data-reveal="" style={{ "--reveal-delay": "320ms" } as React.CSSProperties}><GoogleRating dark /></div>

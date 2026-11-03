@@ -36,7 +36,7 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
             </div>
             <div className="flex items-center gap-5">
               <Link href="/new-patient-offer/" className="hdr-offer inline-flex min-h-11 items-center gap-2 font-semibold hover:underline underline-offset-4">
-                <Icon.sparkle className="h-4 w-4" /> {site.offer.title}
+                <Icon.sparkle className="h-4 w-4" /> Your first visit
               </Link>
               <SocialLinks className="flex items-center gap-1 border-l border-current/20 pl-4" linkClass="flex h-11 w-11 items-center justify-center opacity-80 hover:opacity-100" />
             </div>
@@ -77,7 +77,7 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
               <Icon.phone className="h-4 w-4" /> <span className="hidden xl:inline">{site.phone}</span><span className="xl:hidden">Call</span>
             </a>
             <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm hdr-book">
-              Book Online
+              Book your first visit
             </a>
             <button
               type="button"
@@ -121,7 +121,7 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
               </div>
               <div className="mt-8 flex items-center justify-between border-t border-sand pt-5 text-sm">
                 <Link href="/services/" className="text-link min-h-11">View all services <Icon.arrowRight className="h-4 w-4" /></Link>
-                <span className="text-muted">{site.offer.title} · {site.insurance} · {site.financing}</span>
+                <span className="text-muted">{site.insurance} · {site.financing}</span>
               </div>
             </div>
           </div>
@@ -165,13 +165,13 @@ export function Header({ variant = "solid" }: { variant?: "transparent" | "solid
               )}
               <li>
                 <Link href="/new-patient-offer/" className="flex min-h-14 items-center gap-2 py-3 font-semibold text-gold-700">
-                  <Icon.sparkle className="h-4 w-4" /> {site.offer.title}
+                  <Icon.sparkle className="h-4 w-4" /> Your first visit
                 </Link>
               </li>
             </ul>
           </nav>
           <div className="mt-8 grid gap-3">
-            <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-solid btn-lg">Book Online</a>
+            <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-solid btn-lg">Book your first visit</a>
             <a href={`tel:${site.phoneE164}`} className="btn btn-outline btn-lg"><Icon.phone className="h-4 w-4" /> {site.phone}</a>
           </div>
           <div className="mt-8 text-sm text-muted">

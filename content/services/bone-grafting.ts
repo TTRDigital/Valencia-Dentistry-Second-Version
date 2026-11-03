@@ -177,7 +177,7 @@ const service: Service = {
     heading: "Cost and financing",
     paragraphs: [
       "The fee depends on the type of graft, the material used and how much bone needs rebuilding. Once Dr. Lavi has reviewed your scan, you will receive a written estimate before treatment begins.",
-      "We accept most major PPO plans and offer flexible financing options. New patients can start with our $59 exam and X-rays special.",
+      "We accept most major PPO plans and offer flexible financing options.",
     ],
   },
   faqs: [

@@ -155,7 +155,7 @@ const service: Service = {
     heading: "Cost and financing",
     paragraphs: [
       "The cost of veneers depends on the material and how many teeth are treated. Veneers are usually considered cosmetic, so insurance rarely covers them, though we accept most major PPO plans and will check your benefits.",
-      "You receive a written estimate before treatment begins, and flexible financing options can spread the cost over time. New patients may begin with our $59 exam and X-ray special.",
+      "You receive a written estimate before treatment begins, and flexible financing options can spread the cost over time.",
     ],
   },
   faqs: [

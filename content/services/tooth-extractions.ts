@@ -145,7 +145,7 @@ const service: Service = {
     heading: "Cost of a tooth extraction",
     paragraphs: [
       "The fee depends on whether the extraction is simple or surgical and whether sedation is used. After your exam and scan, you receive a written estimate before treatment so there are no surprises.",
-      "We accept most major PPO plans and offer flexible financing options. New patients can start with our $59 exam and X-rays special.",
+      "We accept most major PPO plans and offer flexible financing options.",
     ],
   },
   faqs: [

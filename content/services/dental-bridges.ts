@@ -152,7 +152,7 @@ const service: Service = {
     heading: "Cost of a dental bridge",
     paragraphs: [
       "The fee depends on the type of bridge, the number of teeth being replaced and the material. After your consultation you receive a written estimate before treatment begins.",
-      "We accept most major PPO plans, and many plans cover a portion of a bridge when it is needed to restore function. Flexible financing options are available, and new patients can start with our $59 exam and X-rays special.",
+      "We accept most major PPO plans, and many plans cover a portion of a bridge when it is needed to restore function.",
     ],
   },
   faqs: [

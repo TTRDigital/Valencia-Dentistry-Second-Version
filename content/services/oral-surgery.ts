@@ -157,7 +157,7 @@ const service: Service = {
     heading: "Cost and financing",
     paragraphs: [
       "Fees vary by procedure, from a simple extraction to grafting or implant placement. Once Dr. Lavi has examined you and reviewed your scan, you will receive a written estimate before treatment so you know what to expect.",
-      "We accept most major PPO plans and will help you understand your coverage. Flexible financing options are available, and new patients can begin with our $59 exam and X-rays special.",
+      "We accept most major PPO plans and will help you understand your coverage.",
     ],
   },
   faqs: [

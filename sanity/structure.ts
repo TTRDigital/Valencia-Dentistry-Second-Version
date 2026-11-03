@@ -6,7 +6,6 @@ export const structure: StructureResolver = (S) =>
     .items([
       S.listItem().title("Site settings").id("siteSettings").child(S.document().schemaType("siteSettings").documentId("siteSettings")),
       S.listItem().title("Navigation").id("navigation").child(S.document().schemaType("navigation").documentId("navigation")),
-      S.listItem().title("New patient offer & popup").id("offer").child(S.document().schemaType("offer").documentId("offer")),
       S.divider(),
       S.documentTypeListItem("service").title("Services"),
       S.documentTypeListItem("page").title("Pages"),

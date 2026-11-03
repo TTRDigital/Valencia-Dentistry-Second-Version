@@ -46,7 +46,7 @@ Still worth an editorial pass (not changed, since the articles are the practice'
 - Citations often link to organisation home pages rather than the study cited; PMC4647895 is reused for several different claims.
 - "Mrs. L, age 72" case story (seniors post) reads as invented; confirm or remove.
 - Top-5 cosmetic procedures post has only H3 headings and quotes an AAO statistic that appears to be Align Technology marketing.
-- Some posts promise "free consultation" in the body (the practice offers a $59 new patient exam; no free consultation is advertised elsewhere).
+- Some posts promise "free consultation" in the body (no free consultation or price offer is advertised elsewhere).
 - Flags per post are stored in `content/posts.json` (`flags`) and in `content/posts-meta/*.json`.
 
 ## Technical notes
