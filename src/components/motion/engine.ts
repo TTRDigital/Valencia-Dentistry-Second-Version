@@ -31,7 +31,7 @@ let lenis: Lenis | null = null;
 /** Lenis smooth scrolling (desktop only; touch keeps native scrolling) and the custom cursor. */
 export function setupGlobal() {
   if (finePointer() && !lenis) {
-    lenis = new Lenis({ lerp: 0.11, smoothWheel: true, syncTouch: false, anchors: { offset: -96 }, prevent: (n) => !!n.closest("[data-lenis-prevent], .drawer, #mega-menu") });
+    lenis = new Lenis({ lerp: 0.11, smoothWheel: true, syncTouch: false, anchors: { offset: -140 }, prevent: (n) => !!n.closest("[data-lenis-prevent], .drawer, #mega-menu") });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((t) => lenis?.raf(t * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -236,6 +236,16 @@ export function run(): Cleanup {
           onUpdate: () => (el.textContent = obj.v.toFixed(decimals)),
           onComplete: () => (el.textContent = el.dataset.count!),
         });
+      }),
+    );
+  }
+
+  /* Lines that draw in as you scroll (process steps). */
+  for (const el of $("[data-draw]")) {
+    queue.push(() =>
+      add(() => {
+        const axis = el.dataset.draw === "y" ? "scaleY" : "scaleX";
+        gsap.fromTo(el, { [axis]: 0 }, { [axis]: 1, ease: "none", scrollTrigger: { trigger: el.parentElement, start: "top 75%", end: "bottom 55%", scrub: true } });
       }),
     );
   }
