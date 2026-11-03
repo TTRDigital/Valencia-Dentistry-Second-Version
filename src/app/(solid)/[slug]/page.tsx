@@ -9,6 +9,8 @@ import { Img } from "@/components/ui/Img";
 import { Mark } from "@/components/ui/Logo";
 import { Icon } from "@/components/ui/Icons";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { SplitHero } from "@/components/sections/Hero";
+import { accent } from "@/components/ui/Accent";
 import { FaqList } from "@/components/ui/Faq";
 import { Button, Arrow } from "@/components/ui/Button";
 import { CtaBand } from "@/components/sections/Cta";
@@ -38,21 +40,15 @@ export default async function Page({ params }: PageProps<"/[slug]">) {
     <>
       <JsonLd data={[articleSchema(p), breadcrumbSchema(crumbs), faqSchema(p.faqs)].filter(Boolean)} />
       <article>
-        <Section tone="ivory" size="sm" as="div" className="pt-10 lg:pt-14">
-          <Breadcrumbs items={crumbs.map((c, i) => (i === 2 ? { ...c, label: "Article" } : c))} />
-          <header className="mx-auto mt-8 max-w-3xl text-center">
-            <p className="eyebrow">{categoryLabel[p.category]}</p>
-            <h1 className="mt-4 text-[clamp(2rem,1.4rem+2.4vw,3.4rem)]">{p.title}</h1>
-            <span className="gold-rule gold-rule-center mt-6" aria-hidden="true" />
-            <p className="mt-6 text-sm text-muted">
-              By <Link href="/about/" className="font-semibold text-ink-700">{p.author}</Link> · <time dateTime={p.datePublished}>{formatDate(p.datePublished)}</time>
-              {p.dateModified !== p.datePublished && <> · Updated <time dateTime={p.dateModified}>{formatDate(p.dateModified!)}</time></>} · {readingTime(p.html)} min read
-            </p>
-          </header>
-          <div className="relative mx-auto mt-10 aspect-[3/1] max-w-5xl overflow-hidden rounded-2xl">
-            <Img src={p.image} alt={p.imageAlt} fill priority sizes="(min-width: 1024px) 1024px, 100vw" className="object-cover" />
-          </div>
-        </Section>
+        <SplitHero tone="light" image={p.image} imageAlt={p.imageAlt} portrait={false}>
+          <div data-reveal=""><Breadcrumbs items={crumbs.map((c, i) => (i === 2 ? { ...c, label: "Article" } : c))} /></div>
+          <p className="eyebrow mt-5" data-reveal=""><span className="gold-rule w-8" aria-hidden="true" />{categoryLabel[p.category]}</p>
+          <h1 className="mt-5 text-[clamp(2.25rem,1.4rem+3vw,4.25rem)]" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent(p.title, 2)}</h1>
+          <p className="mt-6 text-sm text-muted" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>
+            By <Link href="/about/" className="font-semibold text-ink-700">{p.author}</Link> · <time dateTime={p.datePublished}>{formatDate(p.datePublished)}</time>
+            {p.dateModified !== p.datePublished && <> · Updated <time dateTime={p.dateModified}>{formatDate(p.dateModified!)}</time></>} · {readingTime(p.html)} min read
+          </p>
+        </SplitHero>
 
         <Section tone="ivory" as="div" size="sm" className="pt-0">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-12">
@@ -81,7 +77,7 @@ export default async function Page({ params }: PageProps<"/[slug]">) {
                 <aside className="rounded-2xl border border-gold/60 bg-white p-7" aria-labelledby="takeaways">
                   <p id="takeaways" className="eyebrow">Key takeaways</p>
                   <ul className="mt-4 space-y-2.5">
-                    {p.keyTakeaways.map((k) => <li key={k} className="flex items-start gap-3 text-[0.95rem]"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-gold-700" />{k}</li>)}
+                    {p.keyTakeaways.map((k) => <li key={k} className="flex items-start gap-3 text-base"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-gold-700" />{k}</li>)}
                   </ul>
                 </aside>
               )}

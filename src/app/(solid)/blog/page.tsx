@@ -6,6 +6,8 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { Img } from "@/components/ui/Img";
 import { Icon } from "@/components/ui/Icons";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { SplitHero } from "@/components/sections/Hero";
+import { accent } from "@/components/ui/Accent";
 import { CtaBand } from "@/components/sections/Cta";
 import { BlogFilter } from "@/components/sections/BlogFilter";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
@@ -25,10 +27,14 @@ export default async function BlogIndex() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <Section tone="ivory" size="sm" className="pt-10 lg:pt-14">
-        <Breadcrumbs items={crumbs} />
-        <SectionHeading eyebrow="Blog" title="Guides for a healthier smile" as="h1" lead="Written by Dr. Nuriel Lavi, DDS for patients in Valencia and Santa Clarita. Honest answers about costs, timelines, recovery and options." className="mt-6" />
-        <Link href={`/${featured.slug}/`} className="group mt-12 grid gap-8 overflow-hidden rounded-2xl border border-sand bg-white lg:grid-cols-12" data-reveal="">
+      <SplitHero tone="light" image="/images/office/implant-model-hands.jpg" imageAlt="Dentist explaining a treatment on a model">
+        <div data-reveal=""><Breadcrumbs items={crumbs} /></div>
+        <p className="eyebrow mt-5" data-reveal=""><span className="gold-rule w-8" aria-hidden="true" />Blog</p>
+        <h1 className="mt-5" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Guides for a healthier smile", 2)}</h1>
+        <p className="lead mt-6 max-w-xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Written by Dr. Nuriel Lavi, DDS for patients in Valencia and Santa Clarita. Honest answers about costs, timelines, recovery and options.</p>
+      </SplitHero>
+      <Section tone="ivory" size="sm">
+        <Link href={`/${featured.slug}/`} className="group grid gap-8 overflow-hidden rounded-2xl border border-sand bg-white lg:grid-cols-12" data-reveal="">
           <div className="relative aspect-[3/1] lg:col-span-7 lg:aspect-auto lg:min-h-[320px] img-zoom overflow-hidden">
             <Img src={featured.image} alt={featured.imageAlt} fill priority sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover" />
           </div>

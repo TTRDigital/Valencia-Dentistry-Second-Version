@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { accent } from "@/components/ui/Accent";
 import { offer } from "../../../../content/pages";
 import { site } from "../../../../content/site";
 import { Hero } from "@/components/sections/Hero";
@@ -25,7 +26,7 @@ export default function OfferPage() {
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">{offer.hero.eyebrow}</p>
-          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{offer.hero.title}</h1>
+          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent(offer.hero.title, 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>{offer.hero.intro}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
             <Button href={site.bookingUrl} variant="gold" size="lg">Book your first visit</Button>
@@ -38,7 +39,7 @@ export default function OfferPage() {
           <div className="lg:col-span-5">
             <SectionHeading eyebrow="What is included" title="Everything a first visit should be" id="includes-heading" />
             <ul className="mt-8 space-y-3" data-reveal="">
-              {offer.includes.map((t) => <li key={t} className="flex items-start gap-3 rounded-xl border border-sand bg-white p-4 text-[0.95rem]"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-gold-700" />{t}</li>)}
+              {offer.includes.map((t) => <li key={t} className="flex items-start gap-3 rounded-xl border border-sand bg-white p-4 text-base"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-gold-700" />{t}</li>)}
             </ul>
           </div>
           <div className="lg:col-span-7" data-reveal="">

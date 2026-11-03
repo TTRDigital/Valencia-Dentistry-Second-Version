@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { accent } from "@/components/ui/Accent";
 import Link from "next/link";
 import { services } from "../../../../content/services";
 import { site, serviceCategories } from "../../../../content/site";
@@ -40,7 +41,7 @@ export default function ServicesHub() {
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Services</p>
-          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>Everything your smile needs, under one roof</h1>
+          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Everything your smile needs, under one roof", 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>From a child&apos;s first checkup to guided implant surgery, every treatment is planned and delivered by Dr. Nuriel Lavi, DDS, in our Valencia office.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
             <Button href={site.bookingUrl} variant="gold" size="lg">Book your first visit</Button>
@@ -64,7 +65,7 @@ export default function ServicesHub() {
               <div className="lg:col-span-7">
                 <SectionHeading eyebrow={c.key === "surgery" ? "Surgical" : c.name} title={c.name === "Implants & Oral Surgery" ? "Implants & oral surgery" : `${c.name} dentistry`} id={`cat-${c.key}`} lead={c.text} />
                 <ul className="mt-8 grid gap-2 sm:grid-cols-2" data-reveal="">
-                  {extraLists[c.key].map((t) => <li key={t} className="flex items-start gap-2 text-[0.95rem]"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-gold-700" />{t}</li>)}
+                  {extraLists[c.key].map((t) => <li key={t} className="flex items-start gap-2 text-base"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-gold-700" />{t}</li>)}
                 </ul>
                 <ul className="mt-8 flex flex-wrap gap-2" data-reveal="">
                   {pages.map((p) => <li key={p.slug}><Link href={p.path} className="btn btn-outline btn-sm">{p.name}</Link></li>)}

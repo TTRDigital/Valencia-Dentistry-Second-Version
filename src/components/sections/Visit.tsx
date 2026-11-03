@@ -10,7 +10,7 @@ export function Visit({ heading = "Visit us in Valencia", eyebrow = "Find us" }:
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <SectionHeading eyebrow={eyebrow} title={heading} id="visit-heading" lead="Second floor of the Tourney Road professional building, minutes from the I-5 and Valencia Town Center, with free parking at the door." />
-          <dl className="mt-10 space-y-6 text-[0.95rem]" data-reveal="">
+          <dl className="mt-10 space-y-6 text-base" data-reveal="">
             <div className="flex gap-4">
               <dt className="sr-only">Address</dt>
               <Icon.pin className="mt-1 h-5 w-5 shrink-0 text-gold-700" />

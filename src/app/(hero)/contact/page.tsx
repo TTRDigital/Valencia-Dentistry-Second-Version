@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { accent } from "@/components/ui/Accent";
 import { site } from "../../../../content/site";
 import { Hero } from "@/components/sections/Hero";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -27,7 +28,7 @@ export default function ContactPage() {
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Contact</p>
-          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>We would love to hear from you</h1>
+          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("We would love to hear from you", 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Questions, appointments or a second opinion: call, book online or send a note and a real person will reply.</p>
         </div>
       </Hero>
@@ -38,7 +39,7 @@ export default function ContactPage() {
             <ul className="mt-10 space-y-6" data-reveal="">
               <li className="flex gap-4"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ivory-200 text-gold-700"><Icon.phone className="h-5 w-5" /></span><div><p className="font-semibold text-ink-700">Call or text</p><a href={`tel:${site.phoneE164}`} className="text-lg hover:underline underline-offset-4">{site.phone}</a><p className="text-sm text-muted">Fastest for same-day and urgent needs.</p></div></li>
               <li className="flex gap-4"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ivory-200 text-gold-700"><Icon.calendar className="h-5 w-5" /></span><div><p className="font-semibold text-ink-700">Book online</p><a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-link min-h-11">Pick a time in our scheduler <Icon.arrowRight className="h-4 w-4" /></a><p className="text-sm text-muted">Takes about a minute.</p></div></li>
-              <li className="flex gap-4"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ivory-200 text-gold-700"><Icon.mail className="h-5 w-5" /></span><div><p className="font-semibold text-ink-700">Email</p><a href={`mailto:${site.email}`} className="hover:underline underline-offset-4">{site.email}</a><p className="text-sm text-muted">For records, insurance questions and anything that can wait a day.</p></div></li>
+              <li className="flex gap-4"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ivory-200 text-gold-700"><Icon.mail className="h-5 w-5" /></span><div><p className="font-semibold text-ink-700">Email</p><a href={`mailto:${site.email}`} className="inline-flex min-h-11 items-center break-all hover:underline underline-offset-4">{site.email}</a><p className="text-sm text-muted">For records, insurance questions and anything that can wait a day.</p></div></li>
               <li className="flex gap-4"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ivory-200 text-gold-700"><Icon.clock className="h-5 w-5" /></span><div><p className="font-semibold text-ink-700">Hours</p><p>Mon–Fri 8 AM – 5 PM · Sat & Sun closed</p><OpenBadge className="text-muted" /></div></li>
             </ul>
           </div>

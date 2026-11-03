@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { accent } from "@/components/ui/Accent";
 import { emergency } from "../../../../content/pages";
 import { site } from "../../../../content/site";
 import { Hero } from "@/components/sections/Hero";
@@ -25,7 +26,7 @@ export default function EmergencyPage() {
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">{emergency.hero.eyebrow}</p>
-          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{emergency.hero.title}</h1>
+          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent(emergency.hero.title, 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>{emergency.hero.intro}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
             <Button href={`tel:${site.phoneE164}`} variant="gold" size="lg" icon={<Icon.phone className="h-4 w-4" />}>Call {site.phone}</Button>

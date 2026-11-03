@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { accent } from "@/components/ui/Accent";
 import { site } from "../../../../content/site";
 import { getCases } from "@/lib/cms";
 import { Hero } from "@/components/sections/Hero";
@@ -27,7 +28,7 @@ export default async function GalleryPage() {
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Smile gallery</p>
-          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>Real patients, real results</h1>
+          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Real patients, real results", 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Every case below is a patient of Dr. Lavi, photographed in our office and shared with permission. Drag the handle to compare.</p>
         </div>
       </Hero>

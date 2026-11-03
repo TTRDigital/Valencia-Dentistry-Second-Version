@@ -153,7 +153,7 @@ export function ServicePage({ s, all }: { s: Service; all?: Service[] }) {
               <SectionHeading eyebrow="Is it right for you" title={s.whoFor.heading} id="who-heading" lead={s.whoFor.intro} />
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {s.whoFor.bullets.map((b, i) => (
-                  <li key={b} className="flex items-start gap-3 rounded-[var(--r-sm)] border border-white/10 bg-white/[0.04] p-4 text-[0.95rem]" data-reveal="" style={{ "--reveal-delay": `${(i % 2) * 70}ms` } as React.CSSProperties}>
+                  <li key={b} className="flex items-start gap-3 rounded-[var(--r-sm)] border border-white/10 bg-white/[0.04] p-4 text-base" data-reveal="" style={{ "--reveal-delay": `${(i % 2) * 70}ms` } as React.CSSProperties}>
                     <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold text-ink"><Icon.check className="h-3.5 w-3.5" /></span>{b}
                   </li>
                 ))}
@@ -315,7 +315,7 @@ function Extra({ x, alt }: { x: ExtraSection; alt: boolean }) {
           )}
           {x.bullets && (
             <ul className="mt-8 grid gap-3 sm:grid-cols-2" data-reveal="">
-              {x.bullets.map((b) => <li key={b} className="flex items-start gap-3 text-[0.95rem]"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-olive" />{b}</li>)}
+              {x.bullets.map((b) => <li key={b} className="flex items-start gap-3 text-base"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-olive" />{b}</li>)}
             </ul>
           )}
           {x.columns && (

@@ -26,7 +26,7 @@ export function CareFirst() {
           <SectionHeading eyebrow="Comfort" title="Care that puts you first" id="care-heading" lead="Dentistry can be calm. We built the office, the schedule and the pace of each visit around that idea." />
           <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-1" data-reveal="">
             {comforts.map((c) => (
-              <li key={c} className="flex items-start gap-3 text-[0.95rem]"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-gold-700" />{c}</li>
+              <li key={c} className="flex items-start gap-3 text-base"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-gold-700" />{c}</li>
             ))}
           </ul>
           <div className="relative mt-10 aspect-[5/4] overflow-hidden rounded-2xl img-zoom lg:aspect-[4/3]" data-reveal="">

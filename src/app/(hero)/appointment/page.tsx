@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { accent } from "@/components/ui/Accent";
 import { site } from "../../../../content/site";
 import { Hero } from "@/components/sections/Hero";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -26,7 +27,7 @@ export default function AppointmentPage() {
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Appointments</p>
-          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>Book your visit</h1>
+          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Book your visit", 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Choose a time online right now, or send us your preferred time and we will confirm by phone or text.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
             <Button href={site.bookingUrl} variant="gold" size="lg">Book your first visit</Button>
@@ -38,7 +39,7 @@ export default function AppointmentPage() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <SectionHeading eyebrow="Request a time" title="Prefer we call you?" id="request-heading" lead="Fill in the form and our team will reach out during office hours to confirm a time that works." />
-            <ul className="mt-8 space-y-3 text-[0.95rem]" data-reveal="">
+            <ul className="mt-8 space-y-3 text-base" data-reveal="">
               {["Same-day visits often available", "Exam and digital X-rays at your first visit", site.insurance, site.financing, "Sedation options for anxious patients"].map((t) => <li key={t} className="flex items-start gap-3"><Icon.check className="mt-1 h-4 w-4 shrink-0 text-gold-700" />{t}</li>)}
             </ul>
           </div>

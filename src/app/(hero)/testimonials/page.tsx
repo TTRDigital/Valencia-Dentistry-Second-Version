@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { accent } from "@/components/ui/Accent";
 import { site } from "../../../../content/site";
 import { getTestimonials } from "@/lib/cms";
 import { Hero } from "@/components/sections/Hero";
@@ -28,7 +29,7 @@ export default async function TestimonialsPage() {
         <div className="max-w-3xl">
           <Breadcrumbs items={crumbs} light />
           <p className="eyebrow mt-6" data-reveal="">Reviews</p>
-          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>Kind words from our patients</h1>
+          <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Kind words from our patients", 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Every review on this page is a real Google review from a patient of the practice, reproduced word for word.</p>
           <div className="mt-8 flex flex-wrap items-center gap-6" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
             <GoogleRating dark />

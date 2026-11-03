@@ -15,7 +15,7 @@ export function ReviewCard({ t, dark }: { t: Testimonial; dark?: boolean }) {
         <Stars n={t.rating} />
         <span className="inline-flex items-center gap-1.5 text-xs text-muted"><Icon.google className="h-3.5 w-3.5" /> Google review</span>
       </div>
-      <p className={`mt-5 flex-1 text-[0.98rem] leading-relaxed ${dark ? "text-on-dark" : "text-text"}`}>“{t.text}”</p>
+      <p className={`mt-5 flex-1 font-display text-[1.2rem] leading-snug ${dark ? "text-on-dark" : "text-text"}`}>“{t.text}”</p>
       <footer className="mt-6 flex items-center gap-3">
         <span className={`flex h-10 w-10 items-center justify-center rounded-full font-display text-base ${dark ? "bg-gold text-ink" : "bg-ink-700 text-on-dark"}`} aria-hidden="true">{initials}</span>
         <div>
