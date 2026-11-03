@@ -23,34 +23,51 @@ The reference (Newbury Park Dental Arts) was studied for *section ideas and mood
 
 Overall: fewer elements per screen, more air (section padding 120–160px desktop), hairline borders instead of shadows, ivory backgrounds instead of white, deep ink instead of black.
 
-## Tokens (second version: warm charcoal + taupe from the Valencia Dentistry mark; all text pairs pass WCAG AA)
+## Tokens (premium upgrade: charcoal, olive, warm cream, bronze accent; all text pairs pass WCAG AA)
 
 | Token | Value | Use |
 |---|---|---|
-| `--ink` | #1C1B19 | dark surfaces |
-| `--ink-700` | #2E2E2E | logo charcoal, headings |
-| `--slate` | #7A6B52 | taupe accent, links, icons (4.8:1 on ivory) |
-| `--slate-600` | #5E5240 | solid buttons (7.6:1 with white text) |
-| `--ivory` | #FAF7F1 | page background |
-| `--ivory-200` | #F2ECE1 | alternate band |
-| `--sand` | #E9E1D2 | hairlines on light |
-| `--gold` | #D9BE8C | dividers, numerals, accents (decorative) |
-| `--gold-700` | #856A33 | eyebrows and gold text on ivory/white |
-| `--text` | #22211F | body text on ivory |
-| `--muted` | #5F5A52 | secondary text (6.4:1 on ivory) |
-| `--on-dark` | #F3EEE4 | text on ink |
-| `--on-dark-muted` | #C4BDB1 | secondary text on ink |
+| `--ink` | #1B1A17 | charcoal surfaces (hero, process, reviews, CTA, footer) |
+| `--olive` / `--slate-600` | #4A4F3B | solid buttons (8.5:1 with white), outline stroke, checks |
+| `--olive-900` | #2C3024 | dark olive sections (facts, first visit, "What it is", "Why us") |
+| `--ivory` | #F5F0E6 | warm cream page background |
+| `--ivory-200` | #ECE5D6 | alternate cream band |
+| `--sand` | #DDD3C0 | hairlines on light |
+| `--gold` (bronze) | #CFA36E | accent on dark (7.5:1 on charcoal), gold buttons with charcoal text |
+| `--gold-700` (bronze deep) | #82572A | accent text and eyebrows on cream (5.5:1) |
+| `--text` / `--muted` | #22211E / #5E5A51 | body and secondary text on cream |
+| `--on-dark` / `--on-dark-muted` | #F3EEE4 / #C2BCB0 | text on charcoal and olive |
+
+Radii: 12 / 20 / 32 px and pills; arches are `999px 999px 20px 20px`. Section spacing is one scale: 64 px (phones), 96 px (tablets), 128 px (desktop); `.section-sm` is 64 px. One container: 84rem, 16 px gutters on phones, 40 px on desktop.
 
 The logo mark keeps its own colours: charcoal #2E2E2E and taupe #9A8B72 on light backgrounds, ivory and #C9BA9C on dark ones.
 
 ## Type
-- Display: **Fraunces** static instances (Light 300 + Light Italic for headings and quotes, Regular 400 for H3) for H1/H2/pull quotes — proposed over Bodoni Moda because its lighter weights stay legible on phones and it self-hosts through next/font. The variable font with its optical-size and "soft" axes was tried first and dropped: its two preloaded files weighed 270 KB and sat on the LCP path. Alternate: **Cormorant Garamond** 300/400 (also wired in the style guide for comparison).
-- Body/UI: **Manrope** 400/500/600.
-- Eyebrows: Manrope 600, 0.72rem, letter-spacing 0.18em, uppercase, gold-700.
-- Fluid sizes with clamp(): H1 2.6rem→4.6rem, H2 2rem→3.2rem, H3 1.25rem→1.5rem, body 1rem→1.0625rem.
-- Gold 48px × 1px divider under every section heading.
+- Display: **Fraunces** (self-hosted through next/font, OFL) Light 300 + Light Italic for H1/H2 and quotes, Regular 400 for H3. Body/UI: **Manrope**.
+- Sizes: hero H1 up to ~100 px (`clamp(2.75rem, 1.4rem + 5.4vw, 6.25rem)`), section H2 ~54 px, body 16 px on phones and 17 px on desktop.
+- The last 2–3 words of hero and section headlines are italic in the accent colour (`accent()` in `src/components/ui/Accent.tsx`).
 
 ## Motion
-- Reveal: opacity 0→1, translateY 24px→0, 900ms, cubic-bezier(.2,.7,.2,1), staggered 80ms, via IntersectionObserver + Web Animations API (data-reveal). Hero content uses a pure CSS keyframe instead (visible without JavaScript, counted by Chrome as the LCP). Off under prefers-reduced-motion.
-- Images: hover scale 1→1.04 over 1.2s. Hero drift 24s.
-- Carousels: CSS scroll-snap, buttons + keyboard, no library.
+All motion runs through one client `MotionProvider` in the root layout (`src/components/motion/`). It loads GSAP, ScrollTrigger, SplitText and Lenis after first paint (on first interaction or idle, never mid-scroll), sets up effects per route from data attributes, and reverts them on route change. Nothing is hidden by CSS: start states are set by script only for content below the fold, so pages read fine without JavaScript. With `prefers-reduced-motion: reduce`, nothing moves.
+
+| Effect | Attribute / class |
+|---|---|
+| Section headings rise line by line from masks (once) | `data-split` |
+| Photos wipe up into their frame and settle 1.25× → 1× | `data-wipe` (in `<Photo>`) |
+| Gentle parallax on whole frames (half on phones) | `data-parallax` |
+| Heroes recede: copy lifts and fades, media drifts | `data-recede`, `data-recede-copy`, `data-recede-media` |
+| Ticker rows; speed and direction follow scroll velocity | `data-marquee` (`<Marquee>`) |
+| Giant outline type and watermark drifting | `data-drift`, `data-drift-y` |
+| Count-up numerals (final value in the markup) | `data-count` |
+| Pinned horizontal gallery with progress and counter | `data-hscroll` |
+| Scroll story: sticky photo crossfade, timeline line | `data-story` |
+| Stacking sticky cards | `data-stack` + `.stack-card` |
+| Lines that draw in | `data-draw="x|y"` |
+| Cursor depth on the hero stack, magnetic buttons, spotlight (desktop) | `data-depth-root` / `data-depth`, `.btn`, `data-spotlight` |
+| Custom cursor labels | `data-cursor="View|Drag|Book"` |
+| Fade-and-rise blocks (no library) | `data-reveal` |
+
+Lenis smooth scrolling runs on mouse/trackpad devices only; touch keeps native scrolling. The hero fan, aurora, seal and scroll cue are CSS animations (final state without JavaScript).
+
+## Images
+Real practice photos only. A frame never draws a photo wider than half its file's pixel width (sharp on 2× screens), `sizes` states the drawn width including any cover crop, quality is 85 and there are no blurred placeholders. Head-safe 2:3 crops live in `public/images/portrait/`; before/after cases were enlarged 2× with Lanczos and a light unsharp mask (`npm run derive-images`, originals in `assets/originals/`). The Visit map is a brand-tinted composite of OpenStreetMap tiles (© OpenStreetMap contributors); the live Google map loads only on request.

@@ -11,13 +11,27 @@
  * - prefers-reduced-motion: nothing moves (the provider does not call run()).
  * - Work is chunked (one element per task) to keep main-thread tasks short.
  */
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
-import Lenis from "lenis";
+import type { gsap as Gsap } from "gsap";
+import type { ScrollTrigger as ST } from "gsap/ScrollTrigger";
+import type { SplitText as Split } from "gsap/SplitText";
+import type Lenis from "lenis";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
-ScrollTrigger.config({ ignoreMobileResize: true });
+let gsap: typeof Gsap;
+let ScrollTrigger: typeof ST;
+let SplitText: typeof Split;
+
+/** Loads GSAP and each plugin as its own chunk, one per task, so no single evaluation blocks the main thread for long. */
+export async function load() {
+  if (gsap) return;
+  gsap = (await import("gsap")).gsap;
+  await yieldTask();
+  ScrollTrigger = (await import("gsap/ScrollTrigger")).ScrollTrigger;
+  await yieldTask();
+  SplitText = (await import("gsap/SplitText")).SplitText;
+  gsap.registerPlugin(ScrollTrigger, SplitText);
+  ScrollTrigger.config({ ignoreMobileResize: true });
+  await yieldTask();
+}
 
 const finePointer = () => window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 const isPhone = () => window.innerWidth < 768;
@@ -29,9 +43,11 @@ let lenis: Lenis | null = null;
 /* ---------------------------------------------------------------- global */
 
 /** Lenis smooth scrolling (desktop only; touch keeps native scrolling) and the custom cursor. */
-export function setupGlobal() {
+export async function setupGlobal() {
   if (finePointer() && !lenis) {
-    lenis = new Lenis({ lerp: 0.11, smoothWheel: true, syncTouch: false, anchors: { offset: -140 }, prevent: (n) => !!n.closest("[data-lenis-prevent], .drawer, #mega-menu") });
+    const { default: LenisCtor } = await import("lenis");
+    if (lenis) return;
+    lenis = new LenisCtor({ lerp: 0.11, smoothWheel: true, syncTouch: false, anchors: { offset: -140 }, prevent: (n) => !!n.closest("[data-lenis-prevent], .drawer, #mega-menu") });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((t) => lenis?.raf(t * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -42,6 +58,17 @@ export function setupGlobal() {
 export function scrollTop() {
   if (lenis) lenis.scrollTo(0, { immediate: true, force: true });
   window.scrollTo(0, 0);
+}
+
+/** Calls `cb` once when `el` comes within `margin` of the viewport (no layout reads, no ScrollTrigger). */
+function once(el: Element, margin: string, cb: () => void, cleanups: (() => void)[]) {
+  const io = new IntersectionObserver((entries) => {
+    if (!entries.some((e) => e.isIntersecting)) return;
+    io.disconnect();
+    cb();
+  }, { rootMargin: margin });
+  io.observe(el);
+  cleanups.push(() => io.disconnect());
 }
 
 /** Safe refresh: ScrollTrigger waits until scrolling stops, so a refresh never yanks the page back mid-swipe. */
@@ -105,45 +132,39 @@ export function run(): Cleanup {
   const below = new WeakMap<Element, boolean>();
   for (const el of $("[data-split], [data-wipe], [data-count], [data-rise]")) below.set(el, belowFold(el));
 
-  /* Section headings: lines rise from masks, once. */
+  /* Section headings: lines rise from masks, once. Split only when near the viewport, restore the plain text afterwards. */
   for (const el of $("[data-split]")) {
     if (!below.get(el)) continue;
-    queue.push(() =>
-      add(() => {
-        SplitText.create(el, {
-          type: "lines",
-          mask: "lines",
-          linesClass: "split-line",
-          autoSplit: true,
-          onSplit: (self) =>
-            gsap.from(self.lines, { yPercent: 115, duration: 1.15, ease: "expo.out", stagger: 0.09, scrollTrigger: { trigger: el, start: "top 88%", once: true } }),
-        });
-      }),
-    );
+    once(el, "0px 0px 60% 0px", () => {
+      if (!alive) return;
+      const split = SplitText.create(el, { type: "lines", mask: "lines", linesClass: "split-line" });
+      gsap.set(split.lines, { yPercent: 115 });
+      once(el, "0px 0px -12% 0px", () => {
+        gsap.to(split.lines, { yPercent: 0, duration: 1.15, ease: "expo.out", stagger: 0.09, onComplete: () => split.revert() });
+      }, extra);
+      extra.push(() => split.revert());
+    }, extra);
   }
 
   /* Blocks that rise in (cards, paragraphs), once. */
   for (const el of $("[data-rise]")) {
     if (!below.get(el)) continue;
-    queue.push(() =>
-      add(() => {
-        const delay = Number(el.dataset.rise) || 0;
-        gsap.from(el, { y: 36, autoAlpha: 0, duration: 1.1, delay, ease: "expo.out", scrollTrigger: { trigger: el, start: "top 90%", once: true } });
-      }),
-    );
+    gsap.set(el, { y: 36, autoAlpha: 0 });
+    once(el, "0px 0px -10% 0px", () => gsap.to(el, { y: 0, autoAlpha: 1, duration: 1.1, delay: Number(el.dataset.rise) || 0, ease: "expo.out", clearProps: "transform,opacity,visibility" }), extra);
+    extra.push(() => gsap.set(el, { clearProps: "transform,opacity,visibility" }));
   }
 
   /* Photos wipe up into their frame while settling from 1.25× to 1×. */
   for (const el of $("[data-wipe]")) {
     if (!below.get(el)) continue;
-    queue.push(() =>
-      add(() => {
-        const img = el.querySelector("img");
-        const tl = gsap.timeline({ scrollTrigger: { trigger: el, start: "top 88%", once: true } });
-        tl.fromTo(el, { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.4, ease: "expo.out", clearProps: "clipPath" });
-        if (img) tl.fromTo(img, { scale: 1.25 }, { scale: 1, duration: 1.8, ease: "expo.out", clearProps: "transform" }, 0);
-      }),
-    );
+    const img = el.querySelector("img");
+    gsap.set(el, { clipPath: "inset(100% 0% 0% 0%)" });
+    if (img) gsap.set(img, { scale: 1.25 });
+    once(el, "0px 0px -10% 0px", () => {
+      gsap.to(el, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.4, ease: "expo.out", clearProps: "clipPath" });
+      if (img) gsap.to(img, { scale: 1, duration: 1.8, ease: "expo.out", clearProps: "transform" });
+    }, extra);
+    extra.push(() => gsap.set([el, img].filter(Boolean), { clearProps: "clipPath,transform" }));
   }
 
   /* Gentle parallax on whole frames; lighter on phones. */
@@ -223,22 +244,14 @@ export function run(): Cleanup {
   /* Count-up numerals (the final value is in the markup). */
   for (const el of $("[data-count]")) {
     if (!below.get(el)) continue;
-    queue.push(() =>
-      add(() => {
-        const end = Number(el.dataset.count);
-        const decimals = (el.dataset.count!.split(".")[1] || "").length;
-        const obj = { v: 0 };
-        el.textContent = (0).toFixed(decimals);
-        gsap.to(obj, {
-          v: end,
-          duration: 2,
-          ease: "expo.out",
-          scrollTrigger: { trigger: el, start: "top 90%", once: true },
-          onUpdate: () => (el.textContent = obj.v.toFixed(decimals)),
-          onComplete: () => (el.textContent = el.dataset.count!),
-        });
-      }),
-    );
+    const final = el.dataset.count!;
+    const decimals = (final.split(".")[1] || "").length;
+    el.textContent = (0).toFixed(decimals);
+    once(el, "0px 0px -10% 0px", () => {
+      const obj = { v: 0 };
+      gsap.to(obj, { v: Number(final), duration: 2, ease: "expo.out", onUpdate: () => (el.textContent = obj.v.toFixed(decimals)), onComplete: () => (el.textContent = final) });
+    }, extra);
+    extra.push(() => (el.textContent = final));
   }
 
   /* Lines that draw in as you scroll (process steps). */
@@ -254,11 +267,8 @@ export function run(): Cleanup {
   /* Map pin drops in. */
   for (const el of $("[data-drop]")) {
     if (!belowFold(el)) continue;
-    queue.push(() =>
-      add(() => {
-        gsap.from(el, { y: -90, autoAlpha: 0, duration: 1.2, ease: "bounce.out", scrollTrigger: { trigger: el, start: "top 85%", once: true } });
-      }),
-    );
+    gsap.set(el, { y: -90, autoAlpha: 0 });
+    once(el, "0px 0px -15% 0px", () => gsap.to(el, { y: 0, autoAlpha: 1, duration: 1.2, ease: "bounce.out" }), extra);
   }
 
   /* Pinned horizontal gallery: vertical scroll slides the cards sideways. Pins are created first. */
@@ -385,15 +395,20 @@ export function run(): Cleanup {
     }
   }
 
-  // Run the queue in small tasks, then refresh once fonts have settled.
+  // Run the queue in small, time-boxed tasks; refresh once more only if web fonts were still loading.
+  const fontsPending = document.fonts && document.fonts.status !== "loaded";
   (async () => {
+    let t0 = performance.now();
     for (const job of queue) {
       if (!alive) return;
       job();
-      await yieldTask();
+      if (performance.now() - t0 > 8) {
+        await yieldTask();
+        t0 = performance.now();
+      }
     }
-    if (!alive) return;
-    await document.fonts?.ready;
+    if (!alive || !fontsPending) return;
+    await document.fonts.ready;
     if (alive) refresh();
   })();
 

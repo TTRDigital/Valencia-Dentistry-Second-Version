@@ -14,11 +14,11 @@ type Tech = { key: TechKey; name: string; text: string; benefit: string };
 export function TechGrid({ items }: { items: Tech[] }) {
   const [open, setOpen] = useState<string | null>(null);
   return (
-    <ul data-spotlight="" className="spotlight scrollbar-none -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-4 lg:gap-4">
+    <ul data-spotlight="" data-reveal="" className="spotlight scrollbar-none -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-4 lg:gap-4">
       {items.map((t, i) => {
         const isOpen = open === t.key;
         return (
-          <li key={t.key} className="group relative w-[80vw] max-w-[340px] shrink-0 snap-start sm:w-auto sm:max-w-none" data-reveal="" style={{ "--reveal-delay": `${(i % 4) * 70}ms` } as React.CSSProperties}>
+          <li key={t.key} className="group relative w-[80vw] max-w-[340px] shrink-0 snap-start sm:w-auto sm:max-w-none">
             <div className="card-dark relative flex h-full min-h-[300px] flex-col overflow-hidden p-6 transition-colors duration-500 hover:border-gold/40 lg:min-h-[320px]">
               <div className="flex items-start justify-between">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 text-gold"><TechIcon k={t.key} className="h-6 w-6" /></span>

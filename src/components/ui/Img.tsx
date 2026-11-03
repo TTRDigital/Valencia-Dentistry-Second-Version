@@ -1,24 +1,37 @@
-import Image, { type ImageProps } from "next/image";
+import { getImageProps, type ImageProps } from "next/image";
+import { preload } from "react-dom";
 import images from "../../../content/images.json";
 
 type Meta = { w: number; h: number };
 const meta = images as Record<string, Meta>;
 
-type Props = Omit<ImageProps, "src" | "width" | "height" | "placeholder" | "blurDataURL"> & {
+type Props = Omit<ImageProps, "src" | "width" | "height" | "placeholder" | "blurDataURL" | "preload"> & {
   src: string;
   alt: string;
 };
 
 /**
- * next/image with intrinsic width and height from content/images.json.
- * Quality 85 everywhere and no blurred placeholder: an image is either sharp
- * or not painted yet. Frames are sized so no photo is shown wider than its
- * file allows (≤ half its pixel width in CSS px on 2× screens).
+ * Optimised image as a plain <img>: srcset, sizes and intrinsic width/height
+ * come from next/image's getImageProps (no client component, so nothing to
+ * hydrate). Quality 85 everywhere and no blurred placeholder: an image is
+ * either sharp or not painted yet. `priority` preloads it with high fetch
+ * priority (LCP images only). Frames are sized so no photo is shown wider
+ * than its file allows (≤ half its pixel width in CSS px on 2× screens).
  */
-export function Img({ src, alt, fill, quality = 85, ...rest }: Props) {
+export function Img({ src, alt, fill, quality = 85, priority, loading, fetchPriority, ...rest }: Props) {
   const m = meta[src];
-  if (fill) return <Image src={src} alt={alt} fill quality={quality} {...rest} />;
-  return <Image src={src} alt={alt} width={m?.w ?? 1200} height={m?.h ?? 800} quality={quality} {...rest} />;
+  const { props } = getImageProps({
+    src,
+    alt,
+    quality,
+    ...(fill ? { fill: true } : { width: m?.w ?? 1200, height: m?.h ?? 800 }),
+    loading: priority ? "eager" : loading,
+    fetchPriority: priority ? "high" : fetchPriority,
+    ...rest,
+  });
+  if (priority && props.srcSet) preload(props.src, { as: "image", imageSrcSet: props.srcSet, imageSizes: props.sizes, fetchPriority: "high" });
+  // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+  return <img {...props} />;
 }
 
 export function imageSize(src: string) {

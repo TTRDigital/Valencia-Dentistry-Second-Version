@@ -20,7 +20,7 @@ export function ReviewPanel({ reviews }: { reviews: Testimonial[] }) {
           <span>
             <span className="block font-semibold">{r.name}</span>
             <span className="flex items-center gap-2 text-sm text-on-dark-muted">
-              <span className="flex text-gold" aria-label={`${r.rating} out of 5 stars`}>{Array.from({ length: r.rating }).map((_, k) => <Icon.star key={k} className="h-3.5 w-3.5" />)}</span>
+              <span className="flex text-gold" role="img" aria-label={`${r.rating} out of 5 stars`}>{Array.from({ length: r.rating }).map((_, k) => <Icon.star key={k} className="h-3.5 w-3.5" />)}</span>
               Google review{r.service ? ` · ${r.service}` : ""}
             </span>
           </span>

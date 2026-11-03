@@ -116,9 +116,12 @@ export function MotionProvider() {
     const stopReveal = reveal();
     (isFirst ? whenReady() : Promise.resolve())
       .then(loadEngine)
-      .then((engine) => {
+      .then(async (engine) => {
         if (cancelled) return;
-        engine.setupGlobal();
+        await engine.load();
+        if (cancelled) return;
+        await engine.setupGlobal();
+        if (cancelled) return;
         stopEngine = engine.run();
       })
       .catch(() => {});

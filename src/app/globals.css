@@ -1,4 +1,5 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "../";
 
 /* ---------- Design tokens (see docs/design-direction.md) ---------- */
 /* Charcoal, olive, warm cream and a bronze accent. Contrast checked: bronze-700 on cream 5.5:1, bronze on charcoal 7.5:1. */

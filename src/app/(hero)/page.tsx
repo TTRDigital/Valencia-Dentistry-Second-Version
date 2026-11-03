@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { site, technology, cases, testimonials } from "../../../content/site";
 import { services } from "../../../content/services";
 import { emergency, homeFaqs } from "../../../content/pages";
@@ -65,7 +64,7 @@ export default function HomePage() {
       <Section tone="light" labelledBy="picker-title">
         <SectionHeading eyebrow="Start here" title="What's bringing you in?" id="picker-title" lead="Choose what sounds closest. We will point you to the right place, and Dr. Lavi will take it from there." accentWords={2} />
         <div className="mt-12 lg:mt-16">
-          <Suspense fallback={null}><Picker choices={choices} /></Suspense>
+          <Picker choices={choices} />
         </div>
       </Section>
       {/* 5 */}
@@ -80,7 +79,7 @@ export default function HomePage() {
           <SectionHeading eyebrow="Smile gallery" title="Real results, side by side" id="results-title" lead="Drag the handle, or use the arrow keys, to compare before and after." />
           <Button href="/smile-gallery/" variant="outline">See the gallery</Button>
         </div>
-        <Suspense fallback={null}><ResultsShowcase cases={cases} /></Suspense>
+        <ResultsShowcase cases={cases} />
       </Section>
       {/* 9 */}
       <Section tone="dark" labelledBy="reviews-title">
@@ -90,13 +89,13 @@ export default function HomePage() {
             <div className="rounded-[var(--r-lg)] bg-gold p-7 text-ink sm:p-9" data-reveal="">
               <div className="flex items-center gap-3"><Icon.google className="h-7 w-7" /><span className="text-sm font-semibold">Google rating</span></div>
               <p className="mt-6 font-display text-7xl leading-none tracking-[-0.04em]">{site.google.rating}</p>
-              <p className="mt-3 flex gap-1" aria-label={`${site.google.rating} out of 5 stars`}>{[0, 1, 2, 3, 4].map((k) => <Icon.star key={k} className="h-5 w-5" />)}</p>
+              <p className="mt-3 flex gap-1" role="img" aria-label={`${site.google.rating} out of 5 stars`}>{[0, 1, 2, 3, 4].map((k) => <Icon.star key={k} className="h-5 w-5" />)}</p>
               <p className="mt-3 text-sm">From {site.google.reviewCount} Google reviews</p>
               <Button href="/testimonials/" variant="ink" size="sm" className="mt-6">Read reviews</Button>
             </div>
           </div>
           <div className="lg:col-span-8">
-            <Suspense fallback={null}><ReviewPanel reviews={testimonials} /></Suspense>
+            <ReviewPanel reviews={testimonials} />
           </div>
         </div>
       </Section>
@@ -112,7 +111,7 @@ export default function HomePage() {
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6 lg:mb-14">
           <SectionHeading eyebrow="Technology" title="Modern tools, gentler visits" id="tech-title" lead="Hover, focus or tap a card to see what each one means for you." />
         </div>
-        <Suspense fallback={null}><TechGrid items={technology} /></Suspense>
+        <TechGrid items={technology} />
       </Section>
       {/* 12 */}
       <Section tone="light" labelledBy="insurance-title" bare>
@@ -129,7 +128,7 @@ export default function HomePage() {
       <Section tone="cream" labelledBy="visit-title">
         <SectionHeading eyebrow="Visit" title="On Tourney Road, in Valencia" id="visit-title" lead="Free parking at the building and an elevator to our second-floor office." />
         <div className="mt-12">
-          <Suspense fallback={null}><VisitMap site={site} /></Suspense>
+          <VisitMap site={site} />
         </div>
         <div className="mt-20 grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4"><SectionHeading eyebrow="Good to know" title="Before you visit" id="faq-heading" lead="A few things new patients ask before their first visit." /></div>
