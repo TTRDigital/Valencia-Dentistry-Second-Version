@@ -1,7 +1,7 @@
 /**
  * Reads every image in public/images and writes content/images.json with
- * width, height and a tiny blur placeholder, so next/image can reserve space
- * and blur-up without static imports.
+ * intrinsic width and height, so next/image can reserve space without static
+ * imports (no blur placeholders: images are sharp or not yet painted).
  *
  *   npm run images
  */
@@ -11,7 +11,7 @@ import { join, relative } from "node:path";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const PUBLIC = join(ROOT, "public");
-const out: Record<string, { w: number; h: number; blur: string }> = {};
+const out: Record<string, { w: number; h: number }> = {};
 
 async function walk(dir: string) {
   for (const name of readdirSync(dir)) {
@@ -20,8 +20,7 @@ async function walk(dir: string) {
     else if (/\.(png|jpe?g|webp|avif)$/i.test(name)) {
       const img = sharp(p);
       const meta = await img.metadata();
-      const blur = await img.clone().resize(12, 12, { fit: "inside" }).webp({ quality: 40 }).toBuffer();
-      out["/" + relative(PUBLIC, p).split("\\").join("/")] = { w: meta.width!, h: meta.height!, blur: `data:image/webp;base64,${blur.toString("base64")}` };
+      out["/" + relative(PUBLIC, p).split("\\").join("/")] = { w: meta.width!, h: meta.height! };
     }
   }
 }

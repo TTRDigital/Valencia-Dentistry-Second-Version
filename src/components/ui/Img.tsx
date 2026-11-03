@@ -1,7 +1,7 @@
 import Image, { type ImageProps } from "next/image";
 import images from "../../../content/images.json";
 
-type Meta = { w: number; h: number; blur: string };
+type Meta = { w: number; h: number };
 const meta = images as Record<string, Meta>;
 
 type Props = Omit<ImageProps, "src" | "width" | "height" | "placeholder" | "blurDataURL"> & {
@@ -9,17 +9,16 @@ type Props = Omit<ImageProps, "src" | "width" | "height" | "placeholder" | "blur
   alt: string;
 };
 
-/** next/image with width, height and a blur placeholder from content/images.json. */
 /**
- * The blur-up placeholder is only used for priority (above-the-fold) images:
- * every placeholder is a separate SVG document the browser has to parse and
- * rasterise before first paint, and lazy images below the fold never show it.
+ * next/image with intrinsic width and height from content/images.json.
+ * Quality 85 everywhere and no blurred placeholder: an image is either sharp
+ * or not painted yet. Frames are sized so no photo is shown wider than its
+ * file allows (≤ half its pixel width in CSS px on 2× screens).
  */
-export function Img({ src, alt, fill, ...rest }: Props) {
+export function Img({ src, alt, fill, quality = 85, ...rest }: Props) {
   const m = meta[src];
-  const blur = m && rest.priority ? { placeholder: "blur" as const, blurDataURL: m.blur } : {};
-  if (fill) return <Image src={src} alt={alt} fill {...blur} {...rest} />;
-  return <Image src={src} alt={alt} width={m?.w ?? 1200} height={m?.h ?? 800} {...blur} {...rest} />;
+  if (fill) return <Image src={src} alt={alt} fill quality={quality} {...rest} />;
+  return <Image src={src} alt={alt} width={m?.w ?? 1200} height={m?.h ?? 800} quality={quality} {...rest} />;
 }
 
 export function imageSize(src: string) {

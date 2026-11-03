@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
+    "derive-images": "node --experimental-strip-types --no-warnings scripts/derive-images.ts",
     "images": "node --experimental-strip-types --no-warnings scripts/images.ts",
     "favicons": "node --experimental-strip-types --no-warnings scripts/favicons.ts",
     "build-content": "node --experimental-strip-types --no-warnings scripts/build-content.ts",
@@ -18,6 +19,8 @@
   },
   "dependencies": {
     "@sanity/vision": "^6.21.0",
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.27",
     "next": "16.4.3",
     "next-sanity": "^13.4.0",
     "react": "19.3.0",
