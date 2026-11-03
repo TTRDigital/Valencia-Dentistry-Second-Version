@@ -64,10 +64,10 @@ export function DriftType({ text, className = "", drift = "6,-28" }: { text: str
   );
 }
 
-/** Rotating circular seal: "VALENCIA DENTISTRY · SANTA CLARITA ·" around the mark. */
+/** Rotating circular seal: "VALENCIA DENTISTRY · SANTA CLARITA ·" around the mark. Give it a position (relative/absolute) via className. */
 export function Seal({ id = "seal", className = "", text = "VALENCIA DENTISTRY · SANTA CLARITA · ", children }: { id?: string; className?: string; text?: string; children?: ReactNode }) {
   return (
-    <div className={`seal relative ${className}`} aria-hidden="true">
+    <div className={`seal ${className}`} aria-hidden="true">
       <svg viewBox="0 0 140 140" className="seal-text absolute inset-0 h-full w-full">
         <defs>
           <path id={`${id}-circle`} d="M70,70 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0" />

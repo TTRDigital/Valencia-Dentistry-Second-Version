@@ -72,15 +72,16 @@ export const doctor = {
   ],
 };
 
-export const technology: { key: TechKey; name: string; text: string }[] = [
-  { key: "cbct", name: "CBCT 3D imaging", text: "A low-dose 3D scan of your teeth, jaw and nerves for precise diagnosis and implant planning." },
-  { key: "itero", name: "iTero digital scanning", text: "A quick, mess-free digital impression that replaces putty trays for crowns, veneers and Invisalign." },
-  { key: "prf", name: "PRF therapy", text: "Platelet-rich fibrin from your own blood, used to support healing after extractions, grafts and implants." },
-  { key: "guided-implants", name: "Guided implant surgery", text: "Implants planned on your 3D scan and placed with a surgical guide for accuracy and a gentler visit." },
-  { key: "digital-xray", name: "Digital X-rays", text: "Fast, low-radiation images you can see on screen with Dr. Lavi during your exam." },
-  { key: "intraoral-camera", name: "Intraoral cameras", text: "A small camera shows you exactly what we see, so every recommendation makes sense." },
-  { key: "laser", name: "Laser dentistry", text: "Precise, minimally invasive soft-tissue care with less discomfort and faster healing for many procedures." },
-  { key: "same-day-crowns", name: "Same-day crowns", text: "In-house custom crowns, so many patients leave with their final restoration in a single visit." },
+/** `benefit` is the plain-language "what this means for you" line shown on the technology grid. */
+export const technology: { key: TechKey; name: string; text: string; benefit: string }[] = [
+  { key: "cbct", name: "CBCT 3D imaging", text: "A low-dose 3D scan of your teeth, jaw and nerves for precise diagnosis and implant planning.", benefit: "Fewer surprises. Problems are found early, and implants are planned around your real anatomy." },
+  { key: "itero", name: "iTero digital scanning", text: "A quick, mess-free digital impression that replaces putty trays for crowns, veneers and Invisalign.", benefit: "No putty trays. A quick scan instead, and you can see your own teeth on screen." },
+  { key: "prf", name: "PRF therapy", text: "Platelet-rich fibrin from your own blood, used to support healing after extractions, grafts and implants.", benefit: "Your own healing factors, placed where you need them after an extraction, graft or implant." },
+  { key: "guided-implants", name: "Guided implant surgery", text: "Implants planned on your 3D scan and placed with a surgical guide for accuracy and a gentler visit.", benefit: "A more predictable placement, and often a shorter, gentler appointment." },
+  { key: "digital-xray", name: "Digital X-rays", text: "Fast, low-radiation images you can see on screen with Dr. Lavi during your exam.", benefit: "Less radiation than film, and images you look at together with Dr. Lavi." },
+  { key: "intraoral-camera", name: "Intraoral cameras", text: "A small camera shows you exactly what we see, so every recommendation makes sense.", benefit: "You see what Dr. Lavi sees, so every recommendation makes sense." },
+  { key: "laser", name: "Laser dentistry", text: "Precise, minimally invasive soft-tissue care with less discomfort and faster healing for many procedures.", benefit: "Gentler soft-tissue care, with less discomfort and faster healing for many procedures." },
+  { key: "same-day-crowns", name: "Same-day crowns", text: "In-house custom crowns, so many patients leave with their final restoration in a single visit.", benefit: "Often one visit instead of two for your final crown." },
 ];
 
 export const insurers = [

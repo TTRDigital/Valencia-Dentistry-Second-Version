@@ -47,6 +47,7 @@ const portraits: [string, number][] = [
   ["veneer-smile", 365],
   ["veneer-tryin", 381],
   ["implant-model-hands", 439],
+  ["treatment-room", 480],
 ];
 for (const [name, left] of portraits) {
   const src = sharp(join(OFFICE, `${name}.jpg`));

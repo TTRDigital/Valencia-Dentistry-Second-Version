@@ -93,6 +93,7 @@ type Cleanup = () => void;
 
 export function run(): Cleanup {
   let alive = true;
+  document.documentElement.classList.add("motion-on");
   const extra: Cleanup[] = [];
   const ctx = gsap.context(() => {});
   const add = (fn: () => void) => ctx.add(fn);
@@ -239,6 +240,16 @@ export function run(): Cleanup {
     );
   }
 
+  /* Map pin drops in. */
+  for (const el of $("[data-drop]")) {
+    if (!belowFold(el)) continue;
+    queue.push(() =>
+      add(() => {
+        gsap.from(el, { y: -90, autoAlpha: 0, duration: 1.2, ease: "bounce.out", scrollTrigger: { trigger: el, start: "top 85%", once: true } });
+      }),
+    );
+  }
+
   /* Pinned horizontal gallery: vertical scroll slides the cards sideways. */
   for (const sec of $("[data-hscroll]")) {
     queue.push(() =>
@@ -377,6 +388,7 @@ export function run(): Cleanup {
 
   return () => {
     alive = false;
+    document.documentElement.classList.remove("motion-on");
     extra.forEach((f) => f());
     ctx.revert();
   };

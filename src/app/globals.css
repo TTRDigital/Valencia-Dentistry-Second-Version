@@ -254,13 +254,15 @@ h3, .h3 { font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); line-height: 1.25; 
 .marquee-group { display: flex; align-items: center; flex-shrink: 0; }
 .marquee-item { display: inline-flex; align-items: center; gap: clamp(1.25rem, 3vw, 2.75rem); padding-right: clamp(1.25rem, 3vw, 2.75rem); }
 .marquee-row { font-family: var(--font-serif); font-weight: 300; font-size: clamp(2.25rem, 1.2rem + 4vw, 5rem); line-height: 1.15; letter-spacing: -0.02em; }
-.outline-text { color: transparent; -webkit-text-stroke: 1px currentColor; }
+.outline-text { color: transparent; -webkit-text-stroke: 1.25px var(--stroke, var(--olive)); }
+.on-dark .outline-text { --stroke: var(--gold); }
 @supports not (-webkit-text-stroke: 1px black) { .outline-text { color: currentColor; opacity: 0.35; } }
 
 /* Giant outline name drifting behind a section, and the faint brand watermark */
 .drift-type { position: absolute; left: 0; white-space: nowrap; pointer-events: none; user-select: none; z-index: 0;
   font-family: var(--font-serif); font-weight: 300; font-size: clamp(6rem, 2rem + 16vw, 19rem); line-height: 0.85; letter-spacing: -0.04em;
-  color: transparent; -webkit-text-stroke: 1px currentColor; opacity: 0.22; }
+  color: transparent; -webkit-text-stroke: 1.5px var(--stroke, var(--olive)); opacity: 0.28; }
+.on-dark .drift-type { --stroke: var(--gold); opacity: 0.22; }
 .watermark { position: absolute; pointer-events: none; z-index: 0; opacity: 0.06; }
 
 /* Rotating circular seal */
@@ -289,7 +291,7 @@ h3, .h3 { font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); line-height: 1.25; 
 
 /* Underline sweep (picker choices, footer links) */
 .sweep { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size 0.6s var(--ease-expo); }
-.sweep:hover, .sweep[aria-pressed="true"], .sweep:focus-visible { background-size: 100% 1px; }
+.sweep:hover, .group:hover .sweep, .group:focus-visible .sweep, .sweep[data-on], .sweep:focus-visible { background-size: 100% 1px; }
 
 /* Spotlight grid (technology) */
 .spotlight { --mx: 50%; --my: 50%; position: relative; }
@@ -432,3 +434,8 @@ details[open] .chev { transform: rotate(45deg); }
 .reading-progress { position: fixed; left: 0; right: 0; top: 0; height: 2px; z-index: 60; background: var(--gold); transform-origin: left; transform: scaleX(var(--p, 0)); pointer-events: none; }
 html.has-cursor body, html.has-cursor a, html.has-cursor button, html.has-cursor summary, html.has-cursor label, html.has-cursor [role="slider"] { cursor: none; }
 .drawer [data-nav][data-active] { color: var(--gold); }
+/* Scroll-story steps light up as they become active (dim only once the engine is running). */
+.story-step > span:first-child { transition: background-color 0.5s, color 0.5s, border-color 0.5s; }
+[data-story] .story-step[data-active] > span:first-child { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+html.motion-on [data-story] .story-step:not([data-active]) { opacity: 0.45; }
+[data-story] .story-step { transition: opacity 0.6s var(--ease-out); }
