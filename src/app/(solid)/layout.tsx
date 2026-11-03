@@ -5,7 +5,7 @@ export default function SolidLayout({ children }: LayoutProps<"/">) {
   return (
     <>
       <Header variant="solid" />
-      {children}
+      <main id="main" className="flex-1">{children}</main>
     </>
   );
 }

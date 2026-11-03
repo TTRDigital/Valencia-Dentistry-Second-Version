@@ -44,9 +44,10 @@ export function scrollTop() {
   window.scrollTo(0, 0);
 }
 
+/** Safe refresh: ScrollTrigger waits until scrolling stops, so a refresh never yanks the page back mid-swipe. */
 export function refresh() {
   lenis?.resize();
-  ScrollTrigger.refresh();
+  ScrollTrigger.refresh(true);
 }
 
 function setupCursor() {
@@ -260,9 +261,9 @@ export function run(): Cleanup {
     );
   }
 
-  /* Pinned horizontal gallery: vertical scroll slides the cards sideways. */
+  /* Pinned horizontal gallery: vertical scroll slides the cards sideways. Pins are created first. */
   for (const sec of $("[data-hscroll]")) {
-    queue.push(() =>
+    queue.unshift(() =>
       add(() => {
         const viewport = sec.querySelector<HTMLElement>(".hscroll-viewport");
         const track = sec.querySelector<HTMLElement>("[data-hscroll-track]");

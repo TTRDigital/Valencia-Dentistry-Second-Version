@@ -35,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" data-scroll-behavior="smooth" className={`${fraunces.variable} ${manrope.variable} ${cormorant.variable} h-full`}>
       <body className="min-h-full flex flex-col">
         <a href="#main" className="skip-link">Skip to content</a>
-        <main id="main" className="flex-1">{children}</main>
+        {children}
         <Footer />
         <Suspense fallback={null}><MobileBar /></Suspense>
         <Suspense fallback={null}><MotionProvider /></Suspense>

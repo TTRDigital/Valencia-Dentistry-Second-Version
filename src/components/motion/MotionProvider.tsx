@@ -7,17 +7,30 @@ type Engine = typeof import("./engine");
 let enginePromise: Promise<Engine> | null = null;
 const loadEngine = () => (enginePromise ??= import("./engine"));
 
-/** First visit: wait for the first interaction, or idle time after load, so the motion libraries stay off the LCP path. */
+/**
+ * First visit: wait for the first interaction, or idle time after load, so
+ * the motion libraries stay off the LCP path. Never start in the middle of a
+ * scroll (pins and measurements would nudge the page): wait for it to pause.
+ */
 function whenReady(): Promise<void> {
   return new Promise((resolve) => {
-    let done = false;
-    const go = () => {
-      if (done) return;
-      done = true;
-      events.forEach((e) => window.removeEventListener(e, go));
+    let started = false;
+    let lastScroll = 0;
+    const onScroll = () => (lastScroll = performance.now());
+    window.addEventListener("scroll", onScroll, { passive: true });
+    const events = ["pointermove", "pointerdown", "wheel", "touchstart", "keydown", "scroll"];
+    const settle = () => {
+      const wait = 250 - (performance.now() - lastScroll);
+      if (wait > 0) return void setTimeout(settle, wait);
+      window.removeEventListener("scroll", onScroll);
       resolve();
     };
-    const events = ["pointermove", "pointerdown", "wheel", "touchstart", "keydown", "scroll"];
+    const go = () => {
+      if (started) return;
+      started = true;
+      events.forEach((e) => window.removeEventListener(e, go));
+      settle();
+    };
     events.forEach((e) => window.addEventListener(e, go, { once: true, passive: true }));
     const idle = () => ("requestIdleCallback" in window ? requestIdleCallback(go, { timeout: 2500 }) : setTimeout(go, 1200));
     if (document.readyState === "complete") setTimeout(idle, 1500);

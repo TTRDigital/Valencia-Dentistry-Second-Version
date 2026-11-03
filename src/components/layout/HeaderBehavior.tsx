@@ -77,8 +77,26 @@ export function HeaderBehavior() {
           firstEl.focus();
         }
       }
+      // The mega menu sits at the end of the header in the DOM: keep Tab order as if it followed the Services button.
+      if (e.key === "Tab" && megaOpen && mega && megaBtn) {
+        const items = Array.from(mega.querySelectorAll<HTMLElement>("a, button"));
+        const active = document.activeElement as HTMLElement | null;
+        if (!e.shiftKey && active === megaBtn && items[0]) {
+          e.preventDefault();
+          items[0].focus();
+        } else if (e.shiftKey && active === items[0]) {
+          e.preventDefault();
+          megaBtn.focus();
+        } else if (!e.shiftKey && active === items[items.length - 1]) {
+          e.preventDefault();
+          const nav = Array.from(header.querySelectorAll<HTMLElement>("nav[aria-label='Main'] a, nav[aria-label='Main'] button"));
+          setMega(false);
+          (nav[nav.indexOf(megaBtn) + 1] ?? megaBtn).focus();
+        }
+      }
       if (e.key === "Escape") {
         if (menuOpen) setMenu(false);
+        if (megaOpen && mega?.contains(document.activeElement)) megaBtn?.focus();
         setMega(false);
       }
     };

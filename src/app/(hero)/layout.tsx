@@ -5,7 +5,7 @@ export default function HeroLayout({ children }: LayoutProps<"/">) {
   return (
     <>
       <Header variant="transparent" />
-      {children}
+      <main id="main" className="flex-1">{children}</main>
     </>
   );
 }
