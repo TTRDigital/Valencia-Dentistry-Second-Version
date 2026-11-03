@@ -63,3 +63,33 @@ Checks: status, doctype, `<html lang="en">`, charset first in head, one H1, titl
 
 - Real-device Core Web Vitals (needs the Vercel deployment).
 - Sanity Studio and seed against the practice's project (project ID pending; the seed was validated as 90 well-formed documents and the mutate call is dry-run ready).
+
+## Premium upgrade QA (Nov 2026)
+
+Checked on a local production build (`next build && next start`).
+
+- **Build, lint, typecheck:** zero errors.
+- **Playwright scroll, 16 main pages at 390 px and 1440 px:**
+  - no console errors and no horizontal overflow;
+  - nothing left invisible after scrolling;
+  - no photo drawn wider than half its file's pixel width (no upscaling on 2× screens);
+  - phone body and list text is at least 16 px;
+  - tap targets are at least 44 px. The only exception is the inline "privacy policy" link inside the form consent sentence, which is exempt as inline text.
+- **Reduced motion (390 px):** the same checks pass, and nothing moves.
+- **Keyboard:** all 20 checks pass:
+  - mega menu: Enter opens it, Tab enters it, Escape closes it and returns focus to Services;
+  - mobile menu: focus is trapped, Escape closes it and returns focus;
+  - picker: Enter selects;
+  - before/after slider: arrows, Home and End work, with aria-valuenow;
+  - accordions: Enter and Space;
+  - technology reveal: Enter;
+  - forms: logical tab order; an empty submit flags the fields and focuses the first invalid one.
+- **Lighthouse** (simulated throttling, same command before and after; mobile figures are the median of three runs):
+
+| Page | Before (mobile / desktop) | After (mobile / desktop) |
+|---|---|---|
+| Home | 48 / 98 | 86 (81–91) / 99 |
+| Dental implants | 82 / 100 | 91 (88–92) / 99 |
+| Veneers | 81 / 99 | 90 (86–91) / 99 |
+
+Accessibility, best practices and SEO score 100 on all six runs. CLS is 0, apart from 0.005 on desktop home. Most of the remaining mobile cost on Home is native parse, style and layout of a long page with 15 sections, not JavaScript.
