@@ -1,5 +1,7 @@
 # Design direction — Valencia Dentistry
 
+> **Atelier edition (Nov 2026).** The site was restructured so it no longer mirrors the first site's section order or look. Display type is **Instrument Serif** (OFL) with **Inter Tight** for text; colours are bone white `#F3EFE7`, near-black ink `#0F0F0D`, bronze `#D4A872` / `#82572A` and olive `#2C3024`. Chapters are numbered "(01) — Name" with faint 12-column hairlines on light sections. Home: intro curtain (once per session), kinetic headline with a photo filmstrip in an arch, crossing ribbons, scroll-lit manifesto with inline photo pills and a rating ring, treatment index with a cursor-following preview, 3D fly-through of the office (`data-fly`), Dr. Lavi chapter, drawn-path first-visit timeline (`data-path`), results stage, scroll-filled reviews (`data-words`), technology spec tabs over a reactive dot field, expanding care panels, insurance tiles, FAQs, magnetic-letter CTA (`data-magnet`), map. Service pages are long-form articles in numbered chapters with a sticky chapter index. Route changes use a curtain. The sections below describe the shared system (tokens, motion engine, image rules), which still applies.
+
 The reference (Newbury Park Dental Arts) was studied for *section ideas and mood only*. Nothing from it (text, photos, video, logo, doctor, awards, prices, membership, code) is used.
 
 ## What we adapt from the reference, and how ours differs
