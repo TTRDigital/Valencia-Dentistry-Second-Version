@@ -49,15 +49,15 @@ export function Manifesto() {
 
         {/* Numbers */}
         <dl className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-[var(--r-lg)] border border-white/10 bg-white/10 lg:mt-28 lg:grid-cols-4">
-          <div className="flex items-center gap-5 bg-ink p-6 sm:p-8">
-            <svg viewBox="0 0 120 120" className="h-20 w-20 shrink-0 sm:h-24 sm:w-24" aria-hidden="true">
-              <circle cx="60" cy="60" r="52" fill="none" strokeWidth="6" className="ring-track" />
-              <circle cx="60" cy="60" r="52" fill="none" strokeWidth="6" className="ring-fill" pathLength={100} strokeDasharray="100" strokeDashoffset={100 - (site.google.rating / 5) * 100} data-ring={String((site.google.rating / 5) * 100)} />
-            </svg>
-            <div className="flex flex-col-reverse">
-              <dt className="text-sm text-on-dark-muted">Google rating</dt>
-              <dd className="font-display text-6xl leading-none tabular"><span data-count={String(site.google.rating)}>{site.google.rating}</span></dd>
-            </div>
+          <div className="flex flex-col-reverse justify-center bg-ink p-6 sm:p-8">
+            <dt className="mt-2 text-sm text-on-dark-muted">Google rating</dt>
+            <dd className="flex items-center gap-4">
+              <svg viewBox="0 0 120 120" className="h-16 w-16 shrink-0 sm:h-20 sm:w-20" aria-hidden="true">
+                <circle cx="60" cy="60" r="52" fill="none" strokeWidth="6" className="ring-track" />
+                <circle cx="60" cy="60" r="52" fill="none" strokeWidth="6" className="ring-fill" pathLength={100} strokeDasharray="100" strokeDashoffset={100 - (site.google.rating / 5) * 100} data-ring={String((site.google.rating / 5) * 100)} />
+              </svg>
+              <span className="font-display text-6xl leading-none tabular" data-count={String(site.google.rating)}>{site.google.rating}</span>
+            </dd>
           </div>
           {[
             { v: String(site.google.reviewCount), l: "Google reviews" },

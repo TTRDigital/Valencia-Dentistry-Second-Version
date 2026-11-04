@@ -259,7 +259,7 @@ export function run(): Cleanup {
     queue.push(() =>
       add(() => {
         const words = $(".mw, .mpill", el);
-        gsap.fromTo(words, { opacity: 0.14 }, { opacity: 1, ease: "none", stagger: 0.05, scrollTrigger: { trigger: el, start: "top 82%", end: "bottom 52%", scrub: 0.6 } });
+        gsap.fromTo(words, { opacity: 0.5 }, { opacity: 1, ease: "none", stagger: 0.05, scrollTrigger: { trigger: el, start: "top 82%", end: "bottom 52%", scrub: 0.6 } });
       }),
     );
   }
