@@ -27,7 +27,7 @@ export default async function BlogIndex() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <SplitHero tone="light" image="/images/office/implant-model-hands.jpg" imageAlt="Dentist explaining a treatment on a model">
+      <SplitHero solidHeader image="/images/office/implant-model-hands.jpg" imageAlt="Dentist explaining a treatment on a model">
         <div data-reveal=""><Breadcrumbs items={crumbs} /></div>
         <p className="eyebrow mt-5" data-reveal=""><span className="gold-rule w-8" aria-hidden="true" />Blog</p>
         <h1 className="mt-5" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Guides for a healthier smile", 2)}</h1>

@@ -11,7 +11,7 @@ export function LegalPage({ slug }: { slug: keyof typeof legal }) {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <SplitHero tone="light" image="/images/office/treatment-room-2.jpg" imageAlt="Calm treatment room with natural light and a modern dental chair" portrait={false}>
+      <SplitHero solidHeader image="/images/office/treatment-room-2.jpg" imageAlt="Calm treatment room with natural light and a modern dental chair" portrait={false}>
         <div data-reveal=""><Breadcrumbs items={crumbs} /></div>
         <p className="eyebrow mt-5" data-reveal=""><span className="gold-rule w-8" aria-hidden="true" />Legal</p>
         <h1 className="mt-5" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent(doc.title, 2)}</h1>

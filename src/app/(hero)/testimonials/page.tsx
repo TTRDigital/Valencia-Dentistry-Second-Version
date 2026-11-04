@@ -27,12 +27,12 @@ export default async function TestimonialsPage() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <Hero image="/images/office/aligner-patient-2.jpg" imageAlt="Patient smiling while placing a clear aligner" compact objectPosition="center 25%">
         <div className="max-w-3xl">
-          <Breadcrumbs items={crumbs} light />
+          <Breadcrumbs items={crumbs} />
           <p className="eyebrow mt-6" data-reveal="">Reviews</p>
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Kind words from our patients", 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Every review on this page is a real Google review from a patient of the practice, reproduced word for word.</p>
           <div className="mt-8 flex flex-wrap items-center gap-6" data-reveal="" style={{ "--reveal-delay": "240ms" } as React.CSSProperties}>
-            <GoogleRating dark />
+            <GoogleRating />
             <Button href={site.mapsUrl} variant="outline" size="sm" icon={<Icon.google className="h-4 w-4" />}>Read all reviews on Google</Button>
           </div>
         </div>

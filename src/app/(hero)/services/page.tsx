@@ -39,7 +39,7 @@ export default function ServicesHub() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <Hero image="/images/office/treatment-room.jpg" imageAlt="Treatment room with a dental chair, monitors and large arched windows" compact objectPosition="center 40%">
         <div className="max-w-3xl">
-          <Breadcrumbs items={crumbs} light />
+          <Breadcrumbs items={crumbs} />
           <p className="eyebrow mt-6" data-reveal="">Services</p>
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Everything your smile needs, under one roof", 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>From a child&apos;s first checkup to guided implant surgery, every treatment is planned and delivered by Dr. Nuriel Lavi, DDS, in our Valencia office.</p>
@@ -47,7 +47,7 @@ export default function ServicesHub() {
             <Button href={site.bookingUrl} variant="gold" size="lg">Book your first visit</Button>
             <Button href={`tel:${site.phoneE164}`} variant="outline" size="lg" icon={<Icon.phone className="h-4 w-4" />}>{site.phone}</Button>
           </div>
-          <div className="mt-8 border-t border-white/15 pt-5" data-reveal="" style={{ "--reveal-delay": "320ms" } as React.CSSProperties}><GoogleRating dark /></div>
+          <div className="mt-8 border-t border-white/15 pt-5" data-reveal="" style={{ "--reveal-delay": "320ms" } as React.CSSProperties}><GoogleRating /></div>
         </div>
       </Hero>
 

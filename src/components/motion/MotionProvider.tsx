@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 type Engine = typeof import("./engine");
 let enginePromise: Promise<Engine> | null = null;
@@ -89,6 +89,27 @@ export function MotionProvider() {
   const pathname = usePathname();
   const first = useRef(true);
   const popped = useRef(false);
+  const router = useRouter();
+  const curtain = useRef<HTMLDivElement>(null);
+
+  // Curtain page transition: cover, navigate, then reveal the new page.
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const onClick = (e: MouseEvent) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const a = (e.target as Element).closest?.("a");
+      if (!a || a.target || a.hasAttribute("download")) return;
+      const url = new URL(a.href, location.href);
+      if (url.origin !== location.origin || url.pathname.startsWith("/cms") || url.pathname.startsWith("/api")) return;
+      if (url.pathname === location.pathname) return;
+      e.preventDefault();
+      const c = curtain.current;
+      if (c) c.dataset.state = "in";
+      window.setTimeout(() => router.push(url.pathname + url.search + url.hash), 520);
+    };
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
+  }, [router]);
 
   useEffect(() => {
     const onPop = () => (popped.current = true);
@@ -103,13 +124,20 @@ export function MotionProvider() {
     let cancelled = false;
     let stopEngine: (() => void) | null = null;
 
+    if (!isFirst && curtain.current?.dataset.state === "in") {
+      const c = curtain.current;
+      requestAnimationFrame(() => {
+        c.dataset.state = "out";
+        window.setTimeout(() => delete c.dataset.state, 750);
+      });
+    }
     if (!isFirst) {
       if (!popped.current && !window.location.hash) {
         window.scrollTo(0, 0);
         enginePromise?.then((e) => e.scrollTop());
       }
       popped.current = false;
-      if (!reduce) document.getElementById("main")?.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 450, easing: "ease-out" });
+      if (!reduce && !curtain.current?.dataset.state) document.getElementById("main")?.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 450, easing: "ease-out" });
     }
     if (reduce) return;
 
@@ -135,6 +163,9 @@ export function MotionProvider() {
 
   return (
     <>
+      <div ref={curtain} className="curtain" aria-hidden="true">
+        <span className="font-display text-5xl italic text-gold">Valencia</span>
+      </div>
       <div className="cursor-dot" aria-hidden="true" />
       <div className="cursor-ring" aria-hidden="true"><span /></div>
     </>

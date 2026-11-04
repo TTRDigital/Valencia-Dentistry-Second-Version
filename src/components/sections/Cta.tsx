@@ -1,6 +1,6 @@
-import { ClosingCta } from "@/components/home/Closing";
+import { BeginCta } from "@/components/atelier/Cta";
 
-/** Closing call to action on inner pages: the same statement band as the home page (rotating Book button, contact details, photo, aurora). */
+/** Closing call to action on inner pages: the same "Let's begin" band as the home page. */
 export function CtaBand({ title, text }: { eyebrow?: string; title: string; text: string; offer?: boolean }) {
-  return <ClosingCta title={title} text={text} />;
+  return <BeginCta title={title} text={text} />;
 }

@@ -18,11 +18,10 @@ const i = (n: number) => ({ "data-i": "", style: { "--i": n } as React.CSSProper
  * (transforms only, so nothing below moves). Behaviour lives in HeaderBehavior.
  */
 export function Header({ variant = "solid" }: { variant?: "transparent" | "solid" }) {
-  const light = variant === "transparent";
   let n = 0;
   return (
     <>
-      <header id="site-header" data-variant={variant} data-light={light ? "" : undefined} className={`site-header fixed inset-x-0 top-0 z-50 ${light ? "on-dark" : ""}`}>
+      <header id="site-header" data-variant={variant} className="site-header fixed inset-x-0 top-0 z-50">
         <div className="topbar hidden lg:block">
           <div className="container-x flex h-full items-center justify-between text-[0.8125rem]">
             <div className="flex items-center gap-6">

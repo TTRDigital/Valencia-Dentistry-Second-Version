@@ -14,7 +14,6 @@ export function HeaderBehavior() {
   useEffect(() => {
     const header = document.getElementById("site-header");
     if (!header) return;
-    const variant = header.dataset.variant;
     const megaBtn = header.querySelector<HTMLButtonElement>("[data-mega-button]");
     const mega = header.querySelector<HTMLElement>("[data-mega]");
     const menuBtn = header.querySelector<HTMLButtonElement>("[data-menu-button]");
@@ -25,7 +24,7 @@ export function HeaderBehavior() {
     let scrolled = false;
 
     const paint = () => {
-      const light = (variant === "transparent" && !scrolled) || menuOpen;
+      const light = menuOpen;
       header.toggleAttribute("data-light", light);
       header.classList.toggle("on-dark", light);
       header.toggleAttribute("data-scrolled", scrolled && !menuOpen);

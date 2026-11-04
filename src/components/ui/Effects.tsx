@@ -72,7 +72,7 @@ export function Seal({ id = "seal", className = "", text = "VALENCIA DENTISTRY Â
         <defs>
           <path id={`${id}-circle`} d="M70,70 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0" />
         </defs>
-        <text fill="currentColor" style={{ fontSize: 10.5, letterSpacing: "0.32em", fontWeight: 600, fontFamily: "var(--font-manrope)" }}>
+        <text fill="currentColor" style={{ fontSize: 10.5, letterSpacing: "0.32em", fontWeight: 600, fontFamily: "var(--font-sans-src)" }}>
           <textPath href={`#${id}-circle`}>{text}</textPath>
         </text>
       </svg>

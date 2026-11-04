@@ -24,7 +24,7 @@ export default function EmergencyPage() {
       <JsonLd data={[breadcrumbSchema(crumbs), faqSchema(emergency.faqs)]} />
       <Hero image="/images/office/cleaning.jpg" imageAlt="Hygienist cleaning a patient's teeth in a bright treatment room" compact objectPosition="center 30%">
         <div className="max-w-3xl">
-          <Breadcrumbs items={crumbs} light />
+          <Breadcrumbs items={crumbs} />
           <p className="eyebrow mt-6" data-reveal="">{emergency.hero.eyebrow}</p>
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent(emergency.hero.title, 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>{emergency.hero.intro}</p>

@@ -10,7 +10,7 @@ export const metadata: Metadata = pageMeta({ title: "Thank You | Valencia Dentis
 
 export default function ThankYou() {
   return (
-    <SplitHero tone="light" image="/images/office/veneer-tryin.jpg" imageAlt="Patient smiling in the dental chair during a visit">
+    <SplitHero solidHeader image="/images/office/veneer-tryin.jpg" imageAlt="Patient smiling in the dental chair during a visit">
       <div data-reveal=""><Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Thank you", href: "/thank-you/" }]} /></div>
       <p className="eyebrow mt-5" data-reveal=""><span className="gold-rule w-8" aria-hidden="true" />Request received</p>
       <h1 className="mt-5" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>Thank <em className="accent">you</em></h1>

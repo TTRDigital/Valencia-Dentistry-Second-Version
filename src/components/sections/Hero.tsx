@@ -20,21 +20,24 @@ export function SplitHero({
   image,
   imageAlt,
   children,
-  tone = "dark",
+  tone = "light",
   portrait = true,
+  solidHeader,
 }: {
   image: string;
   imageAlt: string;
   children: ReactNode;
   tone?: "dark" | "light";
   portrait?: boolean;
+  /** The page sits under the solid header (which reserves its own height). */
+  solidHeader?: boolean;
 }) {
   const dark = tone === "dark";
   const tall = portrait ? portraitOf(image) : undefined;
   return (
-    <section data-recede="" className={`hero-rise relative overflow-clip ${dark ? "on-dark grain bg-ink text-on-dark" : "bg-ivory-200 text-text"}`}>
-      {dark && <Aurora />}
-      <div className={`container-x relative grid items-center gap-10 lg:grid-cols-12 lg:gap-14 ${dark ? "min-h-[72svh] pb-16 pt-[calc(var(--hdr-h)+28px)] lg:pb-24 lg:pt-[calc(var(--hdr-h)+var(--topbar-h)+40px)]" : "pb-14 pt-8 lg:pb-20 lg:pt-12"}`}>
+    <section data-recede="" className={`split-hero hero-rise relative overflow-clip ${dark ? "on-dark grain bg-ink text-on-dark" : "bg-ivory text-text"}`}>
+      {dark ? <Aurora /> : <div className="grid-lines" aria-hidden="true" />}
+      <div className={`container-x relative grid items-center gap-10 lg:grid-cols-12 lg:gap-14 ${solidHeader ? "pb-14 pt-8 lg:pb-20 lg:pt-12" : "min-h-[72svh] pb-16 pt-[calc(var(--hdr-h)+28px)] lg:pb-24 lg:pt-[calc(var(--hdr-h)+var(--topbar-h)+40px)]"}`}>
         <div className="lg:col-span-7" data-recede-copy="">{children}</div>
         <div className="lg:col-span-5" data-recede-media="">
           {tall ? (

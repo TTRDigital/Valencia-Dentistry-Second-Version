@@ -15,7 +15,7 @@ export function Logo({ className = "h-9 w-auto", tone, title = "Valencia Dentist
         <path fill={dark} d={MARK_DARK} />
         <path fill={accent} d={MARK_ACCENT} />
       </svg>
-      <g fontFamily="var(--font-manrope), Manrope, 'Helvetica Neue', Arial, sans-serif">
+      <g fontFamily="var(--font-sans-src), Manrope, 'Helvetica Neue', Arial, sans-serif">
         <text x="660" y="300" fontSize="210" fontWeight={500} letterSpacing="22" fill={dark}>VALENCIA</text>
         <text x="672" y="420" fontSize="74" fontWeight={600} letterSpacing="38" fill={sub}>DENTISTRY</text>
       </g>

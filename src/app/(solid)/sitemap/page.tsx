@@ -23,7 +23,7 @@ export default function HtmlSitemap() {
   return (
     <>
     <JsonLd data={breadcrumbSchema(crumbs)} />
-    <SplitHero tone="light" image="/images/office/treatment-room.jpg" imageAlt="Treatment room with a dental chair, monitors and large arched windows" portrait={false}>
+    <SplitHero solidHeader image="/images/office/treatment-room.jpg" imageAlt="Treatment room with a dental chair, monitors and large arched windows" portrait={false}>
       <div data-reveal=""><Breadcrumbs items={crumbs} /></div>
       <p className="eyebrow mt-5" data-reveal=""><span className="gold-rule w-8" aria-hidden="true" />Sitemap</p>
       <h1 className="mt-5" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Every page on the site", 2)}</h1>

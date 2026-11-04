@@ -13,17 +13,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-clip bg-ink text-on-dark on-dark grain" aria-labelledby="footer-heading">
       <Aurora className="opacity-60" />
-      {/* Big closing CTA */}
-      <div className="container-x relative border-b border-white/10 pb-14 pt-20 lg:pb-20 lg:pt-28">
-        <p className="eyebrow"><span className="gold-rule w-8" aria-hidden="true" />Valencia · Santa Clarita</p>
-        <h2 id="footer-heading" className="mt-6 max-w-5xl display-giant" data-split="">
-          Book your visit with <em className="accent">Dr. Lavi.</em>
-        </h2>
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-gold btn-lg" data-cursor="Book"><span className="btn-label">Book your first visit <Arrow className="btn-arrow" /></span></a>
-          <a href={`tel:${site.phoneE164}`} className="btn btn-outline btn-lg"><span className="btn-label"><Icon.phone className="h-4 w-4" /> {site.phone}</span></a>
-        </div>
-      </div>
+      <h2 id="footer-heading" className="sr-only">Footer</h2>
       <div className="container-x relative py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -62,6 +52,7 @@ export function Footer() {
             <p className="eyebrow">Get started</p>
             <p className="mt-4 text-sm text-on-dark-muted">{site.insurance}. {site.financing}.</p>
             <div className="mt-5 flex flex-col items-start gap-3">
+              <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-gold" data-cursor="Book"><span className="btn-label">Book your first visit <Arrow className="btn-arrow" /></span></a>
               <Link href="/appointment/" className="btn btn-outline"><span className="btn-label">Request an appointment <Arrow className="btn-arrow" /></span></Link>
               <Link href="/new-patient-offer/" className="text-link min-h-11">What to expect at your first visit</Link>
             </div>
@@ -80,7 +71,7 @@ export function Footer() {
       </div>
       {/* Giant faint wordmark */}
       <div className="relative select-none overflow-hidden" aria-hidden="true">
-        <p className="translate-y-[18%] whitespace-nowrap text-center font-display text-[clamp(5rem,24vw,24rem)] font-light leading-[0.8] tracking-[-0.05em] text-white/[0.05]">Valencia</p>
+        <p className="translate-y-[18%] whitespace-nowrap text-center font-display text-[clamp(5rem,24vw,24rem)] font-light leading-[0.8] tracking-[-0.05em] text-white/[0.07]" data-wordmark="">Valencia</p>
       </div>
     </footer>
   );

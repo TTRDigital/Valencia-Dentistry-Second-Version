@@ -254,6 +254,102 @@ export function run(): Cleanup {
     extra.push(() => (el.textContent = final));
   }
 
+  /* Words light up as you scroll (manifesto, reviews). */
+  for (const el of $("[data-words]")) {
+    queue.push(() =>
+      add(() => {
+        const words = $(".mw, .mpill", el);
+        gsap.fromTo(words, { opacity: 0.14 }, { opacity: 1, ease: "none", stagger: 0.05, scrollTrigger: { trigger: el, start: "top 82%", end: "bottom 52%", scrub: 0.6 } });
+      }),
+    );
+  }
+
+  /* Rating ring fills once. */
+  for (const el of $("[data-ring]")) {
+    if (!belowFold(el)) continue;
+    const end = 100 - Number(el.dataset.ring);
+    gsap.set(el, { strokeDashoffset: 100 });
+    once(el, "0px 0px -10% 0px", () => gsap.to(el, { strokeDashoffset: end, duration: 2, ease: "expo.out" }), extra);
+    extra.push(() => gsap.set(el, { strokeDashoffset: end }));
+  }
+
+  /* 3D fly-through gallery: photos move toward you as you scroll. */
+  for (const sec of $("[data-fly]")) {
+    queue.unshift(() =>
+      add(() => {
+        const items = $("[data-fly-item]", sec);
+        const copy = sec.querySelector<HTMLElement>(".fly-copy");
+        sec.classList.add("fly-on");
+        const gapZ = 560;
+        const near = 520; // ≈2.1× at perspective 1000px: still within each photo's resolution
+        const z0 = items.map((_, i) => -1500 - i * gapZ);
+        const travel = near - z0[z0.length - 1];
+        const apply = (p: number) => {
+          items.forEach((it, i) => {
+            const z = z0[i] + p * travel;
+            const fadeIn = Math.min(1, Math.max(0, (z + 3400) / 1200));
+            const fadeOut = Math.min(1, Math.max(0, (near - z) / 260));
+            it.style.transform = `translate3d(-50%, -50%, ${Math.min(z, near).toFixed(1)}px)`;
+            it.style.opacity = String(Math.min(fadeIn, fadeOut));
+            it.style.visibility = z > near - 2 ? "hidden" : "";
+          });
+          if (copy) copy.style.opacity = String(Math.max(0, 1 - p * 5));
+        };
+        apply(0);
+        ScrollTrigger.create({ trigger: sec, start: "top top", end: "bottom bottom", scrub: 0.8, onUpdate: (self) => apply(self.progress) });
+        return () => {
+          sec.classList.remove("fly-on");
+          items.forEach((it) => {
+            it.style.transform = "";
+            it.style.opacity = "";
+            it.style.visibility = "";
+          });
+          if (copy) copy.style.opacity = "";
+        };
+      }),
+    );
+  }
+
+  /* Path timeline: the line draws, a dot travels along it, milestones light up. */
+  for (const wrap of $("[data-path]")) {
+    queue.push(() =>
+      add(() => {
+        const line = wrap.querySelector<SVGPathElement>("[data-path-line]");
+        const svg = line?.ownerSVGElement;
+        const dot = wrap.querySelector<HTMLElement>("[data-path-dot]");
+        const ms = $("[data-ms]", wrap);
+        if (!line || !svg) return;
+        const len = line.getTotalLength();
+        line.style.strokeDasharray = `${len}`;
+        line.style.strokeDashoffset = `${len}`;
+        if (dot) dot.classList.remove("hidden");
+        const update = (p: number) => {
+          line.style.strokeDashoffset = `${len * (1 - p)}`;
+          if (dot) {
+            const pt = line.getPointAtLength(len * p);
+            const r = svg.getBoundingClientRect();
+            const w = wrap.getBoundingClientRect();
+            dot.style.left = `${r.left - w.left + (pt.x / 100) * r.width}px`;
+            dot.style.top = `${r.top - w.top + (pt.y / 1000) * r.height}px`;
+          }
+          ms.forEach((m) => m.toggleAttribute("data-on", p >= Number(m.dataset.ms) - 0.1));
+        };
+        update(0);
+        ScrollTrigger.create({ trigger: wrap, start: "top 70%", end: "bottom 65%", scrub: 0.5, onUpdate: (self) => update(self.progress) });
+        return () => {
+          line.style.strokeDasharray = "";
+          line.style.strokeDashoffset = "";
+          ms.forEach((m) => m.setAttribute("data-on", ""));
+        };
+      }),
+    );
+  }
+
+  /* Footer wordmark rises as the footer comes into view. */
+  for (const el of $("[data-wordmark]")) {
+    queue.push(() => add(() => gsap.fromTo(el, { yPercent: 55 }, { yPercent: 18, ease: "none", scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom bottom", scrub: true } })));
+  }
+
   /* Lines that draw in as you scroll (process steps). */
   for (const el of $("[data-draw]")) {
     queue.push(() =>
@@ -362,6 +458,32 @@ export function run(): Cleanup {
           el.removeEventListener("pointermove", move);
           el.removeEventListener("pointerleave", leave);
           gsap.set(el, { clearProps: "transform" });
+        });
+      });
+    }
+    for (const el of $("[data-magnet]")) {
+      queue.push(() => {
+        const letters = $("span > span", el);
+        const qs = letters.map((l) => ({ l, x: gsap.quickTo(l, "x", { duration: 0.6, ease: "power3" }), y: gsap.quickTo(l, "y", { duration: 0.6, ease: "power3" }) }));
+        const sec = el.closest("section") ?? el;
+        const move = (e: PointerEvent) => {
+          for (const q of qs) {
+            const r = q.l.getBoundingClientRect();
+            const dx = e.clientX - (r.left + r.width / 2);
+            const dy = e.clientY - (r.top + r.height / 2);
+            const d = Math.hypot(dx, dy);
+            const k = Math.max(0, 1 - d / 260);
+            q.x(-dx * k * 0.35);
+            q.y(-dy * k * 0.35);
+          }
+        };
+        const leave = () => qs.forEach((q) => { q.x(0); q.y(0); });
+        sec.addEventListener("pointermove", move as EventListener);
+        sec.addEventListener("pointerleave", leave);
+        extra.push(() => {
+          sec.removeEventListener("pointermove", move as EventListener);
+          sec.removeEventListener("pointerleave", leave);
+          gsap.set(letters, { clearProps: "transform" });
         });
       });
     }

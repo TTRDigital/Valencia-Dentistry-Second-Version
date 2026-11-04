@@ -28,7 +28,7 @@ export default async function AboutPage() {
       <JsonLd data={[personSchema(), breadcrumbSchema(crumbs)]} />
       <Hero image="/images/office/treatment-room-2.jpg" imageAlt="Calm treatment room with natural light and a modern dental chair" compact objectPosition="center 30%">
         <div className="max-w-3xl">
-          <Breadcrumbs items={crumbs} light />
+          <Breadcrumbs items={crumbs} />
           <p className="eyebrow mt-6" data-reveal="">{about.hero.eyebrow}</p>
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent(about.hero.title, 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>{about.hero.intro}</p>

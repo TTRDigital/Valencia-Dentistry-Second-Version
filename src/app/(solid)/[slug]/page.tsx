@@ -40,7 +40,7 @@ export default async function Page({ params }: PageProps<"/[slug]">) {
     <>
       <JsonLd data={[articleSchema(p), breadcrumbSchema(crumbs), faqSchema(p.faqs)].filter(Boolean)} />
       <article>
-        <SplitHero tone="light" image={p.image} imageAlt={p.imageAlt} portrait={false}>
+        <SplitHero solidHeader image={p.image} imageAlt={p.imageAlt} portrait={false}>
           <div data-reveal=""><Breadcrumbs items={crumbs.map((c, i) => (i === 2 ? { ...c, label: "Article" } : c))} /></div>
           <p className="eyebrow mt-5" data-reveal=""><span className="gold-rule w-8" aria-hidden="true" />{categoryLabel[p.category]}</p>
           <h1 className="mt-5 text-[clamp(2.25rem,1.4rem+3vw,4.25rem)]" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent(p.title, 2)}</h1>

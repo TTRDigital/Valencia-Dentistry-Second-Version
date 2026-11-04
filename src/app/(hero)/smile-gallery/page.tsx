@@ -26,10 +26,10 @@ export default async function GalleryPage() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <Hero image="/images/office/veneer-smile.jpg" imageAlt="Patient checking her smile in a hand mirror" compact objectPosition="center 45%">
         <div className="max-w-3xl">
-          <Breadcrumbs items={crumbs} light />
+          <Breadcrumbs items={crumbs} />
           <p className="eyebrow mt-6" data-reveal="">Smile gallery</p>
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Real patients, real results", 2)}</h1>
-          <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Every case below is a patient of Dr. Lavi, photographed in our office and shared with permission. Drag the handle to compare.</p>
+          <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Before and after photos of real smiles. Drag the handle, or use the arrow keys, to compare. Individual results vary.</p>
         </div>
       </Hero>
       <Section tone="ivory" labelledBy="cases-heading">

@@ -25,7 +25,7 @@ export default function AppointmentPage() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <Hero image="/images/office/treatment-room.jpg" imageAlt="Treatment room with a dental chair, monitors and large arched windows" compact objectPosition="center 30%">
         <div className="max-w-3xl">
-          <Breadcrumbs items={crumbs} light />
+          <Breadcrumbs items={crumbs} />
           <p className="eyebrow mt-6" data-reveal="">Appointments</p>
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent("Book your visit", 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>Choose a time online right now, or send us your preferred time and we will confirm by phone or text.</p>

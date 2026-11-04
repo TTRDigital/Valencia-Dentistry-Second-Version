@@ -24,7 +24,7 @@ export default function OfferPage() {
       <JsonLd data={[breadcrumbSchema(crumbs), faqSchema(offer.faqs)]} />
       <Hero image="/images/office/veneer-tryin.jpg" imageAlt="Patient smiling in the dental chair during a cosmetic visit" compact objectPosition="center 30%">
         <div className="max-w-3xl">
-          <Breadcrumbs items={crumbs} light />
+          <Breadcrumbs items={crumbs} />
           <p className="eyebrow mt-6" data-reveal="">{offer.hero.eyebrow}</p>
           <h1 className="mt-4" data-reveal="" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>{accent(offer.hero.title, 2)}</h1>
           <p className="lead mt-6 max-w-2xl" data-reveal="" style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>{offer.hero.intro}</p>
